@@ -36,3 +36,5 @@ Aynı ürünün hem Yaş hali Hem Kuru hali alım satım yapılabilir örnek cev
 
 Satılacak ürünlerin veya alınacak ürünlerin sitede ki listesi için "Ekleme Talebi" oluşturulabilir. (Hem dinamik olması sağlanır hem de kontrolsüz her şey yazılmasının önüne geçilir!)
 ürünlerin Modelleri de alınacak. ayrıştırıcı resimler ile sergilenecek. (Örnek; Süper Domates(Salata domatesi), Çiçek Domates (Normal domates), Cherry Domates (Kahvaltılık Domates), Bursa Domatesi (Salçalık Domates) vb.
+
+Son satıcının tek seferde, olabildiğince en az çiftçiden sipariş vermesi sağlanılmalı
