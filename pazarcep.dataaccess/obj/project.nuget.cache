@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CldmWpcYMMB2FIeOINMNKnZzKtPowX/NEKepEY96sUAVOPS8EwexjecI8RxeKw2oWCanXaF5+iGJ0pZOtansEw==",
+  "dgSpecHash": "4BGb/SYdD9Y=",
   "success": true,
-  "projectFilePath": "D:\\Yazılım Geliştirme\\pazarcep\\pazarcep\\pazar-cep\\pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
+  "projectFilePath": "C:\\wamp64\\PazarCep\\pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
