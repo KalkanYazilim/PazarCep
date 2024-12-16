@@ -8,34 +8,32 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\musta\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Kalkan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Yazılım Geliştirme\\pazarcep\\pazarcep\\pazar-cep\\pazarcep.entity\\pazarcep.entity.csproj",
+      "projectUniqueName": "C:\\wamp64\\PazarCep\\pazarcep.entity\\pazarcep.entity.csproj",
       "projectName": "pazarcep.entity",
-      "projectPath": "D:\\Yazılım Geliştirme\\pazarcep\\pazarcep\\pazar-cep\\pazarcep.entity\\pazarcep.entity.csproj",
-      "packagesPath": "C:\\Users\\musta\\.nuget\\packages\\",
-      "outputPath": "D:\\Yazılım Geliştirme\\pazarcep\\pazarcep\\pazar-cep\\pazarcep.entity\\obj\\",
+      "projectPath": "C:\\wamp64\\PazarCep\\pazarcep.entity\\pazarcep.entity.csproj",
+      "packagesPath": "C:\\Users\\Kalkan\\.nuget\\packages\\",
+      "outputPath": "C:\\wamp64\\PazarCep\\pazarcep.entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\musta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kalkan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -48,6 +46,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -69,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
