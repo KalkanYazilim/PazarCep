@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vE/v+UENFMs=",
+  "dgSpecHash": "i17dH83zP9A=",
   "success": true,
-  "projectFilePath": "C:\\wamp64\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
+  "projectFilePath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kalkan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Kalkan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
