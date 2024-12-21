@@ -23,3 +23,34 @@ D:\Yazılım Geliştirme\pazarcep\pazarcep\pazar-cep\pazarcep.ui\obj\Debug\net6.
 D:\Yazılım Geliştirme\pazarcep\pazarcep\pazar-cep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.pdb
 D:\Yazılım Geliştirme\pazarcep\pazarcep\pazar-cep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.genruntimeconfig.cache
 D:\Yazılım Geliştirme\pazarcep\pazarcep\pazar-cep\pazarcep.ui\obj\Debug\net6.0\ref\pazarcep.ui.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\appsettings.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.staticwebassets.runtime.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.exe
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.deps.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.runtimeconfig.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net6.0\pazarcep.ui.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.AssemblyInfoInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.AssemblyInfo.cs
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.csproj.CoreCompileInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.RazorAssemblyInfo.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.RazorAssemblyInfo.cs
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.sourcelink.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets\msbuild.pazarcep.ui.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets\msbuild.build.pazarcep.ui.props
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.pazarcep.ui.props
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.pazarcep.ui.props
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\scopedcss\bundle\pazarcep.ui.styles.css
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\scopedcss\projectbundle\pazarcep.ui.bundle.scp.css
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\refint\pazarcep.ui.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\pazarcep.ui.genruntimeconfig.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net6.0\ref\pazarcep.ui.dll

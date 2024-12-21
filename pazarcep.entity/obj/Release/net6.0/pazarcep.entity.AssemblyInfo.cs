@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21167ad96e856293cc5cdc188569cdfc620a25c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e10a41f4de63fcc0f1b67e50669409d0f4886a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "\\pazarcep.business\\Abstracts",
-    "\\pazarcep.dataaccess\\Abstracts",
-    "\\pazarcep.ui\\wwwroot",
-    "\\pazarcep.ui\\wwwroot\\Static"
+    ""
   ],
+  "SelectedNode": "\\pazarcep.sln",
   "PreviewInSolutionExplorer": false
 }
