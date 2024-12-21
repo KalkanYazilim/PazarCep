@@ -1,0 +1,201 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+}
+
+.itineraries-block .container .no-gutters > .col, .no-gutters > [class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.inputwithicon input[type=text]:hover + i {
+  color: rgb(100, 100, 100);
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+}
+
+.findyourhome > div:nth-child(1) {
+  background-color: #fff;
+  height: 100%;
+  padding: 10px 17px 10px 17px;
+}
+
+.findyourhome > div:nth-child(2) {
+  background-color: rgb(120,120,120);
+  height: 100%;
+  padding: 10px 15px 10px 15px;
+  color: #fff;
+}
+
+.findyourhome {
+  position: absolute;
+  display: inline-flex;
+  background-color: #ececec;
+  top: -45px;
+  left: -1px;
+}
+
+.itineraries-block .container .no-gutters > .col, .no-gutters > [class*=col-] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.text-input {
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid #5c5c5c;
+  padding: 5px 5px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.text-input:hover {
+  outline-color: rgb(173, 124, 46);
+  border: 1px solid #8842d5;
+}
+
+.text-input:focus {
+  outline-color: rgb(173, 124, 46);
+  border: 1px solid #8842d5;
+  border-color: rgb(173, 124, 46);
+  box-shadow: 0 0 8px 0 rgb(173, 124, 46);
+}
+
+.inputwithicon input[type=text] {
+  padding-left: 30px;
+}
+
+.inputwithicon select {
+  padding-left: 40px;
+}
+
+.inputwithicon {
+  position: relative;
+}
+
+.inputwithicon i {
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  font-size: 22px;
+  color: rgb(190,190,190);
+  padding: 3px;
+}
+
+.inputwithicon input[type=text]:focus + i {
+  color: rgb(173, 124, 46);
+}
+
+.inputwithicon select:focus + i {
+  color: rgb(173, 124, 46);
+}
+
+.inputwithicon input[type=text]:hover + i {
+  color: rgb(100, 100, 100);
+}
+
+.inputwithicon select:hover + i {
+  color: rgb(100, 100, 100);
+}
+
+.inputwithicon span {
+  position: absolute;
+  left: 48px;
+  top: 4px;
+  font-size: 15px;
+  padding: 3px;
+  color: rgb(190,190,190);
+  background-color: #fff;
+  pointer-events: none;
+}
+
+select.text-input {
+  color: rgb(190,190,190);
+}
+
+select.text-input option {
+  color: rgb(0,0,0);
+}
+
+#advanced-div {
+  margin-top: 5px;
+}
+
+#search-container div[class^="col"] {
+  margin-top: 3px;
+}
+
+#search-container {
+  position: relative;
+  margin-top: 20px;
+  padding: 15px 15px;
+  background-color: #fff;
+}
+
+#search-container:before {
+  content: "";
+  width: 100%;
+  background-color: #E3712C;
+  height: 5px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.advancedlink {
+  cursor: pointer;
+  background-color: #E3712C;
+  border-radius: 2px;
+}
+
+.searchlink {
+  cursor: pointer;
+  background-color: #E3712C;
+  border-radius: 2px;
+}
+
+.searchlink i {
+  color: #fff;
+  margin-right: 5px;
+}
+
+.searchdiv i {
+  font-size: 14px;
+}
+
+#buttons-div a {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+#buttons-div div {
+  padding: 10px 40px;
+  text-align: center;
+}
+
+#buttons-div {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#advanced-btn {
+  background-color: #ebebeb;
+  color: #000;
+}
+
+#advanced-btn a {
+  color: #000;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+}
+
+.searchdiv {
+  margin-top: -120px;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+}
+
