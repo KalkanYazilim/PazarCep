@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e4fc7c6c3b54441b9f6e2dbbb0cabcf652efee0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d513c61872c9c4e046b63ef6f43874da9e00208")]
 [assembly: System.Reflection.AssemblyProductAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pazarcep.entity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
