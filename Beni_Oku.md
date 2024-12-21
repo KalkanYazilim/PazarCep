@@ -42,3 +42,5 @@ Son satıcının tek seferde, olabildiğince en az çiftçiden sipariş vermesi 
 Kullanıcıların puanlarını yükseltilmesi gereken şartlar
 Düzenli bilgi yayınlayan
 Kullanıcılar Üyeliği açtıktan sonra belli bir süre(Örnek:1 hafta) içerisinde kendileri ile ilgili ilk kayıtta almayacağımız ama alırsak iyi olacak bilgileri, resimleri, videoları yayınlayan
+
+En Yakındaki, şu an arama yapan veya mal alma ihtimali olan Son satıcıları çiftçiye göstermememiz iyimi olur kötümü olur tartışacaz!! (Gösterilirse Çiftçinin ürünü bizden dolayı darlada kama ihtimali ortadan kalkar.)
