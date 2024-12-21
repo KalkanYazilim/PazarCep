@@ -38,3 +38,9 @@ Satılacak ürünlerin veya alınacak ürünlerin sitede ki listesi için "Eklem
 ürünlerin Modelleri de alınacak. ayrıştırıcı resimler ile sergilenecek. (Örnek; Süper Domates(Salata domatesi), Çiçek Domates (Normal domates), Cherry Domates (Kahvaltılık Domates), Bursa Domatesi (Salçalık Domates) vb.
 
 Son satıcının tek seferde, olabildiğince en az çiftçiden sipariş vermesi sağlanılmalı
+
+Kullanıcıların puanlarını yükseltilmesi gereken şartlar
+Düzenli bilgi yayınlayan
+Kullanıcılar Üyeliği açtıktan sonra belli bir süre(Örnek:1 hafta) içerisinde kendileri ile ilgili ilk kayıtta almayacağımız ama alırsak iyi olacak bilgileri, resimleri, videoları yayınlayan
+
+En Yakındaki, şu an arama yapan veya mal alma ihtimali olan Son satıcıları çiftçiye göstermememiz iyimi olur kötümü olur tartışacaz!! (Gösterilirse Çiftçinin ürünü bizden dolayı darlada kama ihtimali ortadan kalkar.)
