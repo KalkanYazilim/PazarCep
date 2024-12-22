@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\pazarcep.api.csproj": {}
+    "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.api\\pazarcep.api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\pazarcep.api.csproj": {
+    "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.api\\pazarcep.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
+        "projectUniqueName": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
         "projectName": "pazarcep.api",
-        "projectPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
+        "projectPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.api\\pazarcep.api.csproj",
         "packagesPath": "C:\\Users\\Kalkan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\PazarCep\\pazarcep.api\\obj\\",
+        "outputPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
