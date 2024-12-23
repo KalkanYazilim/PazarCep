@@ -1,5 +1,12 @@
 Çiftçi ile Son Satıcıyı buluşturulacak bir E-Ticaret sitesi yapılacak.
 
+Roller
+Admin
+Çiftçi
+Taşımacı
+Son Satıcı
+Diğer
+
 Çiftçi ve Satıcı Arasında bir randevu talep sistemi oluşturulursa meyvelerin korunması arttırılabilir. (Taşımacıları da ona göre düzenleyecek bir yapı oluşturulacak.)
 Uzun vade Randevu sistemide yapılabilir "Sözleşmeli" 
 
@@ -16,7 +23,7 @@ Puana göre otomatik alım satım sınırı konulacak. Puan yükseldikçe alım 
 Çiftçiler Tarlalarından Resim ve Video paylaşabilecek. (Kendi ne ait olmayan resimler veya videolar tespit edildiğinde silinecek) Videolar "Kalkan_Çiftçiler" Youtube Kanalında yayınlanacak.
 
 Lojistik Kısmı Çiftçi ve Son satıcıya  danışılarak karar verdirilecek.
-Lojistikçiler Taşiıyacağı yük lerin zamanları ile birlikte Hangi şehirde olacakları planlanacak ve son gittiği konuma en yakın yerlerden yük alabilecek şekilde planlanacak.
+Lojistikçiler Taşıyacağı yük lerin zamanları ile birlikte Hangi şehirde olacakları planlanacak ve son gittiği konuma en yakın yerlerden yük alabilecek şekilde planlanacak.
 
 Bu sitede Lojistik çiler de iş açabilir
 Taşımacılar kayıt olurken Araçlarına göre kayıt olacaklar. Plakaları alınacak. (Başta "Hacim ve Soğuk Araç mı, yoksa Normal Araç mı?" olmak üzere Çadıra ve Teker Sayısına kadar her bilgi alınacak! Aracın kendi ağırlığı alınacak.) (Transit tonaj hesaplanacak.)
@@ -44,3 +51,5 @@ Düzenli bilgi yayınlayan
 Kullanıcılar Üyeliği açtıktan sonra belli bir süre(Örnek:1 hafta) içerisinde kendileri ile ilgili ilk kayıtta almayacağımız ama alırsak iyi olacak bilgileri, resimleri, videoları yayınlayan
 
 En Yakındaki, şu an arama yapan veya mal alma ihtimali olan Son satıcıları çiftçiye göstermememiz iyimi olur kötümü olur tartışacaz!! (Gösterilirse Çiftçinin ürünü bizden dolayı darlada kama ihtimali ortadan kalkar.)
+
+Yük birleştirme (Rotaya ve Ana yükün içeriğine göre uygun bir şekilde 1 araç ile  farklı Kişilerden yük alabilmesi sağlanacak)

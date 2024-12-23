@@ -1,0 +1,76 @@
+.login-cont {
+  padding: 100px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.form-control.input-lg.lg-frc {
+  border-radius: 0rem;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: #fff;
+}
+
+.form-control.input-lg.lg-frc:focus {
+  border-color: #565656;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.login-col {
+  padding: 30px;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid rgba(204,204,204,0.36);
+  padding-top: 15px;
+}
+
+.login-btn {
+  border-radius: 0rem;
+  background-color: transparent;
+  background-image: none;
+  text-shadow: none;
+  color: #fff;
+  padding: 10px 40px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .login-cont {
+    margin-top: 150px;
+    padding: 20px;
+  }
+}
+
+.form-control:focus {
+  border-color: #25476a;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.lgp-hd {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.login-form {
+  border: 1px solid rgba(204,204,204,0.36);
+  padding: 20px;
+  background-color: rgba(0,0,0,0.32);
+}
+
+.icon.ion-lock-combination {
+  color: #fff;
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
