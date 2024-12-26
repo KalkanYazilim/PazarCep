@@ -5,7 +5,7 @@ Admin
 Çiftçi
 Taşımacı
 Son Satıcı
-Diğer
+Yük Veren || Taşıtan 
 
 Çiftçi ve Satıcı Arasında bir randevu talep sistemi oluşturulursa meyvelerin korunması arttırılabilir. (Taşımacıları da ona göre düzenleyecek bir yapı oluşturulacak.)
 Uzun vade Randevu sistemide yapılabilir "Sözleşmeli" 
@@ -53,3 +53,7 @@ Kullanıcılar Üyeliği açtıktan sonra belli bir süre(Örnek:1 hafta) içeri
 En Yakındaki, şu an arama yapan veya mal alma ihtimali olan Son satıcıları çiftçiye göstermememiz iyimi olur kötümü olur tartışacaz!! (Gösterilirse Çiftçinin ürünü bizden dolayı darlada kama ihtimali ortadan kalkar.)
 
 Yük birleştirme (Rotaya ve Ana yükün içeriğine göre uygun bir şekilde 1 araç ile  farklı Kişilerden yük alabilmesi sağlanacak)
+
+Çiftçilerin Her ürünü için ayrı ayrı puanlama sistemi getirilebilir!! (Önemi tartışılacak)
+
+Kullanıcıların Takvimleri profillerinden görüntülenebilsin. (Diğer Kullanıcılar tarafından)
