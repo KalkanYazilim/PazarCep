@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Header Yükleme
-    fetch("/Partials/Header.html") // Header dosyasının doğru yolunu kontrol edin
+    fetch("/Partials/Header&Footer.html") // Header dosyasının doğru yolunu kontrol edin
         .then(response => response.text())
         .then(data => {
             const tempDiv = document.createElement("div");
             tempDiv.innerHTML = data;
             
             // Sadece <nav> etiketini bul
-            const navBar = tempDiv.querySelector("nav");
+            const navBar = tempDiv.querySelector("Header");
             if (navBar) {
                 document.body.insertBefore(navBar, document.body.firstChild); // Nav'ı body'nin başına ekle
             } else {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Header yükleme hatası:", error));
 
     // Footer Yükleme
-    fetch("/Partials/Footer.html")
+    fetch("/Partials/Header&Footer.html")
         .then(response => response.text())
         .then(data => {
             const tempDiv = document.createElement("div");
