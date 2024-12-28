@@ -1,0 +1,137 @@
+/* Genel Ayarlar */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: rgb(0, 200, 0);
+  padding: 10px 20px;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* Hikaye Bölümü */
+
+.story-slider {
+  display: flex;
+  overflow-x: auto;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.story-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.story {
+  flex: 0 0 auto;
+  text-align: center;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.story:hover {
+  transform: scale(1.1);
+}
+
+.story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid rgb(200, 0, 0);
+}
+
+.story p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Gönderi Kartı */
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  overflow: hidden;
+  animation: fadeIn 0.8s ease;
+  width: 90%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card .content {
+  padding: 15px;
+}
+
+.card .content h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card .content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card .actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.card .actions button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(0, 200, 0);
+  transition: transform 0.2s ease;
+}
+
+.card .actions button:hover {
+  transform: scale(1.2);
+  color: rgb(200, 0, 0);
+}
+
+/* Animasyon */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
