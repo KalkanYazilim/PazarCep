@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pazarcep.entity.Abstracts
 {
-    public interface IEntity
+    public interface IEntity 
     {
     }
 }

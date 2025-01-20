@@ -57,3 +57,8 @@ Yük birleştirme (Rotaya ve Ana yükün içeriğine göre uygun bir şekilde 1 
 Çiftçilerin Her ürünü için ayrı ayrı puanlama sistemi getirilebilir!! (Önemi tartışılacak)
 
 Kullanıcıların Takvimleri profillerinden görüntülenebilsin. (Diğer Kullanıcılar tarafından)
+
+Çiftçi Bölümüne ürünlerinin Raporlarını ekleyebileceği ve bunun Son Satıcıların görebileceği bir Yapı oluşturulacak. (Yeşil Rozetli Ürün Şeklinde Pazarlayabilir.)
+Çiftçilerin Son ilaçlama yaptığı tarihten itibaren 15 gün sonrasına satış yapmalarına izin verilek şekilde bir düzenleme yapılacak. 
+
+Son Satıcıdan Ürünlerini hangi sıklıkla tedarik edeceği ve ürünle ilgili "Günlük, Haftalık, Aylık" ortalama yapacağı satış miktarı alınırsa Çiftçiye Satış kotası belirlememiz de yardımcı olabilir. 
