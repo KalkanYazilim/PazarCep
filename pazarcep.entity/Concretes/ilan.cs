@@ -10,17 +10,13 @@ namespace pazarcep.entity.Concretes
 {
     public class ilan : IEntity
     {
-        
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
-        public virtual int Kullanici_ID { get; set; }
+        public int ilan_ID { get; set; }
+        public int ilanOlusturan_ID { get; set; }
+        public int Urun_ID { get; set; }
+        public decimal Miktar_Ton { get; set; }
+        public decimal Fiyat { get; set; }
+        public DateTime Eklenme_Tarihi { get; set; }
         public virtual int Durum_ID { get; set; }
-        Burası yazılmadı
     }
 }

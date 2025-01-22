@@ -10,16 +10,15 @@ namespace pazarcep.entity.Concretes
 {
     public class Yuk : IEntity
     {
-        Burası yazılmadı
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
-        public virtual int Kullanici_ID { get; set; }
-        public virtual int Durum_ID { get; set; }
+        public int Yuk_ID { get; set; }
+        public virtual int YukVeren_ID { get; set; }
+        public string Yuk_Adi { get; set; }
+        public decimal Miktar_Ton { get; set; }
+        public string Konum_Baslangic { get; set; }
+        public string Konum_Bitis { get; set; }
+        public DateTime Olusturma_Tarihi { get; set; }
+        public virtual int Urun_ID { get; set; }
+        public virtual int TasimaDurum_ID { get; set; }
     }
 }

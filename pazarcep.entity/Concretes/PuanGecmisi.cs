@@ -10,16 +10,11 @@ namespace pazarcep.entity.Concretes
 {
     public class PuanGecmisi : IEntity
     {
-        Burası yazılmadı
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
+        public int PuanGecmisi_ID { get; set; }
         public virtual int Kullanici_ID { get; set; }
+        public decimal Degisim_Miktari { get; set; }
+        public DateTime Tarihi { get; set; }
         public virtual int Durum_ID { get; set; }
     }
 }

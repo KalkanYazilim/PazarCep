@@ -10,16 +10,14 @@ namespace pazarcep.entity.Concretes
 {
     public class Teslimat_Durumu : IEntity
     {
-        Burası yazılmadı
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
-        public virtual int Kullanici_ID { get; set; }
+        public int Teslimat_ID { get; set; }
+        public virtual int Tasimaci_ID { get; set; }
+        public virtual int Yuk_ID { get; set; }
+        public virtual int Gonderen_ID { get; set; }
+        public decimal Alici_ID { get; set; }
+        public DateTime Teslimat_Tarihi { get; set; }
         public virtual int Durum_ID { get; set; }
+        public virtual int Randevu_ID { get; set; }
     }
 }

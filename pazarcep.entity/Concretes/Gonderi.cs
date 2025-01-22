@@ -13,7 +13,6 @@ namespace pazarcep.entity.Concretes
         [Key]
         public int Gonderi_ID { get; set; }
         public virtual string Kullanici_ID { get; set; }
-
         public string Metin { get; set; }
         public string MedyaYolu { get; set; }
         public DateTime OlusturmaTarihi { get; set; }

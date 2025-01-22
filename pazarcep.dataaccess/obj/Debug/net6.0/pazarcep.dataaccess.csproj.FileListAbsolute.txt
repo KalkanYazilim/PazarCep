@@ -1,0 +1,16 @@
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.AssemblyInfoInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.AssemblyInfo.cs
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.csproj.CoreCompileInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.sourcelink.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\bin\Debug\net6.0\pazarcep.dataaccess.deps.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\bin\Debug\net6.0\pazarcep.dataaccess.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\bin\Debug\net6.0\pazarcep.dataaccess.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\bin\Debug\net6.0\pazarcep.entity.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\bin\Debug\net6.0\pazarcep.entity.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.csproj.AssemblyReference.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.4B6EC703.Up2Date
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\refint\pazarcep.dataaccess.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\pazarcep.dataaccess.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.dataaccess\obj\Debug\net6.0\ref\pazarcep.dataaccess.dll

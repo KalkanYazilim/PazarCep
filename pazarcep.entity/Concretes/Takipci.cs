@@ -10,16 +10,10 @@ namespace pazarcep.entity.Concretes
 {
     public class Takipci : IEntity
     {
-        Burası yazılmadı
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
-        public virtual int Kullanici_ID { get; set; }
-        public virtual int Durum_ID { get; set; }
+        public int Takip_ID { get; set; }
+        public virtual int TakipEdilen_ID { get; set; }
+        public virtual int TakipEden_ID { get; set; }
+        public DateTime Takip_Tarihi { get; set; }
     }
 }
