@@ -10,7 +10,7 @@ namespace pazarcep.entity.Concretes
 {
     public class ilan : IEntity
     {
-        Burası yazılmadı
+        
         [Key]
         public int Arac_ID { get; set; }
         public string Arac_Adi { get; set; }
@@ -21,5 +21,6 @@ namespace pazarcep.entity.Concretes
         public bool Sogutucu { get; set; }
         public virtual int Kullanici_ID { get; set; }
         public virtual int Durum_ID { get; set; }
+        Burası yazılmadı
     }
 }
