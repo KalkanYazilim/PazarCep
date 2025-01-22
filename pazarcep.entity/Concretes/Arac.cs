@@ -13,7 +13,6 @@ namespace pazarcep.entity.Concretes
         [Key]
         public int Arac_ID { get; set; }
         public string Arac_Adi { get; set; }
-
         public string Arac_Plaka { get; set; }
         public string Arac_Turu { get; set; }
         public decimal Tasima_Kapasitesi { get; set; }

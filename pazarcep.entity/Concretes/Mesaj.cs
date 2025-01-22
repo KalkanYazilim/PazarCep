@@ -10,16 +10,12 @@ namespace pazarcep.entity.Concretes
 {
     public class Mesaj : IEntity
     {
-        Burası yazılmadı
         [Key]
-        public int Arac_ID { get; set; }
-        public string Arac_Adi { get; set; }
-
-        public string Arac_Plaka { get; set; }
-        public string Arac_Turu { get; set; }
-        public decimal Tasima_Kapasitesi { get; set; }
-        public bool Sogutucu { get; set; }
-        public virtual int Kullanici_ID { get; set; }
+        public int Mesaj_ID { get; set; }
+        public int Gonderen_ID { get; set; }
+        public int Alici_ID { get; set; }
+        public string Metin { get; set; }
+        public DateTime Gonderim_Tarihi { get; set; }
         public virtual int Durum_ID { get; set; }
     }
 }

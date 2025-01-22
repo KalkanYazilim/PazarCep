@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "pazarcep.dataaccess/1.0.0": {
+        "dependencies": {
+          "pazarcep.entity": "1.0.0"
+        },
+        "runtime": {
+          "pazarcep.dataaccess.dll": {}
+        }
+      },
+      "pazarcep.entity/1.0.0": {
+        "runtime": {
+          "pazarcep.entity.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "pazarcep.dataaccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "pazarcep.entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
