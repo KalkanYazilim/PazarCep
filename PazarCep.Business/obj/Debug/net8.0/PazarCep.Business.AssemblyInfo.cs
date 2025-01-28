@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b44f9a7bd3c892a468839dca1601853cfde99ecc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e964cd4630c4fe414946399f3b32c94bd3512ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
