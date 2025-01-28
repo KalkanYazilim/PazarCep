@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pazarcep.ui", "pazarcep.ui\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pazarcep.dataaccess", "pazarcep.dataaccess\pazarcep.dataaccess.csproj", "{5042FE89-587D-4312-8E44-737F0C43C60D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarCep.Business", "PazarCep.Business\PazarCep.Business.csproj", "{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5042FE89-587D-4312-8E44-737F0C43C60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5042FE89-587D-4312-8E44-737F0C43C60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5042FE89-587D-4312-8E44-737F0C43C60D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
