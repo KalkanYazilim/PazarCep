@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: AracController
         public ActionResult Index()
         {
-            return View();
+            var AracListesi_Var = _AracService.GetAll();
+            return View(AracListesi_Var);
         }
 
         // GET: AracController/Details/5

@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: RandevuController
         public ActionResult Index()
         {
-            return View();
+            var RandevuListesi_Var = _RandevuService.GetAll();
+            return View(RandevuListesi_Var);
         }
 
         // GET: RandevuController/Details/5

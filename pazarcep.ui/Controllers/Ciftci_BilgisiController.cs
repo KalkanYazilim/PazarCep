@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: Ciftci_BilgisiController
         public ActionResult Index()
         {
-            return View();
+            var Ciftci_BilgisiListesi_Var = _Ciftci_BilgisiService.GetAll();
+            return View(Ciftci_BilgisiListesi_Var);
         }
 
         // GET: Ciftci_BilgisiController/Details/5

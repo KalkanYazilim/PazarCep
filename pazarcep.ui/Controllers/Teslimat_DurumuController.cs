@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: Teslimat_DurumuController
         public ActionResult Index()
         {
-            return View();
+            var Teslimat_DurumuListesi_Var = _Teslimat_DurumuService.GetAll();
+            return View(Teslimat_DurumuListesi_Var);
         }
 
         // GET: Teslimat_DurumuController/Details/5

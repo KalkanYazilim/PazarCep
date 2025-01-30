@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: BildirimController
         public ActionResult Index()
         {
-            return View();
+            var BildirimListesi_Var = _BildirimService.GetAll();
+            return View(BildirimListesi_Var);
         }
 
         // GET: BildirimController/Details/5

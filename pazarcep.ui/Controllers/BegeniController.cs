@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: BegeniController
         public ActionResult Index()
         {
-            return View();
+            var BegeniListesi_Var = _BegeniService.GetAll();
+            return View(BegeniListesi_Var);
         }
 
         // GET: BegeniController/Details/5

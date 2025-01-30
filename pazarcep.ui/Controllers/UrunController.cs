@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: UrunController
         public ActionResult Index()
         {
-            return View();
+            var UrunListesi_Var = _UrunService.GetAll();
+            return View(UrunListesi_Var);
         }
 
         // GET: UrunController/Details/5

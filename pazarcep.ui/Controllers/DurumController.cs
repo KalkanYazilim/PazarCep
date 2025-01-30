@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: DurumController
         public ActionResult Index()
         {
-            return View();
+            var DurumListesi_Var = _DurumService.GetAll();
+            return View(DurumListesi_Var);
         }
 
         // GET: DurumController/Details/5

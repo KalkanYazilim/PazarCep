@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: KullaniciController
         public ActionResult Index()
         {
-            return View();
+            var KullaniciListesi_Var = _KullaniciService.GetAll();
+            return View(KullaniciListesi_Var);
         }
 
         // GET: KullaniciController/Details/5
