@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: MesajController
         public ActionResult Index()
         {
-            return View();
+            var MesajListesi_Var = _MesajService.GetAll();
+            return View(MesajListesi_Var);
         }
 
         // GET: MesajController/Details/5

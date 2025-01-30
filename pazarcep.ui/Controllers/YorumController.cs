@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: YorumController
         public ActionResult Index()
         {
-            return View();
+            var YorumListesi_Var = _YorumService.GetAll();
+            return View(YorumListesi_Var);
         }
 
         // GET: YorumController/Details/5

@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: KategoriController
         public ActionResult Index()
         {
-            return View();
+            var KategoriListesi_Var = _KategoriService.GetAll();
+            return View(KategoriListesi_Var);
         }
 
         // GET: KategoriController/Details/5

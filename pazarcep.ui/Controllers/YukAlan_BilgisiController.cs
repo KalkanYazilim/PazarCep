@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: YukAlan_BilgisiController
         public ActionResult Index()
         {
-            return View();
+            var YukAlan_BilgisiListesi_Var = _YukAlan_BilgisiService.GetAll();
+            return View(YukAlan_BilgisiListesi_Var);
         }
 
         // GET: YukAlan_BilgisiController/Details/5

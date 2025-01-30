@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: PuanlarController
         public ActionResult Index()
         {
-            return View();
+            var PuanlarListesi_Var = _PuanlarService.GetAll();
+            return View(PuanlarListesi_Var);
         }
 
         // GET: PuanlarController/Details/5

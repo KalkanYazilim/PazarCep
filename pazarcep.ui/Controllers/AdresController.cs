@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: AdresController
         public ActionResult Index()
         {
-            return View();
+            var AdresListesi_Var = _adresService.GetAll();
+            return View(AdresListesi_Var);
         }
 
         // GET: AdresController/Details/5

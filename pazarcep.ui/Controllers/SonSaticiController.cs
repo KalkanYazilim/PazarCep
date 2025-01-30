@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: SonSaticiController
         public ActionResult Index()
         {
-            return View();
+            var SonSaticiListesi_Var = _SonSaticiService.GetAll();
+            return View(SonSaticiListesi_Var);
         }
 
         // GET: SonSaticiController/Details/5

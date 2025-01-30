@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: GonderiController
         public ActionResult Index()
         {
-            return View();
+            var GonderiListesi_Var = _GonderiService.GetAll();
+            return View(GonderiListesi_Var);
         }
 
         // GET: GonderiController/Details/5

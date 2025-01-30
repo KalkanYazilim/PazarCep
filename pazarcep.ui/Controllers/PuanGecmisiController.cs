@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: PuanGecmisiController
         public ActionResult Index()
         {
-            return View();
+            var PuanGecmisiListesi_Var = _PuanGecmisiService.GetAll();
+            return View(PuanGecmisiListesi_Var);
         }
 
         // GET: PuanGecmisiController/Details/5

@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: TakipciController
         public ActionResult Index()
         {
-            return View();
+            var TakipciListesi_Var = _TakipciService.GetAll();
+            return View(TakipciListesi_Var);
         }
 
         // GET: TakipciController/Details/5

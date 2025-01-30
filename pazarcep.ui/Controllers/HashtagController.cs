@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: HashtagController
         public ActionResult Index()
         {
-            return View();
+            var HashtagListesi_Var = _HashtagService.GetAll();
+            return View(HashtagListesi_Var);
         }
 
         // GET: HashtagController/Details/5

@@ -18,7 +18,8 @@ namespace pazarcep.ui.Controllers
         // GET: Tasimaci_BilgisiController
         public ActionResult Index()
         {
-            return View();
+            var Tasimaci_BilgisiListesi_Var = _Tasimaci_BilgisiService.GetAll();
+            return View(Tasimaci_BilgisiListesi_Var);
         }
 
         // GET: Tasimaci_BilgisiController/Details/5
