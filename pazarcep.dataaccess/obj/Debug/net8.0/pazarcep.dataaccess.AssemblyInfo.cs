@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pazarcep.dataaccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49e74da39a56834e1df9e1ba42ea76abfc4c7997")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be64a96be5d2d9ea71cb8e7b7bb8a5cbc9958f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("pazarcep.dataaccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pazarcep.dataaccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

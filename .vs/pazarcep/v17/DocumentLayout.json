@@ -3,319 +3,156 @@
   "WorkspaceRootPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\bildirimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\bildirimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\yukveren_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\yukveren_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\araccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\araccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\yukveren_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\yukveren_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\adrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\adrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\yuk\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\yuk\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\pazarcep.entity.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\pazarcep.entity.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\yukcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\yukcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\pazarcep.dataaccess.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\pazarcep.dataaccess.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\yukalan_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\yukalan_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\pazarcep.ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\pazarcep.ui.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\yukalan_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\yukalan_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.business\\pazarcep.business.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|solutionrelative:pazarcep.business\\pazarcep.business.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\yorum\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\yorum\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\yorumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\yorumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\pazarcep.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\pazarcep.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\urun\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\urun\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.business\\abstracts\\iadresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|solutionrelative:pazarcep.business\\abstracts\\iadresservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\uruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\uruncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\abstracts\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\abstracts\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\teslimat_durumu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\teslimat_durumu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.business\\concretes\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|solutionrelative:pazarcep.business\\concretes\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\teslimat_durumucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\teslimat_durumucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\tasimaci_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\tasimaci_bilgisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\tasimaci_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\tasimaci_bilgisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\ciftci_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\ciftci_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\takipci\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\takipci\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\arac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\arac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\takipcicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\takipcicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.business\\concretes\\bildirimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF7A679F-B3F9-43AA-9BC0-928097BDABD5}|PazarCep.Business\\PazarCep.Business.csproj|solutionrelative:pazarcep.business\\concretes\\bildirimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\sonsatici\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\sonsatici\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\yorumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\yorumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\sonsaticicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\sonsaticicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\adresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\adresrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\randevu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\randevu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\urunrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\urunrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\randevucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\tasimaci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\tasimaci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\puanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\puanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\takipcirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\takipcirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\puanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\puanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\sonsaticirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\sonsaticirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\puangecmisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\puangecmisi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\randevurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\randevurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\puangecmisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\puangecmisicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\puanlarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\puanlarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\mesaj\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\mesaj\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\puangecmisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\puangecmisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\mesajcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\mesajcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\mesajrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\mesajrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\kullanici\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\kullanici\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\kategorirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\kategorirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\kullanicicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\ilanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\ilanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\kategori\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\kategori\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\hashtagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\hashtagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\kategoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\kategoricontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\gonderirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\gonderirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\ilan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\ilan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\gonderihashtagirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\gonderihashtagirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\ilancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\ilancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\durumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\durumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\hashtag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\hashtag\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\ciftci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\ciftci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\hashtagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\hashtagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\bildirimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\bildirimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\gonderihashtagi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\gonderihashtagi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\begenirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\begenirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\gonderihashtagicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\gonderihashtagicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\concretes\\repositories\\aracrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\concretes\\repositories\\aracrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\views\\gonderi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\views\\gonderi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ihashtagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ihashtagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ipuanlarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ipuanlarrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iyukrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iyukrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iyukveren_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iyukveren_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iciftci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iciftci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iyukalan_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iyukalan_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iyorumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iyorumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iurunrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iurunrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iteslimat_durumurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iteslimat_durumurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\itasimaci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\itasimaci_bilgisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\itakipcirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\itakipcirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ibegenirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ibegenirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ibildirimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ibildirimrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\igonderihashtagirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\igonderihashtagirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\igonderirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\igonderirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\imesajrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\imesajrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\isonsaticirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\isonsaticirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\irandevurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\irandevurepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ipuangecmisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ipuangecmisirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ikategorirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ikategorirepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\iilanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\iilanrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.dataaccess\\abstracts\\ldurumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5042FE89-587D-4312-8E44-737F0C43C60D}|pazarcep.dataaccess\\pazarcep.dataaccess.csproj|solutionrelative:pazarcep.dataaccess\\abstracts\\ldurumrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\puangecmisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\puangecmisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\gonderihashtagi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\gonderihashtagi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\begeni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\begeni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\bildirim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\bildirim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\durum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\durum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\gonderi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\gonderi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\hashtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\hashtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\ilan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\ilan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\kategori.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\kategori.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\kullanici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\mesaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\mesaj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\randevu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\randevu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\sonsatici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\sonsatici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\takipci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\takipci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\tasimaci_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\tasimaci_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\teslimat_durumu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\teslimat_durumu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\urun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\urun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\yuk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\yuk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\yukalan_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\yukalan_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.entity\\concretes\\yukveren_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55A7E604-91A8-4AE4-9F0B-A49BFD93BA9A}|pazarcep.entity\\pazarcep.entity.csproj|solutionrelative:pazarcep.entity\\concretes\\yukveren_bilgisi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|c:\\users\\kalkan\\desktop\\onemliler\\projeler\\9_pazarcep\\pazarcep\\pazarcep.ui\\controllers\\gondericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1EB5B82-6766-49EB-B2E5-00C2D38A82FA}|pazarcep.ui\\pazarcep.ui.csproj|solutionrelative:pazarcep.ui\\controllers\\gondericontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -334,949 +171,459 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BildirimController.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\BildirimController.cs",
-              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\BildirimController.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\BildirimController.cs",
-              "RelativeToolTip": "pazarcep.ui\\Controllers\\BildirimController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T19:38:29.621Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\YukVeren_Bilgisi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\YukVeren_Bilgisi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\YukVeren_Bilgisi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\YukVeren_Bilgisi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:17:56.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AracController.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\AracController.cs",
-              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\AracController.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\AracController.cs",
-              "RelativeToolTip": "pazarcep.ui\\Controllers\\AracController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Title": "YukVeren_BilgisiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukVeren_BilgisiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\YukVeren_BilgisiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukVeren_BilgisiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\YukVeren_BilgisiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T19:38:23.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T21:17:51.737Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdresController.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\AdresController.cs",
-              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\AdresController.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\AdresController.cs",
-              "RelativeToolTip": "pazarcep.ui\\Controllers\\AdresController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:34:38.887Z",
-              "EditorCaption": ""
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Yuk\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Yuk\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Yuk\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Yuk\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:17:49.188Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "pazarcep.entity",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\pazarcep.entity.csproj",
-              "RelativeDocumentMoniker": "pazarcep.entity\\pazarcep.entity.csproj",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\pazarcep.entity.csproj",
-              "RelativeToolTip": "pazarcep.entity\\pazarcep.entity.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-30T16:27:38.039Z"
+              "Title": "YukController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\YukController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\YukController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:17:43.827Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "pazarcep.dataaccess",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
-              "RelativeToolTip": "pazarcep.dataaccess\\pazarcep.dataaccess.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-30T16:27:32.952Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\YukAlan_Bilgisi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\YukAlan_Bilgisi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\YukAlan_Bilgisi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\YukAlan_Bilgisi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:17:41.753Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "pazarcep.ui",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\pazarcep.ui.csproj",
-              "RelativeDocumentMoniker": "pazarcep.ui\\pazarcep.ui.csproj",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\pazarcep.ui.csproj",
-              "RelativeToolTip": "pazarcep.ui\\pazarcep.ui.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-30T16:27:03.829Z"
+              "Title": "YukAlan_BilgisiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukAlan_BilgisiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\YukAlan_BilgisiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YukAlan_BilgisiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\YukAlan_BilgisiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:17:35.605Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PazarCep.Business",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\PazarCep.Business.csproj",
-              "RelativeDocumentMoniker": "PazarCep.Business\\PazarCep.Business.csproj",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\PazarCep.Business.csproj",
-              "RelativeToolTip": "PazarCep.Business\\PazarCep.Business.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-30T16:26:46.233Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Yorum\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Yorum\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Yorum\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Yorum\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:17:33.309Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAAEYHAAAAAAAAAAAtwFYHAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-01-30T16:24:46.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseService.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Concretes\\BaseService.cs",
-              "RelativeDocumentMoniker": "PazarCep.Business\\Concretes\\BaseService.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Concretes\\BaseService.cs",
-              "RelativeToolTip": "PazarCep.Business\\Concretes\\BaseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "YorumController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YorumController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\YorumController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\YorumController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\YorumController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:00:30.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IAdresService.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Abstracts\\IAdresService.cs",
-              "RelativeDocumentMoniker": "PazarCep.Business\\Abstracts\\IAdresService.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Abstracts\\IAdresService.cs",
-              "RelativeToolTip": "PazarCep.Business\\Abstracts\\IAdresService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T12:38:23.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "TakipciRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\TakipciRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\TakipciRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\TakipciRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\TakipciRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:13:33.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SonSaticiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\SonSaticiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\SonSaticiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\SonSaticiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\SonSaticiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:12:25.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RandevuRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\RandevuRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\RandevuRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\RandevuRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\RandevuRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:11:24.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Arac.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Arac.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Arac.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Arac.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Arac.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T21:59:10.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Ciftci_Bilgisi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Ciftci_Bilgisi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Ciftci_Bilgisi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Ciftci_Bilgisi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Ciftci_Bilgisi.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA8AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T21:58:17.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\BaseRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BaseRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\BaseRepository.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDAAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T18:40:43.467Z"
+              "WhenOpened": "2025-01-30T21:17:25.92Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "pazarcep.ui.csproj",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\pazarcep.ui.csproj",
-              "RelativeDocumentMoniker": "pazarcep.ui\\pazarcep.ui.csproj",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\pazarcep.ui.csproj",
-              "RelativeToolTip": "pazarcep.ui\\pazarcep.ui.csproj",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Urun\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Urun\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Urun\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Urun\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-20T22:21:47.368Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:17:23.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "YorumRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\YorumRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\YorumRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\YorumRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\YorumRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABRAAAA",
+              "DocumentIndex": 9,
+              "Title": "UrunController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\UrunController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\UrunController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\UrunController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\UrunController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:20:16.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBaseRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IBaseRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBaseRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IBaseRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T18:36:12.323Z"
+              "WhenOpened": "2025-01-30T21:17:13.583Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Abstracts\\IEntity.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Abstracts\\IEntity.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Abstracts\\IEntity.cs",
-              "RelativeToolTip": "pazarcep.entity\\Abstracts\\IEntity.cs",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Teslimat_Durumu\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Teslimat_Durumu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Teslimat_Durumu\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Teslimat_Durumu\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:16:48.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Teslimat_DurumuController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\Teslimat_DurumuController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\Teslimat_DurumuController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\Teslimat_DurumuController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\Teslimat_DurumuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T12:38:45.468Z"
+              "WhenOpened": "2025-01-30T21:16:42.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Tasimaci_Bilgisi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Tasimaci_Bilgisi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Tasimaci_Bilgisi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Tasimaci_Bilgisi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:16:40.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Tasimaci_BilgisiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\Tasimaci_BilgisiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\Tasimaci_BilgisiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\Tasimaci_BilgisiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\Tasimaci_BilgisiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:16:31.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Takipci\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Takipci\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Takipci\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Takipci\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:16:24.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TakipciController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\TakipciController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\TakipciController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\TakipciController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\TakipciController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:16:17.906Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "BildirimService.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Concretes\\BildirimService.cs",
-              "RelativeDocumentMoniker": "PazarCep.Business\\Concretes\\BildirimService.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.Business\\Concretes\\BildirimService.cs",
-              "RelativeToolTip": "PazarCep.Business\\Concretes\\BildirimService.cs",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\SonSatici\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\SonSatici\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\SonSatici\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\SonSatici\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T12:38:29.941Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:16:14.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Tasimaci_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\Tasimaci_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\Tasimaci_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\Tasimaci_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\Tasimaci_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAByAAAA",
+              "DocumentIndex": 17,
+              "Title": "SonSaticiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\SonSaticiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\SonSaticiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\SonSaticiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\SonSaticiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:14:12.478Z"
+              "WhenOpened": "2025-01-30T21:16:06.498Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "AdresRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\AdresRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\AdresRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\AdresRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\AdresRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T18:49:30.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "PuanlarRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\PuanlarRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\PuanlarRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\PuanlarRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\PuanlarRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:10:57.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PuanGecmisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\PuanGecmisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\PuanGecmisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\PuanGecmisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\PuanGecmisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:10:14.829Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Randevu\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Randevu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Randevu\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Randevu\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:16:01.597Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "UrunRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\UrunRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\UrunRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\UrunRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\UrunRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABOAAAA",
+              "Title": "RandevuController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\RandevuController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\RandevuController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\RandevuController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\RandevuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:16:28.967Z"
+              "WhenOpened": "2025-01-30T21:15:55.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Puanlar\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Puanlar\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Puanlar\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Puanlar\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:51.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PuanlarController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\PuanlarController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\PuanlarController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\PuanlarController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\PuanlarController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:15:46.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\PuanGecmisi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\PuanGecmisi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\PuanGecmisi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\PuanGecmisi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:44.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PuanGecmisiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\PuanGecmisiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\PuanGecmisiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\PuanGecmisiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\PuanGecmisiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:15:37.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Mesaj\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Mesaj\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Mesaj\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Mesaj\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:34.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MesajController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\MesajController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\MesajController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\MesajController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\MesajController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T21:15:29.567Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "MesajRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\MesajRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\MesajRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\MesajRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\MesajRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:09:33.362Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Kullanici\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Kullanici\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Kullanici\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Kullanici\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:26.996Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "KategoriRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\KategoriRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\KategoriRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\KategoriRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\KategoriRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
+              "Title": "KullaniciController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\KullaniciController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\KullaniciController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\KullaniciController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\KullaniciController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:06:11.259Z"
+              "WhenOpened": "2025-01-30T21:15:20.559Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "ilanRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\ilanRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\ilanRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\ilanRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\ilanRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:05:31.642Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Kategori\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Kategori\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Kategori\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Kategori\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:18.193Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "HashtagRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\HashtagRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\HashtagRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\HashtagRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\HashtagRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABXAAAA",
+              "Title": "KategoriController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\KategoriController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\KategoriController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\KategoriController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\KategoriController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:04:46.065Z"
+              "WhenOpened": "2025-01-30T21:15:10.93Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "GonderiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\GonderiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\GonderiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\GonderiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\GonderiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:03:52.955Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\ilan\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\ilan\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\ilan\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\ilan\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:15:08.394Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "GonderiHashtagiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\GonderiHashtagiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\GonderiHashtagiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\GonderiHashtagiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\GonderiHashtagiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABvAAAA",
+              "Title": "ilanController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\ilanController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\ilanController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\ilanController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\ilanController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:03:09.898Z"
+              "WhenOpened": "2025-01-30T21:15:01.863Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "DurumRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\DurumRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\DurumRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\DurumRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\DurumRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:02:25.126Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Hashtag\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Hashtag\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Hashtag\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Hashtag\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:14:58.592Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "Ciftci_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\Ciftci_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\Ciftci_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\Ciftci_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\Ciftci_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABsAAAA",
+              "Title": "HashtagController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\HashtagController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\HashtagController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\HashtagController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\HashtagController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:01:31.282Z"
+              "WhenOpened": "2025-01-30T21:14:52.572Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "BildirimRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BildirimRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\BildirimRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BildirimRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\BildirimRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:00:50.645Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\GonderiHashtagi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\GonderiHashtagi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\GonderiHashtagi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\GonderiHashtagi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:14:41.949Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
-              "Title": "BegeniRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BegeniRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\BegeniRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\BegeniRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\BegeniRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA5AAAA",
+              "Title": "GonderiHashtagiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\GonderiHashtagiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\GonderiHashtagiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\GonderiHashtagiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\GonderiHashtagiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:59:53.616Z"
+              "WhenOpened": "2025-01-30T21:14:34.24Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "AracRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\AracRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Concretes\\Repositories\\AracRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Concretes\\Repositories\\AracRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Concretes\\Repositories\\AracRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:59:07.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IPuanlarRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IPuanlarRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IPuanlarRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IPuanlarRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IPuanlarRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:48:38.988Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Gonderi\\Index.cshtml",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Views\\Gonderi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Views\\Gonderi\\Index.cshtml",
+              "RelativeToolTip": "pazarcep.ui\\Views\\Gonderi\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-30T21:14:29.848Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 37,
-              "Title": "IHashtagRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IHashtagRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IHashtagRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IHashtagRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IHashtagRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABBAAAA",
+              "Title": "GonderiController.cs",
+              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\GonderiController.cs",
+              "RelativeDocumentMoniker": "pazarcep.ui\\Controllers\\GonderiController.cs",
+              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\Controllers\\GonderiController.cs",
+              "RelativeToolTip": "pazarcep.ui\\Controllers\\GonderiController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:43:58.153Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IYukRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IYukRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IYukRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:55:39.441Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IYukVeren_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukVeren_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IYukVeren_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukVeren_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IYukVeren_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:56:31.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "IYukAlan_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukAlan_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IYukAlan_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYukAlan_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IYukAlan_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:55:08.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IYorumRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYorumRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IYorumRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IYorumRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IYorumRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:54:12.663Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IUrunRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IUrunRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IUrunRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IUrunRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IUrunRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:53:36.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ICiftci_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ICiftci_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\ICiftci_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ICiftci_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\ICiftci_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:39:04.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ITeslimat_DurumuRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITeslimat_DurumuRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\ITeslimat_DurumuRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITeslimat_DurumuRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\ITeslimat_DurumuRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:52:54.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ITasimaci_BilgisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITasimaci_BilgisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\ITasimaci_BilgisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITasimaci_BilgisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\ITasimaci_BilgisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:52:05.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ITakipciRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITakipciRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\ITakipciRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ITakipciRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\ITakipciRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:51:25.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "IGonderiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IGonderiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IGonderiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IGonderiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IGonderiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:42:36.759Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "IGonderiHashtagiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IGonderiHashtagiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IGonderiHashtagiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IGonderiHashtagiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IGonderiHashtagiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:40:38.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "IBildirimRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBildirimRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IBildirimRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBildirimRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IBildirimRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:37:46.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "IBegeniRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBegeniRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IBegeniRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IBegeniRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IBegeniRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:33:28.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "IMesajRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IMesajRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IMesajRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IMesajRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IMesajRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:46:59.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "ISonSaticiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ISonSaticiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\ISonSaticiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\ISonSaticiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\ISonSaticiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:50:27.186Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "IRandevuRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IRandevuRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IRandevuRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IRandevuRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IRandevuRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABBAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:49:35.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "IPuanGecmisiRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IPuanGecmisiRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IPuanGecmisiRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IPuanGecmisiRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IPuanGecmisiRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:47:49.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "IKategoriRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IKategoriRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IKategoriRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IKategoriRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IKategoriRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:45:44.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "IilanRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IilanRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\IilanRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\IilanRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\IilanRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:44:54.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "lDurumRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\lDurumRepository.cs",
-              "RelativeDocumentMoniker": "pazarcep.dataaccess\\Abstracts\\lDurumRepository.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.dataaccess\\Abstracts\\lDurumRepository.cs",
-              "RelativeToolTip": "pazarcep.dataaccess\\Abstracts\\lDurumRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T19:40:02.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "PuanGecmisi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\PuanGecmisi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\PuanGecmisi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\PuanGecmisi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\PuanGecmisi.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:26:58.551Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "Bildirim.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Bildirim.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Bildirim.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Bildirim.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Bildirim.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T21:58:30.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "Begeni.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Begeni.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Begeni.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Begeni.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Begeni.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:15:22.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "GonderiHashtagi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\GonderiHashtagi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\GonderiHashtagi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\GonderiHashtagi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\GonderiHashtagi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:23:15.236Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "Hashtag.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Hashtag.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Hashtag.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Hashtag.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Hashtag.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:24:41.958Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "ilan.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\ilan.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\ilan.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\ilan.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\ilan.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:25:14.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "Kategori.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Kategori.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Kategori.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Kategori.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Kategori.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:25:50.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "Kullanici.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Kullanici.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Kullanici.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Kullanici.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Kullanici.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:26:09.136Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "Durum.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Durum.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Durum.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Durum.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Durum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:18:04.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "Gonderi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Gonderi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Gonderi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Gonderi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Gonderi.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:24:02.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "Mesaj.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Mesaj.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Mesaj.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Mesaj.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Mesaj.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:26:26.565Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "Randevu.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Randevu.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Randevu.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Randevu.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Randevu.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:28:29.005Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "SonSatici.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\SonSatici.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\SonSatici.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\SonSatici.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\SonSatici.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:28:54.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "Takipci.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Takipci.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Takipci.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Takipci.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Takipci.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:29:14.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "Tasimaci_Bilgisi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Tasimaci_Bilgisi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Tasimaci_Bilgisi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Tasimaci_Bilgisi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Tasimaci_Bilgisi.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:29:35.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "Teslimat_Durumu.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Teslimat_Durumu.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Teslimat_Durumu.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Teslimat_Durumu.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Teslimat_Durumu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:30:03.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "Urun.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Urun.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Urun.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Urun.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Urun.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:30:46.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "Yuk.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Yuk.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\Yuk.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\Yuk.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\Yuk.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:32:22.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "YukAlan_Bilgisi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\YukAlan_Bilgisi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\YukAlan_Bilgisi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\YukAlan_Bilgisi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\YukAlan_Bilgisi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:33:13.426Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 78,
-              "Title": "YukVeren_Bilgisi.cs",
-              "DocumentMoniker": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\YukVeren_Bilgisi.cs",
-              "RelativeDocumentMoniker": "pazarcep.entity\\Concretes\\YukVeren_Bilgisi.cs",
-              "ToolTip": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.entity\\Concretes\\YukVeren_Bilgisi.cs",
-              "RelativeToolTip": "pazarcep.entity\\Concretes\\YukVeren_Bilgisi.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T22:33:40.719Z"
+              "WhenOpened": "2025-01-30T21:14:08.77Z"
             }
           ]
         }
