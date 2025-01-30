@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pazarcep.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e10a41f4de63fcc0f1b67e50669409d0f4886a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be64a96be5d2d9ea71cb8e7b7bb8a5cbc9958f5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("pazarcep.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pazarcep.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
