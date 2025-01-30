@@ -1,0 +1,12 @@
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\bin\Debug\net8.0\pazarcep.entity.deps.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\bin\Debug\net8.0\pazarcep.entity.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\bin\Debug\net8.0\pazarcep.entity.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.AssemblyInfoInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.AssemblyInfo.cs
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.csproj.CoreCompileInputs.cache
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.sourcelink.json
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\refint\pazarcep.entity.dll
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\pazarcep.entity.pdb
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.entity\obj\Debug\net8.0\ref\pazarcep.entity.dll
