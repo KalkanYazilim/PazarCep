@@ -62,3 +62,5 @@ Kullanıcıların Takvimleri profillerinden görüntülenebilsin. (Diğer Kullan
 Çiftçilerin Son ilaçlama yaptığı tarihten itibaren 15 gün sonrasına satış yapmalarına izin verilek şekilde bir düzenleme yapılacak. 
 
 Son Satıcıdan Ürünlerini hangi sıklıkla tedarik edeceği ve ürünle ilgili "Günlük, Haftalık, Aylık" ortalama yapacağı satış miktarı alınırsa Çiftçiye Satış kotası belirlememiz de yardımcı olabilir. 
+
+İşci bulma için onay kutusu kullanılabilir. (iş sahibine işçiler veya çavuşlar direk arayabilir!!)
