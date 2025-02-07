@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE cshtml>
+<cshtml lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,11 +20,39 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Gizlilik">Gizlilik</a>
                         </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(200,0,0);">
+            <div class="container">
+                <img src="img/Pazarcep_Logo.webp" style="max-width: 150px;"><a class="navbar-brand fw-bold" href="/AnaSayfa.cshtml">PazarCep</a><button data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" class="navbar-toggler" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" type="button"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/SM_AnaSayfa.cshtml">SM_AnaSayfa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/SM_Profil.cshtml">SM_Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Akis.cshtml">Akis</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Kesfet.cshtml">Kesfet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Mesajlar.cshtml">Mesajlar</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="/Kayit.cshtml">Kayıt Ol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Giris.cshtml">Giriş Yap</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Giris.cshtml">Çıkış Yap</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Profil.cshtml">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Siparislerim.cshtml">Siparişlerim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Sepetim.cshtml">Sepetim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Iletisim.cshtml">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Tekliflerim.cshtml">Tekliflerim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/SSS.cshtml">SSS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Urunlerim.cshtml">Ürünlerim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/YukIlanlarim.cshtml">Yük İlanlarım</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/YukBul.cshtml">Yük Bul</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Hakkimizda.cshtml">Hakkımızda</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,17 +63,22 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <footer class="text-center p-3" style="background-color:#f8f9fa;">
+        <span class="text-muted">© 2025 PazarCep Tüm hakları saklıdır.</span>
         <div class="container">
-            &copy; 2024 - pazarcep.ui - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2025 - pazarcep.ui - <a asp-area="" asp-page="/Gizlilik">Gizlilik</a>
         </div>
     </footer>
-
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - pazarcep.ui - <a asp-area="" asp-page="/Gizlilik">Gizlilik</a>
+        </div>
+    </footer>
+ *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-</html>
+</cshtml>

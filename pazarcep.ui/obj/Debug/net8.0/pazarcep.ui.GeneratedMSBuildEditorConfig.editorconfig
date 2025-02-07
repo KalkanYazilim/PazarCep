@@ -22,7 +22,7 @@ build_property.EnableComHosting =
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui
 build_property._RazorSourceGeneratorDebug = 
 
@@ -30,12 +30,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Gizlilik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2l6bGlsaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Shared/_ValidationScriptsPartial.cshtml]

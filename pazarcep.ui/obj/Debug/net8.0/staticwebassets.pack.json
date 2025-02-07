@@ -357,10 +357,6 @@
       "PackagePath": "staticwebassets\\Static\\assets\\img\\avatar-placeholder.png"
     },
     {
-      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\img\\dogs\\image2.jpeg",
-      "PackagePath": "staticwebassets\\Static\\assets\\img\\dogs\\image2.jpeg"
-    },
-    {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\img\\icon_chevron-down.svg",
       "PackagePath": "staticwebassets\\Static\\assets\\img\\icon_chevron-down.svg"
     },
@@ -377,24 +373,12 @@
       "PackagePath": "staticwebassets\\Static\\assets\\js\\Akis.js"
     },
     {
-      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\Billing-Table-with-Add-Row--Fixed-Header-Feature-Billing-Table-with-Add-Row--Fixed-Header.js",
-      "PackagePath": "staticwebassets\\Static\\assets\\js\\Billing-Table-with-Add-Row--Fixed-Header-Feature-Billing-Table-with-Add-Row--Fixed-Header.js"
-    },
-    {
-      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\Gamanet_Header_bs5.js",
-      "PackagePath": "staticwebassets\\Static\\assets\\js\\Gamanet_Header_bs5.js"
-    },
-    {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\Kesfet.js",
       "PackagePath": "staticwebassets\\Static\\assets\\js\\Kesfet.js"
     },
     {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\Mesajlar.js",
       "PackagePath": "staticwebassets\\Static\\assets\\js\\Mesajlar.js"
-    },
-    {
-      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\Profile-Edit-Form-profile.js",
-      "PackagePath": "staticwebassets\\Static\\assets\\js\\Profile-Edit-Form-profile.js"
     },
     {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\Static\\assets\\js\\SMO_Script.js",
@@ -431,6 +415,82 @@
     {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Biber.webp",
+      "PackagePath": "staticwebassets\\img\\Biber.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\C4-outline.svg",
+      "PackagePath": "staticwebassets\\img\\C4-outline.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Domates.webp",
+      "PackagePath": "staticwebassets\\img\\Domates.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Kiraz.webp",
+      "PackagePath": "staticwebassets\\img\\Kiraz.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\LogoText_PluginStore.svg",
+      "PackagePath": "staticwebassets\\img\\LogoText_PluginStore.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Patates.webp",
+      "PackagePath": "staticwebassets\\img\\Patates.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Patlican.webp",
+      "PackagePath": "staticwebassets\\img\\Patlican.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Pazarcep_Logo.webp",
+      "PackagePath": "staticwebassets\\img\\Pazarcep_Logo.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Roller\\Ciftci.webp",
+      "PackagePath": "staticwebassets\\img\\Roller\\Ciftci.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Roller\\SonSatici.webp",
+      "PackagePath": "staticwebassets\\img\\Roller\\SonSatici.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Roller\\Tasimaci_1.webp",
+      "PackagePath": "staticwebassets\\img\\Roller\\Tasimaci_1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Roller\\Tasimaci_2.webp",
+      "PackagePath": "staticwebassets\\img\\Roller\\Tasimaci_2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Roller\\YukVeren.webp",
+      "PackagePath": "staticwebassets\\img\\Roller\\YukVeren.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Salatalik.webp",
+      "PackagePath": "staticwebassets\\img\\Salatalik.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\Sogan.webp",
+      "PackagePath": "staticwebassets\\img\\Sogan.webp"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\avatar-placeholder.png",
+      "PackagePath": "staticwebassets\\img\\avatar-placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\icon_chevron-down.svg",
+      "PackagePath": "staticwebassets\\img\\icon_chevron-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\icon_log-out.svg",
+      "PackagePath": "staticwebassets\\img\\icon_log-out.svg"
+    },
+    {
+      "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\img\\icon_user.svg",
+      "PackagePath": "staticwebassets\\img\\icon_user.svg"
     },
     {
       "Id": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\pazarcep.ui\\wwwroot\\js\\site.js",
