@@ -562,3 +562,4 @@ C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\D
 C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\obj\Debug\net8.0\pazarcep.ui.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll

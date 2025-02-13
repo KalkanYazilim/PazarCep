@@ -31,7 +31,6 @@ namespace pazarcep.dataaccess.Concretes.Ef.Conctexts
         public DbSet<Mesaj> Mesajlar { get; set; }
         public DbSet<Puanlar> Puanlar { get; set; }
         public DbSet<PuanGecmisi> PuanGecmisleri { get; set; }
-        public DbSet<Randevu> Randevular { get; set; }
         public DbSet<SonSatici> SonSaticilar { get; set; }
         public DbSet<Takipci> Takipciler { get; set; }
         public DbSet<Tasimaci_Bilgisi> Tasimaci_Bilgileri { get; set; }

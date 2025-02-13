@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PazarCep.Business.Concretes
 {
-    public class RandevuService : BaseService<Randevu>, IRandevuService
+    public class RandevuService : BaseService<Randevu>,IRandevuService
     {
         public RandevuService(IBaseRepository<Randevu> repository) : base(repository)
         {
