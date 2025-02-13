@@ -9,17 +9,18 @@ namespace pazarcep.ui.Controllers
 {
     public class RandevuController : Controller
     {
+        /*
         private IRandevuService _RandevuService;
         public RandevuController()
         {
             _RandevuService = new RandevuService(new RandevuRepository());
-
-        }
+        
+        }*/
         // GET: RandevuController
         public ActionResult Index()
         {
-            var RandevuListesi_Var = _RandevuService.GetAll();
-            return View(RandevuListesi_Var);
+            //var RandevuListesi_Var = _RandevuService.GetAll();
+            return View();
         }
 
         // GET: RandevuController/Details/5
@@ -92,4 +93,6 @@ namespace pazarcep.ui.Controllers
         }
     }
 }
+
+
 
