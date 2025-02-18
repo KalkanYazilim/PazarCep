@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pazarcep.ui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d9f023fa121d09c3489778add8e42d444e4ce91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57824fb0184275619dc02854a9e0c50e640d044f")]
 [assembly: System.Reflection.AssemblyProductAttribute("pazarcep.ui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pazarcep.ui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
