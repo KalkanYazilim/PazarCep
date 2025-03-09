@@ -1,4 +1,5 @@
-﻿using pazarcep.entity.Abstracts;
+﻿using Microsoft.AspNetCore.Components.Web.Virtualization;
+using pazarcep.entity.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,13 +19,13 @@ namespace pazarcep.entity.Concretes
         public string TC_No { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
-        public string Rol { get; set; }
+        public virtual int Rol_ID { get; set; }
         public string il { get; set; }
         public string ilce { get; set; }
         public string Mahalle_Koy { get; set; }
         public string Cadde_Sokak { get; set; }
         public DateTime Kayit_Tarihi { get; set; }
-        public int Durum_ID { get; set; }
+        public virtual int Durum_ID { get; set; }
         public string Resim_Yolu { get; set; }
     }
 }
