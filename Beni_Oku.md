@@ -64,3 +64,7 @@ Kullanıcıların Takvimleri profillerinden görüntülenebilsin. (Diğer Kullan
 Son Satıcıdan Ürünlerini hangi sıklıkla tedarik edeceği ve ürünle ilgili "Günlük, Haftalık, Aylık" ortalama yapacağı satış miktarı alınırsa Çiftçiye Satış kotası belirlememiz de yardımcı olabilir. 
 
 İşci bulma için onay kutusu kullanılabilir. (iş sahibine işçiler veya çavuşlar direk arayabilir!!)
+
+Sisteme yeni Kayıt olanların Puan ve Yıldız ı diğer kişilerden geride kalması sorununu adil bir sınıra çekecek çözüm bulunmalı!!
+
+açık arttırma satış hakkı getirilebilir!! (Bu yapıyı ödül gibi getirilebilir!!)
