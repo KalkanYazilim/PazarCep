@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bd5de1b26887f3e3157db897c5a8138e600c136")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c18dd1a72d8e5560a1972c2e8e519cec8557886")]
 [assembly: System.Reflection.AssemblyProductAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PazarCep.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

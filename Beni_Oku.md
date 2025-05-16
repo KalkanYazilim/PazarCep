@@ -5,7 +5,11 @@ Admin
 Çiftçi
 Taşımacı
 Son Satıcı
-Yük Veren || Taşıtan 
+Yük Veren
+Yük Alan
+Tüketici (sadece gezebilir, alışveriş yapmaz)
+
+
 
 Çiftçi ve Satıcı Arasında bir randevu talep sistemi oluşturulursa meyvelerin korunması arttırılabilir. (Taşımacıları da ona göre düzenleyecek bir yapı oluşturulacak.)
 Uzun vade Randevu sistemide yapılabilir "Sözleşmeli" 
@@ -19,6 +23,7 @@ Puana göre otomatik alım satım sınırı konulacak. Puan yükseldikçe alım 
 
 Çogarafi yapıya göre alım satım hesaplanacak.
 Çiftçinin puanı çoğarafi yapısı baz alınarak Zamanla birlikte Dinamik planlanacak.
+Çiftçi 1 den fazla Adresi girebilmesi gerekiyor. (2 ve üzeri her yeni kaydedilecek edres için ücret alınabilir!!) 
 
 Çiftçiler Tarlalarından Resim ve Video paylaşabilecek. (Kendi ne ait olmayan resimler veya videolar tespit edildiğinde silinecek) Videolar "Kalkan_Çiftçiler" Youtube Kanalında yayınlanacak.
 
