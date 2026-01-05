@@ -1,0 +1,89 @@
+@{
+    Layout = "_BlankLayout";
+    ViewData["Title"] = "Kayıt Ol - PazarCep";
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/vendor/css/pages/page-auth.css" />
+}
+
+<div class="container-xxl">
+    <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+
+            <div class="card px-sm-6 px-0">
+                <div class="card-body">
+
+                    <!-- Logo -->
+                    <div class="app-brand justify-content-center mb-6">
+                        <a href="/" class="app-brand-link gap-2">
+                            <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
+                            <span class="app-brand-text demo text-heading fw-bold">@TempData.Peek("appName")</span>
+                        </a>
+                    </div>
+
+                    <h4 class="mb-1">Aramıza Katılın 🚀</h4>
+                    <p class="mb-6">
+                        PazarCep hesabınızı oluşturarak işlemlerinizi kolayca yönetmeye başlayabilirsiniz.
+                    </p>
+
+                    <form id="formAuthentication" class="mb-6" action="/" method="POST">
+
+                        <div class="mb-6">
+                            <label for="username" class="form-label">Kullanıcı Adı</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="username"
+                                   name="username"
+                                   placeholder="Kullanıcı adınızı girin"
+                                   autofocus />
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="email" class="form-label">E-posta</label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="email"
+                                   name="email"
+                                   placeholder="E-posta adresinizi girin" />
+                        </div>
+
+                        <div class="form-password-toggle">
+                            <label class="form-label" for="password">Parola</label>
+                            <div class="input-group input-group-merge">
+                                <input type="password"
+                                       id="password"
+                                       class="form-control"
+                                       name="password"
+                                       placeholder="••••••••••••" />
+                                <span class="input-group-text cursor-pointer">
+                                    <i class="icon-base bx bx-hide"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="my-7">
+                            <div class="form-check mb-0">
+                                <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
+                                <label class="form-check-label" for="terms-conditions">
+                                    <a href="javascript:void(0);">Gizlilik politikası ve kullanım şartlarını</a> kabul ediyorum.
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary d-grid w-100">Kayıt Ol</button>
+                    </form>
+
+                    <p class="text-center">
+                        <span>Zaten hesabınız var mı?</span>
+                        <a href="/Auth/LoginBasic">
+                            <span>Giriş yap</span>
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

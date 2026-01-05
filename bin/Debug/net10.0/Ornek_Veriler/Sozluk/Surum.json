@@ -1,0 +1,78 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - Sözlük",
+  "aciklama": "Sistem sözlükleri: iller, ilçeler, mahalleler, birimler ve kategori ağacı. Türkiye geneli coğrafya (TR) ve Çiftçi → Son Satıcı doğrudan modelinde; adresleme, teslimat planlama, ürün sınıflandırma ve raporlama için temel referans verilerini sağlar.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "Sozluk/Birimler.json",
+        "aciklama": "Miktar/ölçü birimleri ve paketleme birimleri (Kg, Kasa, Koli, Demet, Adet vb.). Ürün varyantları, sepet/sipariş kalemleri ve stok hareketleri bu listeyi kullanır.",
+        "minimumAdet": 30,
+        "hedefAdet": 120
+      },
+      {
+        "dosya": "Sozluk/iller.json",
+        "aciklama": "Türkiye illeri. Adres, depo, teslimat ve raporlarda referans olarak kullanılır.",
+        "minimumAdet": 81,
+        "hedefAdet": 81
+      },
+      {
+        "dosya": "Sozluk/ilceler.json",
+        "aciklama": "Türkiye ilçeleri (il bağlantılı). Adres ve rota planlama için kullanılır.",
+        "minimumAdet": 900,
+        "hedefAdet": 1100
+      },
+      {
+        "dosya": "Sozluk/Mahalleler.json",
+        "aciklama": "Mahalle/ köy/ belde seviyesinde adres sözlüğü (ilçe bağlantılı). Büyük hacimli veri olabilir.",
+        "minimumAdet": 5000,
+        "hedefAdet": 50000
+      },
+      {
+        "dosya": "Sozluk/Kategori_Agaci.json",
+        "aciklama": "Ürün kategori ağacı (üst/alt kategori). Katalog ve filtreleme için kullanılır.",
+        "minimumAdet": 120,
+        "hedefAdet": 1000
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "birim": "BRM",
+      "il": "IL",
+      "ilce": "ILC",
+      "mahalle": "MAH",
+      "kategori": "KAT"
+    }
+  },
+  "referansButunlugu": {
+    "il": "Sozluk/iller.json -> ilId",
+    "ilce": "Sozluk/ilceler.json -> ilceId (ilId bağlı)",
+    "mahalle": "Sozluk/Mahalleler.json -> mahalleId (ilceId bağlı)",
+    "kategori": "Sozluk/Kategori_Agaci.json -> kategoriId (ustKategoriId opsiyonel)",
+    "birim": "Sozluk/Birimler.json -> birimKodu"
+  },
+  "kurallar": {
+    "dil": "tr-TR",
+    "kodlama": "UTF-8",
+    "buyukKucukHarf": "Yer adlarında Türkçe karakterler korunur (İ, ı, Ş, ş, Ğ, ğ, Ç, ç, Ö, ö, Ü, ü).",
+    "benzersizlik": {
+      "iller": [ "plakaKodu" ],
+      "ilceler": [ "ilId", "ad" ],
+      "mahalleler": [ "ilceId", "ad" ],
+      "birimler": [ "kod" ],
+      "kategoriler": [ "slug" ]
+    }
+  },
+  "modelNotlari": [
+    "Bu sözlükler, sistemin diğer tüm modüllerinde referans veri olarak kullanılacağı için değişiklikler kontrollü yapılmalıdır.",
+    "Mahalleler veri seti büyük olacağından (10.000+), geliştirme ortamında örnek bir alt küme ile başlayıp sonra genişletmek mantıklıdır.",
+    "Kategori ağacında slug alanı SEO ve URL üretiminde kullanılabilir; benzersiz olmalıdır."
+  ]
+}

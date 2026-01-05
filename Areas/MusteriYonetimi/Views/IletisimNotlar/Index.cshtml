@@ -1,0 +1,36 @@
+@model List<PazarCep.Areas.MusteriYonetimi.Models.NotListeSatiriVM>
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "İletişim & Notlar";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">@ViewData["Title"]</h5>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Müşteri</th>
+                        <th>Başlık</th>
+                        <th>Not</th>
+                        <th>Tarih</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.Musteri</td>
+                            <td>@x.Baslik</td>
+                            <td class="text-truncate" style="max-width: 420px;">@x.Icerik</td>
+                            <td>@x.Tarih.ToString("dd.MM.yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

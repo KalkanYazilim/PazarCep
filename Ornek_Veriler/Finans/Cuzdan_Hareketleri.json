@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Cüzdan Hareketleri",
+    "aciklama": "Cüzdan defter kayıtları. Tahsilat, ödeme, komisyon, iade, bloke ve düzeltme işlemlerini içerir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "CZH-000000"
+  },
+  "kurallar": {
+    "hareketTurleri": [
+      "Tahsilat",
+      "Odeme",
+      "KomisyonKesintisi",
+      "Iade",
+      "DuzeltmeArtis",
+      "DuzeltmeAzalis",
+      "Bloke",
+      "BlokeCoz"
+    ],
+    "hareketYonleri": [ "Giris", "Cikis" ],
+    "mutabakatDurumlari": [ "Beklemede", "Mutabik", "Uyusmazlik" ],
+    "zorunluAlanlar": [
+      "id",
+      "cuzdanId",
+      "hareketTuru",
+      "yon",
+      "tutar",
+      "paraBirimi",
+      "olusturmaTarihi"
+    ]
+  },
+  "cuzdanHareketleri": [
+    {
+      "id": "CZH-000001",
+      "cuzdanId": "CZD-000002",
+      "hareketTuru": "Tahsilat",
+      "yon": "Cikis",
+      "tutar": 1921.00,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000001",
+        "odemeId": "ODM-000001"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "Alıcıdan tahsilat",
+      "olusturmaTarihi": "2025-01-20T09:35:00+03:00"
+    },
+    {
+      "id": "CZH-000002",
+      "cuzdanId": "CZD-000001",
+      "hareketTuru": "Odeme",
+      "yon": "Giris",
+      "tutar": 1837.50,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000001"
+      },
+      "mutabakat": "Beklemede",
+      "aciklama": "Satıcıya ödeme (komisyon hariç)",
+      "olusturmaTarihi": "2025-01-20T10:00:00+03:00"
+    },
+    {
+      "id": "CZH-000003",
+      "cuzdanId": "CZD-000005",
+      "hareketTuru": "KomisyonKesintisi",
+      "yon": "Giris",
+      "tutar": 83.50,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000001",
+        "faturaId": "FTR-000003"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "Platform komisyonu",
+      "olusturmaTarihi": "2025-01-21T10:00:00+03:00"
+    },
+    {
+      "id": "CZH-000004",
+      "cuzdanId": "CZD-000001",
+      "hareketTuru": "Bloke",
+      "yon": "Cikis",
+      "tutar": 15000.00,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000003"
+      },
+      "mutabakat": "Beklemede",
+      "aciklama": "Vadeli satış için bloke",
+      "olusturmaTarihi": "2025-01-18T14:30:00+03:00"
+    },
+    {
+      "id": "CZH-000005",
+      "cuzdanId": "CZD-000001",
+      "hareketTuru": "BlokeCoz",
+      "yon": "Giris",
+      "tutar": 15000.00,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000003"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "Bloke çözümü",
+      "olusturmaTarihi": "2025-02-01T09:00:00+03:00"
+    },
+    {
+      "id": "CZH-000006",
+      "cuzdanId": "CZD-000001",
+      "hareketTuru": "Iade",
+      "yon": "Cikis",
+      "tutar": 1846.70,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000004",
+        "iadeId": "IAD-000001",
+        "odemeId": "ODM-000004"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "İade nedeniyle satıcıdan çıkış",
+      "olusturmaTarihi": "2025-01-26T09:10:00+03:00"
+    },
+    {
+      "id": "CZH-000007",
+      "cuzdanId": "CZD-000002",
+      "hareketTuru": "Iade",
+      "yon": "Giris",
+      "tutar": 1846.70,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "siparisId": "SPR-000004",
+        "iadeId": "IAD-000001"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "Alıcıya iade",
+      "olusturmaTarihi": "2025-01-26T09:10:00+03:00"
+    },
+    {
+      "id": "CZH-000008",
+      "cuzdanId": "CZD-000005",
+      "hareketTuru": "DuzeltmeAzalis",
+      "yon": "Cikis",
+      "tutar": 15.03,
+      "paraBirimi": "TRY",
+      "referanslar": {
+        "faturaId": "FTR-000003"
+      },
+      "mutabakat": "Mutabik",
+      "aciklama": "Komisyon KDV düzeltmesi",
+      "olusturmaTarihi": "2025-01-26T10:00:00+03:00"
+    }
+  ]
+}

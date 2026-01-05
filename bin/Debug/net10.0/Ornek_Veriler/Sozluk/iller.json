@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - İller",
+    "aciklama": "Türkiye geneli il sözlüğü. Tüm adres ve lokasyon verilerinin temelidir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "IL-000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "plakaAraligi": "01-81",
+    "bolgeDegerleri": [
+      "Marmara",
+      "Ege",
+      "Akdeniz",
+      "İç Anadolu",
+      "Karadeniz",
+      "Doğu Anadolu",
+      "Güneydoğu Anadolu"
+    ]
+  },
+  "iller": [
+    {
+      "id": "IL-01",
+      "ad": "Adana",
+      "plaka": "01",
+      "bolge": "Akdeniz",
+      "nufusYaklasik": 2250000,
+      "merkezIlce": "Seyhan",
+      "telefonKodu": "322",
+      "koordinatlar": {
+        "enlem": 37.0000,
+        "boylam": 35.3213
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-06",
+      "ad": "Ankara",
+      "plaka": "06",
+      "bolge": "İç Anadolu",
+      "nufusYaklasik": 5750000,
+      "merkezIlce": "Çankaya",
+      "telefonKodu": "312",
+      "koordinatlar": {
+        "enlem": 39.9334,
+        "boylam": 32.8597
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-07",
+      "ad": "Antalya",
+      "plaka": "07",
+      "bolge": "Akdeniz",
+      "nufusYaklasik": 2700000,
+      "merkezIlce": "Muratpaşa",
+      "telefonKodu": "242",
+      "koordinatlar": {
+        "enlem": 36.8969,
+        "boylam": 30.7133
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-16",
+      "ad": "Bursa",
+      "plaka": "16",
+      "bolge": "Marmara",
+      "nufusYaklasik": 3200000,
+      "merkezIlce": "Osmangazi",
+      "telefonKodu": "224",
+      "koordinatlar": {
+        "enlem": 40.1950,
+        "boylam": 29.0600
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-21",
+      "ad": "Diyarbakır",
+      "plaka": "21",
+      "bolge": "Güneydoğu Anadolu",
+      "nufusYaklasik": 1800000,
+      "merkezIlce": "Bağlar",
+      "telefonKodu": "412",
+      "koordinatlar": {
+        "enlem": 37.9144,
+        "boylam": 40.2306
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-33",
+      "ad": "Mersin",
+      "plaka": "33",
+      "bolge": "Akdeniz",
+      "nufusYaklasik": 1900000,
+      "merkezIlce": "Yenişehir",
+      "telefonKodu": "324",
+      "koordinatlar": {
+        "enlem": 36.8121,
+        "boylam": 34.6415
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-35",
+      "ad": "İzmir",
+      "plaka": "35",
+      "bolge": "Ege",
+      "nufusYaklasik": 4450000,
+      "merkezIlce": "Konak",
+      "telefonKodu": "232",
+      "koordinatlar": {
+        "enlem": 38.4237,
+        "boylam": 27.1428
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-42",
+      "ad": "Konya",
+      "plaka": "42",
+      "bolge": "İç Anadolu",
+      "nufusYaklasik": 2300000,
+      "merkezIlce": "Selçuklu",
+      "telefonKodu": "332",
+      "koordinatlar": {
+        "enlem": 37.8713,
+        "boylam": 32.4846
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-51",
+      "ad": "Niğde",
+      "plaka": "51",
+      "bolge": "İç Anadolu",
+      "nufusYaklasik": 365000,
+      "merkezIlce": "Merkez",
+      "telefonKodu": "388",
+      "koordinatlar": {
+        "enlem": 37.9667,
+        "boylam": 34.6833
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-54",
+      "ad": "Sakarya",
+      "plaka": "54",
+      "bolge": "Marmara",
+      "nufusYaklasik": 1100000,
+      "merkezIlce": "Adapazarı",
+      "telefonKodu": "264",
+      "koordinatlar": {
+        "enlem": 40.7731,
+        "boylam": 30.3948
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-61",
+      "ad": "Trabzon",
+      "plaka": "61",
+      "bolge": "Karadeniz",
+      "nufusYaklasik": 820000,
+      "merkezIlce": "Ortahisar",
+      "telefonKodu": "462",
+      "koordinatlar": {
+        "enlem": 41.0015,
+        "boylam": 39.7178
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    },
+    {
+      "id": "IL-63",
+      "ad": "Şanlıurfa",
+      "plaka": "63",
+      "bolge": "Güneydoğu Anadolu",
+      "nufusYaklasik": 2200000,
+      "merkezIlce": "Haliliye",
+      "telefonKodu": "414",
+      "koordinatlar": {
+        "enlem": 37.1591,
+        "boylam": 38.7969
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-12-26T00:00:00+03:00"
+    }
+  ]
+}

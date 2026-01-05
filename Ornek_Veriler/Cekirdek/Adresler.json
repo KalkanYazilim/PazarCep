@@ -1,0 +1,313 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Adresler",
+    "aciklama": "Kullanıcı ve firma adresleri. İl/ilçe/mahalle sözlüğüne referanslıdır. Fatura, teslimat, depo gibi adres tiplerini içerir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "ADR-000000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "adresTipleri": [ "Fatura", "Teslimat", "Depo", "Sube", "Ciftlik" ],
+    "zorunluAlanlar": [
+      "id",
+      "baslik",
+      "adresTipi",
+      "ilId",
+      "ilceId",
+      "mahalleId",
+      "acikAdres",
+      "durum",
+      "olusturmaTarihi"
+    ],
+    "referansButunlugu": {
+      "ilIdZorunlu": true,
+      "ilceIdZorunlu": true,
+      "mahalleIdZorunlu": true
+    }
+  },
+  "adresler": [
+    {
+      "id": "ADR-000001",
+      "baslik": "Bereket Tarım - Çiftlik/Depo",
+      "adresTipi": "Ciftlik",
+      "ilId": "IL-51",
+      "ilceId": "ILC-000037",
+      "mahalleId": "MAH-000010",
+      "postaKodu": "51200",
+      "acikAdres": "Efendibey Mah. Çiftlik Yolu Sk. No: 12, Merkez/Niğde",
+      "konum": {
+        "enlem": 37.9750,
+        "boylam": 34.6840
+      },
+      "kapiNo": "12",
+      "binaAdi": "Bereket Depo",
+      "daireNo": null,
+      "teslimatNotu": "Kamyon girişine uygundur. Palet indirimi için forklift mevcut (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:05:00+03:00",
+      "etiketler": [ "uretici", "nigde" ]
+    },
+
+    {
+      "id": "ADR-000010",
+      "baslik": "Anadolu Manav - Fatura Adresi",
+      "adresTipi": "Fatura",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000005",
+      "mahalleId": "MAH-000001",
+      "postaKodu": "06420",
+      "acikAdres": "Kızılay Mah. Atatürk Bulv. No: 45 Kat: 2 Daire: 6, Çankaya/Ankara",
+      "konum": {
+        "enlem": 39.9205,
+        "boylam": 32.8541
+      },
+      "kapiNo": "45",
+      "binaAdi": "Demir İş Merkezi",
+      "daireNo": "6",
+      "teslimatNotu": "Fatura adresi. Teslimatlar depo adresine yapılır.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-06-01T14:05:00+03:00",
+      "etiketler": [ "fatura", "ankara" ]
+    },
+    {
+      "id": "ADR-000011",
+      "baslik": "Anadolu Manav - Depo/Teslimat",
+      "adresTipi": "Depo",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000009",
+      "mahalleId": "MAH-000005",
+      "postaKodu": "06824",
+      "acikAdres": "Eryaman Mah. 1. Cad. No: 18, Etimesgut/Ankara",
+      "konum": {
+        "enlem": 39.9897,
+        "boylam": 32.6512
+      },
+      "kapiNo": "18",
+      "binaAdi": "Anadolu Depo",
+      "daireNo": null,
+      "teslimatNotu": "Teslimat saatleri: 09:00-18:00. İrsaliye zorunlu (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-06-01T14:06:00+03:00",
+      "etiketler": [ "teslimat", "depo" ]
+    },
+    {
+      "id": "ADR-000012",
+      "baslik": "Anadolu Manav - Şube 2 (Teslimat)",
+      "adresTipi": "Sube",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000006",
+      "mahalleId": "MAH-000003",
+      "postaKodu": "06010",
+      "acikAdres": "Etlik Mah. Şht. Kubilay Sk. No: 7, Keçiören/Ankara",
+      "konum": {
+        "enlem": 39.9766,
+        "boylam": 32.8362
+      },
+      "kapiNo": "7",
+      "binaAdi": null,
+      "daireNo": null,
+      "teslimatNotu": "Şube teslimatı. Küçük araç tercih edilir.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-06-15T10:10:00+03:00",
+      "etiketler": [ "sube", "teslimat" ]
+    },
+
+    {
+      "id": "ADR-000013",
+      "baslik": "Başkent Market - Fatura Adresi",
+      "adresTipi": "Fatura",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000007",
+      "mahalleId": "MAH-000004",
+      "postaKodu": "06370",
+      "acikAdres": "Batıkent Mah. 2020. Cad. No: 3, Yenimahalle/Ankara",
+      "konum": {
+        "enlem": 39.9658,
+        "boylam": 32.7265
+      },
+      "kapiNo": "3",
+      "binaAdi": "Başkent Market Genel Merkez",
+      "daireNo": null,
+      "teslimatNotu": "E-fatura/e-irsaliye kabul edilir (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-08-15T09:35:00+03:00",
+      "etiketler": [ "market", "fatura" ]
+    },
+    {
+      "id": "ADR-000014",
+      "baslik": "Başkent Market - Merkez Depo",
+      "adresTipi": "Depo",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000010",
+      "mahalleId": "MAH-000024",
+      "postaKodu": "06930",
+      "acikAdres": "Sincan OSB Mah. Lojistik Cad. No: 101, Sincan/Ankara",
+      "konum": {
+        "enlem": 39.9640,
+        "boylam": 32.5670
+      },
+      "kapiNo": "101",
+      "binaAdi": "Merkez Depo",
+      "daireNo": null,
+      "teslimatNotu": "Rampa var. Paletli kabul. Teslimat randevulu (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-08-15T09:36:00+03:00",
+      "etiketler": [ "depo", "osb" ]
+    },
+    {
+      "id": "ADR-000015",
+      "baslik": "Başkent Market - Şube 1",
+      "adresTipi": "Sube",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000008",
+      "mahalleId": "MAH-000002",
+      "postaKodu": "06490",
+      "acikAdres": "Bahçelievler Mah. 7. Cad. No: 25, Mamak/Ankara",
+      "konum": {
+        "enlem": 39.9118,
+        "boylam": 32.8328
+      },
+      "kapiNo": "25",
+      "binaAdi": null,
+      "daireNo": null,
+      "teslimatNotu": "Şube teslimatı. Kasa/koliler giriş kapısından alınır.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-09-01T10:00:00+03:00",
+      "etiketler": [ "sube" ]
+    },
+
+    {
+      "id": "ADR-000016",
+      "baslik": "Lezzet Durağı - Restoran (Teslimat/Fatura)",
+      "adresTipi": "Teslimat",
+      "ilId": "IL-35",
+      "ilceId": "ILC-000028",
+      "mahalleId": "MAH-000006",
+      "postaKodu": "35220",
+      "acikAdres": "Alsancak Mah. Kıbrıs Şehitleri Cd. No: 88, Konak/İzmir",
+      "konum": {
+        "enlem": 38.4375,
+        "boylam": 27.1415
+      },
+      "kapiNo": "88",
+      "binaAdi": null,
+      "daireNo": null,
+      "teslimatNotu": "Teslimatlar 07:00-12:00 arası kabul edilir.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-10-02T12:50:00+03:00",
+      "etiketler": [ "restoran", "izmir" ]
+    },
+
+    {
+      "id": "ADR-000020",
+      "baslik": "Güven Lojistik - Fatura/Operasyon Merkezi",
+      "adresTipi": "Fatura",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000007",
+      "mahalleId": "MAH-000004",
+      "postaKodu": "06370",
+      "acikAdres": "Batıkent Mah. Lojistik Sk. No: 12, Yenimahalle/Ankara",
+      "konum": {
+        "enlem": 39.9658,
+        "boylam": 32.7265
+      },
+      "kapiNo": "12",
+      "binaAdi": "Güven Operasyon",
+      "daireNo": null,
+      "teslimatNotu": "Operasyon merkezi. Evrak teslimi için.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-04-08T11:05:00+03:00",
+      "etiketler": [ "lojistik", "ankara" ]
+    },
+    {
+      "id": "ADR-000021",
+      "baslik": "Güven Lojistik - Araç Park / Depo",
+      "adresTipi": "Depo",
+      "ilId": "IL-06",
+      "ilceId": "ILC-000010",
+      "mahalleId": "MAH-000024",
+      "postaKodu": "06930",
+      "acikAdres": "Sincan OSB Mah. Filo Cad. No: 9, Sincan/Ankara",
+      "konum": {
+        "enlem": 39.9642,
+        "boylam": 32.5660
+      },
+      "kapiNo": "9",
+      "binaAdi": "Filo Park",
+      "daireNo": null,
+      "teslimatNotu": "Araç giriş-çıkış, soğuk zincir hazırlık alanı (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-04-08T11:06:00+03:00",
+      "etiketler": [ "filo", "osb" ]
+    },
+
+    {
+      "id": "ADR-000030",
+      "baslik": "Ege Üretici Kooperatifi - Merkez",
+      "adresTipi": "Depo",
+      "ilId": "IL-35",
+      "ilceId": "ILC-000029",
+      "mahalleId": "MAH-000007",
+      "postaKodu": "35100",
+      "acikAdres": "Kazımdirik Mah. Kooperatif Sk. No: 5, Bornova/İzmir",
+      "konum": {
+        "enlem": 38.4663,
+        "boylam": 27.2167
+      },
+      "kapiNo": "5",
+      "binaAdi": "Koop Merkez",
+      "daireNo": null,
+      "teslimatNotu": "Soğuk hava depolu merkez (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:15:00+03:00",
+      "etiketler": [ "kooperatif", "izmir" ]
+    },
+
+    {
+      "id": "ADR-000040",
+      "baslik": "Karadeniz Manav - Mağaza",
+      "adresTipi": "Teslimat",
+      "ilId": "IL-61",
+      "ilceId": "ILC-000045",
+      "mahalleId": "MAH-000023",
+      "postaKodu": "61080",
+      "acikAdres": "Kalkınma Mah. Sahil Yolu Cd. No: 21, Ortahisar/Trabzon",
+      "konum": {
+        "enlem": 41.0000,
+        "boylam": 39.7300
+      },
+      "kapiNo": "21",
+      "binaAdi": null,
+      "daireNo": null,
+      "teslimatNotu": "Şehir içi teslimatlar 10:00-19:00.",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-11-11T15:05:00+03:00",
+      "etiketler": [ "trabzon", "manav" ]
+    },
+
+    {
+      "id": "ADR-000050",
+      "baslik": "GAP Tarım - Sera Alanı",
+      "adresTipi": "Ciftlik",
+      "ilId": "IL-63",
+      "ilceId": "ILC-000048",
+      "mahalleId": "MAH-000019",
+      "postaKodu": "63300",
+      "acikAdres": "Ahmet Yesevi Mah. Sera Yolu Sk. No: 44, Haliliye/Şanlıurfa",
+      "konum": {
+        "enlem": 37.1650,
+        "boylam": 38.7850
+      },
+      "kapiNo": "44",
+      "binaAdi": "GAP Sera",
+      "daireNo": null,
+      "teslimatNotu": "Yükleme alanı mevcut. Sabah saatleri uygun (demo).",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:05:00+03:00",
+      "etiketler": [ "sanliurfa", "sera", "uretici" ]
+    }
+  ]
+}

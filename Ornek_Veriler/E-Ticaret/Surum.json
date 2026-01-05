@@ -1,0 +1,110 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - E-Ticaret",
+  "aciklama": "E-Ticaret verileri: sepetler, sepet kalemleri, siparişler, sipariş kalemleri, ödemeler, faturalar ve iadeler. Çiftçi → Son Satıcı doğrudan modelinde; sipariş, lojistik teslimat ve stok tahsis/rezervasyon akışlarıyla entegre çalışır.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "E-Ticaret/Sepetler.json",
+        "aciklama": "Alıcıların aktif sepetleri. Taslak siparişten önceki aşama.",
+        "minimumAdet": 200,
+        "hedefAdet": 5000
+      },
+      {
+        "dosya": "E-Ticaret/Sepet_Kalemleri.json",
+        "aciklama": "Sepet içindeki ürün/varyant kalemleri (miktar, birim, fiyat anlık).",
+        "minimumAdet": 500,
+        "hedefAdet": 20000
+      },
+      {
+        "dosya": "E-Ticaret/Siparisler.json",
+        "aciklama": "Sipariş üst bilgileri: alıcı/satıcı, teslimat bilgisi, tutarlar, durum akışı.",
+        "minimumAdet": 200,
+        "hedefAdet": 10000
+      },
+      {
+        "dosya": "E-Ticaret/Siparis_Kalemleri.json",
+        "aciklama": "Sipariş kalemleri: ürün/varyant, parti (lot) tercihi, birim fiyat, KDV, iskonto, komisyon.",
+        "minimumAdet": 500,
+        "hedefAdet": 50000
+      },
+      {
+        "dosya": "E-Ticaret/Odemeler.json",
+        "aciklama": "Ödeme kayıtları: Havale/EFT, SanalPOS, vadeli, kapıda ödeme vb. durum akışları.",
+        "minimumAdet": 200,
+        "hedefAdet": 20000
+      },
+      {
+        "dosya": "E-Ticaret/Faturalar.json",
+        "aciklama": "Fatura/irsaliye mantığı: satıcı faturası, alıcı faturası, komisyon/fark faturası senaryoları.",
+        "minimumAdet": 100,
+        "hedefAdet": 10000
+      },
+      {
+        "dosya": "E-Ticaret/iadeler.json",
+        "aciklama": "İade talepleri ve iade süreçleri: kısmi/tam iade, kusur nedeni, iade ödeme.",
+        "minimumAdet": 50,
+        "hedefAdet": 5000
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "sepet": "SPT",
+      "sepetKalemi": "SKL",
+      "siparis": "SPR",
+      "siparisKalemi": "SPK",
+      "odeme": "ODM",
+      "fatura": "FTR",
+      "iade": "IAD"
+    }
+  },
+  "referansButunlugu": {
+    "aliciFirmaId": "Cekirdek/Firmalar.json (FIR-...)",
+    "saticiFirmaId": "Cekirdek/Firmalar.json (FIR-...)",
+    "kullaniciId": "Cekirdek/Kullanicilar.json (KUL-...)",
+    "teslimatIdOpsiyonel": "Lojistik/Teslimatlar.json (TSL-...)",
+    "urunIdOpsiyonel": "Katalog/Urunler.json (URN-...)",
+    "varyantIdOpsiyonel": "Katalog/Urun_Varyantlari.json (VAR-...)",
+    "kuponIdOpsiyonel": "Fiyat/Kuponlar.json (KPN-...)",
+    "fiyatListesiIdOpsiyonel": "Fiyat/Fiyat_Listeleri.json (FLI-...)",
+    "partiIdOpsiyonel": "Stok/Partiler.json (PRT-...)",
+    "stokHareketIdOpsiyonel": "Stok/Stok_Hareketleri.json (SHR-...)",
+    "adresId": "Cekirdek/Adresler.json (ADR-...)"
+  },
+  "kurallar": {
+    "paraBirimi": "TRY",
+    "siparisDurumlari": [
+      "Taslak",
+      "OnayBekliyor",
+      "Onaylandi",
+      "Hazirlaniyor",
+      "Sevkte",
+      "TeslimEdildi",
+      "Iptal",
+      "IadeSurecinde",
+      "IadeTamamlandi"
+    ],
+    "odemeDurumlari": [ "Beklemede", "Basarili", "Basarisiz", "Iptal", "IadeEdildi" ],
+    "odemeYontemleri": [ "HavaleEFT", "SanalPOS", "Vadeli", "KapidaOdeme" ],
+    "faturaTurleri": [ "SatisFaturasi", "AlisFaturasi", "KomisyonFaturasi", "IadeFaturasi" ],
+    "iadeNedenleri": [ "KusurluUrun", "EksikUrun", "GecTeslimat", "YanlisUrun", "Vazgectim" ],
+    "kisitlar": {
+      "lotBazliIzlenebilirlik": true,
+      "kismiIadeDestekli": true,
+      "kuponBirlesebilirlikKurallariKuponlarJsonIleYon": true
+    }
+  },
+  "modelNotlari": [
+    "Sepet → Sipariş dönüşümünde fiyatlar anlık olarak sipariş kalemlerine kopyalanır (sonradan liste fiyatı değişse bile sipariş sabit kalır).",
+    "Sipariş onaylandığında; stok rezervasyon/tahsis hareketleri üretilir (Stok_Hareketleri).",
+    "Sipariş sevke çıktığında Lojistik/Teslimatlar kaydı oluşur ve stok çıkışı ilişkilendirilebilir.",
+    "Fatura ve ödeme süreçleri, siparişin yaşam döngüsünden bağımsız ama referanslı ilerler."
+  ]
+}

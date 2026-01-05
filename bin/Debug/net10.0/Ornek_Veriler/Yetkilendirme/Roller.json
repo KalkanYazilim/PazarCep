@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Roller",
+    "aciklama": "Sistem rolleri. Kullanıcıların panel, API ve işlem bazlı erişimlerini tanımlar.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "ROL-000000"
+  },
+  "kurallar": {
+    "rolTipleri": [ "Sistem", "Firma", "Operasyon" ],
+    "varsayilanRoller": [ "ROL-ALICI" ],
+    "pasifRolYetkisi": "Yok"
+  },
+  "roller": [
+    {
+      "id": "ROL-ADMIN",
+      "ad": "Sistem Yöneticisi",
+      "kod": "ADMIN",
+      "rolTipi": "Sistem",
+      "aciklama": "Tüm modüllerde tam yetki.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ROL-PLATFORM",
+      "ad": "Platform Yöneticisi",
+      "kod": "PLATFORM",
+      "rolTipi": "Sistem",
+      "aciklama": "Platform ayarları, komisyonlar, raporlar.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ROL-SATICI",
+      "ad": "Satıcı (Çiftçi / Üretici)",
+      "kod": "SATICI",
+      "rolTipi": "Firma",
+      "aciklama": "Ürün, stok, fiyat, sipariş karşılama.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-01-10T09:00:00+03:00"
+    },
+    {
+      "id": "ROL-ALICI",
+      "ad": "Alıcı (Son Satıcı)",
+      "kod": "ALICI",
+      "rolTipi": "Firma",
+      "aciklama": "Ürün görüntüleme, sepet, sipariş oluşturma.",
+      "aktif": true,
+      "varsayilan": true,
+      "olusturmaTarihi": "2023-01-10T09:00:00+03:00"
+    },
+    {
+      "id": "ROL-OPERASYON",
+      "ad": "Operasyon",
+      "kod": "OPERASYON",
+      "rolTipi": "Operasyon",
+      "aciklama": "Sipariş hazırlık, teslimat planlama, lojistik.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "ROL-FINANS",
+      "ad": "Finans",
+      "kod": "FINANS",
+      "rolTipi": "Operasyon",
+      "aciklama": "Ödeme, fatura, cüzdan ve mutabakat.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "ROL-DESTEK",
+      "ad": "Müşteri Destek",
+      "kod": "DESTEK",
+      "rolTipi": "Operasyon",
+      "aciklama": "Destek talepleri, CRM mesajlaşma.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "ROL-LOJISTIK",
+      "ad": "Lojistik",
+      "kod": "LOJISTIK",
+      "rolTipi": "Operasyon",
+      "aciklama": "Araç, sürücü, teslimat yönetimi.",
+      "aktif": true,
+      "olusturmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "ROL-OKUYUCU",
+      "ad": "Okuyucu",
+      "kod": "OKUYUCU",
+      "rolTipi": "Firma",
+      "aciklama": "Sadece okuma yetkisi (rapor, liste).",
+      "aktif": true,
+      "olusturmaTarihi": "2023-03-01T08:30:00+03:00"
+    }
+  ]
+}

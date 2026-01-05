@@ -1,0 +1,635 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Ürünler",
+    "aciklama": "Ürün ana kartları. Varyant, fiyat, stok ve e-ticaret süreçleri bu ürünlere referans verir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "URN-000000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "urunTipleri": [ "Taze", "Kuru", "Islenmis" ],
+    "kaliteSiniflari": [ "Ekstra", "1. Sinif", "2. Sinif", "Sanayi" ],
+    "saklamaTipleri": [ "Oda", "Serin", "SogukZincir", "Dondurulmus" ],
+    "zorunluAlanlar": [
+      "id",
+      "ad",
+      "slug",
+      "kategoriId",
+      "ureticiFirmaId",
+      "birimId",
+      "urunTipi",
+      "durum",
+      "olusturmaTarihi"
+    ],
+    "referansButunlugu": {
+      "ureticiFirmaId": "Cekirdek/Firmalar.json (FIR-...)",
+      "kategoriId": "Sozluk/Kategori_Agaci.json (KAT-...)",
+      "birimId": "Sozluk/Birimler.json (BRM-...)"
+    }
+  },
+  "urunler": [
+    {
+      "id": "URN-000001",
+      "ad": "Niğde Patates",
+      "slug": "nigde-patates",
+      "kategoriId": "KAT-000101",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Kızartmalık/yemeklik, depolu sevkiyata uygun.",
+      "aciklama": "Niğde bölgesi patatesi. Paletli sevkiyata uygundur. Parti bazlı stok takibi önerilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 8,
+        "bitisAy": 3
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 10
+      },
+      "rafOmruGun": 90,
+      "sertifikalar": [ "İyi Tarım (Demo)" ],
+      "etiketOnerileri": [ "Yerli Ürün", "Depolu" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:35:00+03:00"
+    },
+    {
+      "id": "URN-000002",
+      "ad": "Kuru Soğan",
+      "slug": "kuru-sogan",
+      "kategoriId": "KAT-000102",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Yemeklik, depolu sevkiyata uygun.",
+      "aciklama": "Kuru soğan. Çuval/palet sevkiyatına uygundur.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 7,
+        "bitisAy": 2
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 12
+      },
+      "rafOmruGun": 120,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Yerli Ürün" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:36:00+03:00"
+    },
+    {
+      "id": "URN-000003",
+      "ad": "Salkım Domates",
+      "slug": "salkim-domates",
+      "kategoriId": "KAT-000201",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Sera ürünü, taze tüketim.",
+      "aciklama": "Ege bölgesi sera salkım domates. Kasa ile sevk edilir.",
+      "kaliteSinifi": "Ekstra",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 10,
+        "bitisAy": 6
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 8,
+        "sıcaklıkCMax": 12
+      },
+      "rafOmruGun": 10,
+      "sertifikalar": [ "Organik (Demo)" ],
+      "etiketOnerileri": [ "Sera", "Taze" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:40:00+03:00"
+    },
+    {
+      "id": "URN-000004",
+      "ad": "Çarliston Biber",
+      "slug": "carliston-biber",
+      "kategoriId": "KAT-000202",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Sera biberi, günlük sevkiyat.",
+      "aciklama": "Çarliston biber. Kasa bazlı sevkiyat önerilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 4,
+        "bitisAy": 11
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 7,
+        "sıcaklıkCMax": 10
+      },
+      "rafOmruGun": 7,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Taze" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:41:00+03:00"
+    },
+    {
+      "id": "URN-000005",
+      "ad": "Kıl Biber (Acı)",
+      "slug": "kil-biber-aci",
+      "kategoriId": "KAT-000203",
+      "ureticiFirmaId": "FIR-000008",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Acı biber, HORECA için ideal.",
+      "aciklama": "GAP bölgesi acı kıl biber. Düzenli arz için sözleşmeli sevkiyat uygundur (demo).",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-63"
+      },
+      "sezon": {
+        "baslangicAy": 5,
+        "bitisAy": 10
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 7,
+        "sıcaklıkCMax": 10
+      },
+      "rafOmruGun": 6,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Acı", "Taze" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:20:00+03:00"
+    },
+    {
+      "id": "URN-000006",
+      "ad": "Patlıcan (Kemer)",
+      "slug": "patlican-kemer",
+      "kategoriId": "KAT-000204",
+      "ureticiFirmaId": "FIR-000008",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Kemer patlıcan, günlük tüketim.",
+      "aciklama": "Kemer patlıcan. Zedelenmeye hassas olduğundan üst üste istif sınırlı tutulmalıdır.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-63"
+      },
+      "sezon": {
+        "baslangicAy": 4,
+        "bitisAy": 10
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 10,
+        "sıcaklıkCMax": 13
+      },
+      "rafOmruGun": 6,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Taze" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:21:00+03:00"
+    },
+    {
+      "id": "URN-000007",
+      "ad": "Salatalık (Sera)",
+      "slug": "salatalik-sera",
+      "kategoriId": "KAT-000205",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Sera salatalık, hızlı sevkiyat.",
+      "aciklama": "Sera salatalık. Kasa sevkiyatı uygundur.",
+      "kaliteSinifi": "Ekstra",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 3,
+        "bitisAy": 11
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 7,
+        "sıcaklıkCMax": 10
+      },
+      "rafOmruGun": 8,
+      "sertifikalar": [ "Organik (Demo)" ],
+      "etiketOnerileri": [ "Sera", "Taze" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:42:00+03:00"
+    },
+    {
+      "id": "URN-000008",
+      "ad": "Marul (Kıvırcık)",
+      "slug": "marul-kivircik",
+      "kategoriId": "KAT-000301",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000003",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Yeşillik, serin zincir önerilir.",
+      "aciklama": "Kıvırcık marul. Yeşillikler için soğuk zincir önerilir (demo).",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 9,
+        "bitisAy": 5
+      },
+      "saklama": {
+        "saklamaTipi": "SogukZincir",
+        "sıcaklıkCMin": 1,
+        "sıcaklıkCMax": 4
+      },
+      "rafOmruGun": 5,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Yeşillik", "Soğuk Zincir" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:43:00+03:00"
+    },
+    {
+      "id": "URN-000009",
+      "ad": "Maydanoz",
+      "slug": "maydanoz",
+      "kategoriId": "KAT-000302",
+      "ureticiFirmaId": "FIR-000008",
+      "birimId": "BRM-000004",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Demetli yeşillik.",
+      "aciklama": "Maydanoz (demet). Soğuk zincir ile sevk tavsiye edilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-63"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "SogukZincir",
+        "sıcaklıkCMin": 1,
+        "sıcaklıkCMax": 4
+      },
+      "rafOmruGun": 4,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Yeşillik", "Demet" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:22:00+03:00"
+    },
+    {
+      "id": "URN-000010",
+      "ad": "Portakal (Washington)",
+      "slug": "portakal-washington",
+      "kategoriId": "KAT-000401",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Narenciye, sezonluk.",
+      "aciklama": "Washington portakal. Kasalı sevkiyat, depolu bekleme uygundur.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 11,
+        "bitisAy": 4
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 8
+      },
+      "rafOmruGun": 20,
+      "sertifikalar": [ "Organik (Demo)" ],
+      "etiketOnerileri": [ "Narenciye" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:44:00+03:00"
+    },
+    {
+      "id": "URN-000011",
+      "ad": "Mandalina (Satsuma)",
+      "slug": "mandalina-satsuma",
+      "kategoriId": "KAT-000402",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Tatlı narenciye.",
+      "aciklama": "Satsuma mandalina. Perakende ve HORECA için uygundur.",
+      "kaliteSinifi": "Ekstra",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 10,
+        "bitisAy": 1
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 8
+      },
+      "rafOmruGun": 14,
+      "sertifikalar": [ "Organik (Demo)" ],
+      "etiketOnerileri": [ "Narenciye" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:45:00+03:00"
+    },
+    {
+      "id": "URN-000012",
+      "ad": "Limon",
+      "slug": "limon",
+      "kategoriId": "KAT-000403",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Narenciye, depolu sevkiyata uygun.",
+      "aciklama": "Limon. Toptan alımda çuval/kasa opsiyonları varyantlarla yönetilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 9,
+        "bitisAy": 6
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 8
+      },
+      "rafOmruGun": 25,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Narenciye" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:46:00+03:00"
+    },
+    {
+      "id": "URN-000013",
+      "ad": "Elma (Starking)",
+      "slug": "elma-starking",
+      "kategoriId": "KAT-000404",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Depolu elma, uzun raf ömrü.",
+      "aciklama": "Starking elma. Depo stok yönetimine uygundur.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 9,
+        "bitisAy": 5
+      },
+      "saklama": {
+        "saklamaTipi": "SogukZincir",
+        "sıcaklıkCMin": 0,
+        "sıcaklıkCMax": 4
+      },
+      "rafOmruGun": 60,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Depolu" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:47:00+03:00"
+    },
+    {
+      "id": "URN-000014",
+      "ad": "Nar",
+      "slug": "nar",
+      "kategoriId": "KAT-000405",
+      "ureticiFirmaId": "FIR-000008",
+      "birimId": "BRM-000001",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Sezonluk meyve.",
+      "aciklama": "Nar. Kasalı sevkiyat önerilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-63"
+      },
+      "sezon": {
+        "baslangicAy": 9,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "Serin",
+        "sıcaklıkCMin": 4,
+        "sıcaklıkCMax": 8
+      },
+      "rafOmruGun": 20,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Sezonluk" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:23:00+03:00"
+    },
+    {
+      "id": "URN-000015",
+      "ad": "Kuru Fasulye",
+      "slug": "kuru-fasulye",
+      "kategoriId": "KAT-000501",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Kuru",
+      "kisaAciklama": "Bakliyat, çuval/paket sevkiyatına uygun.",
+      "aciklama": "Kuru fasulye. Parti ve kalite sınıfı varyantlarla yönetilebilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "Oda",
+        "sıcaklıkCMin": 10,
+        "sıcaklıkCMax": 25
+      },
+      "rafOmruGun": 365,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Bakliyat", "Uzun Raf Ömrü" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:48:00+03:00"
+    },
+    {
+      "id": "URN-000016",
+      "ad": "Nohut",
+      "slug": "nohut",
+      "kategoriId": "KAT-000502",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Kuru",
+      "kisaAciklama": "Bakliyat, depolu sevkiyata uygun.",
+      "aciklama": "Nohut. Elek boyutu ve kalite varyantlarla yönetilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "Oda",
+        "sıcaklıkCMin": 10,
+        "sıcaklıkCMax": 25
+      },
+      "rafOmruGun": 365,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Bakliyat" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:49:00+03:00"
+    },
+    {
+      "id": "URN-000017",
+      "ad": "Kırmızı Mercimek",
+      "slug": "kirmizi-mercimek",
+      "kategoriId": "KAT-000503",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Kuru",
+      "kisaAciklama": "Bakliyat, çuval/paket.",
+      "aciklama": "Kırmızı mercimek. Paket gramajları varyantlarla belirlenebilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "Oda",
+        "sıcaklıkCMin": 10,
+        "sıcaklıkCMax": 25
+      },
+      "rafOmruGun": 365,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Bakliyat" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:50:00+03:00"
+    },
+    {
+      "id": "URN-000018",
+      "ad": "Bulgur (Pilavlık)",
+      "slug": "bulgur-pilavlik",
+      "kategoriId": "KAT-000504",
+      "ureticiFirmaId": "FIR-000001",
+      "birimId": "BRM-000001",
+      "urunTipi": "Islenmis",
+      "kisaAciklama": "İşlenmiş gıda, paket/çuval.",
+      "aciklama": "Pilavlık bulgur. Marka/ambalaj bilgileri varyantlarla yönetilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-51"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "Oda",
+        "sıcaklıkCMin": 10,
+        "sıcaklıkCMax": 25
+      },
+      "rafOmruGun": 365,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Kuru Gıda" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T10:51:00+03:00"
+    },
+    {
+      "id": "URN-000019",
+      "ad": "Dereotu",
+      "slug": "dereotu",
+      "kategoriId": "KAT-000303",
+      "ureticiFirmaId": "FIR-000006",
+      "birimId": "BRM-000004",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Demetli yeşillik.",
+      "aciklama": "Dereotu (demet). Soğuk zincir önerilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-35"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "SogukZincir",
+        "sıcaklıkCMin": 1,
+        "sıcaklıkCMax": 4
+      },
+      "rafOmruGun": 4,
+      "sertifikalar": [ "Organik (Demo)" ],
+      "etiketOnerileri": [ "Yeşillik", "Demet" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T10:52:00+03:00"
+    },
+    {
+      "id": "URN-000020",
+      "ad": "Roka",
+      "slug": "roka",
+      "kategoriId": "KAT-000304",
+      "ureticiFirmaId": "FIR-000008",
+      "birimId": "BRM-000004",
+      "urunTipi": "Taze",
+      "kisaAciklama": "Demetli yeşillik, HORECA kullanımı yaygın.",
+      "aciklama": "Roka (demet). Soğuk zincir ile sevk önerilir.",
+      "kaliteSinifi": "1. Sinif",
+      "menşei": {
+        "ulke": "Türkiye",
+        "ilId": "IL-63"
+      },
+      "sezon": {
+        "baslangicAy": 1,
+        "bitisAy": 12
+      },
+      "saklama": {
+        "saklamaTipi": "SogukZincir",
+        "sıcaklıkCMin": 1,
+        "sıcaklıkCMax": 4
+      },
+      "rafOmruGun": 4,
+      "sertifikalar": [],
+      "etiketOnerileri": [ "Yeşillik", "Demet" ],
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T09:24:00+03:00"
+    }
+  ]
+}

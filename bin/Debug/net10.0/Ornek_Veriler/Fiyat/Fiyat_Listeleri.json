@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Fiyat Listeleri",
+    "aciklama": "Fiyat listesi başlıkları. Fiyat kalemleri bu listelere bağlıdır. Üretici bazlı, alıcı tipine veya belirli alıcıya özel olabilir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "FLI-000000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "fiyatTipleri": [ "ListeFiyati", "AnlasmaliFiyat", "KampanyaFiyati", "TopluAlimFiyati" ],
+    "aliciKapsamlari": [ "Genel", "AliciTipi", "AliciFirma" ],
+    "odemeYontemleri": [ "HavaleEFT", "SanalPOS", "Vadeli" ],
+    "zorunluAlanlar": [
+      "id",
+      "ad",
+      "saticiFirmaId",
+      "fiyatTipi",
+      "paraBirimi",
+      "aliciKapsami",
+      "gecerlilik",
+      "durum",
+      "olusturmaTarihi"
+    ],
+    "referansButunlugu": {
+      "saticiFirmaId": "Cekirdek/Firmalar.json (FIR-...)",
+      "aliciFirmaIdOpsiyonel": "Cekirdek/Firmalar.json (FIR-...)",
+      "ilIdOpsiyonel": "Sozluk/iller.json (IL-..)"
+    }
+  },
+  "fiyatListeleri": [
+    {
+      "id": "FLI-000001",
+      "ad": "Bereket Tarım - Genel Liste (2025)",
+      "saticiFirmaId": "FIR-000001",
+      "fiyatTipi": "ListeFiyati",
+      "paraBirimi": "TRY",
+      "aliciKapsami": {
+        "tur": "Genel",
+        "aliciTipi": null,
+        "aliciFirmaId": null
+      },
+      "bolge": {
+        "ilId": null,
+        "ilceId": null
+      },
+      "odemeKosullari": {
+        "varsayilanOdemeYontemi": "HavaleEFT",
+        "vadeGun": 7
+      },
+      "teslimatKosullari": {
+        "incoterm": "EXW (Demo)",
+        "minSiparisTutar": 5000,
+        "minSiparisKg": 100,
+        "teslimatSuresiGun": 2
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-01-01",
+        "bitisTarihi": "2025-12-31"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-12-15T10:00:00+03:00",
+      "not": "Varsayılan fiyat listesi."
+    },
+
+    {
+      "id": "FLI-000002",
+      "ad": "Bereket Tarım - Anadolu Manav Anlaşmalı (Q1 2025)",
+      "saticiFirmaId": "FIR-000001",
+      "fiyatTipi": "AnlasmaliFiyat",
+      "paraBirimi": "TRY",
+      "aliciKapsami": {
+        "tur": "AliciFirma",
+        "aliciTipi": null,
+        "aliciFirmaId": "FIR-000002"
+      },
+      "bolge": {
+        "ilId": "IL-06",
+        "ilceId": null
+      },
+      "odemeKosullari": {
+        "varsayilanOdemeYontemi": "Vadeli",
+        "vadeGun": 3
+      },
+      "teslimatKosullari": {
+        "incoterm": "DAP (Demo)",
+        "minSiparisTutar": 10000,
+        "minSiparisKg": 200,
+        "teslimatSuresiGun": 1
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-01-01",
+        "bitisTarihi": "2025-03-31"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-12-20T09:30:00+03:00",
+      "not": "Ankara bölgesine özel anlaşmalı fiyat."
+    },
+
+    {
+      "id": "FLI-000003",
+      "ad": "Ege Kooperatif - Market Genel Liste (2025)",
+      "saticiFirmaId": "FIR-000006",
+      "fiyatTipi": "ListeFiyati",
+      "paraBirimi": "TRY",
+      "aliciKapsami": {
+        "tur": "AliciTipi",
+        "aliciTipi": "Son_Satici_Market",
+        "aliciFirmaId": null
+      },
+      "bolge": {
+        "ilId": null,
+        "ilceId": null
+      },
+      "odemeKosullari": {
+        "varsayilanOdemeYontemi": "HavaleEFT",
+        "vadeGun": 7
+      },
+      "teslimatKosullari": {
+        "incoterm": "EXW (Demo)",
+        "minSiparisTutar": 8000,
+        "minSiparisKg": 150,
+        "teslimatSuresiGun": 2
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-01-01",
+        "bitisTarihi": "2025-12-31"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-12-18T11:00:00+03:00",
+      "not": "Market segmentine özel liste."
+    },
+
+    {
+      "id": "FLI-000004",
+      "ad": "GAP Tarım - Restoran Kampanya (2025 Yaz)",
+      "saticiFirmaId": "FIR-000008",
+      "fiyatTipi": "KampanyaFiyati",
+      "paraBirimi": "TRY",
+      "aliciKapsami": {
+        "tur": "AliciTipi",
+        "aliciTipi": "Son_Satici_Restoran",
+        "aliciFirmaId": null
+      },
+      "bolge": {
+        "ilId": "IL-06",
+        "ilceId": null
+      },
+      "odemeKosullari": {
+        "varsayilanOdemeYontemi": "SanalPOS",
+        "vadeGun": 0
+      },
+      "teslimatKosullari": {
+        "incoterm": "DAP (Demo)",
+        "minSiparisTutar": 4000,
+        "minSiparisKg": 80,
+        "teslimatSuresiGun": 2
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-06-01",
+        "bitisTarihi": "2025-09-30"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-05-15T10:10:00+03:00",
+      "not": "Restoranlara özel yaz kampanyası."
+    },
+
+    {
+      "id": "FLI-000005",
+      "ad": "Bereket Tarım - Toplu Alım (2025)",
+      "saticiFirmaId": "FIR-000001",
+      "fiyatTipi": "TopluAlimFiyati",
+      "paraBirimi": "TRY",
+      "aliciKapsami": {
+        "tur": "Genel",
+        "aliciTipi": null,
+        "aliciFirmaId": null
+      },
+      "bolge": {
+        "ilId": null,
+        "ilceId": null
+      },
+      "odemeKosullari": {
+        "varsayilanOdemeYontemi": "HavaleEFT",
+        "vadeGun": 7
+      },
+      "teslimatKosullari": {
+        "incoterm": "EXW (Demo)",
+        "minSiparisTutar": 20000,
+        "minSiparisKg": 500,
+        "teslimatSuresiGun": 2
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-01-01",
+        "bitisTarihi": "2025-12-31"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-12-15T10:05:00+03:00",
+      "not": "Kademeli fiyat kalemleri bu listeye bağlanacak."
+    }
+  ]
+}

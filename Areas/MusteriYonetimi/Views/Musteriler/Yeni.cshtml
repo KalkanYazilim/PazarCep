@@ -1,0 +1,58 @@
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriYeniVM
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "Yeni Müşteri Ekle";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">@ViewData["Title"]</h5>
+    </div>
+
+    <div class="card-body">
+        <form asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Ad Soyad / Ünvan</label>
+                    <input asp-for="AdSoyadUnvan" class="form-control" />
+                    <span asp-validation-for="AdSoyadUnvan" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Telefon</label>
+                    <input asp-for="Telefon" class="form-control" />
+                    <span asp-validation-for="Telefon" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">E-posta</label>
+                    <input asp-for="Eposta" class="form-control" />
+                    <span asp-validation-for="Eposta" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Adres</label>
+                    <input asp-for="Adres" class="form-control" />
+                    <span asp-validation-for="Adres" class="text-danger"></span>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-check">
+                        <input asp-for="AktifMi" class="form-check-input" />
+                        <label class="form-check-label">Aktif</label>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Index" class="btn btn-label-secondary">İptal</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section PageScripts {
+    <partial name="_ValidationScriptsPartial" />
+}
