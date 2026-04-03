@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Stok Hareketleri",
+    "aciklama": "Stok giriş/çıkış, rezervasyon, satış tahsisi, transfer, iade, fire ve sayım düzeltme hareketleri. Parti (lot) bazlı izlenebilirlik sağlar.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "SHR-000000"
+  },
+  "kurallar": {
+    "hareketTurleri": [
+      "Giris",
+      "Cikis",
+      "Rezervasyon",
+      "RezervasyonIptal",
+      "SatisTahsis",
+      "SatisIptal",
+      "TransferCikis",
+      "TransferGiris",
+      "IadeGiris",
+      "FireCikis",
+      "SayimDuzeltme"
+    ],
+    "stokBirimleri": [ "Kg", "Ambalaj", "Demet", "Koli", "Adet" ],
+    "zorunluAlanlar": [
+      "id",
+      "hareketTuru",
+      "partiId",
+      "depoId",
+      "miktar",
+      "birim",
+      "olusturmaTarihi"
+    ]
+  },
+  "stokHareketleri": [
+    {
+      "id": "SHR-000001",
+      "hareketTuru": "Giris",
+      "firmaId": "FIR-000001",
+      "depoId": "DPO-000001",
+      "partiId": "PRT-000001",
+      "urunId": "URN-000001",
+      "varyantId": "VAR-000001",
+      "miktar": 600,
+      "birim": "Ambalaj",
+      "kaynak": "Hasat",
+      "aciklama": "Niğde patates hasat girişi",
+      "olusturmaTarihi": "2025-01-10T08:31:00+03:00"
+    },
+
+    {
+      "id": "SHR-000002",
+      "hareketTuru": "Rezervasyon",
+      "firmaId": "FIR-000001",
+      "depoId": "DPO-000001",
+      "partiId": "PRT-000001",
+      "miktar": 120,
+      "birim": "Ambalaj",
+      "siparisId": "SPR-000001",
+      "siparisKalemiId": "SPK-000001",
+      "aciklama": "Anadolu Manav siparişi için rezervasyon",
+      "olusturmaTarihi": "2025-01-12T09:15:00+03:00"
+    },
+
+    {
+      "id": "SHR-000003",
+      "hareketTuru": "SatisTahsis",
+      "firmaId": "FIR-000001",
+      "depoId": "DPO-000001",
+      "partiId": "PRT-000001",
+      "miktar": 120,
+      "birim": "Ambalaj",
+      "siparisId": "SPR-000001",
+      "siparisKalemiId": "SPK-000001",
+      "aciklama": "Sipariş onayı sonrası satış tahsisi",
+      "olusturmaTarihi": "2025-01-12T10:05:00+03:00"
+    },
+
+    {
+      "id": "SHR-000004",
+      "hareketTuru": "Cikis",
+      "firmaId": "FIR-000001",
+      "depoId": "DPO-000001",
+      "partiId": "PRT-000001",
+      "miktar": 120,
+      "birim": "Ambalaj",
+      "teslimatId": "TSL-000001",
+      "aciklama": "Ankara sevkiyat çıkışı",
+      "olusturmaTarihi": "2025-01-13T06:40:00+03:00"
+    },
+
+    {
+      "id": "SHR-000005",
+      "hareketTuru": "TransferCikis",
+      "firmaId": "FIR-000006",
+      "depoId": "DPO-000003",
+      "partiId": "PRT-000003",
+      "miktar": 200,
+      "birim": "Ambalaj",
+      "hedefDepoId": "DPO-000005",
+      "aciklama": "İzmir soğuk hava → Ankara kabul alanı",
+      "olusturmaTarihi": "2025-02-07T05:30:00+03:00"
+    },
+
+    {
+      "id": "SHR-000006",
+      "hareketTuru": "TransferGiris",
+      "firmaId": "FIR-000002",
+      "depoId": "DPO-000005",
+      "partiId": "PRT-000003",
+      "miktar": 200,
+      "birim": "Ambalaj",
+      "kaynakHareketId": "SHR-000005",
+      "aciklama": "Transfer kabul",
+      "olusturmaTarihi": "2025-02-07T10:10:00+03:00"
+    },
+
+    {
+      "id": "SHR-000007",
+      "hareketTuru": "FireCikis",
+      "firmaId": "FIR-000006",
+      "depoId": "DPO-000003",
+      "partiId": "PRT-000004",
+      "miktar": 15,
+      "birim": "Ambalaj",
+      "neden": "Bozulma",
+      "aciklama": "Taşıma sonrası kalite kaybı",
+      "olusturmaTarihi": "2025-02-08T14:30:00+03:00"
+    },
+
+    {
+      "id": "SHR-000008",
+      "hareketTuru": "SayimDuzeltme",
+      "firmaId": "FIR-000006",
+      "depoId": "DPO-000003",
+      "partiId": "PRT-000004",
+      "miktar": -5,
+      "birim": "Ambalaj",
+      "aciklama": "Fiziki sayım farkı",
+      "olusturmaTarihi": "2025-02-10T17:45:00+03:00"
+    },
+
+    {
+      "id": "SHR-000009",
+      "hareketTuru": "IadeGiris",
+      "firmaId": "FIR-000001",
+      "depoId": "DPO-000001",
+      "partiId": "PRT-000002",
+      "miktar": 20,
+      "birim": "Ambalaj",
+      "siparisId": "SPR-000004",
+      "aciklama": "Müşteri iadesi",
+      "olusturmaTarihi": "2025-01-25T11:20:00+03:00"
+    }
+  ]
+}

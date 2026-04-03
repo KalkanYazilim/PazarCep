@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Cüzdanlar",
+    "aciklama": "Firma, kullanıcı ve platform cüzdanları. Bakiye, bloke ve limit bilgileri içerir (snapshot).",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "CZD-000000"
+  },
+  "kurallar": {
+    "paraBirimi": "TRY",
+    "cuzdanTurleri": [ "Firma", "Kullanici", "Platform" ],
+    "zorunluAlanlar": [
+      "id",
+      "cuzdanTuru",
+      "paraBirimi",
+      "durum",
+      "olusturmaTarihi"
+    ]
+  },
+  "cuzdanlar": [
+    {
+      "id": "CZD-000001",
+      "cuzdanTuru": "Firma",
+      "firmaId": "FIR-000001",
+      "paraBirimi": "TRY",
+      "bakiye": {
+        "kullanilabilir": 245000.00,
+        "bloke": 15000.00,
+        "toplam": 260000.00
+      },
+      "limitler": {
+        "gunlukCekim": 100000.00,
+        "aylikCekim": 500000.00,
+        "vadeliLimit": 200000.00
+      },
+      "risk": {
+        "riskPuani": 12,
+        "aciklama": "Düşük risk, düzenli tahsilat."
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2023-10-01T09:00:00+03:00",
+      "not": "Üretici satıcı ana cüzdan."
+    },
+    {
+      "id": "CZD-000002",
+      "cuzdanTuru": "Firma",
+      "firmaId": "FIR-000101",
+      "paraBirimi": "TRY",
+      "bakiye": {
+        "kullanilabilir": 12000.00,
+        "bloke": 0.00,
+        "toplam": 12000.00
+      },
+      "limitler": {
+        "gunlukCekim": 30000.00,
+        "aylikCekim": 150000.00,
+        "vadeliLimit": 50000.00
+      },
+      "risk": {
+        "riskPuani": 18,
+        "aciklama": "Alıcı, düzenli ödeme."
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-15T10:05:00+03:00",
+      "not": "Manav – alıcı cüzdan."
+    },
+    {
+      "id": "CZD-000003",
+      "cuzdanTuru": "Firma",
+      "firmaId": "FIR-000006",
+      "paraBirimi": "TRY",
+      "bakiye": {
+        "kullanilabilir": 485000.00,
+        "bloke": 35000.00,
+        "toplam": 520000.00
+      },
+      "limitler": {
+        "gunlukCekim": 200000.00,
+        "aylikCekim": 1000000.00,
+        "vadeliLimit": 400000.00
+      },
+      "risk": {
+        "riskPuani": 20,
+        "aciklama": "Yüksek hacim, zaman zaman bloke."
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2023-10-05T14:10:00+03:00",
+      "not": "Toptancı – alıcı/satıcı."
+    },
+    {
+      "id": "CZD-000004",
+      "cuzdanTuru": "Kullanici",
+      "kullaniciId": "KUL-000501",
+      "paraBirimi": "TRY",
+      "bakiye": {
+        "kullanilabilir": 2500.00,
+        "bloke": 0.00,
+        "toplam": 2500.00
+      },
+      "limitler": {
+        "gunlukCekim": 5000.00,
+        "aylikCekim": 20000.00
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-10T11:00:00+03:00",
+      "not": "Yetkili kullanıcı kişisel cüzdan."
+    },
+    {
+      "id": "CZD-000005",
+      "cuzdanTuru": "Platform",
+      "platform": "PazarCep",
+      "paraBirimi": "TRY",
+      "bakiye": {
+        "kullanilabilir": 980000.00,
+        "bloke": 0.00,
+        "toplam": 980000.00
+      },
+      "limitler": {
+        "gunlukCekim": 500000.00,
+        "aylikCekim": 3000000.00
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2023-01-01T00:00:00+03:00",
+      "not": "Platform komisyon ve hizmet bedelleri."
+    }
+  ]
+}

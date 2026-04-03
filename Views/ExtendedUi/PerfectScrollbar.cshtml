@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Perfect Scrollbar - Gelişmiş Arayüz";
+}
+@section VendorStyles {
+    <link rel="stylesheet" href="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+}
+@section VendorScripts {
+    <script src="~/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+}
+@section PageScripts {
+    <script src="~/js/extended-ui-perfect-scrollbar.js"></script>
+}
+@* ************** İçerik ************** *@
+<div class="row gy-6">
+    <!-- Vertical Scrollbar -->
+    <div class="col-md-6 col-sm-12">
+        <div class="card overflow-hidden" style="height: 300px;">
+            <h5 class="card-header">Dikey Kaydırma Çubuğu</h5>
+            <div class="card-body" id="vertical-example">
+                <p>
+                    Bu alan, dikey kaydırma çubuğunu göstermek için örnek metinle doldurulmuştur. Uzun metinler, kart yüksekliğini aştığında kaydırma çubuğu otomatik olarak devreye girer. PazarCep içerisinde uzun açıklamalar, yardım metinleri veya kayıt listeleri gösterirken bu yapı kullanılabilir.
+                </p>
+                <p>
+                    Metin uzadıkça kullanıcı, içeriği dikey kaydırma ile görüntüler. Böylece sayfa tasarımı bozulmadan, sınırlı bir alanda çok daha fazla bilgi sunabilirsiniz. Özellikle rapor, log kayıtları, sözleşme metinleri ve detaylı ürün açıklamaları için idealdir.
+                </p>
+                <p>
+                    PazarCep’in farklı modüllerinde; Çiftçi paneli, Yük Veren, Yük Alan ya da Taşımacı ekranlarında uzun listeler veya açıklamalar için bu kaydırma alanı kullanılabilir. Mobil ve masaüstü cihazlarda tutarlı bir görünüm sağlar.
+                </p>
+                <p>
+                    Bu paragraf da, sadece alanı doldurarak kaydırma davranışını daha net göstermek için eklenmiştir. Gerçek projede buraya ihtiyacınız olan herhangi bir metni, tabloyu veya bileşeni yerleştirebilirsiniz.
+                </p>
+                <p>
+                    Uzun metinler arayüzün tamamını kaplamak yerine, bu kart içinde kontrollü bir şekilde gösterildiğinde hem tasarım sade kalır hem de kullanıcı deneyimi iyileşir.
+                </p>
+                <p>
+                    Son olarak, Perfect Scrollbar kütüphanesi varsayılan tarayıcı kaydırma çubuklarını daha modern ve şık bir hâle getirerek PazarCep tasarımına uyumlu görünüm sağlar.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--/ Vertical Scrollbar -->
+    <!-- Horizontal Scrollbar -->
+    <div class="col-md-6 col-sm-12">
+        <div class="card overflow-hidden" style="height: 300px;">
+            <h5 class="card-header">Yatay Kaydırma Çubuğu</h5>
+            <div class="card-body" id="horizontal-example">
+                <img src="~/img/backgrounds/1.jpg" alt="kaydırma-örnek-görseli" />
+            </div>
+        </div>
+    </div>
+    <!--/ Horizontal Scrollbar -->
+    <!-- Vertical & Horizontal Scrollbars -->
+    <div class="col-12">
+        <div class="card overflow-hidden" style="height: 500px;">
+            <h5 class="card-header">Dikey ve Yatay Kaydırma Çubukları</h5>
+            <div class="card-body" id="both-scrollbars-example">
+                <img src="~/img/backgrounds/1.jpg" alt="kaydırma-örnek-görseli" />
+            </div>
+        </div>
+    </div>
+    <!--/ Vertical & Horizontal Scrollbars -->
+</div>

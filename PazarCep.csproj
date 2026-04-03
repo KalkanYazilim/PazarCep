@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Fatura\**" />
+    <Compile Remove="Views\Paneller\**" />
+    <Content Remove="Views\Fatura\**" />
+    <Content Remove="Views\Paneller\**" />
+    <EmbeddedResource Remove="Views\Fatura\**" />
+    <EmbeddedResource Remove="Views\Paneller\**" />
+    <None Remove="Views\Fatura\**" />
+    <None Remove="Views\Paneller\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Workloads.10.0.100" Version="10.100.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.22" />
+    <PackageReference Include="runtime.osx.10.10-x64.Microsoft.NETCore.DotNetHost" Version="1.1.13" />
+    <PackageReference Include="runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk" Version="2.2.14" />
+    <PackageReference Include="runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk" Version="2.2.14" />
+    <PackageReference Include="runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk" Version="2.2.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Egitim\Views\Shared\" />
+    <Folder Include="Areas\ETicaret\Models\" />
+    <Folder Include="Areas\ETicaret\Views\Shared\" />
+    <Folder Include="Areas\Lojistik\Views\Shared\" />
+    <Folder Include="Areas\MusteriYonetimi\Views\Shared\" />
+  </ItemGroup>
+</Project>

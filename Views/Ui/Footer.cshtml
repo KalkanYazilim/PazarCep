@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Alt Bilgi - Arayüz öğeleri";
+}
+
+@* ************** İçerik ************** *@
+<!-- Temel alt bilgi -->
+<section id="basic-footer">
+    <h5 class="pb-1 mb-6">Temel Alt Bilgi</h5>
+
+    <footer class="footer bg-light">
+        <div class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-4">
+            <div><a href="@TempData.Peek("livePreview")" target="_blank" class="footer-brand fw-bold">@TempData.Peek("appName")</a> ©</div>
+            <div>
+                <a href="@TempData.Peek("licenseUrl")" class="footer-link me-6" target="_blank">Lisans</a>
+                <a href="javascript:void(0)" class="footer-link me-6">Yardım</a>
+                <a href="javascript:void(0)" class="footer-link me-6">İletişim</a>
+                <a href="javascript:void(0)" class="footer-link">Şartlar &amp; Koşullar</a>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--/ Temel alt bilgi -->
+<hr class="my-12" />
+
+<!-- Bileşenli alt bilgi -->
+<section id="component-footer">
+    <h5 class="pb-1 mb-6">Ögeler İçeren Alt Bilgi</h5>
+
+    <footer class="footer bg-light">
+        <div class="container-fluid d-flex flex-md-row flex-column justify-content-between align-items-md-center gap-1 container-p-x py-4">
+            <div><a href="@TempData.Peek("livePreview")" target="_blank" class="footer-brand fw-bold">@TempData.Peek("appName")</a> ©</div>
+            <div>
+                <div class="form-check form-control-sm footer-link me-4">
+                    <input class="form-check-input" type="checkbox" value="" id="customCheck2" checked />
+                    <label class="form-check-label" for="customCheck2"> Göster </label>
+                </div>
+                <div class="dropdown dropup footer-link me-4">
+                    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Para birimi</button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-dollar"></i> USD</a>
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-euro"></i> Euro</a>
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-pound"></i> Pound</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-bitcoin"></i> Bitcoin</a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-sm btn-outline-danger"><i class="icon-base bx bx-log-out-circle icon-sm me-1"></i>Çıkış Yap</a>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--/ Bileşenli alt bilgi -->
