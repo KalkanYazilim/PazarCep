@@ -1,0 +1,364 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Rol İzinleri",
+    "aciklama": "Roller ile izinler arasındaki çoktan-çoğa ilişki. RBAC yetkilendirme eşleştirmeleri.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "RIZ-000000"
+  },
+  "kurallar": {
+    "zorunluAlanlar": [ "id", "rolId", "izinId" ],
+    "cokluYetki": true
+  },
+  "rolIzinleri": [
+    /* ===== ADMIN ===== */
+    {
+      "id": "RIZ-000001",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000001"
+    },
+    {
+      "id": "RIZ-000002",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000010"
+    },
+    {
+      "id": "RIZ-000003",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000011"
+    },
+    {
+      "id": "RIZ-000004",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000012"
+    },
+    {
+      "id": "RIZ-000005",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000013"
+    },
+    {
+      "id": "RIZ-000006",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000020"
+    },
+    {
+      "id": "RIZ-000007",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000021"
+    },
+    {
+      "id": "RIZ-000008",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000030"
+    },
+    {
+      "id": "RIZ-000009",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000031"
+    },
+    {
+      "id": "RIZ-000010",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000032"
+    },
+    {
+      "id": "RIZ-000011",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000033"
+    },
+    {
+      "id": "RIZ-000012",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000040"
+    },
+    {
+      "id": "RIZ-000013",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000041"
+    },
+    {
+      "id": "RIZ-000014",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000015",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000051"
+    },
+    {
+      "id": "RIZ-000016",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000052"
+    },
+    {
+      "id": "RIZ-000017",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000053"
+    },
+    {
+      "id": "RIZ-000018",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000060"
+    },
+    {
+      "id": "RIZ-000019",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000061"
+    },
+    {
+      "id": "RIZ-000020",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000070"
+    },
+    {
+      "id": "RIZ-000021",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000071"
+    },
+    {
+      "id": "RIZ-000022",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000080"
+    },
+    {
+      "id": "RIZ-000023",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000081"
+    },
+    {
+      "id": "RIZ-000024",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000090"
+    },
+    {
+      "id": "RIZ-000025",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000091"
+    },
+    {
+      "id": "RIZ-000026",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000092"
+    },
+    {
+      "id": "RIZ-000027",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000100"
+    },
+    {
+      "id": "RIZ-000028",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000101"
+    },
+    {
+      "id": "RIZ-000029",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000110"
+    },
+    {
+      "id": "RIZ-000030",
+      "rolId": "ROL-ADMIN",
+      "izinId": "IZN-000111"
+    },
+
+    /* ===== PLATFORM ===== */
+    {
+      "id": "RIZ-000031",
+      "rolId": "ROL-PLATFORM",
+      "izinId": "IZN-000001"
+    },
+    {
+      "id": "RIZ-000032",
+      "rolId": "ROL-PLATFORM",
+      "izinId": "IZN-000100"
+    },
+    {
+      "id": "RIZ-000033",
+      "rolId": "ROL-PLATFORM",
+      "izinId": "IZN-000101"
+    },
+    {
+      "id": "RIZ-000034",
+      "rolId": "ROL-PLATFORM",
+      "izinId": "IZN-000110"
+    },
+    {
+      "id": "RIZ-000035",
+      "rolId": "ROL-PLATFORM",
+      "izinId": "IZN-000111"
+    },
+
+    /* ===== SATICI ===== */
+    {
+      "id": "RIZ-000040",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000030"
+    },
+    {
+      "id": "RIZ-000041",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000031"
+    },
+    {
+      "id": "RIZ-000042",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000032"
+    },
+    {
+      "id": "RIZ-000043",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000040"
+    },
+    {
+      "id": "RIZ-000044",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000041"
+    },
+    {
+      "id": "RIZ-000045",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000046",
+      "rolId": "ROL-SATICI",
+      "izinId": "IZN-000052"
+    },
+
+    /* ===== ALICI ===== */
+    {
+      "id": "RIZ-000050",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000030"
+    },
+    {
+      "id": "RIZ-000051",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000052",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000051"
+    },
+    {
+      "id": "RIZ-000053",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000053"
+    },
+    {
+      "id": "RIZ-000054",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000060"
+    },
+    {
+      "id": "RIZ-000055",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000070"
+    },
+    {
+      "id": "RIZ-000056",
+      "rolId": "ROL-ALICI",
+      "izinId": "IZN-000090"
+    },
+
+    /* ===== OPERASYON ===== */
+    {
+      "id": "RIZ-000060",
+      "rolId": "ROL-OPERASYON",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000061",
+      "rolId": "ROL-OPERASYON",
+      "izinId": "IZN-000052"
+    },
+    {
+      "id": "RIZ-000062",
+      "rolId": "ROL-OPERASYON",
+      "izinId": "IZN-000041"
+    },
+
+    /* ===== FINANS ===== */
+    {
+      "id": "RIZ-000070",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000060"
+    },
+    {
+      "id": "RIZ-000071",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000061"
+    },
+    {
+      "id": "RIZ-000072",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000070"
+    },
+    {
+      "id": "RIZ-000073",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000071"
+    },
+    {
+      "id": "RIZ-000074",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000080"
+    },
+    {
+      "id": "RIZ-000075",
+      "rolId": "ROL-FINANS",
+      "izinId": "IZN-000081"
+    },
+
+    /* ===== DESTEK ===== */
+    {
+      "id": "RIZ-000080",
+      "rolId": "ROL-DESTEK",
+      "izinId": "IZN-000090"
+    },
+    {
+      "id": "RIZ-000081",
+      "rolId": "ROL-DESTEK",
+      "izinId": "IZN-000091"
+    },
+    {
+      "id": "RIZ-000082",
+      "rolId": "ROL-DESTEK",
+      "izinId": "IZN-000092"
+    },
+
+    /* ===== LOJISTIK ===== */
+    {
+      "id": "RIZ-000090",
+      "rolId": "ROL-LOJISTIK",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000091",
+      "rolId": "ROL-LOJISTIK",
+      "izinId": "IZN-000052"
+    },
+
+    /* ===== OKUYUCU ===== */
+    {
+      "id": "RIZ-000100",
+      "rolId": "ROL-OKUYUCU",
+      "izinId": "IZN-000030"
+    },
+    {
+      "id": "RIZ-000101",
+      "rolId": "ROL-OKUYUCU",
+      "izinId": "IZN-000050"
+    },
+    {
+      "id": "RIZ-000102",
+      "rolId": "ROL-OKUYUCU",
+      "izinId": "IZN-000100"
+    }
+  ]
+}

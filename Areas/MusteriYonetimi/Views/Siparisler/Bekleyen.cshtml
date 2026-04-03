@@ -1,0 +1,38 @@
+@model List<PazarCep.Areas.MusteriYonetimi.Models.SiparisListeSatiriVM>
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "Bekleyen Siparişler";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">@ViewData["Title"]</h5>
+    </div>
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sipariş No</th>
+                        <th>Müşteri</th>
+                        <th>Tarih</th>
+                        <th>Tutar</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.SiparisNo</td>
+                            <td>@x.Musteri</td>
+                            <td>@x.Tarih.ToString("dd.MM.yyyy")</td>
+                            <td>@x.Tutar.ToString("N2")</td>
+                            <td>@x.Durum</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

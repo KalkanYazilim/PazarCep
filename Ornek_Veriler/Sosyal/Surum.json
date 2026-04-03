@@ -1,0 +1,63 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - Sosyal",
+  "aciklama": "Sosyal etkileşim verileri. Gönderiler, yorumlar, beğeniler ve takip ilişkileri. Çiftçi ve son satıcıların bilgi paylaşımı ve topluluk etkileşimi için tasarlanmıştır.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "Sosyal/Gonderiler.json",
+        "aciklama": "Kullanıcı paylaşımları (metin, görsel, video, bağlantı).",
+        "minimumAdet": 200,
+        "hedefAdet": 50000
+      },
+      {
+        "dosya": "Sosyal/Yorumlar.json",
+        "aciklama": "Gönderilere yapılan yorumlar (hiyerarşik – yorum/alt yorum).",
+        "minimumAdet": 500,
+        "hedefAdet": 200000
+      },
+      {
+        "dosya": "Sosyal/Begeniler.json",
+        "aciklama": "Gönderi ve yorum beğenileri.",
+        "minimumAdet": 1000,
+        "hedefAdet": 500000
+      },
+      {
+        "dosya": "Sosyal/Takipler.json",
+        "aciklama": "Kullanıcıların birbirini takip etme ilişkileri.",
+        "minimumAdet": 300,
+        "hedefAdet": 100000
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "gonderi": "GND",
+      "yorum": "YRM",
+      "begeni": "BGN",
+      "takip": "TKP"
+    }
+  },
+  "kurallar": {
+    "gonderiTurleri": [ "Metin", "Gorsel", "Video", "Baglanti" ],
+    "yorumSeviyeleri": [ "AnaYorum", "AltYorum" ],
+    "begeniTurleri": [ "Gonderi", "Yorum" ],
+    "takipDurumlari": [ "Aktif", "Iptal" ],
+    "icerikModerasyonu": {
+      "otomatikFiltre": true,
+      "manuelOnayGerekli": false
+    }
+  },
+  "modelNotlari": [
+    "Sosyal modül etkileşimleri analitik ve öneri sistemlerine veri sağlar.",
+    "Yorumlar hiyerarşik yapıdadır (parentYorumId ile).",
+    "Takip ilişkileri tek yönlüdür (A, B’yi takip eder).",
+    "Beğeniler tekil olmalıdır (aynı kullanıcı aynı içeriği bir kez beğenebilir)."
+  ]
+}

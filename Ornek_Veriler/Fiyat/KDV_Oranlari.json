@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - KDV Oranları",
+    "aciklama": "Kategori/ürün grubu bazlı KDV oranları (demo). Fiyat hesaplamalarında kullanılır.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "KDV-000000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "oranlar": [ 0, 1, 8, 10, 18, 20 ],
+    "zorunluAlanlar": [ "id", "ad", "oranYuzde", "kapsam", "durum", "olusturmaTarihi" ],
+    "kapsamTurleri": [ "Kategori", "Urun", "Genel" ]
+  },
+  "kdvOranlari": [
+    {
+      "id": "KDV-000001",
+      "ad": "Genel KDV (%20) - Varsayılan",
+      "oranYuzde": 20,
+      "kapsam": {
+        "tur": "Genel",
+        "kategoriId": null,
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Kategori/ürün bazlı tanım yoksa uygulanır."
+    },
+    {
+      "id": "KDV-000002",
+      "ad": "Taze Sebze (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000200",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Domates, biber, patlıcan, salatalık vb. (demo)."
+    },
+    {
+      "id": "KDV-000003",
+      "ad": "Kök & Yumru (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000100",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Patates, soğan vb. (demo)."
+    },
+    {
+      "id": "KDV-000004",
+      "ad": "Yeşillikler (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000300",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Marul, roka, maydanoz vb. (demo)."
+    },
+    {
+      "id": "KDV-000005",
+      "ad": "Narenciye (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000400",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Portakal, mandalina, limon (demo)."
+    },
+    {
+      "id": "KDV-000006",
+      "ad": "Meyveler (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000410",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Elma, nar vb. (demo)."
+    },
+    {
+      "id": "KDV-000007",
+      "ad": "Bakliyat (%10) - Demo",
+      "oranYuzde": 10,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000500",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Kuru fasulye, nohut, mercimek (demo)."
+    },
+    {
+      "id": "KDV-000008",
+      "ad": "İşlenmiş Ürünler (%10) - Demo",
+      "oranYuzde": 10,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000510",
+        "urunId": null
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Bulgur vb. (demo)."
+    },
+    {
+      "id": "KDV-000009",
+      "ad": "Kıl Biber (Acı) Özel (%1) - Demo",
+      "oranYuzde": 1,
+      "kapsam": {
+        "tur": "Urun",
+        "kategoriId": null,
+        "urunId": "URN-000005"
+      },
+      "baslangicTarihi": "2024-01-01",
+      "bitisTarihi": null,
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Ürün bazlı override örneği."
+    }
+  ]
+}

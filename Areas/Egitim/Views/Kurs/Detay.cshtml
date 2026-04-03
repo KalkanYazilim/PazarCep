@@ -1,0 +1,110 @@
+@model PazarCep.Areas.Egitim.Models.KursDetayVM
+@{
+    ViewData["Title"] = "Kurs Detayı";
+    var yuzde = Model.IlerlemeYuzde < 0 ? 0 : (Model.IlerlemeYuzde > 100 ? 100 : Model.IlerlemeYuzde);
+}
+
+<div class="row g-4">
+    <div class="col-12 col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-1">@Model.KursAdi</h4>
+                <div class="text-muted mb-3">
+                    <span class="me-2"><i class="bx bx-user me-1"></i>@Model.Egitmen</span>
+                    <span class="me-2"><i class="bx bx-layer me-1"></i>@Model.Seviye</span>
+                    <span><i class="bx bx-time me-1"></i>@Model.SureDakika dk</span>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small class="text-muted">İlerleme</small>
+                        <small class="fw-semibold">@yuzde%</small>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                        <div class="progress-bar" role="progressbar" style="width:@yuzde%"></div>
+                    </div>
+                </div>
+
+                <p class="mb-0">@Model.Aciklama</p>
+
+                <hr class="my-4" />
+
+                <div class="d-flex gap-2 flex-wrap">
+                    <a class="btn btn-primary"
+                       asp-area="Egitim" asp-controller="Kurs" asp-action="Icerik" asp-route-id="@Model.Id">
+                        <i class="bx bx-list-ul me-1"></i>İçeriğe Git
+                    </a>
+                    <a class="btn btn-outline-secondary"
+                       asp-area="Egitim" asp-controller="Kurs" asp-action="Index">
+                        <i class="bx bx-left-arrow-alt me-1"></i>Kurslara Dön
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <h5 class="card-header">Bölümler</h5>
+            <div class="card-body">
+                @if (Model.Bolumler == null || !Model.Bolumler.Any())
+                {
+                    <div class="alert alert-warning mb-0">Bölüm bilgisi bulunamadı.</div>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Bölüm</th>
+                                    <th class="text-end">Ders</th>
+                                    <th class="text-end">Tamamlanan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var b in Model.Bolumler.OrderBy(x => x.Sira))
+                                {
+                                    <tr>
+                                        <td class="fw-semibold">@b.Sira</td>
+                                        <td>@b.Baslik</td>
+                                        <td class="text-end">@b.ToplamDers</td>
+                                        <td class="text-end">@b.TamamlananDers</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <div class="card">
+            <h5 class="card-header">Kurs Özeti</h5>
+            <div class="card-body">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Seviye</span>
+                    <span class="fw-semibold">@Model.Seviye</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Süre</span>
+                    <span class="fw-semibold">@Model.SureDakika dk</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="text-muted">İlerleme</span>
+                    <span class="fw-semibold">@yuzde%</span>
+                </div>
+
+                @if (yuzde >= 100)
+                {
+                    <hr class="my-3" />
+                    <a class="btn btn-outline-success w-100"
+                       asp-area="Egitim" asp-controller="Kurs" asp-action="Sertifikalar">
+                        <i class="bx bx-award me-1"></i>Sertifikayı Gör
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

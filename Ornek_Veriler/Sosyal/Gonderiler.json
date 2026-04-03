@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Gönderiler",
+    "aciklama": "Kullanıcı paylaşımları. Metin, görsel, video ve bağlantı türlerini kapsar.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "GND-000000"
+  },
+  "kurallar": {
+    "gonderiTurleri": [ "Metin", "Gorsel", "Video", "Baglanti" ],
+    "zorunluAlanlar": [ "id", "kullaniciId", "gonderiTuru", "icerik", "durum" ]
+  },
+  "gonderiler": [
+    {
+      "id": "GND-000001",
+      "kullaniciId": "KUL-000601",
+      "gonderiTuru": "Metin",
+      "icerik": "Bu yıl patates ekimini erken yaptım, verim beklediğimden iyi gidiyor.",
+      "etiketler": [ "Patates", "Tarla", "Deneyim" ],
+      "konum": {
+        "ilId": "IL-51",
+        "ilceId": "ILC-5101"
+      },
+      "durum": "Yayinda",
+      "olusturmaTarihi": "2024-03-10T09:15:00+03:00"
+    },
+    {
+      "id": "GND-000002",
+      "kullaniciId": "KUL-000602",
+      "gonderiTuru": "Gorsel",
+      "icerik": "Seradaki domateslerin son hali 🌱",
+      "medyaUrl": "https://img.pazarcep.com/gonderiler/domates-sera-01.jpg",
+      "etiketler": [ "Domates", "Sera" ],
+      "konum": {
+        "ilId": "IL-07",
+        "ilceId": "ILC-0702"
+      },
+      "durum": "Yayinda",
+      "olusturmaTarihi": "2024-04-02T14:20:00+03:00"
+    },
+    {
+      "id": "GND-000003",
+      "kullaniciId": "KUL-000501",
+      "gonderiTuru": "Video",
+      "icerik": "Hasat öncesi tarladan kısa bir video.",
+      "medyaUrl": "https://video.pazarcep.com/gonderiler/hasat-oncesi.mp4",
+      "etiketler": [ "Hasat", "Tarla" ],
+      "konum": {
+        "ilId": "IL-42",
+        "ilceId": "ILC-4205"
+      },
+      "durum": "Yayinda",
+      "olusturmaTarihi": "2024-05-18T11:00:00+03:00"
+    },
+    {
+      "id": "GND-000004",
+      "kullaniciId": "KUL-000704",
+      "gonderiTuru": "Baglanti",
+      "icerik": "Soğuk zincirin önemiyle ilgili güzel bir yazı.",
+      "baglantiUrl": "https://blog.pazarcep.com/soguk-zincir-onemi",
+      "etiketler": [ "SogukZincir", "Lojistik" ],
+      "durum": "Yayinda",
+      "olusturmaTarihi": "2024-06-05T16:45:00+03:00"
+    }
+  ]
+}

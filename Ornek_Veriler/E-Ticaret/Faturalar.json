@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Faturalar",
+    "aciklama": "Satış, alış, komisyon ve iade faturaları. Sipariş ve ödeme süreçleriyle ilişkilidir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "FTR-000000"
+  },
+  "kurallar": {
+    "faturaTurleri": [
+      "SatisFaturasi",
+      "AlisFaturasi",
+      "KomisyonFaturasi",
+      "IadeFaturasi"
+    ],
+    "faturaDurumlari": [ "Taslak", "Kesildi", "Iptal" ],
+    "paraBirimi": "TRY",
+    "zorunluAlanlar": [
+      "id",
+      "faturaNo",
+      "faturaTuru",
+      "saticiFirmaId",
+      "aliciFirmaId",
+      "toplamTutar",
+      "durum",
+      "olusturmaTarihi"
+    ]
+  },
+  "faturalar": [
+    {
+      "id": "FTR-000001",
+      "faturaNo": "PC-SAT-2025-000001",
+      "faturaTuru": "SatisFaturasi",
+      "siparisId": "SPR-000001",
+      "saticiFirmaId": "FIR-000001",
+      "aliciFirmaId": "FIR-000101",
+      "araToplam": 1620.00,
+      "kdvToplami": 301.00,
+      "toplamTutar": 1921.00,
+      "paraBirimi": "TRY",
+      "eFatura": {
+        "tip": "eArsiv",
+        "uuid": "UUID-DEMO-0001",
+        "gonderimDurumu": "Basarili"
+      },
+      "durum": "Kesildi",
+      "kesimTarihi": "2025-01-20",
+      "olusturmaTarihi": "2025-01-20T09:40:00+03:00",
+      "not": "Satış faturası"
+    },
+    {
+      "id": "FTR-000002",
+      "faturaNo": "PC-SAT-2025-000002",
+      "faturaTuru": "SatisFaturasi",
+      "siparisId": "SPR-000002",
+      "saticiFirmaId": "FIR-000006",
+      "aliciFirmaId": "FIR-000102",
+      "araToplam": 1047.50,
+      "kdvToplami": 188.55,
+      "toplamTutar": 1236.05,
+      "paraBirimi": "TRY",
+      "eFatura": {
+        "tip": "eFatura",
+        "uuid": "UUID-DEMO-0002",
+        "gonderimDurumu": "Basarili"
+      },
+      "durum": "Kesildi",
+      "kesimTarihi": "2025-01-15",
+      "olusturmaTarihi": "2025-01-15T11:00:00+03:00"
+    },
+    {
+      "id": "FTR-000003",
+      "faturaNo": "PC-KOM-2025-000001",
+      "faturaTuru": "KomisyonFaturasi",
+      "siparisId": "SPR-000001",
+      "saticiFirmaId": "FIR-000001",
+      "aliciFirmaId": "FIR-000999",
+      "araToplam": 83.50,
+      "kdvToplami": 15.03,
+      "toplamTutar": 98.53,
+      "paraBirimi": "TRY",
+      "eFatura": {
+        "tip": "eArsiv",
+        "uuid": "UUID-DEMO-0003",
+        "gonderimDurumu": "Basarili"
+      },
+      "durum": "Kesildi",
+      "kesimTarihi": "2025-01-21",
+      "olusturmaTarihi": "2025-01-21T10:00:00+03:00",
+      "not": "PazarCep komisyon faturası"
+    },
+    {
+      "id": "FTR-000004",
+      "faturaNo": "PC-IADE-2025-000001",
+      "faturaTuru": "IadeFaturasi",
+      "siparisId": "SPR-000004",
+      "saticiFirmaId": "FIR-000001",
+      "aliciFirmaId": "FIR-000104",
+      "araToplam": 1565.00,
+      "kdvToplami": 281.70,
+      "toplamTutar": 1846.70,
+      "paraBirimi": "TRY",
+      "iliskiliFaturaId": "FTR-000001",
+      "eFatura": {
+        "tip": "eArsiv",
+        "uuid": "UUID-DEMO-0004",
+        "gonderimDurumu": "Basarili"
+      },
+      "durum": "Kesildi",
+      "kesimTarihi": "2025-01-26",
+      "olusturmaTarihi": "2025-01-26T09:15:00+03:00",
+      "not": "Sipariş iade faturası"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - Eğitim",
+  "aciklama": "Eğitim modülü örnek verileri: kurslar, dersler, sınavlar ve kullanıcı kayıt/ilerleme verileri. Çiftçi ve son satıcılar için içerik, öğrenme ve sertifika altyapısına uygun kurgulanmıştır.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "Egitim/Kurslar.json",
+        "aciklama": "Kurs ana kayıtları (başlık, kategori, seviye, hedef kitle, eğitmen, toplam süre, yayın durumu).",
+        "minimumAdet": 50,
+        "hedefAdet": 1000
+      },
+      {
+        "dosya": "Egitim/Dersler.json",
+        "aciklama": "Kurslara bağlı ders/ünite içerikleri (video/makale/doküman).",
+        "minimumAdet": 200,
+        "hedefAdet": 5000
+      },
+      {
+        "dosya": "Egitim/Sinavlar.json",
+        "aciklama": "Kurs sınavları (soru setleri, değerlendirme, geçme notu, deneme hakkı).",
+        "minimumAdet": 50,
+        "hedefAdet": 2000
+      },
+      {
+        "dosya": "Egitim/Kayitlar.json",
+        "aciklama": "Kullanıcı kurs kayıtları ve ilerleme durumu (başladı/tamamladı, yüzde ilerleme, sınav sonucu vb.).",
+        "minimumAdet": 500,
+        "hedefAdet": 50000
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "kurs": "KRS",
+      "ders": "DRS",
+      "sinav": "SNV",
+      "kayit": "KYT"
+    }
+  },
+  "kurallar": {
+    "egitimSeviyeleri": [ "Baslangic", "Orta", "Ileri" ],
+    "icerikTurleri": [ "Video", "Makale", "Dokuman" ],
+    "hedefKitle": [ "Ciftci", "Alici", "HerIkisi" ],
+    "kayitDurumlari": [ "Kayitli", "Basladi", "DevamEdiyor", "Tamamlandi", "Birakti" ],
+    "sinavDurumlari": [ "Girmedi", "Girdi", "Gecti", "Kaldi" ]
+  },
+  "modelNotlari": [
+    "Kurslar -> Dersler ilişkisi 1:N’dir. Her ders bir kursa bağlıdır.",
+    "Sinavlar kurs bazlıdır; soru setleri ayrı bir dosyaya ayrılmak istenirse ileride 'Sinav_Sorulari.json' eklenebilir.",
+    "Kayitlar tablosu kullanıcı eğitim davranışlarını ölçmek için analitik raporlara kaynak olur."
+  ]
+}
