@@ -1,0 +1,46 @@
+@model List<PazarCep.Areas.MusteriYonetimi.Models.MusteriListeSatiriVM>
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "Müşteriler";
+}
+
+<div class="card">
+    <div class="card-header d-flex align-items-center justify-content-between">
+        <h5 class="mb-0">@ViewData["Title"]</h5>
+        <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" class="btn btn-primary">
+            Yeni Müşteri Ekle
+        </a>
+    </div>
+
+    <div class="card-body">
+        @if (TempData["BasariliMesaj"] != null)
+        {
+            <div class="alert alert-success">@TempData["BasariliMesaj"]</div>
+        }
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Ad Soyad / Ünvan</th>
+                        <th>Telefon</th>
+                        <th>E-posta</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.Id</td>
+                            <td>@x.AdSoyadUnvan</td>
+                            <td>@x.Telefon</td>
+                            <td>@x.Eposta</td>
+                            <td>@x.Durum</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Destek Talepleri",
+    "aciklama": "Destek talepleri (ticket). Sipariş/teslimat/ödeme/fatura ile ilişkilendirilebilir; SLA, öncelik ve durum akışı içerir.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "DST-000000"
+  },
+  "kurallar": {
+    "talepKanallari": [ "Uygulama", "Web", "Telefon", "WhatsApp", "Eposta" ],
+    "talepOncelikleri": [ "Dusuk", "Orta", "Yuksek", "Kritik" ],
+    "talepDurumlari": [
+      "Acik",
+      "MusteriYanitiBekleniyor",
+      "DestekYanitiBekleniyor",
+      "Cozuldu",
+      "Kapatildi",
+      "Iptal"
+    ],
+    "kategoriler": [ "Siparis", "Odeme", "Teslimat", "UrunKalitesi", "Iade", "Hesap", "Teknik" ],
+    "zorunluAlanlar": [
+      "id",
+      "talepNo",
+      "firmaId",
+      "kullaniciId",
+      "kanal",
+      "kategori",
+      "oncelik",
+      "durum",
+      "baslik",
+      "olusturmaTarihi"
+    ]
+  },
+  "destekTalepleri": [
+    {
+      "id": "DST-000001",
+      "talepNo": "PC-DST-2025-000001",
+      "firmaId": "FIR-000101",
+      "kullaniciId": "KUL-000501",
+      "kanal": "Uygulama",
+      "kategori": "Teslimat",
+      "oncelik": "Yuksek",
+      "sla": {
+        "ilkYanitDakika": 60,
+        "cozumSaat": 24
+      },
+      "durum": "Cozuldu",
+      "baslik": "Teslimat gecikti (SPR-000003)",
+      "aciklama": "Sipariş sevkte görünüyor fakat teslim edilmedi.",
+      "referanslar": {
+        "siparisId": "SPR-000003",
+        "teslimatId": "TSL-000003",
+        "odemeId": "ODM-000003",
+        "faturaId": null
+      },
+      "atanan": {
+        "departman": "Operasyon",
+        "kullaniciId": "KUL-000900",
+        "atanmaTarihi": "2025-01-20T10:10:00+03:00"
+      },
+      "zamanlar": {
+        "ilkYanit": "2025-01-20T10:35:00+03:00",
+        "cozum": "2025-01-20T15:20:00+03:00",
+        "kapanis": "2025-01-21T09:00:00+03:00"
+      },
+      "etiketler": [ "Gecikme", "Sevkiyat" ],
+      "olusturmaTarihi": "2025-01-20T10:05:00+03:00",
+      "guncellemeTarihi": "2025-01-21T09:00:00+03:00"
+    },
+
+    {
+      "id": "DST-000002",
+      "talepNo": "PC-DST-2025-000002",
+      "firmaId": "FIR-000104",
+      "kullaniciId": "KUL-000504",
+      "kanal": "Web",
+      "kategori": "Iade",
+      "oncelik": "Orta",
+      "sla": {
+        "ilkYanitDakika": 120,
+        "cozumSaat": 48
+      },
+      "durum": "DestekYanitiBekleniyor",
+      "baslik": "İade süreci hakkında bilgi (SPR-000004)",
+      "aciklama": "İade onaylandı mı, ne zaman ödeme yapılacak?",
+      "referanslar": {
+        "siparisId": "SPR-000004",
+        "teslimatId": "TSL-000004",
+        "odemeId": "ODM-000004",
+        "faturaId": "FTR-000004"
+      },
+      "atanan": {
+        "departman": "Müşteri Hizmetleri",
+        "kullaniciId": "KUL-000901",
+        "atanmaTarihi": "2025-01-25T12:10:00+03:00"
+      },
+      "zamanlar": {
+        "ilkYanit": "2025-01-25T12:40:00+03:00",
+        "cozum": null,
+        "kapanis": null
+      },
+      "etiketler": [ "Iade", "OdemeIadesi" ],
+      "olusturmaTarihi": "2025-01-25T11:55:00+03:00",
+      "guncellemeTarihi": "2025-01-25T12:40:00+03:00"
+    },
+
+    {
+      "id": "DST-000003",
+      "talepNo": "PC-DST-2025-000003",
+      "firmaId": "FIR-000102",
+      "kullaniciId": "KUL-000502",
+      "kanal": "WhatsApp",
+      "kategori": "Odeme",
+      "oncelik": "Kritik",
+      "sla": {
+        "ilkYanitDakika": 30,
+        "cozumSaat": 8
+      },
+      "durum": "Acik",
+      "baslik": "POS ödemesi hata verdi (SPR-000002)",
+      "aciklama": "Ödeme çekildi mi, sipariş durumu ne olacak?",
+      "referanslar": {
+        "siparisId": "SPR-000002",
+        "teslimatId": "TSL-000002",
+        "odemeId": "ODM-000002",
+        "faturaId": "FTR-000002"
+      },
+      "atanan": {
+        "departman": "Finans",
+        "kullaniciId": "KUL-000902",
+        "atanmaTarihi": "2025-01-15T10:55:00+03:00"
+      },
+      "zamanlar": {
+        "ilkYanit": null,
+        "cozum": null,
+        "kapanis": null
+      },
+      "etiketler": [ "SanalPOS", "Kritik" ],
+      "olusturmaTarihi": "2025-01-15T10:54:00+03:00",
+      "guncellemeTarihi": "2025-01-15T10:54:00+03:00"
+    },
+
+    {
+      "id": "DST-000004",
+      "talepNo": "PC-DST-2025-000004",
+      "firmaId": "FIR-000105",
+      "kullaniciId": "KUL-000505",
+      "kanal": "Telefon",
+      "kategori": "Siparis",
+      "oncelik": "Dusuk",
+      "sla": {
+        "ilkYanitDakika": 240,
+        "cozumSaat": 72
+      },
+      "durum": "Iptal",
+      "baslik": "Siparişi iptal etmek istiyorum (SPR-000005)",
+      "aciklama": "Sipariş henüz hazırlanmadıysa iptal edelim.",
+      "referanslar": {
+        "siparisId": "SPR-000005",
+        "teslimatId": null,
+        "odemeId": "ODM-000005",
+        "faturaId": null
+      },
+      "atanan": {
+        "departman": "Müşteri Hizmetleri",
+        "kullaniciId": "KUL-000901",
+        "atanmaTarihi": "2025-01-22T16:12:00+03:00"
+      },
+      "zamanlar": {
+        "ilkYanit": "2025-01-22T16:20:00+03:00",
+        "cozum": "2025-01-22T16:25:00+03:00",
+        "kapanis": "2025-01-22T16:25:00+03:00"
+      },
+      "etiketler": [ "Iptal" ],
+      "olusturmaTarihi": "2025-01-22T16:12:00+03:00",
+      "guncellemeTarihi": "2025-01-22T16:25:00+03:00",
+      "not": "Sipariş iptali gerçekleşti."
+    }
+  ]
+}

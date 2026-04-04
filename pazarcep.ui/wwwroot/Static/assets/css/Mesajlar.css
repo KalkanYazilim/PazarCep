@@ -1,0 +1,121 @@
+/* Mesajlar Sayfası */
+
+/* Genel Yapı */
+
+.messages-section {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+/* Mesaj Listesi */
+
+.message-list {
+  flex: 1;
+  background: rgba(200, 200, 0);
+  border-right: 2px solid #ddd;
+  overflow-y: auto;
+}
+
+.search-bar {
+  padding: 10px;
+  background: rgba(0, 200, 0,0.2);
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.message-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-items li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-items li:hover {
+  background: rgba(200, 0, 0, 0.5);
+}
+
+.message-items img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-info {
+  flex: 1;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Mesaj Detayları */
+
+.message-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.chat-message {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.sender {
+  background: rgba(0, 200, 0, 0.6);
+  align-self: flex-end;
+}
+
+.receiver {
+  background: rgba(200, 0, 0, 0.6);
+  align-self: flex-start;
+}
+
+.message-input {
+  display: flex;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.message-input button {
+  padding: 8px 15px;
+  border-radius: 0 5px 5px 0;
+  background-color: rgb(200, 0, 0);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+

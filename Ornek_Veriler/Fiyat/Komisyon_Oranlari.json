@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Komisyon Oranları",
+    "aciklama": "Platform komisyon oranları (demo). Çiftçi → Son Satıcı doğrudan satış modelinde satıcıdan veya işlemden komisyon alınmasını simüle eder.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "KMS-000000"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "kapsamTurleri": [ "Genel", "Kategori", "Urun", "SaticiTipi", "AliciTipi" ],
+    "saticiTipleri": [ "Ciftci_Uretici", "Kooperatif" ],
+    "aliciTipleri": [ "Son_Satici_Manav", "Son_Satici_Market", "Son_Satici_Restoran" ],
+    "odemeYontemleri": [ "HavaleEFT", "SanalPOS", "Vadeli" ],
+    "komisyonTipleri": [ "Yuzde", "SabitTutar" ],
+    "zorunluAlanlar": [
+      "id",
+      "ad",
+      "komisyonTipi",
+      "deger",
+      "kapsam",
+      "durum",
+      "olusturmaTarihi"
+    ],
+    "paraBirimi": "TRY"
+  },
+  "komisyonOranlari": [
+    {
+      "id": "KMS-000001",
+      "ad": "Genel Komisyon - %4 (Varsayılan)",
+      "komisyonTipi": "Yuzde",
+      "deger": 4.0,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Genel",
+        "kategoriId": null,
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00",
+      "not": "Diğer kural yoksa uygulanır."
+    },
+
+    {
+      "id": "KMS-000002",
+      "ad": "Taze Sebze Kategorisi - %3",
+      "komisyonTipi": "Yuzde",
+      "deger": 3.0,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000200",
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:01:00+03:00",
+      "not": "Domates/biber/patlıcan/salatalık vb. (demo)."
+    },
+    {
+      "id": "KMS-000003",
+      "ad": "Yeşillikler - %2.5",
+      "komisyonTipi": "Yuzde",
+      "deger": 2.5,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000300",
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:02:00+03:00",
+      "not": "Hassas ürün olduğu için düşük komisyon (demo)."
+    },
+    {
+      "id": "KMS-000004",
+      "ad": "Bakliyat - %5",
+      "komisyonTipi": "Yuzde",
+      "deger": 5.0,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000500",
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:03:00+03:00"
+    },
+
+    {
+      "id": "KMS-000005",
+      "ad": "Kooperatif Satıcı - %2.5",
+      "komisyonTipi": "Yuzde",
+      "deger": 2.5,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "SaticiTipi",
+        "kategoriId": null,
+        "urunId": null,
+        "saticiTipi": "Kooperatif",
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:04:00+03:00",
+      "not": "Kooperatifleri teşvik için."
+    },
+
+    {
+      "id": "KMS-000006",
+      "ad": "Restoran Alıcı Tipi - %3.5",
+      "komisyonTipi": "Yuzde",
+      "deger": 3.5,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "AliciTipi",
+        "kategoriId": null,
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": "Son_Satici_Restoran",
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:05:00+03:00"
+    },
+
+    {
+      "id": "KMS-000007",
+      "ad": "Sanal POS Ödeme - +%1 Ek Komisyon",
+      "komisyonTipi": "Yuzde",
+      "deger": 1.0,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Genel",
+        "kategoriId": null,
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": "SanalPOS"
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:06:00+03:00",
+      "not": "POS maliyetini simüle eder. Uygulamada 'toplam komisyon = temel + pos ek' gibi hesaplanabilir."
+    },
+
+    {
+      "id": "KMS-000008",
+      "ad": "Kampanya Dönemi - Taze Sebze %2 (2025 Yaz)",
+      "komisyonTipi": "Yuzde",
+      "deger": 2.0,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Kategori",
+        "kategoriId": "KAT-000200",
+        "urunId": null,
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2025-06-01",
+        "bitisTarihi": "2025-09-30"
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2025-05-15T10:00:00+03:00",
+      "not": "Kampanya dönemlerinde komisyon düşebilir."
+    },
+
+    {
+      "id": "KMS-000009",
+      "ad": "Ürün Bazlı Override - Kıl Biber (Acı) %4.5",
+      "komisyonTipi": "Yuzde",
+      "deger": 4.5,
+      "minKomisyonTutar": 0,
+      "maxKomisyonTutar": null,
+      "kapsam": {
+        "tur": "Urun",
+        "kategoriId": null,
+        "urunId": "URN-000005",
+        "saticiTipi": null,
+        "aliciTipi": null,
+        "odemeYontemi": null
+      },
+      "gecerlilik": {
+        "baslangicTarihi": "2024-01-01",
+        "bitisTarihi": null
+      },
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:07:00+03:00",
+      "not": "Ürün bazlı komisyon örneği."
+    }
+  ]
+}

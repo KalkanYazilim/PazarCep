@@ -1,0 +1,402 @@
+@{
+    ViewData["Title"] = "Girdi Grupları - Formlar";
+}
+
+@* ************** İçerik ************** *@
+<div class="row g-6 mb-6">
+    <!-- Basic -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Temel</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon11">&#64;</span>
+                    <input type="text" class="form-control" placeholder="Kullanıcı adı" aria-label="Username" aria-describedby="basic-addon11" />
+                </div>
+
+                <div class="form-password-toggle">
+                    <label class="form-label" for="basic-default-password12">Şifre</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="basic-default-password12" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="basic-default-password2" />
+                        <span id="basic-default-password2" class="input-group-text cursor-pointer"><i class="icon-base bx bx-hide"></i></span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Alıcının kullanıcı adı" aria-label="Recipient's username" aria-describedby="basic-addon13" />
+                    <span class="input-group-text" id="basic-addon13">&#64;example.com</span>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon14">https://example.com/users/</span>
+                    <input type="text" class="form-control" placeholder="URL" id="basic-url1" aria-describedby="basic-addon14" />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" placeholder="Tutar" aria-label="Amount (to the nearest dollar)" />
+                    <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">Metin alanı</span>
+                    <textarea class="form-control" aria-label="With textarea" placeholder="Yorum"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Merged -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Birleştirilmiş</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text" id="basic-addon-search31"><i class="icon-base bx bx-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Ara..." aria-label="Search..." aria-describedby="basic-addon-search31" />
+                </div>
+
+                <div class="form-password-toggle">
+                    <label class="form-label" for="basic-default-password32">Şifre</label>
+                    <div class="input-group input-group-merge">
+                        <input type="password" class="form-control" id="basic-default-password32" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="basic-default-password" />
+                        <span class="input-group-text cursor-pointer" id="basic-default-password"><i class="icon-base bx bx-hide"></i></span>
+                    </div>
+                </div>
+
+                <div class="input-group input-group-merge">
+                    <input type="text" class="form-control" placeholder="Alıcının kullanıcı adı" aria-label="Recipient's username" aria-describedby="basic-addon33" />
+                    <span class="input-group-text" id="basic-addon33">&#64;example.com</span>
+                </div>
+
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text" id="basic-addon34">https://example.com/users/</span>
+                    <input type="text" class="form-control" id="basic-url3" aria-describedby="basic-addon34" />
+                </div>
+
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text">$</span>
+                    <input type="number" class="form-control" placeholder="100" aria-label="Amount (to the nearest dollar)" />
+                    <span class="input-group-text">.00</span>
+                </div>
+
+                <div class="input-group input-group-merge">
+                    <span class="input-group-text">Metin alanı</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sizing -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Boyut ve Şekil</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text">&#64;</span>
+                    <input type="text" class="form-control" placeholder="Kullanıcı adı" />
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-text">&#64;</span>
+                    <input type="text" class="form-control" placeholder="Kullanıcı adı" />
+                </div>
+
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text">&#64;</span>
+                    <input type="text" class="form-control" placeholder="Kullanıcı adı" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Checkbox and radio addons -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Onay kutusu ve radyo ekleri</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Aşağıdaki metin girişi için onay kutusu" />
+                    </div>
+                    <input type="text" class="form-control" aria-label="Onay kutusu ile metin girişi" />
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="radio" value="" aria-label="Aşağıdaki metin girişi için radyo düğmesi" />
+                    </div>
+                    <input type="text" class="form-control" aria-label="Radyo düğmesi ile metin girişi" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-6 mb-6">
+    <!-- Multiple inputs & addon -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Birden fazla girdi ve ek</h5>
+
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <small class="fw-medium d-block">Birden fazla girdi</small>
+                <div class="input-group">
+                    <span class="input-group-text">Ad ve soyad</span>
+                    <input type="text" aria-label="Ad" class="form-control" />
+                    <input type="text" aria-label="Soyad" class="form-control" />
+                </div>
+
+                <small class="fw-medium d-block pt-4">Birden fazla ek</small>
+                <div class="input-group">
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
+                    <input type="text" class="form-control" aria-label="Ondalık ve iki basamaklı dolar tutarı" />
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Ondalık ve iki basamaklı dolar tutarı" />
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Speech To Text -->
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Konuşmadan Yazıya</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <small class="fw-medium d-block">Girdi Grubu</small>
+
+                <div class="input-group input-group-merge form-send-message">
+                    <input type="text" class="form-control message-input" placeholder="Söyleyin" aria-describedby="text-to-speech-addon" />
+                    <span class="message-actions input-group-text" id="text-to-speech-addon">
+                        <i class="icon-base bx bx-microphone cursor-pointer speech-to-text"></i>
+                    </span>
+                </div>
+
+                <small class="fw-medium d-block pt-4">Metin alanı</small>
+
+                <div class="input-group input-group-merge form-send-message">
+                    <textarea class="form-control message-input" placeholder="Söyleyin" rows="2"></textarea>
+                    <span class="message-actions input-group-text">
+                        <i class="icon-base bx bx-microphone cursor-pointer speech-to-text"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button with dropdowns & addons -->
+<div class="row g-6 mb-6">
+    <div class="col-md-6">
+        <div class="card">
+            <h5 class="card-header">Açılır menülü butonlar ve ekler</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <small class="fw-medium d-block">Buton ekleri</small>
+                <div class="input-group">
+                    <button class="btn btn-outline-primary" type="button" id="button-addon1">Buton</button>
+                    <input type="text" class="form-control" placeholder="" aria-label="Buton ekli örnek metin" aria-describedby="button-addon1" />
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Alıcının kullanıcı adı" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Buton</button>
+                </div>
+
+                <div class="input-group">
+                    <button class="btn btn-outline-primary" type="button">Buton</button>
+                    <button class="btn btn-outline-primary" type="button">Buton</button>
+                    <input type="text" class="form-control" placeholder="" aria-label="İki buton ekli örnek metin" />
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Alıcının kullanıcı adı" aria-label="Recipient's username with two button addons" />
+                    <button class="btn btn-outline-primary" type="button">Buton</button>
+                    <button class="btn btn-outline-primary" type="button">Buton</button>
+                </div>
+
+                <small class="fw-medium d-block pt-4">Açılır menülü buton</small>
+                <div class="input-group">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Açılır menü</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0);">İşlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir işlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                    </ul>
+                    <input type="text" class="form-control" aria-label="Açılır menülü buton ile metin girişi" />
+                </div>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Açılır menülü buton ile metin girişi" />
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Açılır menü</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0);">İşlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir işlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                    </ul>
+                </div>
+
+                <div class="input-group">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Açılır menü</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0);">Öncesi için işlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Öncesi için başka işlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                    </ul>
+                    <input type="text" class="form-control" aria-label="İki açılır menülü buton ile metin girişi" />
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Açılır menü</button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="javascript:void(0);">İşlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir işlem</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <!-- Segmented buttons -->
+        <div class="row g-6 mb-6">
+            <div class="col-12">
+                <div class="card">
+                    <h5 class="card-header">Bölünmüş butonlar</h5>
+                    <div class="card-body demo-vertical-spacing demo-only-element">
+                        <div class="input-group">
+                            <button type="button" class="btn btn-outline-primary">İşlem</button>
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Açılır menüyü aç/kapat</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="javascript:void(0);">İşlem</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Başka bir işlem</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                            </ul>
+                            <input type="text" class="form-control" aria-label="Bölünmüş açılır menülü buton ile metin girişi" />
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" class="form-control" aria-label="Bölünmüş açılır menülü buton ile metin girişi" />
+                            <button type="button" class="btn btn-outline-primary">İşlem</button>
+                            <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="visually-hidden">Açılır menüyü aç/kapat</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="javascript:void(0);">İşlem</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Başka bir işlem</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Başka bir seçenek</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="javascript:void(0);">Ayrı bağlantı</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom select -->
+        <div class="row g-6 mb-6">
+            <div class="col-12">
+                <div class="card">
+                    <h5 class="card-header">Özel seçim kutusu</h5>
+                    <div class="card-body demo-vertical-spacing demo-only-element">
+                        <div class="input-group">
+                            <label class="input-group-text" for="inputGroupSelect01">Seçenekler</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Seçiniz...</option>
+                                <option value="1">Bir</option>
+                                <option value="2">İki</option>
+                                <option value="3">Üç</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select class="form-select" id="inputGroupSelect02">
+                                <option selected>Seçiniz...</option>
+                                <option value="1">Bir</option>
+                                <option value="2">İki</option>
+                                <option value="3">Üç</option>
+                            </select>
+                            <label class="input-group-text" for="inputGroupSelect02">Seçenekler</label>
+                        </div>
+
+                        <div class="input-group">
+                            <button class="btn btn-outline-primary" type="button">Buton</button>
+                            <select class="form-select" id="inputGroupSelect03" aria-label="Buton ekli seçim kutusu örneği">
+                                <option selected>Seçiniz...</option>
+                                <option value="1">Bir</option>
+                                <option value="2">İki</option>
+                                <option value="3">Üç</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <select class="form-select" id="inputGroupSelect04" aria-label="Buton ekli seçim kutusu örneği">
+                                <option selected>Seçiniz...</option>
+                                <option value="1">Bir</option>
+                                <option value="2">İki</option>
+                                <option value="3">Üç</option>
+                            </select>
+                            <button class="btn btn-outline-primary" type="button">Buton</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom file input -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <h5 class="card-header">Özel dosya girişi</h5>
+            <div class="card-body demo-vertical-spacing demo-only-element">
+                <div class="input-group">
+                    <label class="input-group-text" for="inputGroupFile01">Yükle</label>
+                    <input type="file" class="form-control" id="inputGroupFile01" />
+                </div>
+
+                <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile02" />
+                    <label class="input-group-text" for="inputGroupFile02">Yükle</label>
+                </div>
+
+                <div class="input-group">
+                    <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon03">Buton</button>
+                    <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Yükle" />
+                </div>
+
+                <div class="input-group">
+                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Yükle" />
+                    <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Buton</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

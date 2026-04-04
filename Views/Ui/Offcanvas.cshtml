@@ -1,0 +1,203 @@
+@{
+    ViewData["Title"] = "Offcanvas - Arayüz öğeleri";
+}
+@* ************** İçerik ************** *@
+<div class="row gy-6">
+    <div class="col-lg-12">
+        <div class="card">
+            <h5 class="card-header">Konumlar</h5>
+            <div class="card-body">
+                <div class="row gy-3">
+                    <!-- Varsayılan Offcanvas (Sol) -->
+                    <div class="col-lg-3 col-md-6">
+                        <small class="fw-medium mb-4">Sol (Varsayılan)</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasStart" aria-controls="offcanvasStart">Sol paneli aç</button>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasStart" aria-labelledby="offcanvasStartLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasStartLabel" class="offcanvas-title">Sol Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <p class="text-center">Bu metin, offcanvas bileşeninin içerik alanını test etmek için kullanılan örnek bir açıklamadır. Gerçek veriler yerine tasarım ve yerleşim testi amacıyla kullanılır.</p>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sağ Offcanvas -->
+                    <div class="col-lg-3 col-md-6">
+                        <small class="fw-medium mb-4">Sağ</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEnd" aria-controls="offcanvasEnd">Sağ paneli aç</button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasEnd" aria-labelledby="offcanvasEndLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasEndLabel" class="offcanvas-title">Sağ Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <p class="text-center">Bu içerik, sağ taraftan açılan offcanvas bileşeninin örnek görünümünü göstermektedir. Tasarım testleri için örnek metin kullanılır.</p>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Üst Offcanvas -->
+                    <div class="col-lg-3 col-md-6">
+                        <small class="fw-medium mb-4">Üst</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Üst paneli aç</button>
+                            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasTopLabel" class="offcanvas-title">Üst Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p>Bu alan, sayfanın üst kısmından açılan offcanvas panelinin içerik örneğini temsil eder. Kullanıcıya kısa bilgiler, filtreler veya menüler sunmak için kullanılabilir.</p>
+                                    <button type="button" class="btn btn-primary me-3">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alt Offcanvas -->
+                    <div class="col-lg-3 col-md-6">
+                        <small class="fw-medium mb-4">Alt</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Alt paneli aç</button>
+                            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasBottomLabel" class="offcanvas-title">Alt Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p>Bu panel, sayfanın alt kısmından açılan offcanvas bileşenini temsil eder. Özellikle mobil görünümde aksiyon butonları veya özet bilgiler göstermek için kullanılabilir.</p>
+                                    <button type="button" class="btn btn-primary me-3">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <h5 class="card-header">Arka Plan (Backdrop)</h5>
+            <div class="card-body">
+                <div class="row gy-3">
+                    <!-- Gövde kaydırmayı etkinleştir -->
+                    <div class="col-lg-4 col-md-6">
+                        <small class="fw-medium mb-4">Gövde kaydırmayı etkinleştir</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScroll" aria-controls="offcanvasScroll">Gövde kaydırmayı etkinleştir</button>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScroll" aria-labelledby="offcanvasScrollLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasScrollLabel" class="offcanvas-title">Kaydırmalı Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <p class="text-center">Bu örnekte, offcanvas açıkken sayfanın gövdesini kaydırmaya devam edebilirsiniz. Arka plan bulanıklaştırılmaz veya kilitlenmez.</p>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arka planı etkinleştir (varsayılan) -->
+                    <div class="col-lg-4 col-md-6">
+                        <small class="fw-medium mb-4">Arka planı etkinleştir (varsayılan)</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBackdrop" aria-controls="offcanvasBackdrop">Arka planı etkinleştir</button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBackdrop" aria-labelledby="offcanvasBackdropLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasBackdropLabel" class="offcanvas-title">Arka planlı Offcanvas</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <p class="text-center">Bu yapı, offcanvas açıldığında sayfanın geri kalanını karartan bir arka plan (backdrop) kullanır ve kullanıcıyı bu alana odaklar.</p>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kaydırma & Arka plan birlikte -->
+                    <div class="col-lg-4 col-md-6">
+                        <small class="fw-medium mb-4">Hem kaydırma hem arka plan</small>
+                        <div class="mt-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBoth" aria-controls="offcanvasBoth">Kaydırma & arka planı etkinleştir</button>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasBoth" aria-labelledby="offcanvasBothLabel">
+                                <div class="offcanvas-header">
+                                    <h5 id="offcanvasBothLabel" class="offcanvas-title">Kaydırma & arka plan etkin</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                                </div>
+                                <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                                    <p class="text-center">Bu örnek, hem gövde kaydırmasının hem de arka plan efektinin birlikte kullanılabildiği durumu göstermektedir.</p>
+                                    <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                                    <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5>Duyarlı (responsive) offcanvas</h5>
+                <div>
+                    <button class="btn btn-primary d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">offcanvas-xl panelini aç</button>
+                    <div class="alert alert-info d-xl-block d-none mt-4">Duyarlı offcanvas butonunu görmek için tarayıcı genişliğinizi <code>xl</code> kırılımına göre yeniden boyutlandırın.</div>
+                    <div class="offcanvas offcanvas-start offcanvas-xl" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Kapat"></button>
+                        </div>
+                        <div class="offcanvas-body d-xl-none my-auto mx-0 flex-grow-0">
+                            <p class="text-center">Bu panel yalnızca belirli ekran genişliklerinde offcanvas olarak gösterilir. Geniş ekranlarda ise normal içerik gibi davranır.</p>
+                            <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                            <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- Koyu Offcanvas -->
+                <h5>Koyu tema offcanvas</h5>
+                <div>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">Koyu offcanvas aç</button>
+
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel" data-bs-theme="dark">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkLabel">Koyu Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Kapat"></button>
+                        </div>
+                        <div class="offcanvas-body my-auto mx-0 flex-grow-0">
+                            <p class="text-center">Bu örnek, koyu tema ile kullanılan offcanvas bileşenini göstermektedir. Gece modu veya koyu arayüzler için idealdir.</p>
+                            <button type="button" class="btn btn-primary mb-2 d-grid w-100">Devam Et</button>
+                            <button type="button" class="btn btn-outline-secondary d-grid w-100" data-bs-dismiss="offcanvas">İptal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

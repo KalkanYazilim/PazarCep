@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Kullanıcı Roller",
+    "aciklama": "Kullanıcılar ile roller arasındaki çoktan-çoğa ilişki. RBAC kullanıcı atamaları.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "KRL-000000"
+  },
+  "kurallar": {
+    "zorunluAlanlar": [ "id", "kullaniciId", "rolId", "aktif" ],
+    "birKullaniciCokluRol": true
+  },
+  "kullaniciRolleri": [
+    {
+      "id": "KRL-000001",
+      "kullaniciId": "KUL-000001",
+      "rolId": "ROL-ADMIN",
+      "aktif": true,
+      "atanmaTarihi": "2023-01-01T00:00:00+03:00",
+      "not": "Sistem kurucusu"
+    },
+    {
+      "id": "KRL-000002",
+      "kullaniciId": "KUL-000900",
+      "rolId": "ROL-PLATFORM",
+      "aktif": true,
+      "atanmaTarihi": "2023-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "KRL-000003",
+      "kullaniciId": "KUL-000501",
+      "rolId": "ROL-ALICI",
+      "aktif": true,
+      "atanmaTarihi": "2024-01-15T10:00:00+03:00"
+    },
+    {
+      "id": "KRL-000004",
+      "kullaniciId": "KUL-000501",
+      "rolId": "ROL-OKUYUCU",
+      "aktif": true,
+      "atanmaTarihi": "2024-01-15T10:00:00+03:00",
+      "not": "Rapor görüntüleme yetkisi"
+    },
+    {
+      "id": "KRL-000005",
+      "kullaniciId": "KUL-000601",
+      "rolId": "ROL-SATICI",
+      "aktif": true,
+      "atanmaTarihi": "2023-11-01T09:30:00+03:00"
+    },
+    {
+      "id": "KRL-000006",
+      "kullaniciId": "KUL-000602",
+      "rolId": "ROL-SATICI",
+      "aktif": true,
+      "atanmaTarihi": "2023-11-01T09:30:00+03:00"
+    },
+    {
+      "id": "KRL-000007",
+      "kullaniciId": "KUL-000701",
+      "rolId": "ROL-OPERASYON",
+      "aktif": true,
+      "atanmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "KRL-000008",
+      "kullaniciId": "KUL-000702",
+      "rolId": "ROL-FINANS",
+      "aktif": true,
+      "atanmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "KRL-000009",
+      "kullaniciId": "KUL-000703",
+      "rolId": "ROL-DESTEK",
+      "aktif": true,
+      "atanmaTarihi": "2023-02-01T10:00:00+03:00"
+    },
+    {
+      "id": "KRL-000010",
+      "kullaniciId": "KUL-000704",
+      "rolId": "ROL-LOJISTIK",
+      "aktif": true,
+      "atanmaTarihi": "2023-02-01T10:00:00+03:00"
+    }
+  ]
+}

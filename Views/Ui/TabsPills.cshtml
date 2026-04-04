@@ -1,0 +1,165 @@
+@{
+    ViewData["Title"] = "Sekmeler ve Haplar (Tabs & Pills) - Arayüz Öğeleri";
+}
+@* ************** İçerik ************** *@
+<!-- Tabs -->
+<h5 class="py-4 my-6">Sekmeler</h5>
+
+<div class="row g-6">
+    <div class="col-xl-6">
+        <h6 class="text-body-secondary">Temel</h6>
+        <div class="nav-align-top nav-tabs-shadow">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-top-home" aria-controls="navs-top-home" aria-selected="true">Ana Sayfa</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-top-profile" aria-controls="navs-top-profile" aria-selected="false">Profil</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-top-messages" aria-controls="navs-top-messages" aria-selected="false">Mesajlar</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="navs-top-home" role="tabpanel">
+                    <p>Şekerleme, pasta ve tatlı karışımlarından oluşan örnek açıklama metni.</p>
+                    <p class="mb-0">Kurabiye, tatlı, jöle ve şekerlemelerden oluşan açıklama metni.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-top-profile" role="tabpanel">
+                    <p>Donut, draje ve pasta çeşitlerinden oluşan açıklama metni.</p>
+                    <p class="mb-0">Limonlu kek, pamuk şeker ve çeşitli tatlıların yer aldığı örnek metin.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-top-messages" role="tabpanel">
+                    <p>Şekerleme, donut, karamela ve çikolata karışımlarından oluşan açıklama metni.</p>
+                    <p class="mb-0">Elmalı turta, çikolatalı kek ve diğer tatlıların yer aldığı örnek metin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6">
+        <h6 class="text-body-secondary">Dolgulu Sekmeler</h6>
+        <div class="nav-align-top nav-tabs-shadow">
+            <ul class="nav nav-tabs nav-fill" role="tablist">
+                <li class="nav-item">
+                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-home" aria-controls="navs-justified-home" aria-selected="true">
+                        <span class="d-none d-sm-inline-flex align-items-center">
+                            <i class="icon-base bx bx-home icon-sm me-1_5"></i>Ana Sayfa
+                            <span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-label-danger ms-1_5">3</span>
+                        </span>
+                        <i class="icon-base bx bx-home icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-profile" aria-controls="navs-justified-profile" aria-selected="false">
+                        <span class="d-none d-sm-inline-flex align-items-center"><i class="icon-base bx bx-user icon-sm me-1_5"></i>Profil</span>
+                        <i class="icon-base bx bx-user icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-justified-messages" aria-controls="navs-justified-messages" aria-selected="false">
+                        <span class="d-none d-sm-inline-flex align-items-center"><i class="icon-base bx bx-message-square icon-sm me-1_5"></i>Mesajlar</span>
+                        <i class="icon-base bx bx-message-square icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="navs-justified-home" role="tabpanel">
+                    <p>Şekerleme, pasta ve tatlı karışımlarından oluşan örnek açıklama metni.</p>
+                    <p class="mb-0">Tatlı, jöle ve kurabiyelerden oluşan açıklama metni.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-justified-profile" role="tabpanel">
+                    <p>Donut, draje, pasta ve tatlı çeşitlerinden oluşan örnek açıklama metni.</p>
+                    <p class="mb-0">Limonlu kek, pamuk şeker ve çeşitli tatlıların yer aldığı örnek metin.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-justified-messages" role="tabpanel">
+                    <p>Şekerleme, donut, karamela ve çikolata karışımlarından oluşan açıklama metni.</p>
+                    <p class="mb-0">Tatlılar, pastalar ve çikolatalardan oluşan örnek açıklama metni.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tabs -->
+
+<hr class="container-m-nx mt-12" />
+
+<!-- Pills -->
+<h5 class="py-4 my-6">Haplar</h5>
+
+<div class="row g-6">
+    <div class="col-xl-6">
+        <h6 class="text-body-secondary">Temel</h6>
+        <div class="nav-align-top">
+            <ul class="nav nav-pills mb-4" role="tablist">
+                <li class="nav-item">
+                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-home" aria-controls="navs-pills-top-home" aria-selected="true">Ana Sayfa</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-profile" aria-controls="navs-pills-top-profile" aria-selected="false">Profil</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-messages" aria-controls="navs-pills-top-messages" aria-selected="false">Mesajlar</button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="navs-pills-top-home" role="tabpanel">
+                    <p>Şekerleme ve tatlılardan oluşan örnek açıklama metni.</p>
+                    <p class="mb-0">Pasta, jöle ve çikolatalardan oluşan metin örneği.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-pills-top-profile" role="tabpanel">
+                    <p>Donut, kurabiye ve çeşitli tatlılardan oluşan açıklama metni.</p>
+                    <p class="mb-0">Pamuk şeker, limonlu kek ve tatlılardan oluşan örnek metin.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-pills-top-messages" role="tabpanel">
+                    <p>Şekerleme, cupcake ve çikolata çeşitlerinden oluşan metin.</p>
+                    <p class="mb-0">Elmalı turta, çikolatalı kek ve tatlılardan oluşan örnek açıklama metni.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6">
+        <h6 class="text-body-secondary">Dolgulu Haplar</h6>
+        <div class="nav-align-top">
+            <ul class="nav nav-pills mb-4 nav-fill" role="tablist">
+                <li class="nav-item mb-1 mb-sm-0">
+                    <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-home" aria-controls="navs-pills-justified-home" aria-selected="true">
+                        <span class="d-none d-sm-inline-flex align-items-center">
+                            <i class="icon-base bx bx-home icon-sm me-1_5"></i>Ana Sayfa
+                            <span class="badge rounded-pill badge-center h-px-20 w-px-20 bg-danger ms-1_5">3</span>
+                        </span>
+                        <i class="icon-base bx bx-home icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+                <li class="nav-item mb-1 mb-sm-0">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-profile" aria-controls="navs-pills-justified-profile" aria-selected="false">
+                        <span class="d-none d-sm-inline-flex align-items-center"><i class="icon-base bx bx-user icon-sm me-1_5"></i>Profil</span>
+                        <i class="icon-base bx bx-user icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-justified-messages" aria-controls="navs-pills-justified-messages" aria-selected="false">
+                        <span class="d-none d-sm-inline-flex align-items-center"><i class="icon-base bx bx-message-square icon-sm me-1_5"></i>Mesajlar</span>
+                        <i class="icon-base bx bx-message-square icon-sm d-sm-none"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="navs-pills-justified-home" role="tabpanel">
+                    <p>Şekerleme ve çeşitli tatlılardan oluşan örnek açıklama metni.</p>
+                    <p class="mb-0">Pasta, jöle ve çikolatalardan oluşan örnek açıklama metni.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-pills-justified-profile" role="tabpanel">
+                    <p>Donut, kurabiye ve kek çeşitlerinden oluşan açıklama metni.</p>
+                    <p class="mb-0">Pamuk şeker ve limonlu tatlılardan oluşan örnek açıklama.</p>
+                </div>
+                <div class="tab-pane fade" id="navs-pills-justified-messages" role="tabpanel">
+                    <p>Şekerleme, cupcake ve çikolata çeşitlerinden oluşan tatlı metni.</p>
+                    <p class="mb-0">Turta, çikolatalı kek ve pastalardan oluşan açıklama metni.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pills -->

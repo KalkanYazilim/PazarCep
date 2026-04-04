@@ -1,0 +1,73 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - Katalog",
+  "aciklama": "Katalog verileri: Ürünler, ürün varyantları, ürün fotoğrafları ve ürün etiketleri. Fiyat/Stok/E-Ticaret modülleri bu verileri referans alır.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "Katalog/Urunler.json",
+        "aciklama": "Ürün ana kartları (kategori, üretici firma, birim, temel özellikler)",
+        "minimumAdet": 100,
+        "hedefAdet": 1000
+      },
+      {
+        "dosya": "Katalog/Urun_Varyantlari.json",
+        "aciklama": "Ürün varyantları (boy, kalite sınıfı, paket/ambalaj, organik vb.)",
+        "minimumAdet": 150,
+        "hedefAdet": 1500
+      },
+      {
+        "dosya": "Katalog/Fotograflari.json",
+        "aciklama": "Ürün fotoğrafları (ana foto, galeri; varyant veya ürün bazlı)",
+        "minimumAdet": 300,
+        "hedefAdet": 3000
+      },
+      {
+        "dosya": "Katalog/Urun_Etiketleri.json",
+        "aciklama": "Etiket sözlüğü ve ürün-etiket eşleştirmeleri",
+        "minimumAdet": 50,
+        "hedefAdet": 300
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "urun": "URN",
+      "varyant": "VAR",
+      "foto": "FOT",
+      "etiket": "ETK",
+      "urunEtiket": "UET"
+    }
+  },
+  "referansButunlugu": {
+    "urunFirmaId": "Cekirdek/Firmalar.json (FIR-...)",
+    "urunKategoriId": "Sozluk/Kategori_Agaci.json (KAT-...)",
+    "urunBirimId": "Sozluk/Birimler.json (BRM-...)",
+    "varyantUrunId": "Katalog/Urunler.json (URN-...)",
+    "fotoUrunId": "Katalog/Urunler.json (URN-...)",
+    "fotoVaryantIdOpsiyonel": "Katalog/Urun_Varyantlari.json (VAR-...)",
+    "urunEtiketUrunId": "Katalog/Urunler.json (URN-...)",
+    "urunEtiketEtiketId": "Katalog/Urun_Etiketleri.json (ETK-...)"
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "zorunluAlanlar": [ "id", "durum", "olusturmaTarihi" ],
+    "turkceAlanStandardi": {
+      "adlarTurkce": true,
+      "basHarfBuyuk": true,
+      "turkceKarakterKullan": true
+    }
+  },
+  "notlar": [
+    "Çiftçi → Son Satıcı doğrudan modelinde ürünlerin üretici firması (FIR-...) ile bağlanması önemlidir.",
+    "Fiyat modülü ürün/varyant bazlı fiyat listeleri ile çalışacaktır.",
+    "Stok modülü ürün/varyant bazlı parti ve depo stokları ile çalışacaktır."
+  ]
+}
+s
