@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/SMO_Style.css">
+  <link rel="stylesheet" href="assets/css/SM_Profil.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="AnaSayfa.html">PazarCep</a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="SM_Profil.html">Profilim</a>
+      <a class="nav-link" href="Akis.html">Akış</a>
+      <a class="nav-link" href="Kesfet.html">Keşfet</a>
+      <a class="nav-link active" href="Mesajlar.html">Mesajlar</a>
+    </div>
+  </nav>
+
+  <!-- Profil Bilgileri -->
+  <div class="profile-header">
+    <img src="assets/img/avatar-placeholder.png" alt="Profil Resmi" class="profile-pic">
+    <h1>Kullanıcı Adı</h1>
+    <p>Biyografi: Çiftçiyim, doğa severim! 🌱</p>
+    <div class="profile-actions">
+      <button class="primary" id="follow-btn-1" onclick="toggleFollow(1, false)">Takip Et</button>
+      <button class="primary" onclick="alert('Mesaj Gönderiliyor!')">Mesaj Gönder</button>
+      <button class="primary" onclick="moreOptions(1)">⋮ Daha Fazla</button>
+    </div>
+  </div>
+
+  <!-- Gönderiler -->
+  <div class="container">
+    <h2>Gönderiler</h2>
+    
+    <!-- Gönderi Kartı -->
+    <div class="card">
+      <img src="assets/img/Kiraz.webp" alt="Gönderi Resmi" class="post-img">
+      <div class="content">
+        <h5>Hasat Günlüğü 🍅🌱</h5>
+        <p>Bugün tarlada harika bir gün geçirdik!</p>
+        
+        <!-- Beğeni ve Yorumlar -->
+        <div class="stats">
+          <span id="like-count-5">45 Beğeni</span> | 
+          <span id="dislike-count-5">3 Beğenmeme</span> | 
+          <span id="comment-count-5">12 Yorum</span>
+        </div>
+
+        <!-- Etkileşim Butonları -->
+        <div class="actions">
+          <button id="like-btn-5" class="primary" onclick="toggleLike(5)">❤️ Beğen</button>
+          <button id="dislike-btn-5" class="primary" onclick="toggleDislike(5)">👎 Beğenmeme</button>
+          <button class="primary" onclick="openCommentsModal(5)">💬 Yorumlar</button>
+          <button class="primary" onclick="moreOptions(5)">⋮ Daha Fazla</button>
+        </div>
+      </div>
+    </div>
+      <!-- Gönderi Kartı -->
+      <div class="card">
+        <img src="assets/img/Salatalik.webp" alt="Gönderi Resmi" class="post-img">
+        <div class="content">
+          <h5>Hasat Günlüğü 🍅🌱</h5>
+          <p>Bugün tarlada harika bir gün geçirdik!</p>
+          
+          <!-- Beğeni ve Yorumlar -->
+          <div class="stats">
+            <span id="like-count-6">45 Beğeni</span> | 
+            <span id="dislike-count-6">3 Beğenmeme</span> | 
+            <span id="comment-count-6">12 Yorum</span>
+          </div>
+  
+          <!-- Etkileşim Butonları -->
+          <div class="actions">
+            <button id="like-btn-6" class="primary" onclick="toggleLike(6)">❤️ Beğen</button>
+            <button id="dislike-btn-6" class="primary" onclick="toggleDislike(6)">👎 Beğenmeme</button>
+            <button class="primary" onclick="openCommentsModal(6)">💬 Yorumlar</button>
+            <button class="primary" onclick="moreOptions(6)">⋮ Daha Fazla</button>
+          </div>
+        </div>
+      </div>
+        <!-- Gönderi Kartı -->
+    <div class="card">
+        <img src="assets/img/Domates.webp" alt="Gönderi Resmi" class="post-img">
+        <div class="content">
+          <h5>Hasat Günlüğü 🍅🌱</h5>
+          <p>Bugün tarlada harika bir gün geçirdik!</p>
+          
+          <!-- Beğeni ve Yorumlar -->
+          <div class="stats">
+            <span id="like-count-7">45 Beğeni</span> | 
+            <span id="dislike-count-7">3 Beğenmeme</span> | 
+            <span id="comment-count-7">12 Yorum</span>
+          </div>
+  
+          <!-- Etkileşim Butonları -->
+          <div class="actions">
+            <button id="like-btn-7" class="primary" onclick="toggleLike(7)">❤️ Beğen</button>
+            <button id="dislike-btn-7" class="primary" onclick="toggleDislike(7)">👎 Beğenmeme</button>
+            <button class="primary" onclick="openCommentsModal(7)">💬 Yorumlar</button>
+            <button class="primary" onclick="moreOptions(7)">⋮ Daha Fazla</button>
+          </div>
+        </div>
+      </div>
+        <!-- Gönderi Kartı -->
+    <div class="card">
+        <img src="assets/img/Patates.webp" alt="Gönderi Resmi" class="post-img">
+        <div class="content">
+          <h5>Hasat Günlüğü 🍅🌱</h5>
+          <p>Bugün tarlada harika bir gün geçirdik!</p>
+          
+          <!-- Beğeni ve Yorumlar -->
+          <div class="stats">
+            <span id="like-count-8">45 Beğeni</span> | 
+            <span id="dislike-count-8">3 Beğenmeme</span> | 
+            <span id="comment-count-8">12 Yorum</span>
+          </div>
+  
+          <!-- Etkileşim Butonları -->
+          <div class="actions">
+            <button id="like-btn-8" class="primary" onclick="toggleLike(8)">❤️ Beğen</button>
+            <button id="dislike-btn-8" class="primary" onclick="toggleDislike(8)">👎 Beğenmeme</button>
+            <button class="primary" onclick="openCommentsModal(8)">💬 Yorumlar</button>
+            <button class="primary" onclick="moreOptions(8)">⋮ Daha Fazla</button>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Yorumlar Modalı -->
+  <div id="comments-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCommentsModal()">&times;</span>
+      <h3>Yorumlar ve Beğeniler</h3>
+      <div class="modal-body">
+        <!-- Beğenenler ve Beğenmeyenler -->
+        <div class="likes-section">
+          <div class="liked">
+            <h4>Beğenenler</h4>
+            <ul>
+              <li>Ali Veli</li>
+              <li>Ayşe Çelik</li>
+              <li>Mehmet Can</li>
+            </ul>
+          </div>
+          <div class="not-liked">
+            <h4>Beğenmeyenler</h4>
+            <ul>
+              <li>Fatma Yılmaz</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Yorumlar -->
+        <div id="comments-section">
+          <h4>Yorumlar</h4>
+          <p><strong>Ayşe:</strong> Harika görünüyor! 😊</p>
+          <p><strong>Mehmet:</strong> Tebrikler, çok güzel bir hasat! 👏</p>
+        </div>
+
+        <!-- Yorum Yap -->
+        <div class="comment-input">
+          <input type="text" id="new-comment" placeholder="Yorum yaz...">
+          <button class="primary" onclick="addComment(1)">Gönder</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/SMO_Script.js"></script>
+  <script src="assets/js/SM_Profil.js"></script>
+</body>
+</html>

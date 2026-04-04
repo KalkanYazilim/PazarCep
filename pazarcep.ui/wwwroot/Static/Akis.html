@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akış</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/SMO_Style.css">
+  <link rel="stylesheet" href="assets/css/Akis.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="AnaSayfa.html">PazarCep</a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="SM_Profil.html">Profilim</a>
+      <a class="nav-link" href="Akis.html">Akış</a>
+      <a class="nav-link" href="Kesfet.html">Keşfet</a>
+      <a class="nav-link active" href="Mesajlar.html">Mesajlar</a>
+    </div>
+  </nav>
+
+  <!-- Hikaye Bölümü -->
+  <div class="story-slider">
+    <div class="story" onclick="viewStory(10)">
+      <img src="assets/img/Kiraz.webp" alt="Hikaye">
+      <p>Ali Veli</p>
+    </div>
+    <div class="story" onclick="viewStory(20)">
+      <img src="assets/img/Salatalik.webp" alt="Hikaye">
+      <p>Ayşe Çelik</p>
+    </div>
+    <div class="story" onclick="viewStory(30)">
+      <img src="assets/img/Patates.webp" alt="Hikaye">
+      <p>Mehmet Can</p>
+    </div>
+  </div>
+
+  <!-- Gönderiler -->
+  <div class="container">
+    <div class="card">
+      <img src="assets/img/Patlican.webp" alt="Gönderi Resmi" class="post-img">
+      <div class="content">
+        <h5>Patlıcan Hasadı🍅🌱</h5>
+        <p>Bugün tarlada harika bir gün geçirdik!</p>
+        <div class="actions">
+          <button id="like-btn-1" class="primary" onclick="toggleLike(1)">❤️ Beğen</button>
+          <button class="primary" onclick="commentPost(1)">💬 Yorum Yap</button>
+          <button class="primary" onclick="moreOptions(1)">⋮ Daha Fazla</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/img/Domates.webp" alt="Gönderi Resmi" class="post-img">
+      <div class="content">
+        <h5>Domates Hasadı 🌰</h5>
+        <p>Domates Bahçelerimiz bu yıl çok bereketliydi!</p>
+        <div class="actions">
+          <button id="like-btn-2" class="primary" onclick="toggleLike(2)">❤️ Beğen</button>
+          <button class="primary" onclick="commentPost(2)">💬 Yorum Yap</button>
+          <button class="primary" onclick="moreOptions(2)">⋮ Daha Fazla</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+        <img src="assets/img/Biber.webp" alt="Gönderi Resmi" class="post-img">
+        <div class="content">
+          <h5>Biber Hasadı 🌰</h5>
+          <p>Ceviz ağaçlarımız bu yıl çok bereketliydi!</p>
+          <div class="actions">
+            <button id="like-btn-3" class="primary" onclick="toggleLike(3)">❤️ Beğen</button>
+            <button class="primary" onclick="commentPost(3)">💬 Yorum Yap</button>
+            <button class="primary" onclick="moreOptions(3)">⋮ Daha Fazla</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/img/Sogan.webp" alt="Gönderi Resmi" class="post-img">
+        <div class="content">
+          <h5>Sogan Hasadı 🌰</h5>
+          <p>Sogan Tarlalarımız bu yıl çok bereketliydi!</p>
+          <div class="actions">
+            <button id="like-btn-4" class="primary" onclick="toggleLike(4)">❤️ Beğen</button>
+            <button class="primary" onclick="commentPost(4)">💬 Yorum Yap</button>
+            <button class="primary" onclick="moreOptions(4)">⋮ Daha Fazla</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/SMO_Script.js"></script>
+  <script src="assets/js/Akis.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "surum": "1.0.0",
+  "paketAdi": "PazarCep Örnek Veriler - CRM",
+  "aciklama": "CRM verileri: müşteriler, destek talepleri ve destek mesajları. Alıcı ve satıcı firmalarla ilişkilidir. Çiftçi → Son Satıcı doğrudan modelinde; sipariş/teslimat/ödeme ile bağlantılı destek süreçlerini kapsar.",
+  "zamanlama": {
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul"
+  },
+  "icerik": {
+    "veriSetleri": [
+      {
+        "dosya": "CRM/Musteriler.json",
+        "aciklama": "Müşteri kartları (CRM perspektifi). Firmalar ve kullanıcılarla ilişkilidir; segment, etiket, not ve performans alanlarını içerir.",
+        "minimumAdet": 200,
+        "hedefAdet": 5000
+      },
+      {
+        "dosya": "CRM/Destek_Talepleri.json",
+        "aciklama": "Destek talepleri (ticket). Sipariş/teslimat/ödeme referanslarıyla bağlanabilir; SLA ve durum akışı içerir.",
+        "minimumAdet": 200,
+        "hedefAdet": 20000
+      },
+      {
+        "dosya": "CRM/Destek_Mesajlari.json",
+        "aciklama": "Destek talebine bağlı mesajlaşma kayıtları (müşteri/operatör). Ekler, iç notlar ve otomatik mesajlar dahil.",
+        "minimumAdet": 500,
+        "hedefAdet": 100000
+      }
+    ]
+  },
+  "idStandartlari": {
+    "format": "PREFIX-000000",
+    "prefixler": {
+      "musteri": "MUS",
+      "destekTalebi": "DST",
+      "destekMesaji": "DSM"
+    }
+  },
+  "referansButunlugu": {
+    "firmaId": "Cekirdek/Firmalar.json (FIR-...)",
+    "kullaniciId": "Cekirdek/Kullanicilar.json (KUL-...)",
+    "siparisIdOpsiyonel": "E-Ticaret/Siparisler.json (SPR-...)",
+    "teslimatIdOpsiyonel": "Lojistik/Teslimatlar.json (TSL-...)",
+    "odemeIdOpsiyonel": "E-Ticaret/Odemeler.json (ODM-...)",
+    "faturaIdOpsiyonel": "E-Ticaret/Faturalar.json (FTR-...)"
+  },
+  "kurallar": {
+    "musteriTurleri": [ "Alici", "Satici", "HerIkisi" ],
+    "musteriDurumlari": [ "Aktif", "Pasif", "Riskli" ],
+    "talepKanallari": [ "Uygulama", "Web", "Telefon", "WhatsApp", "Eposta" ],
+    "talepOncelikleri": [ "Dusuk", "Orta", "Yuksek", "Kritik" ],
+    "talepDurumlari": [
+      "Acik",
+      "MusteriYanitiBekleniyor",
+      "DestekYanitiBekleniyor",
+      "Cozuldu",
+      "Kapatildi",
+      "Iptal"
+    ],
+    "kategoriOrnekleri": [
+      "Siparis",
+      "Odeme",
+      "Teslimat",
+      "UrunKalitesi",
+      "Iade",
+      "Hesap",
+      "Teknik"
+    ],
+    "sla": {
+      "ilkYanitDakika": {
+        "Dusuk": 240,
+        "Orta": 120,
+        "Yuksek": 60,
+        "Kritik": 30
+      },
+      "cozumSaat": {
+        "Dusuk": 72,
+        "Orta": 48,
+        "Yuksek": 24,
+        "Kritik": 8
+      }
+    }
+  },
+  "modelNotlari": [
+    "CRM/Musteriler, Cekirdek/Firmalar’daki kayıtların CRM görünümüdür; segment, etiket, risk ve notlar burada tutulur.",
+    "Destek talebi (ticket) sipariş/teslimat/ödeme/fatura ile ilişkilendirilebilir; böylece operasyon tek ekrandan izlenir.",
+    "Destek mesajları hem müşteri mesajlarını hem de destek ekibinin iç notlarını (gorunurluk: IcNot) içerebilir.",
+    "SLA alanları örnek veridir; gerçek sistemde otomatik hesaplanıp talep kaydına yazılabilir."
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Ürün Etiketleri",
+    "aciklama": "Etiket sözlüğü ve ürün-etiket eşleştirmeleri. Filtreleme, rozetler ve arama için kullanılır.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormatlari": {
+      "etiket": "ETK-000000",
+      "urunEtiket": "UET-000000"
+    }
+  },
+  "kurallar": {
+    "durumDegerleri": [ "Aktif", "Pasif" ],
+    "zorunluAlanlarEtiket": [ "id", "ad", "slug", "durum", "olusturmaTarihi" ],
+    "zorunluAlanlarUrunEtiket": [ "id", "urunId", "etiketId", "durum", "olusturmaTarihi" ],
+    "referansButunlugu": {
+      "urunId": "Katalog/Urunler.json (URN-...)",
+      "etiketId": "Bu dosyadaki etiketler (ETK-...)"
+    }
+  },
+  "etiketler": [
+    {
+      "id": "ETK-000001",
+      "ad": "Organik",
+      "slug": "organik",
+      "aciklama": "Organik üretim veya organik sertifikalı (demo).",
+      "rozetMetni": "Organik",
+      "ikon": "leaf",
+      "renk": "#2E7D32",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000002",
+      "ad": "Yerli Ürün",
+      "slug": "yerli-urun",
+      "aciklama": "Türkiye menşeli ürün.",
+      "rozetMetni": "Yerli",
+      "ikon": "flag",
+      "renk": "#D32F2F",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000003",
+      "ad": "Soğuk Zincir",
+      "slug": "soguk-zincir",
+      "aciklama": "Taşıma/saklama sırasında soğuk zincir önerilir veya zorunludur.",
+      "rozetMetni": "Soğuk Zincir",
+      "ikon": "snowflake",
+      "renk": "#1565C0",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000004",
+      "ad": "Sera",
+      "slug": "sera",
+      "aciklama": "Sera üretimi.",
+      "rozetMetni": "Sera",
+      "ikon": "home",
+      "renk": "#388E3C",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000005",
+      "ad": "Depolu",
+      "slug": "depolu",
+      "aciklama": "Depoda bekletilebilir / depo sevkiyatına uygun.",
+      "rozetMetni": "Depolu",
+      "ikon": "warehouse",
+      "renk": "#6D4C41",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000006",
+      "ad": "Sezonluk",
+      "slug": "sezonluk",
+      "aciklama": "Belirli ay aralığında temin edilir.",
+      "rozetMetni": "Sezonluk",
+      "ikon": "calendar",
+      "renk": "#F57C00",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000007",
+      "ad": "Yeşillik",
+      "slug": "yesillik",
+      "aciklama": "Hassas yapraklı ürünler (marul, roka, maydanoz vb.)",
+      "rozetMetni": "Yeşillik",
+      "ikon": "sprout",
+      "renk": "#2E7D32",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000008",
+      "ad": "Bakliyat",
+      "slug": "bakliyat",
+      "aciklama": "Kuru bakliyat grubu.",
+      "rozetMetni": "Bakliyat",
+      "ikon": "beans",
+      "renk": "#5D4037",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000009",
+      "ad": "Kuru Gıda",
+      "slug": "kuru-gida",
+      "aciklama": "Uzun raf ömürlü kuru ürünler.",
+      "rozetMetni": "Kuru",
+      "ikon": "box",
+      "renk": "#795548",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000010",
+      "ad": "HORECA",
+      "slug": "horeca",
+      "aciklama": "Otel/Restoran/Kafe için uygun ürün/varyant.",
+      "rozetMetni": "HORECA",
+      "ikon": "store",
+      "renk": "#455A64",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000011",
+      "ad": "Acı",
+      "slug": "aci",
+      "aciklama": "Acı ürünler için etiket.",
+      "rozetMetni": "Acı",
+      "ikon": "pepper",
+      "renk": "#C62828",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    },
+    {
+      "id": "ETK-000012",
+      "ad": "Demet",
+      "slug": "demet",
+      "aciklama": "Demetli ürünler.",
+      "rozetMetni": "Demet",
+      "ikon": "bundle",
+      "renk": "#2E7D32",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-01-01T00:00:00+03:00"
+    }
+  ],
+  "urunEtiketleri": [
+    {
+      "id": "UET-000001",
+      "urunId": "URN-000001",
+      "etiketId": "ETK-000002",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:00:00+03:00"
+    },
+    {
+      "id": "UET-000002",
+      "urunId": "URN-000001",
+      "etiketId": "ETK-000005",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:00:00+03:00"
+    },
+
+    {
+      "id": "UET-000003",
+      "urunId": "URN-000002",
+      "etiketId": "ETK-000002",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:01:00+03:00"
+    },
+    {
+      "id": "UET-000004",
+      "urunId": "URN-000002",
+      "etiketId": "ETK-000005",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:01:00+03:00"
+    },
+
+    {
+      "id": "UET-000005",
+      "urunId": "URN-000003",
+      "etiketId": "ETK-000004",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T12:00:00+03:00"
+    },
+    {
+      "id": "UET-000006",
+      "urunId": "URN-000003",
+      "etiketId": "ETK-000001",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T12:00:00+03:00"
+    },
+
+    {
+      "id": "UET-000007",
+      "urunId": "URN-000004",
+      "etiketId": "ETK-000004",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T12:01:00+03:00"
+    },
+
+    {
+      "id": "UET-000008",
+      "urunId": "URN-000005",
+      "etiketId": "ETK-000011",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T12:00:00+03:00"
+    },
+    {
+      "id": "UET-000009",
+      "urunId": "URN-000005",
+      "etiketId": "ETK-000010",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T12:00:00+03:00"
+    },
+
+    {
+      "id": "UET-000010",
+      "urunId": "URN-000008",
+      "etiketId": "ETK-000007",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T12:02:00+03:00"
+    },
+    {
+      "id": "UET-000011",
+      "urunId": "URN-000008",
+      "etiketId": "ETK-000003",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-05-22T12:02:00+03:00"
+    },
+
+    {
+      "id": "UET-000012",
+      "urunId": "URN-000009",
+      "etiketId": "ETK-000007",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T12:01:00+03:00"
+    },
+    {
+      "id": "UET-000013",
+      "urunId": "URN-000009",
+      "etiketId": "ETK-000012",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-07-07T12:01:00+03:00"
+    },
+
+    {
+      "id": "UET-000014",
+      "urunId": "URN-000015",
+      "etiketId": "ETK-000008",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:03:00+03:00"
+    },
+    {
+      "id": "UET-000015",
+      "urunId": "URN-000015",
+      "etiketId": "ETK-000009",
+      "durum": "Aktif",
+      "olusturmaTarihi": "2024-03-12T12:03:00+03:00"
+    }
+  ]
+}

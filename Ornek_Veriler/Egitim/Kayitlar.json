@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - Eğitim Kayıtları",
+    "aciklama": "Kullanıcıların kurslara kayıtları, ilerleme yüzdeleri ve sınav sonuçları.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "KYT-000000"
+  },
+  "kurallar": {
+    "kayitDurumlari": [ "Kayitli", "Basladi", "DevamEdiyor", "Tamamlandi", "Birakti" ],
+    "sinavDurumlari": [ "Girmedi", "Girdi", "Gecti", "Kaldi" ],
+    "zorunluAlanlar": [ "id", "kullaniciId", "kursId", "kayitDurumu" ]
+  },
+  "kayitlar": [
+    {
+      "id": "KYT-000001",
+      "kullaniciId": "KUL-000601",
+      "kursId": "KRS-000001",
+      "kayitDurumu": "Tamamlandi",
+      "ilerlemeYuzde": 100,
+      "sinavId": "SNV-000001",
+      "sinavDurumu": "Gecti",
+      "sinavPuani": 75,
+      "baslamaTarihi": "2024-02-16",
+      "bitisTarihi": "2024-02-25",
+      "sertifikaVerildi": true
+    },
+    {
+      "id": "KYT-000002",
+      "kullaniciId": "KUL-000602",
+      "kursId": "KRS-000002",
+      "kayitDurumu": "DevamEdiyor",
+      "ilerlemeYuzde": 60,
+      "sinavId": "SNV-000002",
+      "sinavDurumu": "Girmedi",
+      "baslamaTarihi": "2024-03-26",
+      "sertifikaVerildi": false
+    },
+    {
+      "id": "KYT-000003",
+      "kullaniciId": "KUL-000501",
+      "kursId": "KRS-000003",
+      "kayitDurumu": "Tamamlandi",
+      "ilerlemeYuzde": 100,
+      "sinavId": "SNV-000003",
+      "sinavDurumu": "Gecti",
+      "sinavPuani": 68,
+      "baslamaTarihi": "2024-04-23",
+      "bitisTarihi": "2024-04-30",
+      "sertifikaVerildi": true
+    },
+    {
+      "id": "KYT-000004",
+      "kullaniciId": "KUL-000704",
+      "kursId": "KRS-000004",
+      "kayitDurumu": "Basladi",
+      "ilerlemeYuzde": 20,
+      "sinavId": "SNV-000004",
+      "sinavDurumu": "Girmedi",
+      "baslamaTarihi": "2024-05-16",
+      "sertifikaVerildi": false
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+@{
+    ViewData["Title"] = "Bildirimler (Toasts) - Arayüz Öğeleri";
+}
+@section PageScripts {
+    <script src="~/js/ui-toasts.js"></script>
+}
+@* ************** İçerik ************** *@
+
+<!-- Toast with Placements -->
+<div class="bs-toast toast toast-placement-ex m-2" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+    <div class="toast-header">
+        <i class="icon-base bx bx-bell me-2"></i>
+        <div class="me-auto fw-medium">Bootstrap</div>
+        <small>11 dakika önce</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+    </div>
+    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından bir örnek açıklama.</div>
+</div>
+<!-- Toast with Placements -->
+<!-- Bootstrap Toasts with Placement -->
+<div class="card mb-6">
+    <h5 class="card-header">Konumlandırma Örnekli Bootstrap Bildirimleri</h5>
+    <div class="card-body">
+        <div class="row gx-3 gy-2 align-items-center">
+            <div class="col-md-3">
+                <label class="form-label" for="selectTypeOpt">Tip</label>
+                <select id="selectTypeOpt" class="form-select color-dropdown">
+                    <option value="bg-primary" selected>Birincil</option>
+                    <option value="bg-secondary">İkincil</option>
+                    <option value="bg-success">Başarılı</option>
+                    <option value="bg-danger">Hata</option>
+                    <option value="bg-warning">Uyarı</option>
+                    <option value="bg-info">Bilgi</option>
+                    <option value="bg-dark">Koyu</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label" for="selectPlacement">Konum</label>
+                <select class="form-select placement-dropdown" id="selectPlacement">
+                    <option value="top-0 start-0">Sol üst</option>
+                    <option value="top-0 start-50 translate-middle-x">Orta üst</option>
+                    <option value="top-0 end-0">Sağ üst</option>
+                    <option value="top-50 start-0 translate-middle-y">Sol orta</option>
+                    <option value="top-50 start-50 translate-middle">Orta</option>
+                    <option value="top-50 end-0 translate-middle-y">Sağ orta</option>
+                    <option value="bottom-0 start-0">Sol alt</option>
+                    <option value="bottom-0 start-50 translate-middle-x">Orta alt</option>
+                    <option value="bottom-0 end-0">Sağ alt</option>
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-label" for="showToastPlacement">&nbsp;</label>
+                <button id="showToastPlacement" class="btn btn-primary d-block">Bildirimi Göster</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Bootstrap Toasts with Placement -->
+<!-- Bootstrap Toasts Styles -->
+<div class="card mb-6">
+    <h5 class="card-header">Bootstrap Bildirim Stilleri</h5>
+    <div class="row g-0">
+        <div class="col-md-6 p-6">
+            <div class="small fw-medium mb-4">Varsayılan</div>
+
+            <div class="toast-container position-relative">
+                <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-primary" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-warning" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-info" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Translucent -->
+        <div class="col-md-6 ui-bg-overlay-container p-6">
+            <div class="ui-bg-overlay rounded-end-bottom"></div>
+            <div class="text-white small fw-medium mb-4">Saydam</div>
+
+            <div class="toast-container position-relative">
+
+                <!-- Tekrar eden tüm içerikler Türkçeleştirildi -->
+
+                <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-primary" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-secondary" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-warning" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-info" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+                <div class="bs-toast toast fade show bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <i class="icon-base bx bx-bell me-2"></i>
+                        <div class="me-auto fw-medium">Bootstrap</div>
+                        <small>11 dakika önce</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Kapat"></button>
+                    </div>
+                    <div class="toast-body">Meyveli kek, çikolatalı bar, şekerleme ve jöle karışımından oluşan içerik.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Bootstrap Toasts Styles -->

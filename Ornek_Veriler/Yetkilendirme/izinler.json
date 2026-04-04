@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "surum": "1.0.0",
+    "paketAdi": "PazarCep Örnek Veriler - İzinler",
+    "aciklama": "Modül ve aksiyon bazlı izin tanımları. Oku/Yaz/Güncelle/Sil/Onayla seviyelerini kapsar.",
+    "olusturmaTarihi": "2025-12-26T00:00:00+03:00",
+    "guncellemeTarihi": "2025-12-26T00:00:00+03:00",
+    "saatDilimi": "Europe/Istanbul",
+    "idFormati": "IZN-000000"
+  },
+  "kurallar": {
+    "yetkiSeviyeleri": [ "Oku", "Yaz", "Guncelle", "Sil", "Onayla" ],
+    "zorunluAlanlar": [ "id", "modul", "aksiyon", "seviye" ]
+  },
+  "izinler": [
+    /* ===== GENEL ===== */
+    {
+      "id": "IZN-000001",
+      "modul": "Dashboard",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+
+    /* ===== KULLANICI / FİRMA ===== */
+    {
+      "id": "IZN-000010",
+      "modul": "Kullanicilar",
+      "aksiyon": "Listele",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000011",
+      "modul": "Kullanicilar",
+      "aksiyon": "Olustur",
+      "seviye": "Yaz"
+    },
+    {
+      "id": "IZN-000012",
+      "modul": "Kullanicilar",
+      "aksiyon": "Guncelle",
+      "seviye": "Guncelle"
+    },
+    {
+      "id": "IZN-000013",
+      "modul": "Kullanicilar",
+      "aksiyon": "Sil",
+      "seviye": "Sil"
+    },
+
+    {
+      "id": "IZN-000020",
+      "modul": "Firmalar",
+      "aksiyon": "Listele",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000021",
+      "modul": "Firmalar",
+      "aksiyon": "Guncelle",
+      "seviye": "Guncelle"
+    },
+
+    /* ===== KATALOG ===== */
+    {
+      "id": "IZN-000030",
+      "modul": "Urunler",
+      "aksiyon": "Listele",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000031",
+      "modul": "Urunler",
+      "aksiyon": "Olustur",
+      "seviye": "Yaz"
+    },
+    {
+      "id": "IZN-000032",
+      "modul": "Urunler",
+      "aksiyon": "Guncelle",
+      "seviye": "Guncelle"
+    },
+    {
+      "id": "IZN-000033",
+      "modul": "Urunler",
+      "aksiyon": "Sil",
+      "seviye": "Sil"
+    },
+
+    /* ===== STOK ===== */
+    {
+      "id": "IZN-000040",
+      "modul": "Stok",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000041",
+      "modul": "Stok",
+      "aksiyon": "GirisCikis",
+      "seviye": "Yaz"
+    },
+
+    /* ===== SIPARIS ===== */
+    {
+      "id": "IZN-000050",
+      "modul": "Siparisler",
+      "aksiyon": "Listele",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000051",
+      "modul": "Siparisler",
+      "aksiyon": "Olustur",
+      "seviye": "Yaz"
+    },
+    {
+      "id": "IZN-000052",
+      "modul": "Siparisler",
+      "aksiyon": "DurumGuncelle",
+      "seviye": "Guncelle"
+    },
+    {
+      "id": "IZN-000053",
+      "modul": "Siparisler",
+      "aksiyon": "Iptal",
+      "seviye": "Onayla"
+    },
+
+    /* ===== ODEME / FINANS ===== */
+    {
+      "id": "IZN-000060",
+      "modul": "Odemeler",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000061",
+      "modul": "Odemeler",
+      "aksiyon": "Iade",
+      "seviye": "Onayla"
+    },
+
+    {
+      "id": "IZN-000070",
+      "modul": "Cuzdan",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000071",
+      "modul": "Cuzdan",
+      "aksiyon": "OdemeYap",
+      "seviye": "Onayla"
+    },
+
+    /* ===== FATURA ===== */
+    {
+      "id": "IZN-000080",
+      "modul": "Faturalar",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000081",
+      "modul": "Faturalar",
+      "aksiyon": "Kes",
+      "seviye": "Onayla"
+    },
+
+    /* ===== CRM / DESTEK ===== */
+    {
+      "id": "IZN-000090",
+      "modul": "Destek",
+      "aksiyon": "TalepOlustur",
+      "seviye": "Yaz"
+    },
+    {
+      "id": "IZN-000091",
+      "modul": "Destek",
+      "aksiyon": "Yanıtla",
+      "seviye": "Yaz"
+    },
+    {
+      "id": "IZN-000092",
+      "modul": "Destek",
+      "aksiyon": "Kapat",
+      "seviye": "Onayla"
+    },
+
+    /* ===== RAPOR / ANALITIK ===== */
+    {
+      "id": "IZN-000100",
+      "modul": "Raporlar",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000101",
+      "modul": "Raporlar",
+      "aksiyon": "DisariAktar",
+      "seviye": "Oku"
+    },
+
+    /* ===== AYARLAR ===== */
+    {
+      "id": "IZN-000110",
+      "modul": "Ayarlar",
+      "aksiyon": "Goruntule",
+      "seviye": "Oku"
+    },
+    {
+      "id": "IZN-000111",
+      "modul": "Ayarlar",
+      "aksiyon": "Guncelle",
+      "seviye": "Guncelle"
+    }
+  ]
+}

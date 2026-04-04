@@ -1,0 +1,162 @@
+/* Admin Paneline Özel Ayarlar */
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #343a40;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+#sidebar .nav-link:hover {
+  background: #495057;
+  color: #ffc107;
+}
+
+#sidebar .nav-item.active .nav-link {
+  background: #495057;
+  color: #ffc107;
+}
+
+/* Sidebar Collapse */
+
+#sidebar.active {
+  margin-left: -250px;
+  transition: all 0.3s;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* Dashboard Kartları */
+
+.card.dashboard-card {
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card.dashboard-card.bg-primary {
+  background-color: #007bff;
+}
+
+.card.dashboard-card.bg-success {
+  background-color: #28a745;
+}
+
+.card.dashboard-card.bg-warning {
+  background-color: #ffc107;
+}
+
+.card.dashboard-card.bg-danger {
+  background-color: #dc3545;
+}
+
+.card.dashboard-card .card-body {
+  text-align: center;
+}
+
+/* Tablolar */
+
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  margin-top: 10px;
+}
+
+.dataTables_wrapper .dataTables_info {
+  float: left;
+  margin-top: 10px;
+}
+
+.dataTables_wrapper .dataTables_length {
+  float: left;
+}
+
+/* Modallar */
+
+.modal-header {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+/* Grafik Alanı */
+
+.chart-container {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+}
+
+.chart-card {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Butonlar */
+
+.btn-dashboard {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-dashboard-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-dashboard-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-dashboard-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-dashboard-danger:hover {
+  background-color: #bd2130;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #content {
+    padding: 10px;
+  }
+}
+

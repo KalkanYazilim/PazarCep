@@ -1,0 +1,28 @@
+@{
+    Layout = "_BlankLayout";
+    ViewData["Title"] = "Sayfa Bulunamadı";
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/vendor/css/pages/page-misc.css" />
+}
+
+@* ************** Content ************** *@
+<!-- Error -->
+<div class="container-xxl container-p-y">
+    <div class="misc-wrapper">
+        <h1 class="mb-2 mx-2" style="line-height: 6rem; font-size: 6rem;">404</h1>
+        <h4 class="mb-2 mx-2">Sayfa Bulunamadı ⚠️</h4>
+        <p class="mb-6 mx-2">
+            Aradığınız sayfayı bulamadık. Bağlantı adresi hatalı olabilir veya sayfa taşınmış olabilir.
+        </p>
+        <a href="/" class="btn btn-primary">Ana sayfaya dön</a>
+        <div class="mt-6">
+            <img src="~/img/illustrations/page-misc-error-light.png"
+                 alt="Sayfa bulunamadı"
+                 width="500"
+                 class="img-fluid" />
+        </div>
+    </div>
+</div>
+<!-- /Error -->
