@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using pazarcep.dataaccess.Concretes.Repositories;
 using PazarCep.Business.Abstracts;
 using PazarCep.Business.Concretes;

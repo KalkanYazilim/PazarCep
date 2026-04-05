@@ -7,12 +7,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="pazarcep.api\**" />
+    <Compile Remove="pazarcep.ui\**" />
+    <Compile Remove="pazarcep.entity\**" />
+    <Compile Remove="pazarcep.dataaccess\**" />
+    <Compile Remove="PazarCep.Business\**" />
     <Compile Remove="Views\Fatura\**" />
     <Compile Remove="Views\Paneller\**" />
+    <Content Remove="pazarcep.api\**" />
+    <Content Remove="pazarcep.ui\**" />
+    <Content Remove="pazarcep.entity\**" />
+    <Content Remove="pazarcep.dataaccess\**" />
+    <Content Remove="PazarCep.Business\**" />
     <Content Remove="Views\Fatura\**" />
     <Content Remove="Views\Paneller\**" />
+    <EmbeddedResource Remove="pazarcep.api\**" />
+    <EmbeddedResource Remove="pazarcep.ui\**" />
+    <EmbeddedResource Remove="pazarcep.entity\**" />
+    <EmbeddedResource Remove="pazarcep.dataaccess\**" />
+    <EmbeddedResource Remove="PazarCep.Business\**" />
     <EmbeddedResource Remove="Views\Fatura\**" />
     <EmbeddedResource Remove="Views\Paneller\**" />
+    <None Remove="pazarcep.api\**" />
+    <None Remove="pazarcep.ui\**" />
+    <None Remove="pazarcep.entity\**" />
+    <None Remove="pazarcep.dataaccess\**" />
+    <None Remove="PazarCep.Business\**" />
     <None Remove="Views\Fatura\**" />
     <None Remove="Views\Paneller\**" />
   </ItemGroup>
