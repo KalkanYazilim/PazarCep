@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.vs/
+.git/
+.idea/
+**/.DS_Store
+**/*.user
+**/*.suo
+**/*.log
+node_modules/
+docker-compose*
