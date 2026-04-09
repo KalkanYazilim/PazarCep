@@ -416,3 +416,4 @@ ASALocalRun/
 # wal and shm files - SQLite
 *-wal
 *-shm
+node_modules
