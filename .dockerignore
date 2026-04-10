@@ -1,0 +1,10 @@
+.git
+.git copy
+.vs
+**/bin
+**/obj
+node_modules
+TestResults
+Dosya_Yapisi.txt
+MeyveSebze_Listesi.xlsx
+publish-test
