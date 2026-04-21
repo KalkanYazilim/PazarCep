@@ -1,9 +1,107 @@
+@model MusteriAdresFaturalandirmaSayfaViewModel
 @{
-    ViewData["Title"] = "Müşteri - Adres Faturalandırma";
+    ViewData["Title"] = "Müşteri - Adres & Faturalandırma";
 }
-<h4 class="mb-3">Müşteri Bilgileri • Adres Faturalandırma</h4>
-<div class="card">
-    <div class="card-body">
-        Müşteri Id: <strong>@ViewBag.MusteriId</strong>
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    <div class="row g-4">
+        @foreach (var adres in Model.Adresler)
+        {
+            <div class="col-12 col-lg-6">
+                <div class="card customer-section-card border-0 h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start gap-3">
+                            <div>
+                                <span class="badge bg-label-@(adres.Varsayilan ? "success" : "secondary") mb-3">@adres.Tip</span>
+                                <h5 class="mb-1">@adres.Baslik</h5>
+                                <p class="text-muted mb-3">@adres.Alici</p>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Düzenle</button>
+                        </div>
+
+                        <div class="customer-definition-list">
+                            <div>
+                                <span class="label">Adres</span>
+                                <strong>@adres.AdresSatiri</strong>
+                            </div>
+                            <div>
+                                <span class="label">İlçe / il</span>
+                                <strong>@adres.IlceIl</strong>
+                            </div>
+                            <div>
+                                <span class="label">Operasyon notu</span>
+                                <strong>@adres.VergiBilgisi</strong>
+                            </div>
+                            <div>
+                                <span class="label">Ek açıklama</span>
+                                <strong>@adres.Not</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-7">
+            @foreach (var panel in Model.FaturaPanelleri)
+            {
+                <div class="card customer-section-card border-0 @(panel == Model.FaturaPanelleri.Last() ? string.Empty : "mb-4")">
+                    <div class="card-header border-0 pb-0">
+                        <h5 class="mb-1">@panel.Baslik</h5>
+                        <p class="text-muted mb-0">@panel.Aciklama</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            @foreach (var alan in panel.Alanlar)
+                            {
+                                <div class="@alan.GridSinifi">
+                                    <label class="form-label">@alan.Etiket</label>
+                                    <input type="text" class="form-control" value="@alan.Deger" />
+                                    @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))
+                                    {
+                                        <div class="form-text">@alan.YardimMetni</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Son faturalar</h5>
+                    <p class="text-muted mb-0">Tahsilat ve vade akışının hızlı görünümü.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-stack-list">
+                        @foreach (var fatura in Model.SonFaturalar)
+                        {
+                            <div class="customer-stack-list__item">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-1">
+                                        <strong>@fatura.FaturaNo</strong>
+                                        <span class="badge bg-label-@fatura.DurumSinifi">@fatura.Durum</span>
+                                    </div>
+                                    <p class="text-muted mb-1">@fatura.Vade · @fatura.Yontem</p>
+                                    <span class="fw-semibold">@fatura.Tutar</span>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">İncele</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

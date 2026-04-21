@@ -1,9 +1,153 @@
+@model MusteriGenelBakisSayfaViewModel
 @{
     ViewData["Title"] = "Müşteri - Genel Bakış";
 }
-<h4 class="mb-3">Müşteri Bilgileri • Genel Bakış</h4>
-<div class="card">
-    <div class="card-body">
-        Müşteri Id: <strong>@ViewBag.MusteriId</strong>
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    @await Html.PartialAsync("_MusteriOzetKartlari", Model.PerformansKartlari)
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-8">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Son aktiviteler</h5>
+                    <p class="text-muted mb-0">Müşteri ilişkisinde son aksiyonlar, ekip notları ve kritik gelişmeler.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-timeline">
+                        @foreach (var aktivite in Model.SonAktiviteler)
+                        {
+                            <div class="customer-timeline__item">
+                                <div class="customer-timeline__icon customer-tone-@aktivite.Ton">
+                                    <i class="bx @aktivite.Ikon"></i>
+                                </div>
+                                <div class="customer-timeline__content">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
+                                        <div>
+                                            <h6 class="mb-1">@aktivite.Baslik</h6>
+                                            <p class="text-muted mb-0">@aktivite.Aciklama</p>
+                                        </div>
+                                        <span class="customer-timeline__time">@aktivite.Zaman</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="card customer-section-card border-0 mt-4">
+                <div class="card-header border-0 pb-0">
+                    <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+                        <div>
+                            <h5 class="mb-1">Son sipariş akışı</h5>
+                            <p class="text-muted mb-0">Müşterinin son siparişleri ve kanal bazlı davranışı.</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-secondary btn-sm align-self-start">
+                            <i class="bx bx-link-external me-1"></i>Sipariş detayına git
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive d-none d-md-block">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Sipariş no</th>
+                                    <th>Tarih</th>
+                                    <th>Kanal</th>
+                                    <th>Tutar</th>
+                                    <th>Durum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var siparis in Model.SonSiparisler)
+                                {
+                                    <tr>
+                                        <td class="fw-semibold">@siparis.SiparisNo</td>
+                                        <td>@siparis.Tarih</td>
+                                        <td>@siparis.Kanal</td>
+                                        <td>@siparis.Tutar</td>
+                                        <td><span class="badge bg-label-@siparis.DurumSinifi">@siparis.Durum</span></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="row g-3 d-md-none">
+                        @foreach (var siparis in Model.SonSiparisler)
+                        {
+                            <div class="col-12">
+                                <div class="customer-mobile-card card border-0">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start gap-3">
+                                            <div>
+                                                <strong>@siparis.SiparisNo</strong>
+                                                <p class="text-muted mb-1">@siparis.Tarih · @siparis.Kanal</p>
+                                                <span class="fw-semibold">@siparis.Tutar</span>
+                                            </div>
+                                            <span class="badge bg-label-@siparis.DurumSinifi">@siparis.Durum</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Hesap sağlığı</h5>
+                    <p class="text-muted mb-0">Risk ve büyüme sinyallerinin yönetici özeti.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-health-list">
+                        @foreach (var durum in Model.HesapSagligi)
+                        {
+                            <div class="customer-health-list__item">
+                                <div>
+                                    <span class="customer-health-list__label">@durum.Baslik</span>
+                                    <p class="text-muted mb-0">@durum.Aciklama</p>
+                                </div>
+                                <span class="badge bg-label-@durum.Ton">@durum.Deger</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="card customer-section-card border-0 mt-4">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Hızlı aksiyonlar</h5>
+                    <p class="text-muted mb-0">Sık kullanılan müşteri yönetimi adımları.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-action-stack">
+                        <button type="button" class="btn btn-primary justify-content-start">
+                            <i class="bx bx-phone-call me-2"></i>Müşteriyi ara
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-file me-2"></i>Teklif yenile
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-bell me-2"></i>Uyarı oluştur
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-star me-2"></i>VIP etiketi güncelle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

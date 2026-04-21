@@ -1,0 +1,111 @@
+@model MusteriBilgilerSayfaViewModel
+@{
+    ViewData["Title"] = "Müşteri - Bilgiler";
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    @await Html.PartialAsync("_MusteriOzetKartlari", Model.DurumKartlari)
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-8">
+            <form action="javascript:void(0);" class="customer-form-stack">
+                @foreach (var grup in Model.BilgiGruplari)
+                {
+                    <div class="card customer-section-card border-0">
+                        <div class="card-header border-0 pb-0">
+                            <h5 class="mb-1">@grup.Baslik</h5>
+                            <p class="text-muted mb-0">@grup.Aciklama</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                @foreach (var alan in grup.Alanlar)
+                                {
+                                    var uzunAlan = alan.GridSinifi == "col-12";
+
+                                    <div class="@alan.GridSinifi">
+                                        <label class="form-label">@alan.Etiket</label>
+
+                                        @if (uzunAlan)
+                                        {
+                                            <textarea class="form-control" rows="3">@alan.Deger</textarea>
+                                        }
+                                        else
+                                        {
+                                            <input type="text" class="form-control" value="@alan.Deger" />
+                                        }
+
+                                        @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))
+                                        {
+                                            <div class="form-text">@alan.YardimMetni</div>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="d-flex flex-column flex-md-row gap-2">
+                    <button type="button" class="btn btn-primary">
+                        <i class="bx bx-save me-1"></i>Değişiklik taslağını kaydet
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bx bx-reset me-1"></i>Formu sıfırla
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">İlgili kişiler</h5>
+                    <p class="text-muted mb-0">İletişim ve operasyon sahipleri.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-contact-list">
+                        @foreach (var yetkili in Model.Yetkililer)
+                        {
+                            <div class="customer-contact-list__item">
+                                <div>
+                                    <div class="d-flex align-items-center gap-2 mb-1">
+                                        <h6 class="mb-0">@yetkili.AdSoyad</h6>
+                                        <span class="badge bg-label-@yetkili.DurumSinifi">@yetkili.Durum</span>
+                                    </div>
+                                    <p class="text-muted mb-1">@yetkili.Rol</p>
+                                    <small class="d-block">@yetkili.Email</small>
+                                    <small class="text-muted">@yetkili.Telefon</small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="card customer-section-card border-0 mt-4">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Çalışma etiketleri</h5>
+                    <p class="text-muted mb-0">Ekip içi sınıflandırmalar ve hızlı bağlam etiketleri.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-hero__tags">
+                        @foreach (var etiket in Model.Kabuk.Etiketler)
+                        {
+                            <span class="customer-tag">@etiket</span>
+                        }
+                    </div>
+
+                    <div class="alert alert-primary border-0 mt-4 mb-0">
+                        <strong>Operasyon notu:</strong> Kritik teslimatlar için sabah ilk rota kuralı aktif. Faturalandırma değişikliklerinde muhasebe onayı aranmalı.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

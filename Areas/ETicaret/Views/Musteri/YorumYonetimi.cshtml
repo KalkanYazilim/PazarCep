@@ -1,0 +1,68 @@
+@model MusteriYorumYonetimiSayfaViewModel
+@{
+    ViewData["Title"] = "Müşteri - Yorum Yönetimi";
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    @await Html.PartialAsync("_MusteriOzetKartlari", Model.ModerasyonKartlari)
+
+    <div class="card customer-section-card border-0">
+        <div class="card-header border-0 pb-0">
+            <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+                <div>
+                    <h5 class="mb-1">Moderasyon kuyruğu</h5>
+                    <p class="text-muted mb-0">Yayın durumu, puan ve marka yanıtını tek akışta yönetin.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Düşük puanlılar</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm">Yanıt bekleyenler</button>
+                    <button type="button" class="btn btn-primary btn-sm">Toplu aksiyon</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                @foreach (var yorum in Model.Yorumlar)
+                {
+                    <div class="col-12">
+                        <div class="customer-review-card">
+                            <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                        <span class="badge bg-label-@yorum.DurumSinifi">@yorum.Durum</span>
+                                        <span class="badge bg-label-secondary">@yorum.Kanal</span>
+                                        <span class="text-muted">@yorum.Tarih</span>
+                                    </div>
+                                    <h5 class="mb-1">@yorum.Baslik</h5>
+                                    <p class="text-muted mb-2">@yorum.Urun</p>
+                                    <div class="customer-rating mb-3">
+                                        @for (var i = 0; i < 5; i++)
+                                        {
+                                            <i class="bx @(i < yorum.Puan ? "bxs-star" : "bx-star")"></i>
+                                        }
+                                    </div>
+                                    <p class="mb-3">@yorum.Icerik</p>
+                                    <div class="alert alert-light border mb-0">
+                                        <strong>Moderasyon notu:</strong> @yorum.ModerasyonNotu
+                                    </div>
+                                </div>
+
+                                <div class="customer-review-card__actions">
+                                    <button type="button" class="btn btn-primary btn-sm">Yanıtla</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">Yayınla</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm">İncele</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

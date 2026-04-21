@@ -31,8 +31,8 @@
     @* ! Full version menu-items *@
     <ul class="menu-inner py-1">
         <!-- Paneller -->
-        <!-- "active open" ? işaretinden sonra yazılacak -->
-        <li class='menu-item@(currentPage.StartsWith("/") ? " active open" : "")'>
+        <!-- "active open" ? iÃƒâ€¦Ã…Â¸aretinden sonra yazÃƒâ€Ã‚Â±lacak -->
+        <li class='menu-item@((currentPage ?? "").StartsWith("/", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-home-smile"></i>
                 <div class="text-truncate" data-i18n="Dashboards">Paneller</div>
@@ -45,11 +45,11 @@
                     </a>
                 </li>
 
-                <!-- Eğitim -->
+                <!-- EÃƒâ€Ã…Â¸itim -->
                 <li class='menu-item@((currentPage ?? "").StartsWith("/Egitim", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
                         <i class="menu-icon icon-base bx bx-dock-top"></i>
-                        <div class="text-truncate" data-i18n="Education">Eğitim</div>
+                        <div class="text-truncate" data-i18n="Education">EÃƒâ€Ã…Â¸itim</div>
                         <span class="badge rounded-pill bg-danger ms-auto">5</span>
                     </a>
 
@@ -64,34 +64,34 @@
                             </a>
                         </li>
 
-                        <!-- Kurslarım -->
+                        <!-- KurslarÃƒâ€Ã‚Â±m -->
                         <li class='menu-item@(
                                         ((currentPage ?? "").StartsWith("/Egitim/Kurs/Index", StringComparison.OrdinalIgnoreCase)
                                       || (currentPage ?? "").Equals("/Egitim/Kurs", StringComparison.OrdinalIgnoreCase))
                                         ? " active" : "")'>
                             <a asp-area="Egitim" asp-controller="Kurs" asp-action="Index" class="menu-link">
-                                <div class="text-truncate">Kurslarım</div>
+                                <div class="text-truncate">KurslarÃƒâ€Ã‚Â±m</div>
                             </a>
                         </li>
 
-                        <!-- Kurs Detayları (menüden id gelmez, controller içinde Index'e yönlendireceğiz) -->
+                        <!-- Kurs DetaylarÃƒâ€Ã‚Â± (menÃƒÆ’Ã‚Â¼den id gelmez, controller iÃƒÆ’Ã‚Â§inde Index'e yÃƒÆ’Ã‚Â¶nlendireceÃƒâ€Ã…Â¸iz) -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/Egitim/Kurs/Detay", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="Egitim" asp-controller="Kurs" asp-action="Detay" class="menu-link">
-                                <div class="text-truncate">Kurs Detayları</div>
+                                <div class="text-truncate">Kurs DetaylarÃƒâ€Ã‚Â±</div>
                             </a>
                         </li>
 
-                        <!-- Ders İçerikleri (id gelmez, controller içinde Index'e yönlendireceğiz) -->
+                        <!-- Ders Ãƒâ€Ã‚Â°ÃƒÆ’Ã‚Â§erikleri (id gelmez, controller iÃƒÆ’Ã‚Â§inde Index'e yÃƒÆ’Ã‚Â¶nlendireceÃƒâ€Ã…Â¸iz) -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/Egitim/Kurs/Icerik", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="Egitim" asp-controller="Kurs" asp-action="Icerik" class="menu-link">
-                                <div class="text-truncate">Ders İçerikleri</div>
+                                <div class="text-truncate">Ders Ãƒâ€Ã‚Â°ÃƒÆ’Ã‚Â§erikleri</div>
                             </a>
                         </li>
 
-                        <!-- Sertifikalarım -->
+                        <!-- SertifikalarÃƒâ€Ã‚Â±m -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/Egitim/Kurs/Sertifikalar", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="Egitim" asp-controller="Kurs" asp-action="Sertifikalar" class="menu-link">
-                                <div class="text-truncate">Sertifikalarım</div>
+                                <div class="text-truncate">SertifikalarÃƒâ€Ã‚Â±m</div>
                             </a>
                         </li>
                     </ul>
@@ -100,7 +100,7 @@
                 <!-- E-Ticaret --> <!-- 3+3+2+5 Sayfa -->
                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon icon-base bx bx-home-smile"></i> <!-- Sepet ikonuna dönüştürülecek -->
+                        <i class="menu-icon icon-base bx bx-home-smile"></i> <!-- Sepet ikonuna dÃƒÆ’Ã‚Â¶nÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸tÃƒÆ’Ã‚Â¼rÃƒÆ’Ã‚Â¼lecek -->
                         <div class="text-truncate" data-i18n="Dashboards">E-Ticaret</div>
                         <span class="badge rounded-pill bg-danger ms-auto">3+3+2+5</span>
                     </a>
@@ -117,25 +117,25 @@
                             </a>
                         </li>
 
-                        <!-- Ürünler --> <!-- 3 Sayfa -->
+                        <!-- ÃƒÆ’Ã…â€œrÃƒÆ’Ã‚Â¼nler --> <!-- 3 Sayfa -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Urunler", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
                             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                                <i class="menu-icon icon-base bx bx-home-smile"></i><!-- ikonun dönüştürülecek -->
-                                <div class="text-truncate" data-i18n="Products">Ürünler</div>
+                                <i class="menu-icon icon-base bx bx-home-smile"></i><!-- ikonun dÃƒÆ’Ã‚Â¶nÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸tÃƒÆ’Ã‚Â¼rÃƒÆ’Ã‚Â¼lecek -->
+                                <div class="text-truncate" data-i18n="Products">ÃƒÆ’Ã…â€œrÃƒÆ’Ã‚Â¼nler</div>
                                 <span class="badge rounded-pill bg-danger ms-auto">3</span>
                             </a>
 
                             <ul class="menu-sub">
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Urunler/Liste", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="menu-link">
-                                        <div class="text-truncate">Ürün Listesi</div>
+                                        <div class="text-truncate">ÃƒÆ’Ã…â€œrÃƒÆ’Ã‚Â¼n Listesi</div>
                                         <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                     </a>
                                 </li>
 
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Urunler/Ekle", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="menu-link">
-                                        <div class="text-truncate">Ürün Ekle</div>
+                                        <div class="text-truncate">ÃƒÆ’Ã…â€œrÃƒÆ’Ã‚Â¼n Ekle</div>
                                         <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                     </a>
                                 </li>
@@ -160,62 +160,72 @@
                             <ul class="menu-sub">
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Emir/SiparisListesi", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="menu-link">
-                                        <div class="text-truncate">Sipariş Listesi</div>
+                                        <div class="text-truncate">SipariÃƒâ€¦Ã…Â¸ Listesi</div>
                                     </a>
                                 </li>
 
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Emir/SiparisDetay", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" class="menu-link">
-                                        <div class="text-truncate">Sipariş Detayları</div>
+                                        <div class="text-truncate">SipariÃƒâ€¦Ã…Â¸ DetaylarÃƒâ€Ã‚Â±</div>
                                         <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
-                        <!-- Müşteri --> <!-- 1+4 Sayfa -->
+                        <!-- MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri --> <!-- 1+4 Sayfa -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
                             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                                <div class="text-truncate" data-i18n="Customer">Müşteri</div>
-                                <span class="badge rounded-pill bg-danger ms-auto">1+4</span>
+                                <div class="text-truncate" data-i18n="Customer">M&#252;&#351;teri</div>
+                                <span class="badge rounded-pill bg-danger ms-auto">1+7</span>
                             </a>
 
                             <ul class="menu-sub">
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/TumMusteriler", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="menu-link">
-                                        <div class="text-truncate">Tüm Müşteriler</div>
+                                        <div class="text-truncate">T&#252;m M&#252;&#351;teriler</div>
                                     </a>
                                 </li>
 
                                 <li class='menu-item@(
                                                         (currentPage ?? "").StartsWith("/ETicaret/Musteri/GenelBakis", StringComparison.OrdinalIgnoreCase)
+                                                     || (currentPage ?? "").StartsWith("/ETicaret/Musteri/Bilgiler", StringComparison.OrdinalIgnoreCase)
                                                      || (currentPage ?? "").StartsWith("/ETicaret/Musteri/Guvenlik", StringComparison.OrdinalIgnoreCase)
                                                      || (currentPage ?? "").StartsWith("/ETicaret/Musteri/AdresFaturalandirma", StringComparison.OrdinalIgnoreCase)
                                                      || (currentPage ?? "").StartsWith("/ETicaret/Musteri/Bildirimler", StringComparison.OrdinalIgnoreCase)
+                                                     || (currentPage ?? "").StartsWith("/ETicaret/Musteri/YorumYonetimi", StringComparison.OrdinalIgnoreCase)
+                                                     || (currentPage ?? "").StartsWith("/ETicaret/Musteri/Yonlendirmeler", StringComparison.OrdinalIgnoreCase)
                                                         ? " active open" : "")'>
                                     <a href="javascript:void(0);" class="menu-link menu-toggle">
-                                        <div class="text-truncate" data-i18n="CustomerDetails">Müşteri Bilgileri</div>
-                                        <span class="badge rounded-pill bg-danger ms-auto">4</span>
+                                        <div class="text-truncate" data-i18n="CustomerDetails">M&#252;&#351;teri &#199;al&#305;&#351;ma Alan&#305;</div>
+                                        <span class="badge rounded-pill bg-danger ms-auto">7</span>
                                     </a>
 
                                     <ul class="menu-sub">
                                         <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/GenelBakis", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                             <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" class="menu-link">
-                                                <div class="text-truncate">Genel Bakış</div>
+                                                <div class="text-truncate">Genel Bak&#305;&#351;</div>
+                                                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
+                                            </a>
+                                        </li>
+
+                                        <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/Bilgiler", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
+                                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" class="menu-link">
+                                                <div class="text-truncate">M&#252;&#351;teri Bilgileri</div>
                                                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                             </a>
                                         </li>
 
                                         <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/Guvenlik", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                             <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Guvenlik" class="menu-link">
-                                                <div class="text-truncate">Güvenlik</div>
+                                                <div class="text-truncate">G&#252;venlik</div>
                                                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                             </a>
                                         </li>
 
                                         <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/AdresFaturalandirma", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                             <a asp-area="ETicaret" asp-controller="Musteri" asp-action="AdresFaturalandirma" class="menu-link">
-                                                <div class="text-truncate">Adres & Faturalandırma</div>
+                                                <div class="text-truncate">Adres &amp; Faturaland&#305;rma</div>
                                                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                             </a>
                                         </li>
@@ -226,26 +236,22 @@
                                                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                             </a>
                                         </li>
+                                        <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/YorumYonetimi", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
+                                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="YorumYonetimi" class="menu-link">
+                                                <div class="text-truncate">Yorum Y&#246;netimi</div>
+                                                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
+                                            </a>
+                                        </li>
+
+                                        <li class='menu-item@((currentPage ?? "").StartsWith("/ETicaret/Musteri/Yonlendirmeler", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
+                                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Yonlendirmeler" class="menu-link">
+                                                <div class="text-truncate">Y&#246;nlendirmeler</div>
+                                                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
-
-                        <!-- Bu ikisi şimdilik dış link: active koşulu ETicaret ile uyumlu değil -->
-                        <li class="menu-item">
-                            <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/vertical-menu-template/app-academy-dashboard.html"
-                               target="_blank" class="menu-link">
-                                <div class="text-truncate">Yorumları Yönet</div>
-                                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
-                            </a>
-                        </li>
-
-                        <li class="menu-item">
-                            <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/vertical-menu-template/app-academy-dashboard.html"
-                               target="_blank" class="menu-link">
-                                <div class="text-truncate">Yönlendirmeler</div>
-                                <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
-                            </a>
                         </li>
                     </ul>
                 </li>
@@ -277,12 +283,12 @@
                     </ul>
                 </li>
 
-                <!-- Müşteri Yönetimi --> <!-- 3+2+2 Sayfa -->
-                    <!-- "active open" ? işaretinden sonra yazılacak -->
+                <!-- MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri YÃƒÆ’Ã‚Â¶netimi --> <!-- 3+2+2 Sayfa -->
+                    <!-- "active open" ? iÃƒâ€¦Ã…Â¸aretinden sonra yazÃƒâ€Ã‚Â±lacak -->
                 <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <i class="menu-icon icon-base bx bx-home-smile"></i> <!-- ikon: değişecek -->
-                        <div class="text-truncate" data-i18n="CustomerManagement">Müşteri Yönetimi</div>
+                        <i class="menu-icon icon-base bx bx-home-smile"></i> <!-- ikon: deÃƒâ€Ã…Â¸iÃƒâ€¦Ã…Â¸ecek -->
+                        <div class="text-truncate" data-i18n="CustomerManagement">MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri YÃƒÆ’Ã‚Â¶netimi</div>
                         <span class="badge rounded-pill bg-danger ms-auto">3+2+2</span>
                     </a>
 
@@ -298,73 +304,73 @@
                             </a>
                         </li>
 
-                        <!-- Müşteriler -->
+                        <!-- MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teriler -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/Musteriler", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Index" class="menu-link">
-                                <div class="text-truncate">Müşteriler</div>
+                                <div class="text-truncate">MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teriler</div>
                             </a>
                         </li>
 
-                        <!-- Yeni Müşteri Ekle -->
+                        <!-- Yeni MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri Ekle -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/Musteriler/Yeni", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" class="menu-link">
-                                <div class="text-truncate">Yeni Müşteri Ekle</div>
+                                <div class="text-truncate">Yeni MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri Ekle</div>
                             </a>
                         </li>
 
-                        <!-- Müşteri Siparişleri --> <!-- 2 Sayfa -->
+                        <!-- MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri SipariÃƒâ€¦Ã…Â¸leri --> <!-- 2 Sayfa -->
                         <li class='menu-item@(
                                         (currentPage ?? "").StartsWith("/MusteriYonetimi/Siparisler/TumSiparisler", StringComparison.OrdinalIgnoreCase)
                                      || (currentPage ?? "").StartsWith("/MusteriYonetimi/Siparisler/Bekleyen", StringComparison.OrdinalIgnoreCase)
                                         ? " active open" : "")'>
                             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                                <div class="text-truncate" data-i18n="CustomerOrders">Müşteri Siparişleri</div>
+                                <div class="text-truncate" data-i18n="CustomerOrders">MÃƒÆ’Ã‚Â¼Ãƒâ€¦Ã…Â¸teri SipariÃƒâ€¦Ã…Â¸leri</div>
                                 <span class="badge rounded-pill bg-danger ms-auto">2</span>
                             </a>
 
                             <ul class="menu-sub">
-                                <!-- Tüm Siparişler -->
+                                <!-- TÃƒÆ’Ã‚Â¼m SipariÃƒâ€¦Ã…Â¸ler -->
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/Siparisler/TumSiparisler", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="MusteriYonetimi" asp-controller="Siparisler" asp-action="TumSiparisler" class="menu-link">
-                                        <div class="text-truncate">Tüm Siparişler</div>
+                                        <div class="text-truncate">TÃƒÆ’Ã‚Â¼m SipariÃƒâ€¦Ã…Â¸ler</div>
                                         <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                     </a>
                                 </li>
 
-                                <!-- Bekleyen Siparişler -->
+                                <!-- Bekleyen SipariÃƒâ€¦Ã…Â¸ler -->
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/Siparisler/Bekleyen", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="MusteriYonetimi" asp-controller="Siparisler" asp-action="Bekleyen" class="menu-link">
-                                        <div class="text-truncate">Bekleyen Siparişler</div>
+                                        <div class="text-truncate">Bekleyen SipariÃƒâ€¦Ã…Â¸ler</div>
                                         <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
                                     </a>
                                 </li>
 
-                                <!-- Not: "Tamamlanan / İptal" istersen ekleriz ama sen 2 sayfa demişsin, bu yüzden çıkardım -->
+                                <!-- Not: "Tamamlanan / Ãƒâ€Ã‚Â°ptal" istersen ekleriz ama sen 2 sayfa demiÃƒâ€¦Ã…Â¸sin, bu yÃƒÆ’Ã‚Â¼zden ÃƒÆ’Ã‚Â§Ãƒâ€Ã‚Â±kardÃƒâ€Ã‚Â±m -->
                             </ul>
                         </li>
 
-                        <!-- İletişim & Notlar -->
+                        <!-- Ãƒâ€Ã‚Â°letiÃƒâ€¦Ã…Â¸im & Notlar -->
                         <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/IletisimNotlar", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                             <a asp-area="MusteriYonetimi" asp-controller="IletisimNotlar" asp-action="Index" class="menu-link">
-                                <div class="text-truncate">İletişim & Notlar</div>
+                                <div class="text-truncate">Ãƒâ€Ã‚Â°letiÃƒâ€¦Ã…Â¸im & Notlar</div>
                             </a>
                         </li>
 
-                        <!-- Şikayet / Destek Talepleri --> <!-- 2 Sayfa -->
+                        <!-- Ãƒâ€¦Ã‚Âikayet / Destek Talepleri --> <!-- 2 Sayfa -->
                         <li class='menu-item@(
                                         (currentPage ?? "").StartsWith("/MusteriYonetimi/Destek/Sikayet", StringComparison.OrdinalIgnoreCase)
                                      || (currentPage ?? "").StartsWith("/MusteriYonetimi/Destek/Destek", StringComparison.OrdinalIgnoreCase)
                                         ? " active open" : "")'>
                             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                                <div class="text-truncate" data-i18n="ComplaintsSupport">Şikayet / Destek Talepleri</div>
+                                <div class="text-truncate" data-i18n="ComplaintsSupport">Ãƒâ€¦Ã‚Âikayet / Destek Talepleri</div>
                                 <span class="badge rounded-pill bg-danger ms-auto">2</span>
                             </a>
 
                             <ul class="menu-sub">
-                                <!-- Şikayet -->
+                                <!-- Ãƒâ€¦Ã‚Âikayet -->
                                 <li class='menu-item@((currentPage ?? "").StartsWith("/MusteriYonetimi/Destek/Sikayet", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
                                     <a asp-area="MusteriYonetimi" asp-controller="Destek" asp-action="Sikayet" class="menu-link">
-                                        <div class="text-truncate">Şikayet</div>
+                                        <div class="text-truncate">Ãƒâ€¦Ã‚Âikayet</div>
                                     </a>
                                 </li>
 
@@ -381,9 +387,9 @@
                 </li>
             </ul>
         <!-- Fatura -->
-        <li class='menu-item@(currentPage.StartsWith("/Pages/Account") ? " active" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Pages/Account", StringComparison.OrdinalIgnoreCase) ? " active" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon icon-base bx bx-dock-top"></i>  <!-- icon Değişecek -->
+                <i class="menu-icon icon-base bx bx-dock-top"></i>  <!-- icon DeÃƒâ€Ã…Â¸iÃƒâ€¦Ã…Â¸ecek -->
                 <div class="text-truncate">Fatura</div>
                 <span class="badge rounded-pill bg-danger ms-auto">4</span>
             </a>
@@ -394,16 +400,16 @@
                         <div class="text-truncate">Liste</div>
                     </a>
                 </li>
-                <!-- Önizleme -->
+                <!-- ÃƒÆ’Ã¢â‚¬â€œnizleme -->
                 <li class='menu-item@(currentPage == "/Pages/AccountSettingsNotifications" ? " active" : "")'>
                     <a asp-controller="Pages" asp-action="AccountSettingsConnections" class="menu-link">
-                        <div class="text-truncate">Önizleme</div>
+                        <div class="text-truncate">ÃƒÆ’Ã¢â‚¬â€œnizleme</div>
                     </a>
                 </li>
-                <!-- Düzenleme -->
+                <!-- DÃƒÆ’Ã‚Â¼zenleme -->
                 <li class='menu-item@(currentPage == "/Pages/AccountSettingsConnections" ? " active" : "")'>
                     <a asp-controller="Pages" asp-action="AccountSettingsConnections" class="menu-link">
-                        <div class="text-truncate">Düzenleme</div>
+                        <div class="text-truncate">DÃƒÆ’Ã‚Â¼zenleme</div>
                     </a>
                 </li>
                 <!-- Eklemek -->
@@ -415,11 +421,11 @@
             </ul>
         </li>
 
-        <!-- Layouts (Düzenler) -->
-        <li class='menu-item@(currentPage.StartsWith("/LayoutExamples") ? " active open" : "")'>
+        <!-- Layouts (DÃƒÆ’Ã‚Â¼zenler) -->
+        <li class='menu-item@((currentPage ?? "").StartsWith("/LayoutExamples", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-layout"></i>
-                <div class="text-truncate">Layouts (Düzenler)</div>
+                <div class="text-truncate">Layouts (DÃƒÆ’Ã‚Â¼zenler)</div>
             </a>
 
             <ul class="menu-sub">
@@ -436,58 +442,58 @@
                 </li>
                 <li class='menu-item@(currentPage == "/LayoutExamples/Fluid" ? " active" : "")'>
                     <a asp-controller="LayoutExamples" asp-action="Fluid" class="menu-link">
-                        <div class="text-truncate">Fluid (Akışkan)</div>
+                        <div class="text-truncate">Fluid (AkÃƒâ€Ã‚Â±Ãƒâ€¦Ã…Â¸kan)</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/LayoutExamples/Container" ? " active" : "")'>
                     <a asp-controller="LayoutExamples" asp-action="Container" class="menu-link">
-                        <div class="text-truncate">Container (Kapsayıcı)</div>
+                        <div class="text-truncate">Container (KapsayÃƒâ€Ã‚Â±cÃƒâ€Ã‚Â±)</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/LayoutExamples/Blank" ? " active" : "")'>
                     <a asp-controller="LayoutExamples" asp-action="Blank" class="menu-link">
-                        <div class="text-truncate">Blank (Boş)</div>
+                        <div class="text-truncate">Blank (BoÃƒâ€¦Ã…Â¸)</div>
                     </a>
                 </li>
             </ul>
         </li>
 
-        <!-- Ön Sayfalar -->
-        <li class='menu-item@(currentPage.StartsWith("/FrontPages") ? " active open" : "")'>
+        <!-- ÃƒÆ’Ã¢â‚¬â€œn Sayfalar -->
+        <li class='menu-item@((currentPage ?? "").StartsWith("/FrontPages", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-store"></i>
-                <div class="text-truncate">Ön Sayfalar</div>
+                <div class="text-truncate">ÃƒÆ’Ã¢â‚¬â€œn Sayfalar</div>
                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/FrontPages/LandingPage" ? " active" : "")'>
                     <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/front-pages/landing-page.html"
                        class="menu-link" target="_blank">
-                        <div class="text-truncate">Açılış Sayfası</div>
+                        <div class="text-truncate">AÃƒÆ’Ã‚Â§Ãƒâ€Ã‚Â±lÃƒâ€Ã‚Â±Ãƒâ€¦Ã…Â¸ SayfasÃƒâ€Ã‚Â±</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/FrontPages/PricingPage" ? " active" : "")'>
                     <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/front-pages/pricing-page.html"
                        class="menu-link" target="_blank">
-                        <div class="text-truncate">Fiyatlandırma Sayfası</div>
+                        <div class="text-truncate">FiyatlandÃƒâ€Ã‚Â±rma SayfasÃƒâ€Ã‚Â±</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/FrontPages/PaymentPage" ? " active" : "")'>
                     <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/front-pages/payment-page.html"
                        class="menu-link" target="_blank">
-                        <div class="text-truncate">Ödeme Sayfası</div>
+                        <div class="text-truncate">ÃƒÆ’Ã¢â‚¬â€œdeme SayfasÃƒâ€Ã‚Â±</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/FrontPages/CheckoutPage" ? " active" : "")'>
                     <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/front-pages/checkout-page.html"
                        class="menu-link" target="_blank">
-                        <div class="text-truncate">Ödeme Sayfası 2</div>
+                        <div class="text-truncate">ÃƒÆ’Ã¢â‚¬â€œdeme SayfasÃƒâ€Ã‚Â± 2</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/FrontPages/HelpCenterLanding" ? " active" : "")'>
                     <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/front-pages/help-center-landing.html"
                        class="menu-link" target="_blank">
-                        <div class="text-truncate">Yardım Merkezi</div>
+                        <div class="text-truncate">YardÃƒâ€Ã‚Â±m Merkezi</div>
                     </a>
                 </li>
             </ul>
@@ -525,15 +531,15 @@
             <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/vertical-menu-template/app-kanban.html"
                target="_blank" class="menu-link">
                 <i class="menu-icon icon-base bx bx-grid"></i>
-                <div class="text-truncate">Görev Panosu (Not Sistemi)</div>
+                <div class="text-truncate">GÃƒÆ’Ã‚Â¶rev Panosu (Not Sistemi)</div>
                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
             </a>
         </li>
         <!-- Sayfalar -->
-        <li class='menu-item@(currentPage.StartsWith("/Pages/Account") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Pages/Account", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-dock-top"></i>
-                <div class="text-truncate">Hesap Ayarları</div>
+                <div class="text-truncate">Hesap AyarlarÃƒâ€Ã‚Â±</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/Pages/AccountSettings" ? " active" : "")'>
@@ -548,39 +554,39 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Pages/AccountSettingsConnections" ? " active" : "")'>
                     <a asp-controller="Pages" asp-action="AccountSettingsConnections" class="menu-link">
-                        <div class="text-truncate">Bağlantılar</div>
+                        <div class="text-truncate">BaÃƒâ€Ã…Â¸lantÃƒâ€Ã‚Â±lar</div>
                     </a>
                 </li>
             </ul>
         </li>
 
-        <li class='menu-item@(currentPage.StartsWith("/Auth") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Auth", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-lock-open-alt"></i>
-                <div class="text-truncate">Kimlik doğrulamaları</div>
+                <div class="text-truncate">Kimlik doÃƒâ€Ã…Â¸rulamalarÃƒâ€Ã‚Â±</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/Auth/LoginBasic" ? " active" : "")'>
                     <a asp-controller="Auth" asp-action="LoginBasic" class="menu-link" target="_blank">
-                        <div class="text-truncate">Giriş</div>
+                        <div class="text-truncate">GiriÃƒâ€¦Ã…Â¸</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Auth/RegisterBasic" ? " active" : "")'>
                     <a asp-controller="Auth" asp-action="RegisterBasic" class="menu-link" target="_blank">
-                        <div class="text-truncate">Kayıt Ol</div>
+                        <div class="text-truncate">KayÃƒâ€Ã‚Â±t Ol</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Auth/ForgotPasswordBasic" ? " active" : "")'>
                     <a asp-controller="Auth" asp-action="ForgotPasswordBasic" class="menu-link" target="_blank">
-                        <div class="text-truncate">Parolanızı mı unuttunuz</div>
+                        <div class="text-truncate">ParolanÃƒâ€Ã‚Â±zÃƒâ€Ã‚Â± mÃƒâ€Ã‚Â± unuttunuz</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class='menu-item@(currentPage.StartsWith("/Pages/Misc") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Pages/Misc", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-cube-alt"></i>
-                <div class="text-truncate">Diğer Sayfalar</div>
+                <div class="text-truncate">DiÃƒâ€Ã…Â¸er Sayfalar</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/Pages/MiscError" ? " active" : "")'>
@@ -590,13 +596,13 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Pages/MiscUnderMaintenance" ? " active" : "")'>
                     <a asp-controller="Pages" asp-action="MiscUnderMaintenance" class="menu-link" target="_blank">
-                        <div class="text-truncate">Bakımda!</div>
+                        <div class="text-truncate">BakÃƒâ€Ã‚Â±mda!</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <!-- Bileşenler -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Bileşenler</span></li>
+        <!-- BileÃƒâ€¦Ã…Â¸enler -->
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">BileÃƒâ€¦Ã…Â¸enler</span></li>
         <!-- Cards -->
         <li class='menu-item@(currentPage == "/Cards/Basic" ? " active" : "")'>
             <a asp-controller="Cards" asp-action="Basic" class="menu-link">
@@ -605,10 +611,10 @@
             </a>
         </li>
         <!-- User interface -->
-        <li class='menu-item@(currentPage.StartsWith("/Ui") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Ui", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-box"></i>
-                <div class="text-truncate">Kullanıcı Arayüzleri</div>
+                <div class="text-truncate">KullanÃƒâ€Ã‚Â±cÃƒâ€Ã‚Â± ArayÃƒÆ’Ã‚Â¼zleri</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/Ui/Accordion" ? " active" : "")'>
@@ -618,7 +624,7 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Alerts" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="Alerts" class="menu-link">
-                        <div class="text-truncate">Uyarılar</div>
+                        <div class="text-truncate">UyarÃƒâ€Ã‚Â±lar</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Badges" ? " active" : "")'>
@@ -643,7 +649,7 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Dropdowns" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="Dropdowns" class="menu-link">
-                        <div class="text-truncate">Açılır menüler</div>
+                        <div class="text-truncate">AÃƒÆ’Ã‚Â§Ãƒâ€Ã‚Â±lÃƒâ€Ã‚Â±r menÃƒÆ’Ã‚Â¼ler</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Footer" ? " active" : "")'>
@@ -653,7 +659,7 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/ListGroups" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="ListGroups" class="menu-link">
-                        <div class="text-truncate">Liste grupları</div>
+                        <div class="text-truncate">Liste gruplarÃƒâ€Ã‚Â±</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Modals" ? " active" : "")'>
@@ -668,7 +674,7 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Offcanvas" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="Offcanvas" class="menu-link">
-                        <div class="text-truncate">Off_Canvas (Dişardan)</div>
+                        <div class="text-truncate">Off_Canvas (DiÃƒâ€¦Ã…Â¸ardan)</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/PaginationBreadcrumbs" ? " active" : "")'>
@@ -693,12 +699,12 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Toasts" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="Toasts" class="menu-link">
-                        <div class="text-truncate">Toasts (Uyarılar) </div>
+                        <div class="text-truncate">Toasts (UyarÃƒâ€Ã‚Â±lar) </div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/TooltipsPopovers" ? " active" : "")'>
                     <a asp-controller="Ui" asp-action="TooltipsPopovers" class="menu-link">
-                        <div class="text-truncate">Araç İpuçları & Açılır Pencereler</div>
+                        <div class="text-truncate">AraÃƒÆ’Ã‚Â§ Ãƒâ€Ã‚Â°puÃƒÆ’Ã‚Â§larÃƒâ€Ã‚Â± & AÃƒÆ’Ã‚Â§Ãƒâ€Ã‚Â±lÃƒâ€Ã‚Â±r Pencereler</div>
                     </a>
                 </li>
                 <li class='menu-item@(currentPage == "/Ui/Typography" ? " active" : "")'>
@@ -710,10 +716,10 @@
         </li>
 
         <!-- Extended components -->
-        <li class='menu-item@(currentPage.StartsWith("/ExtendedUi") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/ExtendedUi", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0)" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-copy"></i>
-                <div class="text-truncate">Gelişmiş UI</div>
+                <div class="text-truncate">GeliÃƒâ€¦Ã…Â¸miÃƒâ€¦Ã…Â¸ UI</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/ExtendedUi/PerfectScrollbar" ? " active" : "")'>
@@ -723,7 +729,7 @@
                 </li>
                 <li class='menu-item@(currentPage == "/ExtendedUi/TextDivider" ? " active" : "")'>
                     <a asp-controller="ExtendedUi" asp-action="TextDivider" class="menu-link">
-                        <div class="text-truncate">Metin Ayırıcılar</div>
+                        <div class="text-truncate">Metin AyÃƒâ€Ã‚Â±rÃƒâ€Ã‚Â±cÃƒâ€Ã‚Â±lar</div>
                     </a>
                 </li>
             </ul>
@@ -740,10 +746,10 @@
         <!-- Formlar & Tablolar -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Formlar &amp; Tablolar</span></li>
         <!-- Forms -->
-        <li class='menu-item@(currentPage.StartsWith("/Forms") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/Forms", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-detail"></i>
-                <div class="text-truncate">Form Elemanları</div>
+                <div class="text-truncate">Form ElemanlarÃƒâ€Ã‚Â±</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/Forms/BasicInputs" ? " active" : "")'>
@@ -753,15 +759,15 @@
                 </li>
                 <li class='menu-item@(currentPage == "/Forms/InputGroups" ? " active" : "")'>
                     <a asp-controller="Forms" asp-action="InputGroups" class="menu-link">
-                        <div class="text-truncate">input Grupları</div>
+                        <div class="text-truncate">input GruplarÃƒâ€Ã‚Â±</div>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class='menu-item@(currentPage.StartsWith("/FormLayouts") ? " active open" : "")'>
+        <li class='menu-item@((currentPage ?? "").StartsWith("/FormLayouts", StringComparison.OrdinalIgnoreCase) ? " active open" : "")'>
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon icon-base bx bx-detail"></i>
-                <div class="text-truncate">Form Düzenleri (Layouts)</div>
+                <div class="text-truncate">Form DÃƒÆ’Ã‚Â¼zenleri (Layouts)</div>
             </a>
             <ul class="menu-sub">
                 <li class='menu-item@(currentPage == "/FormLayouts/Vertical" ? " active" : "")'>
@@ -781,7 +787,7 @@
             <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/vertical-menu-template/form-validation.html"
                target="_blank" class="menu-link">
                 <i class="menu-icon icon-base bx bx-list-check"></i>
-                <div class="text-truncate">Form Doğrulaması</div>
+                <div class="text-truncate">Form DoÃƒâ€Ã…Â¸rulamasÃƒâ€Ã‚Â±</div>
                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
             </a>
         </li>
@@ -797,12 +803,12 @@
             <a href="https://demos.themeselection.com/sneat-aspnet-core-mvc-admin-template/html/vertical-menu-template/tables-datatables-basic.html"
                target="_blank" class="menu-link">
                 <i class="menu-icon icon-base bx bx-grid"></i>
-                <div class="text-truncate">Veri tabloları</div>
+                <div class="text-truncate">Veri tablolarÃƒâ€Ã‚Â±</div>
                 <div class="badge rounded-pill bg-label-primary text-uppercase fs-tiny ms-auto">Pro</div>
             </a>
         </li>
-        <!-- Diğer -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Diğer</span></li>
+        <!-- DiÃƒâ€Ã…Â¸er -->
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">DiÃƒâ€Ã…Â¸er</span></li>
         <li class="menu-item">
             <a href='@TempData.Peek("support")' target="_blank" class="menu-link">
                 <i class="menu-icon icon-base bx bx-support"></i>
@@ -812,12 +818,12 @@
         <li class="menu-item">
             <a href='@TempData.Peek("documentation")' target="_blank" class="menu-link">
                 <i class="menu-icon icon-base bx bx-file"></i>
-                <div class="text-truncate">Dokümantasyon</div>
+                <div class="text-truncate">DokÃƒÆ’Ã‚Â¼mantasyon</div>
             </a>
         </li>
    
 
-    <!-- Yan menü için sürüklenebilir genişlik çubuğu -->
+    <!-- Yan menÃƒÆ’Ã‚Â¼ iÃƒÆ’Ã‚Â§in sÃƒÆ’Ã‚Â¼rÃƒÆ’Ã‚Â¼klenebilir geniÃƒâ€¦Ã…Â¸lik ÃƒÆ’Ã‚Â§ubuÃƒâ€Ã…Â¸u -->
     <div id="pcSidebarResizer" class="pc-sidebar-resizer"></div>
 
 </aside>

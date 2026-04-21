@@ -1,9 +1,107 @@
+@model MusteriGuvenlikSayfaViewModel
 @{
     ViewData["Title"] = "Müşteri - Güvenlik";
 }
-<h4 class="mb-3">Müşteri Bilgileri • Güvenlik</h4>
-<div class="card">
-    <div class="card-body">
-        Müşteri Id: <strong>@ViewBag.MusteriId</strong>
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    @await Html.PartialAsync("_MusteriOzetKartlari", Model.RiskKartlari)
+
+    <div class="alert alert-warning border-0 customer-warning-banner">
+        <div>
+            <strong>Güvenlik odağı:</strong> kritik profil ve fatura değişiklikleri ikinci onay akışı ile korunuyor.
+        </div>
+        <button type="button" class="btn btn-sm btn-outline-dark">Politika detayları</button>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-5">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Kontrol seti</h5>
+                    <p class="text-muted mb-0">Kimlik, oturum ve işlem güvenliği için aktif savunmalar.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-stack-list">
+                        @foreach (var kontrol in Model.Kontroller)
+                        {
+                            <div class="customer-stack-list__item">
+                                <div>
+                                    <div class="d-flex gap-2 align-items-center mb-1">
+                                        <strong>@kontrol.Baslik</strong>
+                                        <span class="badge bg-label-@kontrol.DurumSinifi">@kontrol.Durum</span>
+                                    </div>
+                                    <p class="text-muted mb-0">@kontrol.Aciklama</p>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">@kontrol.EylemMetni</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-7">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Oturumlar ve cihazlar</h5>
+                    <p class="text-muted mb-0">Aktif cihaz görünürlüğü ve hızlı sonlandırma aksiyonları.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-stack-list">
+                        @foreach (var oturum in Model.Oturumlar)
+                        {
+                            <div class="customer-stack-list__item">
+                                <div>
+                                    <div class="d-flex gap-2 align-items-center mb-1">
+                                        <strong>@oturum.Cihaz</strong>
+                                        @if (oturum.MevcutOturum)
+                                        {
+                                            <span class="badge bg-label-success">Mevcut oturum</span>
+                                        }
+                                    </div>
+                                    <p class="text-muted mb-1">@oturum.Konum · @oturum.IpAdresi</p>
+                                    <small>@oturum.SonAktivite</small>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-danger">Sonlandır</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="card customer-section-card border-0 mt-4">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Denetim izi</h5>
+                    <p class="text-muted mb-0">Son güvenlik ve yetki olaylarının iz kaydı.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-timeline">
+                        @foreach (var kayit in Model.DenetimKayitlari)
+                        {
+                            <div class="customer-timeline__item">
+                                <div class="customer-timeline__icon customer-tone-@kayit.Ton">
+                                    <i class="bx bx-shield-quarter"></i>
+                                </div>
+                                <div class="customer-timeline__content">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
+                                        <div>
+                                            <h6 class="mb-1">@kayit.Baslik</h6>
+                                            <p class="text-muted mb-0">@kayit.Aciklama</p>
+                                        </div>
+                                        <span class="customer-timeline__time">@kayit.Zaman</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

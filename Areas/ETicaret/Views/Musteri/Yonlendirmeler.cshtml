@@ -1,0 +1,83 @@
+@model MusteriYonlendirmelerSayfaViewModel
+@{
+    ViewData["Title"] = "Müşteri - Yönlendirmeler";
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    @await Html.PartialAsync("_MusteriDetayKabugu", Model)
+
+    @await Html.PartialAsync("_MusteriOzetKartlari", Model.ProgramKartlari)
+
+    <div class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+                        <div>
+                            <h5 class="mb-1">Yönlendirme performansı</h5>
+                            <p class="text-muted mb-0">Kayıt, ilk sipariş ve teşvik akışını birlikte izleyin.</p>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <i class="bx bx-copy me-1"></i>Referans kodunu kopyala
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-primary border-0 mb-4">
+                        <strong>Aktif referans kodu:</strong> REF-@Model.Kabuk.MusteriKodu
+                    </div>
+
+                    <div class="customer-stack-list">
+                        @foreach (var yonlendirme in Model.Yonlendirmeler)
+                        {
+                            <div class="customer-stack-list__item">
+                                <div>
+                                    <div class="d-flex gap-2 align-items-center mb-1">
+                                        <strong>@yonlendirme.AdSoyad</strong>
+                                        <span class="badge bg-label-@yonlendirme.DurumSinifi">@yonlendirme.KayitDurumu</span>
+                                    </div>
+                                    <p class="text-muted mb-1">@yonlendirme.Kanal · @yonlendirme.Tarih</p>
+                                    <small class="d-block">@yonlendirme.Not</small>
+                                </div>
+                                <div class="text-lg-end">
+                                    <strong class="d-block">@yonlendirme.DonusumDegeri</strong>
+                                    <small class="text-muted">Dönüşüm değeri</small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="card customer-section-card border-0">
+                <div class="card-header border-0 pb-0">
+                    <h5 class="mb-1">Program akışı</h5>
+                    <p class="text-muted mb-0">Ödül ve takip adımlarının mevcut durumu.</p>
+                </div>
+                <div class="card-body">
+                    <div class="customer-step-list">
+                        @foreach (var adim in Model.ProgramAdimlari)
+                        {
+                            <div class="customer-step-list__item">
+                                <div class="customer-step-list__marker bg-label-@adim.DurumSinifi"></div>
+                                <div>
+                                    <div class="d-flex gap-2 align-items-center mb-1">
+                                        <strong>@adim.Baslik</strong>
+                                        <span class="badge bg-label-@adim.DurumSinifi">@adim.Durum</span>
+                                    </div>
+                                    <p class="text-muted mb-0">@adim.Aciklama</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
