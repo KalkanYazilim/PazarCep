@@ -1,8 +1,47 @@
-﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Kayıt Ol";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Kayıt</h1>
+<div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-3">Kayıt Ol</h1>
+                <p class="text-muted">PazarCep hesabı oluşturmak için formu doldurun.</p>
 
+                @if (ViewBag.HataMesaji is string hataMesaji)
+                {
+                    <div class="alert alert-danger" role="alert">@hataMesaji</div>
+                }
+
+                <form asp-controller="Kayit" asp-action="Index" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="mb-3">
+                        <label class="form-label" for="adSoyad">Ad Soyad</label>
+                        <input class="form-control" id="adSoyad" type="text" name="adSoyad" autocomplete="name" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="eposta">E-posta</label>
+                        <input class="form-control" id="eposta" type="email" name="eposta" autocomplete="email" required />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" for="sifre">Şifre</label>
+                            <input class="form-control" id="sifre" type="password" name="sifre" autocomplete="new-password" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label" for="sifreTekrar">Şifre Tekrar</label>
+                            <input class="form-control" id="sifreTekrar" type="password" name="sifreTekrar" autocomplete="new-password" required />
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Kayıt Ol</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

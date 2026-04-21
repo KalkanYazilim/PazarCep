@@ -1,8 +1,48 @@
-﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Giriş Yap";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Giriş</h1>
+<div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-8 col-lg-5">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h1 class="h4 mb-3">Giriş Yap</h1>
+                <p class="text-muted">Hesabınıza erişmek için bilgilerinizi girin.</p>
 
+                @if (TempData["BasariMesaji"] is string basariMesaji)
+                {
+                    <div class="alert alert-success" role="alert">@basariMesaji</div>
+                }
+
+                @if (ViewBag.HataMesaji is string hataMesaji)
+                {
+                    <div class="alert alert-danger" role="alert">@hataMesaji</div>
+                }
+
+                <form asp-controller="Giris" asp-action="Index" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+
+                    <div class="mb-3">
+                        <label class="form-label" for="eposta">E-posta</label>
+                        <input class="form-control" id="eposta" type="email" name="eposta" autocomplete="username" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="sifre">Şifre</label>
+                        <input class="form-control" id="sifre" type="password" name="sifre" autocomplete="current-password" required />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                </form>
+
+                <hr />
+                <p class="mb-0 text-center">
+                    Hesabınız yok mu?
+                    <a href="~/Kayit">Kayıt Ol</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

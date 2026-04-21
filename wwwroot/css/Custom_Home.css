@@ -1119,6 +1119,65 @@ textarea {
   }
 }
 
+@media (max-width: 991.98px) {
+  .pc-nav-links,
+  .pc-nav-cta {
+    display: none;
+  }
+
+  .pc-mobile-toggle {
+    display: inline-flex;
+  }
+
+  .pc-nav-mobile {
+    display: none;
+  }
+
+  .pc-nav-mobile.open {
+    display: flex;
+  }
+
+  .pc-logo-mark {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pc-logo-text-main {
+    font-size: 1.05rem;
+  }
+
+  .pc-logo-text-sub {
+    letter-spacing: 0.08em;
+  }
+
+  .pc-nav-mobile-cta {
+    flex-wrap: wrap;
+  }
+
+  .pc-nav-mobile-cta .pc-btn {
+    flex: 1 1 180px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pc-logo-text {
+    min-width: 0;
+  }
+
+  .pc-logo-text-sub {
+    font-size: 0.65rem;
+  }
+
+  .pc-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pc-table-scroll .pc-table {
+    min-width: 640px;
+  }
+}
+
 /* === PazarCep - Yan Menü Genişlik Ayarı (Resizable Sidebar) === */
 .layout-menu.pc-sidebar-resizable {
   position: relative;
@@ -1239,6 +1298,20 @@ body.pc-sidebar-resizing * {
   }
 }
 
+@media (max-width: 1199.98px) {
+  .layout-page {
+    margin-left: 0 !important;
+  }
+
+  #layout-menu.pc-sidebar-resizable {
+    max-width: min(420px, calc(100vw - 1rem));
+  }
+
+  #layout-menu .menu-inner {
+    padding-right: 16px;
+  }
+}
+
 /* === PazarCep Logo Sabitleme (Vertical Menu) === */
 .layout-menu .app-brand .pc-logo {
   width: 57.844px !important;
@@ -1254,4 +1327,3 @@ body.pc-sidebar-resizing * {
     object-fit: contain !important; /* taşmadan sığdırır */
     display: block;
   }
-

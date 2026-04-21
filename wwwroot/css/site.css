@@ -289,4 +289,26 @@ textarea.form-control {
   .layout-menu {
     box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
   }
+
+  .card-header.d-flex {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .card-header.d-flex > .btn,
+  .card-header.d-flex > .btn-group,
+  .card-header.d-flex > a.btn {
+    max-width: 100%;
+  }
+
+  .table-responsive .btn-group {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  .d-flex.gap-2,
+  .d-flex.gap-3 {
+    flex-wrap: wrap;
+  }
 }
