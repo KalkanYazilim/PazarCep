@@ -1,0 +1,74 @@
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriYonetimDestekSayfaViewModel
+@{
+    ViewData["Title"] = ViewData["Title"] ?? "Destek";
+}
+
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">CRM / @Model.KuyrukEtiketi</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="MusteriYonetimi" asp-controller="IletisimNotlar" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-note me-1"></i>Iletisim notlari
+                </a>
+                <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-id-card me-1"></i>Musteri portfoyu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Talep kuyrugu</h2>
+                <p class="pc-panel__subtitle mb-0">Oncelik, kanal ve musteri baglami ile servis kayitlari.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-mobile-list">
+                @foreach (var talep in Model.Talepler)
+                {
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@talep.TalepNo</div>
+                                <div class="text-muted">@talep.Musteri · @talep.Kanal</div>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@talep.DurumTonu">@talep.Durum</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="pc-status-pill pc-status-pill--@talep.OncelikTonu">@talep.Oncelik</span>
+                            <span class="pc-chip">@talep.Tarih</span>
+                        </div>
+                        <h3 class="h6 mb-2">@talep.Konu</h3>
+                        <p class="text-muted mb-3">@talep.Ozet</p>
+                        <div class="d-flex gap-2">
+                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@talep.MusteriId" class="btn btn-primary flex-fill">Musteri</a>
+                            <a asp-area="MusteriYonetimi" asp-controller="IletisimNotlar" asp-action="Index" class="btn btn-outline-secondary flex-fill">Notlar</a>
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+</div>

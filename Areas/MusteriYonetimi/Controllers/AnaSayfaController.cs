@@ -1,10 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
+using PazarCep.Areas.MusteriYonetimi.Models;
 
-namespace PazarCep.Areas.MusteriYonetimi.Controllers
+namespace PazarCep.Areas.MusteriYonetimi.Controllers;
+
+[Area("MusteriYonetimi")]
+[Route("[area]/[controller]/[action]")]
+public class AnaSayfaController : Controller
 {
-  [Area("MusteriYonetimi")]
-  public class AnaSayfaController : Controller
+  public IActionResult Index()
   {
-    public IActionResult Index() => View();
+    ViewData["Title"] = "CRM Operasyonlari";
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Musteri portfoyu ve servis akislari";
+
+    return View(MusteriYonetimiWorkspaceFactory.CreateOverview());
   }
 }

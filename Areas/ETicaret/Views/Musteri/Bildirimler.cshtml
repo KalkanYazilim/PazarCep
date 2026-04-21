@@ -12,6 +12,10 @@
 
     @await Html.PartialAsync("_MusteriOzetKartlari", Model.KanalKartlari)
 
+    <div class="alert alert-light border mb-0">
+        Bildirim tercihleri operasyonel görünüm olarak sunulur. Kalıcı değişiklikler hesap sahibi ve temsilci onayıyla uygulanır.
+    </div>
+
     <div class="row g-4">
         <div class="col-12 col-xl-8">
             @foreach (var grup in Model.TercihGruplari)
@@ -43,10 +47,10 @@
                                                     <small class="text-muted">@tercih.Aciklama</small>
                                                 </div>
                                             </td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Sms" /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Push" /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" /></td>
+                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled /></td>
+                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled /></td>
+                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Push" disabled /></td>
+                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled /></td>
                                         </tr>
                                     }
                                 </tbody>
@@ -62,10 +66,10 @@
                                             <strong>@tercih.Baslik</strong>
                                             <p class="text-muted mb-3">@tercih.Aciklama</p>
                                             <div class="customer-toggle-grid">
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" /> E-posta</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Sms" /> SMS</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Push" /> Push</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" /> Uygulama</label>
+                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled /> E-posta</label>
+                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled /> SMS</label>
+                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Push" disabled /> Push</label>
+                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled /> Uygulama</label>
                                             </div>
                                         </div>
                                     </div>

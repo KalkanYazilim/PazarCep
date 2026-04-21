@@ -1,125 +1,217 @@
 @model PazarCep.Areas.ETicaret.Models.UrunListeViewModel
 @{
     ViewData["Title"] = "Ürün Listesi";
+    var taslakUrun = Model.Urunler.Count(x => x.Durum == "Taslak");
+    var pasifUrun = Model.Urunler.Count(x => x.Durum == "Pasif");
 }
 
-<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-    <div>
-        <h4 class="mb-1">Ürün Listesi</h4>
-        <p class="text-muted mb-0">E-Ticaret kataloğunuzu yönetin, stok durumunu izleyin ve ürün performansını analiz edin.</p>
-    </div>
-    <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="btn btn-primary">
-        <i class="bx bx-plus me-1"></i>Yeni Ürün Ekle
-    </a>
-</div>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">E-Ticaret / Ürün Kataloğu</span>
+            <h1 class="pc-page-title">Ürün kataloğu</h1>
+            <p class="pc-page-description mb-0">Katalog, stok ve ürün görünürlüğünü aynı standartta yönetin. Mobilde okunabilir kartlar, masaüstünde yüksek yoğunluklu liste sunulur.</p>
+            <div class="pc-page-actions mt-4">
+                <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="btn btn-primary">
+                    <i class="bx bx-plus me-1"></i>Yeni ürün ekle
+                </a>
+                <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Kategoriler" class="btn btn-outline-secondary">
+                    <i class="bx bx-category me-1"></i>Kategori yönetimi
+                </a>
+            </div>
+        </div>
+    </section>
 
-@if (TempData["SuccessMessage"] is string successMessage)
-{
-    <div class="alert alert-success alert-dismissible" role="alert">
-        @successMessage
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
-    </div>
-}
+    @if (TempData["SuccessMessage"] is string successMessage)
+    {
+        <div class="pc-alert-strip pc-alert-strip--info">
+            <div>
+                <div class="fw-semibold mb-1">İşlem tamamlandı</div>
+                <p class="text-muted mb-0">@successMessage</p>
+            </div>
+        </div>
+    }
 
-<div class="row g-3 mb-4">
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <span class="text-muted">Toplam Ürün</span>
-                <h3 class="mt-2 mb-0">@Model.ToplamUrun</h3>
+    <section class="pc-kpi-grid">
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Toplam ürün</div>
+                    <div class="pc-kpi-card__value">@Model.ToplamUrun</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-box"></i></span>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <span class="text-muted">Aktif Ürün</span>
-                <h3 class="mt-2 mb-0 text-success">@Model.AktifUrun</h3>
+            <div class="pc-kpi-card__meta">Katalogta listelenen tüm başlıklar</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Aktif ürün</div>
+                    <div class="pc-kpi-card__value">@Model.AktifUrun</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-check-circle"></i></span>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <span class="text-muted">Kritik Stok</span>
-                <h3 class="mt-2 mb-0 text-warning">@Model.KritikStokUrun</h3>
+            <div class="pc-kpi-card__meta">Satışa açık ve görünür ürünler</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Kritik stok</div>
+                    <div class="pc-kpi-card__value">@Model.KritikStokUrun</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-error-circle"></i></span>
             </div>
-        </div>
-    </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100">
-            <div class="card-body">
-                <span class="text-muted">Ort. Sepet Tutarı</span>
-                <h3 class="mt-2 mb-0">₺@Model.OrtalamaSepetTutari.ToString("N2")</h3>
+            <div class="pc-kpi-card__meta">Tedarik planı gerektiren ürünler</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Taslak / pasif</div>
+                    <div class="pc-kpi-card__value">@taslakUrun / @pasifUrun</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-edit"></i></span>
             </div>
-        </div>
-    </div>
-</div>
+            <div class="pc-kpi-card__meta">Gözden geçirilmesi gereken katalog kalemleri</div>
+        </article>
+    </section>
 
-<div class="card">
-    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <h5 class="mb-0">Ürün Kataloğu</h5>
-        <div class="d-flex gap-2">
-            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bx bx-filter-alt me-1"></i>Filtrele</button>
-            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bx bx-download me-1"></i>Dışa Aktar</button>
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Filtre ve görünüm</h2>
+                <p class="pc-panel__subtitle mb-0">Ürün arama, kategori kırılımı ve stok alarmı için başlangıç kontrolleri.</p>
+            </div>
         </div>
-    </div>
-    <div class="table-responsive text-nowrap">
-        <table class="table table-hover align-middle mb-0">
-            <thead class="table-light">
-                <tr>
-                    <th>Ürün</th>
-                    <th>Kategori</th>
-                    <th>Fiyat</th>
-                    <th>Stok</th>
-                    <th>Durum</th>
-                    <th>Puan</th>
-                    <th>Sipariş</th>
-                    <th>Güncelleme</th>
-                    <th class="text-end">İşlem</th>
-                </tr>
-            </thead>
-            <tbody>
+        <div class="pc-panel__body">
+            <div class="pc-filter-grid">
+                <div class="pc-col-6">
+                    <label class="form-label">Ürün ara</label>
+                    <input type="text" class="form-control" placeholder="Ürün adı, marka veya SKU" />
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Kategori</label>
+                    <select class="form-select">
+                        <option>Tüm kategoriler</option>
+                        <option>Meyve</option>
+                        <option>Sebze</option>
+                        <option>Süt & Kahvaltılık</option>
+                    </select>
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Stok görünümü</label>
+                    <select class="form-select">
+                        <option>Tüm stoklar</option>
+                        <option>Kritik stok</option>
+                        <option>Sağlıklı stok</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel pc-table-card">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Katalog listesi</h2>
+                <p class="pc-panel__subtitle mb-0">Masaüstünde yüksek yoğunluklu tablo, mobilde taranabilir ürün kartları.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body d-none d-lg-block">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Ürün</th>
+                            <th>Kategori</th>
+                            <th>Fiyat</th>
+                            <th>Stok</th>
+                            <th>Durum</th>
+                            <th>Puan</th>
+                            <th>Sipariş</th>
+                            <th>Güncelleme</th>
+                            <th class="text-end">Aksiyon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var urun in Model.Urunler)
+                        {
+                            var ton = urun.Durum switch
+                            {
+                                "Aktif" => "success",
+                                "Taslak" => "info",
+                                _ => "warning"
+                            };
+
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-semibold">@urun.UrunAdi</span>
+                                        <small class="text-muted">#@urun.Id · @urun.Marka</small>
+                                    </div>
+                                </td>
+                                <td>@urun.Kategori</td>
+                                <td class="fw-semibold">₺@urun.Fiyat.ToString("N2") / @urun.Birim</td>
+                                <td class="@(urun.StokMiktari <= 25 ? "text-warning fw-semibold" : "")">@urun.StokMiktari</td>
+                                <td><span class="pc-status-pill pc-status-pill--@ton">@urun.Durum</span></td>
+                                <td>@urun.Puan.ToString("N1")</td>
+                                <td>@urun.SiparisAdedi</td>
+                                <td>@urun.GuncellenmeTarihi.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</td>
+                                <td class="text-end">
+                                    <div class="d-inline-flex gap-2">
+                                        <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="btn btn-sm btn-outline-secondary">Benzer ekle</a>
+                                        <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Kategoriler" class="btn btn-sm btn-primary">Kategori</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pc-panel__body d-lg-none">
+            <div class="pc-mobile-list">
                 @foreach (var urun in Model.Urunler)
                 {
-                    var badgeClass = urun.Durum switch
+                    var ton = urun.Durum switch
                     {
-                        "Aktif" => "bg-label-success",
-                        "Taslak" => "bg-label-info",
-                        _ => "bg-label-secondary"
+                        "Aktif" => "success",
+                        "Taslak" => "info",
+                        _ => "warning"
                     };
 
-                    <tr>
-                        <td>
-                            <div class="d-flex flex-column">
-                                <span class="fw-semibold">@urun.UrunAdi</span>
-                                <small class="text-muted">#@urun.Id · @urun.Marka</small>
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@urun.UrunAdi</div>
+                                <div class="text-muted">@urun.Marka</div>
                             </div>
-                        </td>
-                        <td>@urun.Kategori</td>
-                        <td class="fw-semibold">₺@urun.Fiyat.ToString("N2") / @urun.Birim</td>
-                        <td>
-                            <span class="@(urun.StokMiktari <= 25 ? "text-warning fw-semibold" : "")">@urun.StokMiktari</span>
-                        </td>
-                        <td><span class="badge @badgeClass">@urun.Durum</span></td>
-                        <td>@urun.Puan.ToString("N1")</td>
-                        <td>@urun.SiparisAdedi</td>
-                        <td>@urun.GuncellenmeTarihi.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</td>
-                        <td class="text-end">
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-label="İşlemler">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>Düzenle</a>
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-show-alt me-1"></i>Detay</a>
-                                    <a class="dropdown-item text-danger" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>Sil</a>
-                                </div>
+                            <span class="pc-status-pill pc-status-pill--@ton">@urun.Durum</span>
+                        </div>
+                        <div class="pc-mobile-card__grid mb-3">
+                            <div>
+                                <span class="pc-mobile-card__label">Fiyat</span>
+                                <strong>₺@urun.Fiyat.ToString("N2") / @urun.Birim</strong>
                             </div>
-                        </td>
-                    </tr>
+                            <div>
+                                <span class="pc-mobile-card__label">Stok</span>
+                                <strong>@urun.StokMiktari</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Kategori</span>
+                                <strong>@urun.Kategori</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Puan</span>
+                                <strong>@urun.Puan.ToString("N1")</strong>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="btn btn-outline-secondary flex-fill">Benzer ekle</a>
+                            <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Kategoriler" class="btn btn-primary flex-fill">Kategori</a>
+                        </div>
+                    </article>
                 }
-            </tbody>
-        </table>
-    </div>
+            </div>
+        </div>
+    </section>
 </div>

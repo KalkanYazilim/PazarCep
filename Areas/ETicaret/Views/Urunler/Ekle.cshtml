@@ -3,119 +3,137 @@
     ViewData["Title"] = "Ürün Ekle";
 }
 
-<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-    <div>
-        <h4 class="mb-1">Ürün Ekle</h4>
-        <p class="text-muted mb-0">Profesyonel ürün kartı oluşturun, satış ve stok ayarlarını tek ekrandan yönetin.</p>
-    </div>
-    <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary">
-        <i class="bx bx-arrow-back me-1"></i>Ürün Listesine Dön
-    </a>
-</div>
-
-<div class="row g-4">
-    <div class="col-xl-8">
-        <form asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" method="post" class="card">
-            @Html.AntiForgeryToken()
-            <div class="card-header">
-                <h5 class="mb-0">Ürün Bilgileri</h5>
-            </div>
-            <div class="card-body">
-                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
-
-                <div class="row g-3">
-                    <div class="col-md-8">
-                        <label asp-for="UrunAdi" class="form-label">Ürün Adı</label>
-                        <input asp-for="UrunAdi" class="form-control" placeholder="Örn: Organik Çilek" />
-                        <span asp-validation-for="UrunAdi" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="Kategori" class="form-label">Kategori</label>
-                        <select asp-for="Kategori" asp-items="Model.KategoriSecenekleri" class="form-select">
-                            <option value="">Kategori seçiniz</option>
-                        </select>
-                        <span asp-validation-for="Kategori" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="StokKodu" class="form-label">SKU / Barkod</label>
-                        <input asp-for="StokKodu" class="form-control" placeholder="PC-URUN-0001" />
-                        <span asp-validation-for="StokKodu" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="SatisFiyati" class="form-label">Satış Fiyatı (₺)</label>
-                        <input asp-for="SatisFiyati" class="form-control" type="number" step="0.01" min="0" />
-                        <span asp-validation-for="SatisFiyati" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="IndirimliFiyat" class="form-label">İndirimli Fiyat (₺)</label>
-                        <input asp-for="IndirimliFiyat" class="form-control" type="number" step="0.01" min="0" />
-                        <span asp-validation-for="IndirimliFiyat" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="StokMiktari" class="form-label">Stok Miktarı</label>
-                        <input asp-for="StokMiktari" class="form-control" type="number" min="0" />
-                        <span asp-validation-for="StokMiktari" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="KritikStokSeviyesi" class="form-label">Kritik Stok Seviyesi</label>
-                        <input asp-for="KritikStokSeviyesi" class="form-control" type="number" min="0" />
-                        <span asp-validation-for="KritikStokSeviyesi" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-4">
-                        <label asp-for="Birim" class="form-label">Birim</label>
-                        <select asp-for="Birim" asp-items="Model.BirimSecenekleri" class="form-select"></select>
-                    </div>
-                    <div class="col-12">
-                        <label asp-for="KisaAciklama" class="form-label">Kısa Açıklama</label>
-                        <input asp-for="KisaAciklama" class="form-control" placeholder="Müşterilerin listede göreceği kısa açıklama" />
-                        <span asp-validation-for="KisaAciklama" class="text-danger"></span>
-                    </div>
-                    <div class="col-12">
-                        <label asp-for="Aciklama" class="form-label">Detaylı Açıklama</label>
-                        <textarea asp-for="Aciklama" rows="4" class="form-control" placeholder="Ürün özellikleri, saklama koşulları, menşei vb."></textarea>
-                        <span asp-validation-for="Aciklama" class="text-danger"></span>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check form-switch">
-                            <input asp-for="VitrindeGoster" class="form-check-input" />
-                            <label asp-for="VitrindeGoster" class="form-check-label">Vitrinde öne çıkar</label>
-                        </div>
-                        <div class="form-check form-switch mt-2">
-                            <input asp-for="KargoUygun" class="form-check-input" />
-                            <label asp-for="KargoUygun" class="form-check-label">Kargoya uygun ürün</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer d-flex justify-content-end gap-2">
-                <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary">İptal</a>
-                <button type="submit" class="btn btn-primary"><i class="bx bx-save me-1"></i>Ürünü Kaydet</button>
-            </div>
-        </form>
-    </div>
-
-    <div class="col-xl-4">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h6 class="mb-0">Yayın Öncesi Kontrol</h6>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><i class="bx bx-check-circle text-success me-1"></i>SEO uyumlu ürün adı kullanın.</li>
-                    <li class="mb-2"><i class="bx bx-check-circle text-success me-1"></i>Stok kodunu benzersiz girin.</li>
-                    <li class="mb-2"><i class="bx bx-check-circle text-success me-1"></i>Kısa açıklamayı 120 karakter altında tutun.</li>
-                    <li><i class="bx bx-check-circle text-success me-1"></i>Fiyat ve indirim ilişkisini kontrol edin.</li>
-                </ul>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">E-Ticaret / Ürün Formu</span>
+            <h1 class="pc-page-title">Yeni ürün oluştur</h1>
+            <p class="pc-page-description mb-0">Profesyonel katalog girişi için içerik, fiyat, stok ve vitrin ayarlarını tek formda yönetin.</p>
+            <div class="pc-page-actions mt-4">
+                <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary">
+                    <i class="bx bx-arrow-back me-1"></i>Kataloğa dön
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="card">
-            <div class="card-header">
-                <h6 class="mb-0">Hızlı İpuçları</h6>
-            </div>
-            <div class="card-body">
-                <p class="mb-2">Profesyonel katalog yönetimi için ürün görsellerini en az <strong>1200x1200</strong> çözünürlükte ekleyin.</p>
-                <p class="mb-0">Kritik stok seviyesini doğru ayarlayarak stok tükenmeden otomatik uyarı alabilirsiniz.</p>
+    <div class="row g-4">
+        <div class="col-12 col-xl-8">
+            <form asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" method="post" class="pc-panel">
+                @Html.AntiForgeryToken()
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Ürün bilgileri</h2>
+                        <p class="pc-panel__subtitle mb-0">Katalog ve operasyon ekiplerinin kullanacağı temel veri alanları.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="pc-filter-grid">
+                        <div class="pc-col-6">
+                            <label asp-for="UrunAdi" class="form-label">Ürün adı</label>
+                            <input asp-for="UrunAdi" class="form-control" placeholder="Örn. Organik Çilek" />
+                            <span asp-validation-for="UrunAdi" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-6">
+                            <label asp-for="Kategori" class="form-label">Kategori</label>
+                            <select asp-for="Kategori" asp-items="Model.KategoriSecenekleri" class="form-select">
+                                <option value="">Kategori seçiniz</option>
+                            </select>
+                            <span asp-validation-for="Kategori" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="StokKodu" class="form-label">SKU / Barkod</label>
+                            <input asp-for="StokKodu" class="form-control" placeholder="PC-URUN-0001" />
+                            <span asp-validation-for="StokKodu" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="SatisFiyati" class="form-label">Satış fiyatı (₺)</label>
+                            <input asp-for="SatisFiyati" class="form-control" type="number" step="0.01" min="0" />
+                            <span asp-validation-for="SatisFiyati" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="IndirimliFiyat" class="form-label">İndirimli fiyat (₺)</label>
+                            <input asp-for="IndirimliFiyat" class="form-control" type="number" step="0.01" min="0" />
+                            <span asp-validation-for="IndirimliFiyat" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="StokMiktari" class="form-label">Stok miktarı</label>
+                            <input asp-for="StokMiktari" class="form-control" type="number" min="0" />
+                            <span asp-validation-for="StokMiktari" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="KritikStokSeviyesi" class="form-label">Kritik stok seviyesi</label>
+                            <input asp-for="KritikStokSeviyesi" class="form-control" type="number" min="0" />
+                            <span asp-validation-for="KritikStokSeviyesi" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-4">
+                            <label asp-for="Birim" class="form-label">Birim</label>
+                            <select asp-for="Birim" asp-items="Model.BirimSecenekleri" class="form-select"></select>
+                        </div>
+                        <div class="pc-col-12">
+                            <label asp-for="KisaAciklama" class="form-label">Kısa açıklama</label>
+                            <input asp-for="KisaAciklama" class="form-control" placeholder="Liste görünümünde öne çıkacak kısa açıklama" />
+                            <span asp-validation-for="KisaAciklama" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-12">
+                            <label asp-for="Aciklama" class="form-label">Detaylı açıklama</label>
+                            <textarea asp-for="Aciklama" rows="5" class="form-control" placeholder="Ürün özellikleri, saklama koşulları, menşei ve operasyon notları"></textarea>
+                            <span asp-validation-for="Aciklama" class="text-danger"></span>
+                        </div>
+                        <div class="pc-col-12">
+                            <div class="d-flex flex-column gap-3">
+                                <div class="form-check form-switch">
+                                    <input asp-for="VitrindeGoster" class="form-check-input" />
+                                    <label asp-for="VitrindeGoster" class="form-check-label">Vitrinde öne çıkar</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input asp-for="KargoUygun" class="form-check-input" />
+                                    <label asp-for="KargoUygun" class="form-check-label">Kargoya uygun ürün</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 mt-4 flex-wrap">
+                        <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary">İptal</a>
+                        <button type="submit" class="btn btn-primary"><i class="bx bx-save me-1"></i>Ürünü kaydet</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-xl-4">
+            <div class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Yayın öncesi kontrol</h2>
+                        <p class="pc-panel__subtitle mb-0">Katalog kalitesini koruyan temel kontroller.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        <article class="pc-health-list__item">
+                            <div>
+                                <div class="fw-semibold mb-1">Ürün adı</div>
+                                <p class="text-muted mb-0">Arama ve kategori görünürlüğü için açık ve kısa başlık kullanın.</p>
+                            </div>
+                        </article>
+                        <article class="pc-health-list__item">
+                            <div>
+                                <div class="fw-semibold mb-1">Stok kodu</div>
+                                <p class="text-muted mb-0">Tekil SKU ile depo ve sipariş akışını çakışmasız yönetin.</p>
+                            </div>
+                        </article>
+                        <article class="pc-health-list__item">
+                            <div>
+                                <div class="fw-semibold mb-1">Kritik stok</div>
+                                <p class="text-muted mb-0">Tükenme öncesi alarm seviyesi operasyon ekibine erken sinyal verir.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,128 @@
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriYonetimOzetSayfaViewModel
 @{
-    ViewData["Title"] = "MusteriYonetimi";
+    ViewData["Title"] = "CRM Operasyonlari";
 }
-<h1>Müşteri Yönetimi Area Çalışıyor...!!✅</h1>
 
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">CRM / Operasyon Merkezi</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
 
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-group"></i>Musteri portfoyu tek gorunumde</span>
+                <span><i class="bx bx-transfer-alt"></i>Siparis ve destek akisi bagli</span>
+                <span><i class="bx bx-mobile-alt"></i>Mobil kart duzeni aktif</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-id-card me-1"></i>Musteri listesi
+                </a>
+                <a asp-area="MusteriYonetimi" asp-controller="Siparisler" asp-action="Bekleyen" class="btn btn-outline-secondary">
+                    <i class="bx bx-time-five me-1"></i>Bekleyen siparisler
+                </a>
+                <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="btn btn-outline-secondary">
+                    <i class="bx bx-grid-alt me-1"></i>Musteri calisma alani
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Oncelikli akislar</h2>
+                        <p class="pc-panel__subtitle mb-0">Bugun kapatilmali veya yakin takip edilmeli alanlar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var akis in Model.OncelikliAkislar)
+                        {
+                            <article class="pc-alert-strip pc-alert-strip--@akis.DurumTonu">
+                                <div>
+                                    <div class="fw-semibold mb-1">@akis.Baslik</div>
+                                    <p class="text-muted mb-0">@akis.Ozet</p>
+                                </div>
+                                <a href="@akis.EylemLinki" class="btn btn-outline-secondary btn-sm">@akis.EylemMetni</a>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Portfoy segmentleri</h2>
+                        <p class="pc-panel__subtitle mb-0">Is degeri ve hizmet hassasiyetine gore gruplanmis gorunum.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-module-grid">
+                        @foreach (var segment in Model.PortfoySegmentleri)
+                        {
+                            <article class="pc-module-card">
+                                <div class="d-flex align-items-start gap-3 mb-3">
+                                    <span class="pc-kpi-card__icon"><i class="bx @segment.Ikon"></i></span>
+                                    <div>
+                                        <h3 class="h6 mb-1">@segment.Baslik</h3>
+                                        <p class="text-muted mb-1">@segment.Ozet</p>
+                                        <strong>@segment.Deger</strong>
+                                    </div>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Hizli gecisler</h2>
+                <p class="pc-panel__subtitle mb-0">CRM, ETicaret ve servis yuzeyleri arasinda hizli gecis.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-grid-auto">
+                @foreach (var baglanti in Model.HizliBaglantilar)
+                {
+                    <a href="@baglanti.Link" class="pc-module-card text-decoration-none">
+                        <div class="d-flex align-items-start gap-3">
+                            <span class="pc-kpi-card__icon"><i class="bx @baglanti.Ikon"></i></span>
+                            <div>
+                                <div class="fw-semibold text-dark mb-1">@baglanti.Baslik</div>
+                                <div class="text-muted">@baglanti.Ozet</div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </div>
+    </section>
+</div>

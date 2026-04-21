@@ -1,106 +1,111 @@
-@* ! Brand demo (display only for navbar-full and hide on below xl) *@
-@if (ViewData["navbarFull"] != null)
-{
-<div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
-  <a asp-controller="Dashboards" asp-action="Index" class="app-brand-link gap-2">
-      <span class="app-brand-logo demo">
-        @await Html.PartialAsync("../_Partials/_Macros")
-      </span>
-      <span class="app-brand-text demo menu-text fw-bold text-heading">@TempData.Peek("appName")</span>
-    </a>
-
-    @* ! Display menu close icon only for horizontal-menu with navbar-full *@
-    @if (Convert.ToBoolean(@TempData.Peek("menuHorizontal")).ToString() == "True")
-    {
-      <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
-        <i class="icon-base bx bx-chevron-left d-flex align-items-center justify-content-center"></i>
-      </a>
-    }
-  </div>
-}
-
-@* ! Not required for layout-without-menu *@
 @if (ViewData["navbarHideToggle"] == null)
 {
-  <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
-    <a class="nav-item nav-link px-0 me-xl-6" href="javascript:void(0)">
+  <div class="layout-menu-toggle navbar-nav align-items-center me-2 me-xl-0 d-xl-none">
+    <a class="nav-item nav-link px-0" href="javascript:void(0)" aria-label="Menüyü aç">
       <i class="icon-base bx bx-menu bx-md"></i>
     </a>
   </div>
 }
 
-
-<div class="navbar-nav-right d-flex align-items-center justify-content-end" id="navbar-collapse">
-
-  <!-- Search -->
-    <div class="navbar-nav align-items-center me-auto">
-      <div class="nav-item d-flex align-items-center">
-        <span class="w-px-22 h-px-22"><i class="icon-base bx bx-search icon-md"></i></span>
-       <!-- <input type="text" class="form-control border-0 shadow-none ps-1 ps-sm-2 d-md-block d-none" placeholder="Search..." aria-label="Search..." />-->
-            <input type="text" class="form-control border-0 shadow-none ps-1 ps-sm-2 d-md-block d-none" placeholder="Ara..." aria-label="Ara..." />
-
-
-      </div>
+<div class="navbar-nav-right d-flex align-items-center gap-3 w-100" id="navbar-collapse">
+  <div class="navbar-nav align-items-center flex-grow-1">
+    <div class="nav-item w-100">
+      <label class="pc-global-search mb-0">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Müşteri, sipariş, ürün veya rota ara" aria-label="Genel arama" />
+      </label>
     </div>
-  <!-- /Search -->
+  </div>
 
-
-
-  <ul class="navbar-nav flex-row align-items-center ms-md-auto">
-    <!-- Place this tag where you want the button to render. -->
-    <li class="nav-item lh-1 me-4">
-      <a class="github-button" href="https://github.com/themeselection/sneat-bootstrap-html-aspnet-core-mvc-admin-template-free" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Star</a>
+  <ul class="navbar-nav flex-row align-items-center ms-auto gap-2 flex-nowrap">
+    <li class="nav-item d-none d-lg-block">
+      <span class="pc-navbar-chip">
+        <i class="bx bx-git-branch"></i>
+        ai-lab çalışma alanı
+      </span>
     </li>
-
-    <!-- User -->
-    <li class="nav-item navbar-dropdown dropdown-user dropdown">
-      <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0);" data-bs-toggle="dropdown">
-        <div class="avatar avatar-online">
-          <img src="~/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+    <li class="nav-item d-none d-md-block">
+      <a asp-controller="AnaSayfa" asp-action="Index" class="btn btn-outline-secondary btn-sm">
+        <i class="bx bx-store-alt me-1"></i>Tanıtım sayfası
+      </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link position-relative px-2" href="javascript:void(0)" data-bs-toggle="dropdown" aria-label="Bildirimler">
+        <i class="icon-base bx bx-bell bx-sm"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-end p-0 overflow-hidden" style="min-width: 20rem;">
+        <div class="px-3 py-3 border-bottom">
+          <h6 class="mb-1">Operasyon bildirimleri</h6>
+          <p class="text-muted mb-0 small">Bugün öncelik isteyen kayıtlar</p>
         </div>
+        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="dropdown-item py-3">
+          <div class="d-flex gap-3">
+            <span class="pc-list-icon flex-shrink-0"><i class="bx bx-package"></i></span>
+            <div>
+              <div class="fw-semibold">12 sipariş bugün sevke hazırlanıyor</div>
+              <div class="pc-navbar-note">Operasyon ekibi tarafından doğrulama bekleniyor.</div>
+            </div>
+          </div>
+        </a>
+        <a asp-area="Lojistik" asp-controller="AnaSayfa" asp-action="Index" class="dropdown-item py-3">
+          <div class="d-flex gap-3">
+            <span class="pc-list-icon flex-shrink-0"><i class="bx bx-car"></i></span>
+            <div>
+              <div class="fw-semibold">2 rota zaman penceresine yaklaşıyor</div>
+              <div class="pc-navbar-note">Teslimat gecikme riski için yeniden planlama önerildi.</div>
+            </div>
+          </div>
+        </a>
+        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="dropdown-item py-3">
+          <div class="d-flex gap-3">
+            <span class="pc-list-icon flex-shrink-0"><i class="bx bx-user-voice"></i></span>
+            <div>
+              <div class="fw-semibold">3 müşteri kritik takip listesinde</div>
+              <div class="pc-navbar-note">Tahsilat, memnuniyet ve sipariş ritmi birlikte izlensin.</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </li>
+    <li class="nav-item navbar-dropdown dropdown-user dropdown">
+      <a class="nav-link dropdown-toggle hide-arrow p-0" href="javascript:void(0)" data-bs-toggle="dropdown">
+        <span class="pc-avatar-shell">OP</span>
       </a>
       <ul class="dropdown-menu dropdown-menu-end">
         <li>
-          <a class="dropdown-item" href="javascript:void(0);">
-            <div class="d-flex">
-              <div class="flex-shrink-0 me-3">
-                <div class="avatar avatar-online">
-                  <img src="~/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                </div>
-              </div>
-              <div class="flex-grow-1">
-                <h6 class="mb-0">John Doe</h6>
-                <small class="text-body-secondary">Admin</small>
+          <div class="dropdown-item-text">
+            <div class="d-flex align-items-center gap-3">
+              <span class="pc-avatar-shell">OP</span>
+              <div>
+                <div class="fw-semibold">Operasyon paneli</div>
+                <div class="pc-navbar-note">PazarCep yönetim alanı</div>
               </div>
             </div>
+          </div>
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a asp-controller="Dashboards" asp-action="Index" class="dropdown-item">
+            <i class="icon-base bx bx-grid-alt icon-md me-3"></i><span>Kontrol merkezi</span>
           </a>
         </li>
         <li>
-          <div class="dropdown-divider my-1"></div>
-        </li>
-        <li>
-          <a class="dropdown-item" asp-controller="Pages" asp-action="ProfileUser"> <i class="icon-base bx bx-user icon-md me-3"></i><span>Profilim</span> </a>
-        </li>
-        <li>
-          <a class="dropdown-item" asp-controller="Pages" asp-action="AccountSettings"> <i class="icon-base bx bx-cog icon-md me-3"></i><span>Ayarlar</span> </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="javascript:void(0);">
-            <span class="d-flex align-items-center align-middle">
-              <i class="flex-shrink-0 icon-base bx bx-credit-card icon-md me-3"></i><span class="flex-grow-1 align-middle">Abonelik Planı</span>
-              <span class="flex-shrink-0 badge rounded-pill bg-danger">4</span>
-            </span>
+          <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="dropdown-item">
+            <i class="icon-base bx bx-group icon-md me-3"></i><span>Müşteri alanı</span>
           </a>
         </li>
         <li>
-          <div class="dropdown-divider my-1"></div>
+          <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="dropdown-item">
+            <i class="icon-base bx bx-package icon-md me-3"></i><span>Siparişler</span>
+          </a>
         </li>
         <li>
-          <a class="dropdown-item" href="javascript:void(0);"> <i class="icon-base bx bx-power-off icon-md me-3"></i><span>Çıkış Yap</span> </a>
+          <a asp-controller="Pages" asp-action="AccountSettings" class="dropdown-item">
+            <i class="icon-base bx bx-cog icon-md me-3"></i><span>Ayarlar</span>
+          </a>
         </li>
       </ul>
     </li>
-    <!--/ User -->
-
   </ul>
 </div>

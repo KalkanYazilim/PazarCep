@@ -1,21 +1,21 @@
-@model OrderListPageViewModel
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriYonetimSiparisSayfaViewModel
 @{
-    ViewData["Title"] = "Sipariş Listesi";
+    ViewData["Title"] = ViewData["Title"] ?? "Siparisler";
 }
 
 <div class="pc-page-shell">
     <section class="pc-page-hero">
         <div class="pc-page-hero__body">
-            <span class="pc-page-eyebrow">E-Ticaret / Sipariş Yönetimi</span>
+            <span class="pc-page-eyebrow">CRM / Siparis Kuyrugu</span>
             <h1 class="pc-page-title">@Model.Baslik</h1>
             <p class="pc-page-description mb-0">@Model.Aciklama</p>
 
             <div class="pc-page-actions mt-4">
-                <a asp-area="ETicaret" asp-controller="AnaSayfa" asp-action="Index" class="btn btn-outline-secondary">
-                    <i class="bx bx-arrow-back me-1"></i>Operasyon özetine dön
+                <a asp-area="MusteriYonetimi" asp-controller="AnaSayfa" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-arrow-back me-1"></i>CRM merkezine don
                 </a>
-                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-primary">
-                    <i class="bx bx-calendar-check me-1"></i>Randevu planlama
+                <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-primary">
+                    <i class="bx bx-link-external me-1"></i>E-ticaret siparisleri
                 </a>
             </div>
         </div>
@@ -38,47 +38,21 @@
     </section>
 
     <section class="pc-panel">
-        <div class="pc-panel__header">
-            <div>
-                <h2 class="pc-panel__title">Filtre ve görünüm</h2>
-                <p class="pc-panel__subtitle mb-0">Sipariş önceliğini kanal, zaman penceresi ve durum bazında okuyun.</p>
-            </div>
-        </div>
         <div class="pc-panel__body">
-            <div class="pc-filter-grid">
-                <div class="pc-col-6">
-                    <label class="form-label">Sipariş ara</label>
-                    <input type="text" class="form-control" placeholder="Sipariş no, müşteri veya temsilci" />
+            <article class="pc-alert-strip pc-alert-strip--@Model.VurguTonu">
+                <div>
+                    <div class="fw-semibold mb-1">@Model.VurguBasligi</div>
+                    <p class="text-muted mb-0">@Model.VurguMetni</p>
                 </div>
-                <div class="pc-col-3">
-                    <label class="form-label">Durum</label>
-                    <select class="form-select">
-                        <option>Tüm durumlar</option>
-                        <option>Yeni sipariş</option>
-                        <option>Hazırlanıyor</option>
-                        <option>Sevke hazır</option>
-                        <option>Takip gerekli</option>
-                    </select>
-                </div>
-                <div class="pc-col-3">
-                    <label class="form-label">Sevk penceresi</label>
-                    <select class="form-select">
-                        <option>Tüm pencereler</option>
-                        <option>07:00 - 09:00</option>
-                        <option>10:00 - 12:00</option>
-                        <option>13:00 - 15:00</option>
-                        <option>16:00 - 18:00</option>
-                    </select>
-                </div>
-            </div>
+            </article>
         </div>
     </section>
 
     <section class="pc-panel pc-table-card">
         <div class="pc-panel__header">
             <div>
-                <h2 class="pc-panel__title">Sipariş kuyruğu</h2>
-                <p class="pc-panel__subtitle mb-0">Masaüstünde yoğun tablo, mobilde aksiyon odaklı kart görünümü.</p>
+                <h2 class="pc-panel__title">Siparis listesi</h2>
+                <p class="pc-panel__subtitle mb-0">Musteri baglami, sevk penceresi ve operasyon notu birlikte gorunur.</p>
             </div>
         </div>
         <div class="pc-panel__body d-none d-lg-block">
@@ -86,13 +60,12 @@
                 <table class="table table-hover align-middle">
                     <thead>
                         <tr>
-                            <th>Sipariş</th>
+                            <th>Siparis</th>
+                            <th>Musteri</th>
                             <th>Kanal</th>
-                            <th>Sevk penceresi</th>
-                            <th>Rota</th>
-                            <th>Temsilci</th>
+                            <th>Pencere</th>
                             <th>Durum</th>
-                            <th class="text-end">İşlem</th>
+                            <th class="text-end">Islem</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -102,17 +75,24 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <span class="fw-semibold">@siparis.SiparisNo</span>
-                                        <span class="text-muted">@siparis.Musteri</span>
+                                        <span class="text-muted">@siparis.Tarih</span>
                                         <small class="text-muted">@siparis.Tutar</small>
                                     </div>
                                 </td>
+                                <td>@siparis.Musteri</td>
                                 <td>@siparis.Kanal</td>
-                                <td>@siparis.SevkPenceresi</td>
-                                <td>@siparis.Rota</td>
-                                <td>@siparis.Temsilci</td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@siparis.SevkPenceresi</span>
+                                        <small class="text-muted">@siparis.OperasyonNotu</small>
+                                    </div>
+                                </td>
                                 <td><span class="pc-status-pill pc-status-pill--@siparis.DurumTonu">@siparis.Durum</span></td>
                                 <td class="text-end">
-                                    <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.Id" class="btn btn-sm btn-primary">Detay</a>
+                                    <div class="d-inline-flex gap-2">
+                                        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.SiparisId" class="btn btn-sm btn-primary">Detay</a>
+                                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@siparis.MusteriId" class="btn btn-sm btn-outline-secondary">Musteri</a>
+                                    </div>
                                 </td>
                             </tr>
                         }
@@ -132,7 +112,7 @@
                             </div>
                             <span class="pc-status-pill pc-status-pill--@siparis.DurumTonu">@siparis.Durum</span>
                         </div>
-                        <p class="text-muted mb-3">@siparis.Ozet</p>
+                        <p class="text-muted mb-3">@siparis.OperasyonNotu</p>
                         <div class="pc-mobile-card__grid mb-3">
                             <div>
                                 <span class="pc-mobile-card__label">Kanal</span>
@@ -143,15 +123,18 @@
                                 <strong>@siparis.Tutar</strong>
                             </div>
                             <div>
-                                <span class="pc-mobile-card__label">Sevk</span>
-                                <strong>@siparis.SevkPenceresi</strong>
+                                <span class="pc-mobile-card__label">Tarih</span>
+                                <strong>@siparis.Tarih</strong>
                             </div>
                             <div>
-                                <span class="pc-mobile-card__label">Temsilci</span>
-                                <strong>@siparis.Temsilci</strong>
+                                <span class="pc-mobile-card__label">Pencere</span>
+                                <strong>@siparis.SevkPenceresi</strong>
                             </div>
                         </div>
-                        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.Id" class="btn btn-primary w-100">Sipariş detayını aç</a>
+                        <div class="d-flex gap-2">
+                            <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.SiparisId" class="btn btn-primary flex-fill">Detay</a>
+                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@siparis.MusteriId" class="btn btn-outline-secondary flex-fill">Musteri</a>
+                        </div>
                     </article>
                 }
             </div>

@@ -22,7 +22,7 @@
                                 <h5 class="mb-1">@adres.Baslik</h5>
                                 <p class="text-muted mb-3">@adres.Alici</p>
                             </div>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Düzenle</button>
+                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@Model.Kabuk.Id" class="btn btn-sm btn-outline-secondary">Profili aç</a>
                         </div>
 
                         <div class="customer-definition-list">
@@ -51,6 +51,10 @@
 
     <div class="row g-4">
         <div class="col-12 col-xl-7">
+            <div class="alert alert-light border mb-4">
+                Adres ve faturalandırma alanları operasyon snapshot görünümüdür; düzenleme akışı temsilci onayıyla ilerler.
+            </div>
+
             @foreach (var panel in Model.FaturaPanelleri)
             {
                 <div class="card customer-section-card border-0 @(panel == Model.FaturaPanelleri.Last() ? string.Empty : "mb-4")">
@@ -64,7 +68,7 @@
                             {
                                 <div class="@alan.GridSinifi">
                                     <label class="form-label">@alan.Etiket</label>
-                                    <input type="text" class="form-control" value="@alan.Deger" />
+                                    <input type="text" class="form-control" value="@alan.Deger" readonly />
                                     @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))
                                     {
                                         <div class="form-text">@alan.YardimMetni</div>
@@ -96,7 +100,7 @@
                                     <p class="text-muted mb-1">@fatura.Vade · @fatura.Yontem</p>
                                     <span class="fw-semibold">@fatura.Tutar</span>
                                 </div>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">İncele</button>
+                                <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bildirimler" asp-route-id="@Model.Kabuk.Id" class="btn btn-sm btn-outline-secondary">Akışı gör</a>
                             </div>
                         }
                     </div>

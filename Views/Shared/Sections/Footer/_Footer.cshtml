@@ -1,49 +1,30 @@
 @{
-  TempData.Keep();
-  ViewData["containerNav"] = (ViewData["containerNav"] ??= "container-fluid");
+  ViewData["containerNav"] = ViewData["containerNav"] ?? "container-fluid";
 }
 
-<!-- Footer -->
 <footer class="content-footer footer bg-footer-theme">
-  
   <div class="@ViewData["containerNav"]">
-    <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-md-row flex-column">
-      <div class="mb-2 mb-md-0">
-        &#169;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-                <strong>PazarCep</strong> —
-                <a href="@TempData.Peek("authorUrl")" target="_blank" class="footer-link">@TempData.Peek("authorName")</a> <!-- Kalkan YAZILIM  -->
-        , ❤️ ile geliştirildi:
+    <div class="footer-container d-flex align-items-center justify-content-between py-4 flex-column flex-lg-row gap-3">
+      <div class="pc-footer-meta">
+        <div>
+          <strong>PazarCep</strong>
+          <span class="text-muted">tarım tedarik zinciri operasyon platformu</span>
+        </div>
+        <span class="pc-chip">
+          <i class="bx bx-check-shield"></i>
+          Ön izleme: ai-lab
+        </span>
       </div>
-            <div class="d-none d-lg-inline-block">
-                <a href="#" class="footer-link me-4">Hakkımızda</a>
-                <a href="#" class="footer-link me-4">Sözleşmeler</a>
-                <a href="#" class="footer-link me-4">Gizlilik Politikası</a>
-            </div>
-      <div class="d-none d-lg-inline-block">
-        <a href="@TempData.Peek("adminTemplates")" target="_blank" class="footer-link me-4">Admin Şablonları</a>
-        <a href="@TempData.Peek("licenseUrl")" class="footer-link me-4" target="_blank">Lisans</a>
-        <a href="@TempData.Peek("bootstrapDashboard")" target="_blank" class="footer-link me-4">Bootstrap Panelleri</a>
-        <a href="@TempData.Peek("documentation_menu_link")" target="_blank" class="footer-link me-4">Dokümantasyon</a>
-        <a href="@TempData.Peek("support")" target="_blank" class="footer-link d-none d-sm-inline-block">Destek</a>
+      <div class="pc-footer-links">
+        <a asp-controller="Dashboards" asp-action="Index" class="footer-link">Kontrol merkezi</a>
+        <a asp-area="ETicaret" asp-controller="AnaSayfa" asp-action="Index" class="footer-link">E-Ticaret</a>
+        <a asp-area="Lojistik" asp-controller="AnaSayfa" asp-action="Index" class="footer-link">Lojistik</a>
+        <a asp-area="MusteriYonetimi" asp-controller="AnaSayfa" asp-action="Index" class="footer-link">CRM</a>
+        <a asp-controller="AnaSayfa" asp-action="Index" class="footer-link">Açık site</a>
       </div>
-            
+      <div class="text-muted small">
+        © <script>document.write(new Date().getFullYear());</script> PazarCep. Operasyonel kullanım için optimize edildi.
+      </div>
     </div>
   </div>
 </footer>
-<!-- / Footer -->
-
-
-
-    
-       
-
-            
-
-            
-        
-  
-
-

@@ -9,14 +9,10 @@ public class IletisimNotlarController : Controller
 {
   public IActionResult Index()
   {
-    ViewData["Title"] = "İletişim & Notlar";
+    ViewData["Title"] = "Iletisim ve Notlar";
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Temsilci notlari ve temas plani";
 
-    var liste = new List<NotListeSatiriVM>
-        {
-            new() { Id=1, Musteri="Ahmet Yılmaz", Baslik="Teslimat bilgisi", Icerik="Adres teyidi alındı.", Tarih=DateTime.Today.AddDays(-3) },
-            new() { Id=2, Musteri="Kalkan Yazılım Ltd.", Baslik="Fatura talebi", Icerik="E-fatura bilgileri güncellendi.", Tarih=DateTime.Today.AddDays(-1) },
-        };
-
-    return View(liste);
+    return View(MusteriYonetimiWorkspaceFactory.CreateNotesPage());
   }
 }

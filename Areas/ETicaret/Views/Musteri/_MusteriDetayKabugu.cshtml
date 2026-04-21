@@ -26,6 +26,25 @@
                             <span><i class="bx bx-time-five"></i>Son temas: @Model.Kabuk.SonEtkilesim</span>
                         </div>
 
+                        <div class="customer-hero__summary mt-4">
+                            <div class="customer-summary-chip">
+                                <span class="label">Temsilci</span>
+                                <strong>@Model.Kabuk.Temsilci</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Abonelik</span>
+                                <strong>@Model.Kabuk.Abonelik</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Bakiye</span>
+                                <strong>@Model.Kabuk.Bakiye</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Kayıt tarihi</span>
+                                <strong>@Model.Kabuk.KayitTarihi</strong>
+                            </div>
+                        </div>
+
                         <div class="customer-hero__tags mt-4">
                             @foreach (var etiket in Model.Kabuk.Etiketler)
                             {
@@ -39,9 +58,12 @@
                     <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="btn btn-outline-secondary">
                         <i class="bx bx-arrow-back me-1"></i>Müşteri listesine dön
                     </a>
-                    <button type="button" class="btn btn-primary">
-                        <i class="bx bx-message-square-edit me-1"></i>Temsilci notu ekle
-                    </button>
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@Model.Kabuk.Id" class="btn btn-primary">
+                        <i class="bx bx-id-card me-1"></i>Profil görünümü
+                    </a>
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Guvenlik" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary">
+                        <i class="bx bx-shield-quarter me-1"></i>Güvenlik
+                    </a>
                 </div>
             </div>
 

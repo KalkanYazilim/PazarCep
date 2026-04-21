@@ -1,9 +1,157 @@
+@model OrderDetailPageViewModel
 @{
     ViewData["Title"] = "Sipariş Detayı";
 }
-<h4 class="mb-3">Sipariş Detayı</h4>
-<div class="card">
-    <div class="card-body">
-        Sipariş Id: <strong>@ViewBag.SiparisId</strong>
-    </div>
+
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <div class="d-flex flex-column flex-xl-row justify-content-between gap-4">
+                <div>
+                    <span class="pc-page-eyebrow">Sipariş / @Model.SiparisNo</span>
+                    <h1 class="pc-page-title mb-2">@Model.Musteri</h1>
+                    <p class="pc-page-description mb-0">Kanal, ödeme, sevkiyat ve randevu akışının tek sipariş görünümü.</p>
+                    <div class="pc-page-meta mt-4">
+                        <span><i class="bx bx-receipt"></i>@Model.Kanal</span>
+                        <span><i class="bx bx-time-five"></i>@Model.TeslimatPenceresi</span>
+                        <span><i class="bx bx-map"></i>@Model.SevkiyatRota</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-xl-end gap-3">
+                    <span class="pc-status-pill pc-status-pill--@Model.DurumTonu">@Model.Durum</span>
+                    <div class="h3 text-white mb-0">@Model.ToplamTutar</div>
+                    <div class="pc-page-actions">
+                        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-outline-secondary">
+                            <i class="bx bx-arrow-back me-1"></i>Listeye dön
+                        </a>
+                        <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-primary">
+                            <i class="bx bx-calendar-event me-1"></i>Randevu panosu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel pc-table-card">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Sipariş kalemleri</h2>
+                        <p class="pc-panel__subtitle mb-0">Paketleme ve sevkiyat ekibinin kullandığı ticari detaylar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Ürün</th>
+                                    <th>Miktar</th>
+                                    <th>Birim fiyat</th>
+                                    <th class="text-end">Ara toplam</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var kalem in Model.Kalemler)
+                                {
+                                    <tr>
+                                        <td class="fw-semibold">@kalem.Urun</td>
+                                        <td>@kalem.Miktar</td>
+                                        <td>@kalem.BirimFiyat</td>
+                                        <td class="text-end fw-semibold">@kalem.AraToplam</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pc-panel mt-4">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Operasyon akışı</h2>
+                        <p class="pc-panel__subtitle mb-0">Sipariş oluşturulduktan sonraki doğrulanmış adımlar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-timeline">
+                        @foreach (var olay in Model.Akis)
+                        {
+                            <article class="pc-timeline__item">
+                                <div class="pc-timeline__icon"><i class="bx @olay.Ikon"></i></div>
+                                <div class="pc-timeline__body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
+                                        <div>
+                                            <div class="fw-semibold mb-1">@olay.Baslik</div>
+                                            <p class="text-muted mb-0">@olay.Aciklama</p>
+                                        </div>
+                                        <span class="pc-timeline__time">@olay.Zaman</span>
+                                    </div>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Sipariş özeti</h2>
+                        <p class="pc-panel__subtitle mb-0">Ticari ve operasyonel sahiplik bilgileri.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-mobile-card">
+                        <div class="pc-mobile-card__grid">
+                            <div>
+                                <span class="pc-mobile-card__label">Sipariş no</span>
+                                <strong>@Model.SiparisNo</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Temsilci</span>
+                                <strong>@Model.Temsilci</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Ödeme</span>
+                                <strong>@Model.OdemeYontemi</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Teslimat</span>
+                                <strong>@Model.TeslimatPenceresi</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pc-alert-strip pc-alert-strip--info mt-4">
+                        <div>
+                            <div class="fw-semibold mb-1">Randevu bağlantısı</div>
+                            <p class="text-muted mb-0">@Model.RandevuOzeti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

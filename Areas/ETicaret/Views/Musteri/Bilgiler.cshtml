@@ -15,6 +15,10 @@
     <div class="row g-4">
         <div class="col-12 col-xl-8">
             <form action="javascript:void(0);" class="customer-form-stack">
+                <div class="alert alert-light border mb-0">
+                    Bu ekran hesap bilgisinin güncel görünümünü sunar. Değişiklikler kontrollü operasyon akışı ile taslak olarak ilerletilir.
+                </div>
+
                 @foreach (var grup in Model.BilgiGruplari)
                 {
                     <div class="card customer-section-card border-0">
@@ -33,11 +37,11 @@
 
                                         @if (uzunAlan)
                                         {
-                                            <textarea class="form-control" rows="3">@alan.Deger</textarea>
+                                            <textarea class="form-control" rows="3" readonly>@alan.Deger</textarea>
                                         }
                                         else
                                         {
-                                            <input type="text" class="form-control" value="@alan.Deger" />
+                                            <input type="text" class="form-control" value="@alan.Deger" readonly />
                                         }
 
                                         @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))
@@ -55,9 +59,9 @@
                     <button type="button" class="btn btn-primary">
                         <i class="bx bx-save me-1"></i>Değişiklik taslağını kaydet
                     </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                        <i class="bx bx-reset me-1"></i>Formu sıfırla
-                    </button>
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="AdresFaturalandirma" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary">
+                        <i class="bx bx-map me-1"></i>Adres ve fatura akışı
+                    </a>
                 </div>
             </form>
         </div>

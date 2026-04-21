@@ -49,9 +49,9 @@
                             <h5 class="mb-1">Son sipariş akışı</h5>
                             <p class="text-muted mb-0">Müşterinin son siparişleri ve kanal bazlı davranışı.</p>
                         </div>
-                        <button type="button" class="btn btn-outline-secondary btn-sm align-self-start">
-                            <i class="bx bx-link-external me-1"></i>Sipariş detayına git
-                        </button>
+                        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-outline-secondary btn-sm align-self-start">
+                            <i class="bx bx-link-external me-1"></i>Sipariş ekranını aç
+                        </a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -133,18 +133,18 @@
                 </div>
                 <div class="card-body">
                     <div class="customer-action-stack">
-                        <button type="button" class="btn btn-primary justify-content-start">
-                            <i class="bx bx-phone-call me-2"></i>Müşteriyi ara
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary justify-content-start">
-                            <i class="bx bx-file me-2"></i>Teklif yenile
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary justify-content-start">
-                            <i class="bx bx-bell me-2"></i>Uyarı oluştur
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary justify-content-start">
-                            <i class="bx bx-star me-2"></i>VIP etiketi güncelle
-                        </button>
+                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@Model.Kabuk.Id" class="btn btn-primary justify-content-start">
+                            <i class="bx bx-id-card me-2"></i>Profili incele
+                        </a>
+                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bildirimler" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-bell me-2"></i>Bildirimleri yönet
+                        </a>
+                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Yonlendirmeler" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-git-branch me-2"></i>Yönlendirmeleri aç
+                        </a>
+                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Guvenlik" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary justify-content-start">
+                            <i class="bx bx-shield-quarter me-2"></i>Güvenlik kontrolleri
+                        </a>
                     </div>
                 </div>
             </div>

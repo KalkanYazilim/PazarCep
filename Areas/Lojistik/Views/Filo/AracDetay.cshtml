@@ -1,58 +1,152 @@
-@model PazarCep.Areas.Lojistik.Models.AracDetayVM
+@model PazarCep.Areas.Lojistik.Models.LojistikAracDetaySayfaViewModel
 @{
-    ViewData["Title"] = ViewData["Title"] ?? "Araç Detayı";
+    ViewData["Title"] = "Arac Detayi";
 }
 
-<div class="row g-4">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body d-flex align-items-center justify-content-between">
-                <div>
-                    <h5 class="mb-1">@Model.Plaka</h5>
-                    <small class="text-muted">@Model.AracTipi • Sürücü: @Model.Surucu</small>
-                </div>
-                <a asp-area="Lojistik" asp-controller="Filo" asp-action="Index" class="btn btn-label-secondary">
-                    Filoya Dön
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Lojistik / Arac Detayi</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-car"></i>@Model.Arac.AracTipi</span>
+                <span><i class="bx bx-user-pin"></i>@Model.Arac.Surucu</span>
+                <span><i class="bx bx-map"></i>@Model.Arac.Konum</span>
+                <span><i class="bx bx-time-five"></i>@Model.Arac.SonGuncelleme</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="Lojistik" asp-controller="Filo" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-arrow-back me-1"></i>Filo listesine don
+                </a>
+                <a asp-area="Lojistik" asp-controller="AnaSayfa" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-layout me-1"></i>Operasyon merkezi
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="col-12 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Durum</div>
-                <div class="fs-4">@Model.Durum</div>
-                <small class="text-muted">Son güncelleme: @Model.SonGuncelleme.ToString("dd.MM.yyyy HH:mm")</small>
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Arac sagligi</h2>
+                        <p class="pc-panel__subtitle mb-0">@Model.Arac.OperasyonOzeti</p>
+                    </div>
+                    <span class="pc-status-pill pc-status-pill--@Model.Arac.DurumTonu">@Model.Arac.Durum</span>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-key-grid mb-4">
+                        <div>
+                            <span class="label">Plaka</span>
+                            <strong>@Model.Arac.Plaka</strong>
+                        </div>
+                        <div>
+                            <span class="label">Son rota</span>
+                            <strong>@Model.Arac.SonRota</strong>
+                        </div>
+                        <div>
+                            <span class="label">Konum</span>
+                            <strong>@Model.Arac.Konum</strong>
+                        </div>
+                        <div>
+                            <span class="label">Son bakim</span>
+                            <strong>@Model.Arac.SonBakim</strong>
+                        </div>
+                    </div>
+
+                    <div class="pc-health-list">
+                        @foreach (var kontrol in Model.Kontroller)
+                        {
+                            <article class="pc-health-list__item">
+                                <div>
+                                    <div class="fw-semibold mb-1">@kontrol.Baslik</div>
+                                    <p class="text-muted mb-0">@kontrol.Aciklama</p>
+                                </div>
+                                <div class="d-flex flex-column align-items-end gap-2">
+                                    <span class="pc-status-pill pc-status-pill--@kontrol.DurumTonu">@kontrol.Durum</span>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm">@kontrol.EylemMetni</button>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-12 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Konum</div>
-                <div class="fs-4">@Model.Konum</div>
-                <small class="text-muted">Takip entegrasyonu eklenebilir (GPS)</small>
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Rota ve saha duraklari</h2>
+                        <p class="pc-panel__subtitle mb-0">Musteri kabul ve geri donus adimlarini pencere bazinda izleyin.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-mobile-list">
+                        @foreach (var durak in Model.RotaDuraklari)
+                        {
+                            <article class="pc-mobile-card">
+                                <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                    <div>
+                                        <div class="fw-semibold">@durak.Durak</div>
+                                        <div class="text-muted">@durak.ZamanPenceresi</div>
+                                    </div>
+                                    <span class="pc-status-pill pc-status-pill--@durak.DurumTonu">@durak.Durum</span>
+                                </div>
+                                <p class="mb-0 text-muted">@durak.Not</p>
+                            </article>
+                        }
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Bugünkü Sevkiyat</div>
-                <div class="fs-3">@Model.BugunkuSevkiyatAdedi</div>
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Son operasyon akisi</h2>
+                <p class="pc-panel__subtitle mb-0">Sahadan gelen son durumlar ve ekip gecmisi.</p>
             </div>
         </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Bugünkü Km</div>
-                <div class="fs-3">@Model.BugunkuKm</div>
+        <div class="pc-panel__body">
+            <div class="pc-timeline">
+                @foreach (var kayit in Model.ZamanAkisi)
+                {
+                    <article class="pc-timeline__item">
+                        <div class="pc-timeline__icon"><i class="bx @kayit.Ikon"></i></div>
+                        <div class="pc-timeline__body">
+                            <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
+                                <div>
+                                    <div class="fw-semibold mb-1">@kayit.Baslik</div>
+                                    <p class="text-muted mb-0">@kayit.Aciklama</p>
+                                </div>
+                                <span class="pc-timeline__time">@kayit.Zaman</span>
+                            </div>
+                        </div>
+                    </article>
+                }
             </div>
         </div>
-    </div>
+    </section>
 </div>
