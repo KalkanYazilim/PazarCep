@@ -52,7 +52,7 @@
   @await Html.PartialAsync("Sections/_ScriptsIncludes")
 </head>
 
-<body>
+<body class="@(ViewData["bodyClass"] as string ?? "")">
   <!-- Layout Content -->
   @RenderBody()
   <!--/ Layout Content -->

@@ -12,6 +12,16 @@ WORKDIR /src
 
 COPY . .
 COPY --from=assets /src/wwwroot ./wwwroot
+<<<<<<< ours
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nodejs npm \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN npm ci
+RUN npm run build:prod
+=======
+>>>>>>> theirs
 
 RUN dotnet restore ./PazarCep.csproj
 RUN dotnet publish ./PazarCep.csproj -c Release -o /app/publish /p:UseAppHost=false

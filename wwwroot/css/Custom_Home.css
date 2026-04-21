@@ -28,8 +28,16 @@ html {
 body {
   margin: 0;
   font-family: var(--pc-font-main);
-  background: linear-gradient(180deg, #E6FCF7 0%, #EAF7FF 50%, #F9FAFB 100%);
   color: var(--pc-dark);
+}
+
+body.pc-homepage {
+  background: #ff8c00;
+  overflow-x: hidden;
+}
+
+body.pc-homepage.pc-mobile-nav-open {
+  overflow: hidden;
 }
 
 a {
@@ -270,6 +278,7 @@ img {
   .pc-nav-mobile-links a {
     font-size: 0.9rem;
     color: var(--pc-muted);
+    padding: 0.5rem 0.25rem;
   }
 
 .pc-nav-mobile-cta {
@@ -1088,11 +1097,24 @@ textarea {
 
   .pc-nav-mobile {
     display: none;
+    margin-top: 0.4rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+    padding-top: 0.5rem;
   }
 
     .pc-nav-mobile.open {
       display: flex;
     }
+
+  .pc-mobile-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .pc-btn {
+    min-height: 44px;
+  }
 
   .pc-role-grid,
   .pc-steps-grid,
@@ -1239,26 +1261,28 @@ body.pc-sidebar-resizing * {
 ================================== */
 
 /* Menü fixed olunca sayfa içeriğini menü genişliği kadar it */
-.layout-page {
-  margin-left: var(--pc-sidebar-width, 260px) !important;
-  /*background-color:red;*/
-}
-
-/* Menü solda sabit kalsın */
-#layout-menu.pc-sidebar-resizable {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  height: 100vh !important;
-  overflow: hidden; /* iç scroll menü-inner'da */
-  z-index: 1100;
-}
-
-  /* Menü içeriği uzarsa menünün içinde scroll olsun */
-  #layout-menu.pc-sidebar-resizable .menu-inner {
-    height: 100%;
-    overflow-y: auto;
+@media (min-width: 1200px) {
+  .layout-page {
+    margin-left: var(--pc-sidebar-width, 260px) !important;
+    /*background-color:red;*/
   }
+
+  /* Menü solda sabit kalsın */
+  #layout-menu.pc-sidebar-resizable {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    height: 100vh !important;
+    overflow: hidden; /* iç scroll menü-inner'da */
+    z-index: 1100;
+  }
+
+    /* Menü içeriği uzarsa menünün içinde scroll olsun */
+    #layout-menu.pc-sidebar-resizable .menu-inner {
+      height: 100%;
+      overflow-y: auto;
+    }
+}
 
 /* Toggle ok ile sağ kenar arasına boşluk + ok konumu */
 #layout-menu .menu-link.menu-toggle {
@@ -1287,6 +1311,22 @@ body.pc-sidebar-resizing * {
 }
 #layout-menu .ps__rail-y {
   right: 5 !important;
+}
+
+@media (max-width: 1199.98px) {
+  .layout-page {
+    margin-left: 0 !important;
+  }
+
+  #layout-menu.pc-sidebar-resizable {
+    position: absolute !important;
+    height: 100% !important;
+    max-width: 100%;
+  }
+
+  #layout-menu .menu-inner {
+    padding-right: 20px;
+  }
 }
 /* === FIX: Menü ile içerik arasındaki dinamik 260px boşluğu kapat === */
 /* core.css: .layout-menu-fixed ... .layout-page padding-inline-start veriyor */
@@ -1327,3 +1367,45 @@ body.pc-sidebar-resizing * {
     object-fit: contain !important; /* taşmadan sığdırır */
     display: block;
   }
+<<<<<<< ours
+=======
+
+/* === Mobil Stabilite: Navbar + Sidebar + İçerik Taşma Koruması === */
+@media (max-width: 1199.98px) {
+  .layout-page {
+    margin-left: 0 !important;
+    min-width: 0;
+  }
+
+  #layout-menu.pc-sidebar-resizable {
+    left: 0;
+    max-width: min(88vw, 320px);
+  }
+
+  .layout-wrapper,
+  .layout-container,
+  .layout-page,
+  .content-wrapper,
+  .container-xxl,
+  .container-fluid {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .layout-navbar .navbar-nav,
+  .layout-navbar .navbar-nav-right {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table th,
+  .table td {
+    white-space: nowrap;
+  }
+}
+>>>>>>> theirs
