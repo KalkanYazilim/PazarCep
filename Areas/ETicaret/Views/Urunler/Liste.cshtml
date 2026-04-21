@@ -1,9 +1,125 @@
+@model PazarCep.Areas.ETicaret.Models.UrunListeViewModel
 @{
     ViewData["Title"] = "Ürün Listesi";
 }
-<h4 class="mb-3">Ürün Listesi</h4>
+
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+    <div>
+        <h4 class="mb-1">Ürün Listesi</h4>
+        <p class="text-muted mb-0">E-Ticaret kataloğunuzu yönetin, stok durumunu izleyin ve ürün performansını analiz edin.</p>
+    </div>
+    <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Ekle" class="btn btn-primary">
+        <i class="bx bx-plus me-1"></i>Yeni Ürün Ekle
+    </a>
+</div>
+
+@if (TempData["SuccessMessage"] is string successMessage)
+{
+    <div class="alert alert-success alert-dismissible" role="alert">
+        @successMessage
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+    </div>
+}
+
+<div class="row g-3 mb-4">
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <span class="text-muted">Toplam Ürün</span>
+                <h3 class="mt-2 mb-0">@Model.ToplamUrun</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <span class="text-muted">Aktif Ürün</span>
+                <h3 class="mt-2 mb-0 text-success">@Model.AktifUrun</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <span class="text-muted">Kritik Stok</span>
+                <h3 class="mt-2 mb-0 text-warning">@Model.KritikStokUrun</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <span class="text-muted">Ort. Sepet Tutarı</span>
+                <h3 class="mt-2 mb-0">₺@Model.OrtalamaSepetTutari.ToString("N2")</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="card">
-    <div class="card-body">
-        Buraya ürün tablosu gelecek.
+    <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <h5 class="mb-0">Ürün Kataloğu</h5>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bx bx-filter-alt me-1"></i>Filtrele</button>
+            <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bx bx-download me-1"></i>Dışa Aktar</button>
+        </div>
+    </div>
+    <div class="table-responsive text-nowrap">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Ürün</th>
+                    <th>Kategori</th>
+                    <th>Fiyat</th>
+                    <th>Stok</th>
+                    <th>Durum</th>
+                    <th>Puan</th>
+                    <th>Sipariş</th>
+                    <th>Güncelleme</th>
+                    <th class="text-end">İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var urun in Model.Urunler)
+                {
+                    var badgeClass = urun.Durum switch
+                    {
+                        "Aktif" => "bg-label-success",
+                        "Taslak" => "bg-label-info",
+                        _ => "bg-label-secondary"
+                    };
+
+                    <tr>
+                        <td>
+                            <div class="d-flex flex-column">
+                                <span class="fw-semibold">@urun.UrunAdi</span>
+                                <small class="text-muted">#@urun.Id · @urun.Marka</small>
+                            </div>
+                        </td>
+                        <td>@urun.Kategori</td>
+                        <td class="fw-semibold">₺@urun.Fiyat.ToString("N2") / @urun.Birim</td>
+                        <td>
+                            <span class="@(urun.StokMiktari <= 25 ? "text-warning fw-semibold" : "")">@urun.StokMiktari</span>
+                        </td>
+                        <td><span class="badge @badgeClass">@urun.Durum</span></td>
+                        <td>@urun.Puan.ToString("N1")</td>
+                        <td>@urun.SiparisAdedi</td>
+                        <td>@urun.GuncellenmeTarihi.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</td>
+                        <td class="text-end">
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-label="İşlemler">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>Düzenle</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-show-alt me-1"></i>Detay</a>
+                                    <a class="dropdown-item text-danger" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>Sil</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>

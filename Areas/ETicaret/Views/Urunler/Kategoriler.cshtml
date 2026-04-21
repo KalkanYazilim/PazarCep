@@ -1,9 +1,51 @@
 @{
-    ViewData["Title"] = "Kategori Listesi";
+    ViewData["Title"] = "Kategori Yönetimi";
+
+    var kategoriler = new[]
+    {
+        new { Ad = "Meyve", UrunSayisi = 148, Komisyon = "%8", Durum = "Aktif" },
+        new { Ad = "Sebze", UrunSayisi = 204, Komisyon = "%7", Durum = "Aktif" },
+        new { Ad = "Bakliyat", UrunSayisi = 89, Komisyon = "%10", Durum = "Aktif" },
+        new { Ad = "Süt & Kahvaltılık", UrunSayisi = 62, Komisyon = "%9", Durum = "Taslak" }
+    };
 }
-<h4 class="mb-3">Kategori Listesi</h4>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h4 class="mb-1">Kategori Yönetimi</h4>
+        <p class="text-muted mb-0">Kategori bazlı komisyon, ürün adedi ve yayın durumunu yönetin.</p>
+    </div>
+    <button type="button" class="btn btn-primary"><i class="bx bx-plus me-1"></i>Kategori Ekle</button>
+</div>
+
 <div class="card">
-    <div class="card-body">
-        Buraya kategori tablosu gelecek.
+    <div class="table-responsive">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Kategori</th>
+                    <th>Ürün Sayısı</th>
+                    <th>Komisyon</th>
+                    <th>Durum</th>
+                    <th class="text-end">İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kategori in kategoriler)
+                {
+                    <tr>
+                        <td class="fw-semibold">@kategori.Ad</td>
+                        <td>@kategori.UrunSayisi</td>
+                        <td>@kategori.Komisyon</td>
+                        <td>
+                            <span class="badge @(kategori.Durum == "Aktif" ? "bg-label-success" : "bg-label-info")">@kategori.Durum</span>
+                        </td>
+                        <td class="text-end">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Düzenle</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     </div>
 </div>
