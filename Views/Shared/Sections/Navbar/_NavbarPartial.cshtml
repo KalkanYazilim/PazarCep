@@ -1,9 +1,15 @@
 @if (ViewData["navbarHideToggle"] == null)
 {
-  <div class="layout-menu-toggle navbar-nav align-items-center me-2 me-xl-0 d-xl-none">
-    <a class="nav-item nav-link px-0" href="javascript:void(0)" aria-label="Menüyü aç">
-      <i class="icon-base bx bx-menu bx-md"></i>
-    </a>
+  <div class="navbar-nav align-items-center me-2 me-lg-1">
+    <button type="button"
+            class="btn btn-outline-secondary btn-sm pc-app-menu-button"
+            data-pc-menu-toggle="layout"
+            aria-controls="layout-menu"
+            aria-expanded="true"
+            aria-label="Menüyü aç veya kapat">
+      <i class="icon-base bx bx-menu"></i>
+      <span class="d-none d-sm-inline">Menü</span>
+    </button>
   </div>
 }
 
