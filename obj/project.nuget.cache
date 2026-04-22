@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1B570m66LGg=",
+  "dgSpecHash": "CSIXCU1rsoM=",
   "success": true,
   "projectFilePath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.csproj",
   "expectedPackageFiles": [
@@ -109,5 +109,30 @@
     "C:\\Users\\Kalkan\\.nuget\\packages\\system.security.cryptography.pkcs\\6.0.4\\system.security.cryptography.pkcs.6.0.4.nupkg.sha512",
     "C:\\Users\\Kalkan\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "message": "Package 'NuGet.Packaging' 6.11.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.csproj",
+      "libraryId": "NuGet.Packaging",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1901",
+      "level": "Warning",
+      "message": "Package 'NuGet.Protocol' 6.11.0 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Kalkan\\Desktop\\Onemliler\\Projeler\\9_PazarCep\\PazarCep\\PazarCep.csproj",
+      "libraryId": "NuGet.Protocol",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
