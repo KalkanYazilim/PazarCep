@@ -5,7 +5,7 @@ COPY package.json package-lock.json build-config.js Gulpfile.js webpack.config.j
 COPY src ./src
 COPY wwwroot ./wwwroot
 
-RUN npm ci && npm run build:prod
+RUN npm ci --legacy-peer-deps && npm run build:prod
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
