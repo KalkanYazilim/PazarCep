@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.RootNamespace = pazarcep.ui
+build_property.RootNamespace = pazarcep.ui
+build_property.ProjectDir = C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = C:\Users\Kalkan\Desktop\Onemliler\Projeler\9_PazarCep\PazarCep\pazarcep.ui
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Shared/_CSS_Yollari.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DU1NfWW9sbGFyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Shared/_Font_Yollari.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Gb250X1lvbGxhcmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/AdminPaneli/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5QYW5lbGlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/AkisSayfasi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWtpc1NheWZhc2lcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Akis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWtpc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/AnaSayfa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5hU2F5ZmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Giris/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lyaXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Hakkimizda/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFra2ltaXpkYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/iletisim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcaWxldGlzaW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Kayit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2F5aXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Kesfet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2VzZmV0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/KullaniciPaneli/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpUGFuZWxpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/KullaniciYonetimi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3VsbGFuaWNpWW9uZXRpbWlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Mesajlar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzYWpsYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Odeme/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2RlbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/ProfilDuzenle/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsRHV6ZW5sZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Profil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Randevu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZGV2dVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Sepetim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VwZXRpbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Siparislerim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lwYXJpc2xlcmltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/SM_AnaSayfa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU01fQW5hU2F5ZmFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/SM_Profil/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU01fUHJvZmlsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/SSS/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU1NTXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Tekliflerim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVrbGlmbGVyaW1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/UrunAra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1bkFyYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/UrunDetay/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1bkRldGF5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/UrunEkle/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1bkVrbGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/Urunlerim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXJ1bmxlcmltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/YukBul/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWXVrQnVsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/YukEkle/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWXVrRWtsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Views/YukIlanlarim/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWXVrSWxhbmxhcmltXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kalkan/Desktop/Onemliler/Projeler/9_PazarCep/PazarCep/pazarcep.ui/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zock778dg2
