@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+**/bin/
+**/obj/
+.vs/
+.git/
+.idea/
+**/.DS_Store
+**/*.user
+**/*.suo
+**/*.log
+node_modules/
+docker-compose*
+=======
 .git
 .git copy
 .vs
@@ -8,3 +21,4 @@ TestResults
 Dosya_Yapisi.txt
 MeyveSebze_Listesi.xlsx
 publish-test
+>>>>>>> 05d0eabeb5a5a33af9461104efbc4ea41eaae5ca
