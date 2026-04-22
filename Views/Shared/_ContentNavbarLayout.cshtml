@@ -23,11 +23,18 @@
 
 @section VendorStyles{ @RenderSection("VendorStyles", required: false) }
 
-@section PageStyles{ @RenderSection("PageStyles", required: false) }
+@section PageStyles{
+  <link rel="stylesheet" href="~/css/app-shell.css" asp-append-version="true" />
+  @RenderSection("PageStyles", required: false)
+}
 
 @section VendorScripts{ @RenderSection("VendorScripts", required: false) }
 
-@section PageScripts{ @RenderSection("PageScripts", required: false) }
+@section PageScripts{
+  <script src="~/js/main.js" asp-append-version="true"></script>
+  <script src="~/js/pc-menu-nav-toggle.js" asp-append-version="true"></script>
+  @RenderSection("PageScripts", required: false)
+}
 
 @{
   bool isMenu = ViewData["isMenu"] != null && Convert.ToBoolean(ViewData["isMenu"]);

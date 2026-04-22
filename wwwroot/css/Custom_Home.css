@@ -1,13 +1,13 @@
 /* Custom styles goes here */
 :root {
-  /* PazarCep kurumsal paleti (B seçeneği) */
-  --pc-primary: #20CCAA; /* Ana turkuaz */
-  --pc-primary-soft: #C8F8EF; /* Yumuşak arka planlar */
-  --pc-secondary: #13B39A; /* Bir tık koyu turkuaz / mavi-yeşil */
-  --pc-accent: #FF2B3C; /* Logo kırmızısı, uyarı / vurgu */
-  --pc-bg: #F1F5F9; /* Açık gri arka plan */
-  --pc-dark: #000000; /* Ana koyu metin */
-  --pc-muted: #64748B; /* İkincil metin */
+  /* PazarCep brand palette */
+  --pc-primary: #20CCAA; /* Primary turquoise */
+  --pc-primary-soft: #C8F8EF; /* Soft background tint */
+  --pc-secondary: #13B39A; /* Secondary turquoise */
+  --pc-accent: #FF2B3C; /* Accent red */
+  --pc-bg: #F1F5F9; /* Light page background */
+  --pc-dark: #000000; /* Primary text */
+  --pc-muted: #64748B; /* Secondary text */
   --pc-radius-lg: 18px;
   --pc-radius-xl: 26px;
   --pc-shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.16);
@@ -25,14 +25,14 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body.pc-homepage {
   margin: 0;
   font-family: var(--pc-font-main);
   color: var(--pc-dark);
-}
-
-body.pc-homepage {
-  background: #ff8c00;
+  background:
+    radial-gradient(circle at top left, rgba(32, 204, 170, 0.14), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 43, 60, 0.1), transparent 24%),
+    linear-gradient(180deg, #f8fffd 0%, #f1f5f9 28%, #ffffff 100%);
   overflow-x: hidden;
 }
 
@@ -40,12 +40,12 @@ body.pc-homepage.pc-mobile-nav-open {
   overflow: hidden;
 }
 
-a {
+body.pc-homepage a {
   color: inherit;
   text-decoration: none;
 }
 
-img {
+body.pc-homepage img {
   max-width: 100%;
   display: block;
 }
@@ -332,7 +332,7 @@ img {
 }
 
   .pc-hero-title span {
-    color: var(--pc-primary); /* fallback: gradient desteklenmezse düz renk */
+    color: var(--pc-primary); /* Fallback when gradient text is unsupported */
     background: linear-gradient(120deg, var(--pc-primary), var(--pc-secondary), var(--pc-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -649,7 +649,7 @@ img {
   }
 
     .pc-card-list li::before {
-      content: "•";
+      content: "\2022";
       color: #16a34a;
       margin-top: 0.05rem;
     }
@@ -960,13 +960,13 @@ img {
   grid-column: 1 / -1;
 }
 
-label {
+.pc-contact-form label {
   font-size: 0.75rem;
 }
 
-input,
-select,
-textarea {
+.pc-contact-form input,
+.pc-contact-form select,
+.pc-contact-form textarea {
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.6);
   padding: 0.45rem 0.7rem;
@@ -977,18 +977,17 @@ textarea {
   color: #e5e7eb;
 }
 
-textarea {
+.pc-contact-form textarea {
   border-radius: 14px;
   min-height: 70px;
   resize: vertical;
 }
-
-  input:focus,
-  select:focus,
-  textarea:focus {
-    border-color: #22c55e;
-    box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7);
-  }
+.pc-contact-form input:focus,
+.pc-contact-form select:focus,
+.pc-contact-form textarea:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7);
+}
 
 .pc-form-foot {
   grid-column: 1 / -1;
@@ -1199,213 +1198,3 @@ textarea {
     min-width: 640px;
   }
 }
-
-/* === PazarCep - Yan Menü Genişlik Ayarı (Resizable Sidebar) === */
-.layout-menu.pc-sidebar-resizable {
-  position: relative;
-  width: var(--pc-sidebar-width, 260px); /* Varsayılan genişlik */
-  min-width: 200px;
-  max-width: 420px;
-  transition: width 0.1s ease-out;
-}
-
-/* Sürükleme çubuğu (sidebar sağ kenarı) */
-.pc-sidebar-resizer {
-  position: absolute;
-  top: 0; 
-  right: 0;
-  width: 6px;
-  height: 100%;
-  cursor: col-resize;
-  user-select: none;
-  z-index: 1000;
-  /* İstersen çok hafif bir çizgi verebilirsin:
-       background-color: rgba(0, 0, 0, 0.03);
-    */
-}
-
-/* Sürüklerken metin seçilmesini ve cursor saçmalamasını engelle */
-body.pc-sidebar-resizing,
-body.pc-sidebar-resizing * {
-  user-select: none !important;
-  cursor: col-resize !important; 
-}
-
-/* === PazarCep - Yan Menü içinin de genişlemesi === */
-
-/*Menünün kendi genişliği zaten JS ile değişiyor */
-.layout-menu.pc-sidebar-resizable {
-  width: var(--pc-sidebar-width, 260px);
-}
-
-  /* İçteki container'ların sabit genişliğini iptal edip %100 yapıyoruz */
-  .layout-menu.pc-sidebar-resizable .menu-inner {
-    width: 100% !important;
-  }
-
-  .layout-menu.pc-sidebar-resizable .menu-item,
-  .layout-menu.pc-sidebar-resizable .menu-item > .menu-link {
-    width: 100%;
-  }
-
-  /* Metin alanı (text-truncate) satır içinde esneyebilsin */
-  .layout-menu.pc-sidebar-resizable .menu-link .text-truncate {
-    display: block;
-    width: 100%;
-  }
-/* ================================
-   PazarCep - Sidebar Layout Fixes
-   1) 260px boşluk düzelt
-   2) Menü sabit kalsın
-   3) Ok ile sağ kenar arası 10px
-================================== */
-
-/* Menü fixed olunca sayfa içeriğini menü genişliği kadar it */
-@media (min-width: 1200px) {
-  .layout-page {
-    margin-left: var(--pc-sidebar-width, 260px) !important;
-    /*background-color:red;*/
-  }
-
-  /* Menü solda sabit kalsın */
-  #layout-menu.pc-sidebar-resizable {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    height: 100vh !important;
-    overflow: hidden; /* iç scroll menü-inner'da */
-    z-index: 1100;
-  }
-
-    /* Menü içeriği uzarsa menünün içinde scroll olsun */
-    #layout-menu.pc-sidebar-resizable .menu-inner {
-      height: 100%;
-      overflow-y: auto;
-    }
-}
-
-/* Toggle ok ile sağ kenar arasına boşluk + ok konumu */
-#layout-menu .menu-link.menu-toggle {
-  padding-right: 30px !important; /* ok + badge için alan 30px */
-}
-
-  #layout-menu .menu-link.menu-toggle::after {
-    right:10px !important; /* ok sağdan 10px içeride */
-  }
-/* Menü sağ iç boşluğu: ok dahil her şey kenardan 10px içeride dursun */
-#layout-menu.pc-sidebar-resizable {
-  padding-right: 0px;
-  box-sizing: border-box;
-}
-
-  /* Resizer çizgisi kenarda kalsın (padding içine kaçmasın) */
-  #layout-menu.pc-sidebar-resizable .pc-sidebar-resizer {
-    right: 0px; /* 10px padding'i telafi ediyor */
-    width: 5px; /* tutması kolay olsun */
-  }
-/* Scrollbar ile menü içeriği arasında boşluk */
-
-#layout-menu .menu-inner {
-  padding-right: 30px;
-  box-sizing: border-box;
-}
-#layout-menu .ps__rail-y {
-  right: 5 !important;
-}
-
-@media (max-width: 1199.98px) {
-  .layout-page {
-    margin-left: 0 !important;
-  }
-
-  #layout-menu.pc-sidebar-resizable {
-    position: absolute !important;
-    height: 100% !important;
-    max-width: 100%;
-  }
-
-  #layout-menu .menu-inner {
-    padding-right: 20px;
-  }
-}
-/* === FIX: Menü ile içerik arasındaki dinamik 260px boşluğu kapat === */
-/* core.css: .layout-menu-fixed ... .layout-page padding-inline-start veriyor */
-@media (min-width: 1200px) {
-  .layout-menu-fixed:not(.layout-menu-collapsed) .layout-page,
-  .layout-menu-fixed-offcanvas:not(.layout-menu-collapsed) .layout-page,
-  .layout-menu-fixed.layout-menu-collapsed .layout-page {
-    padding-inline-start: 0 !important;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .layout-page {
-    margin-left: 0 !important;
-  }
-
-  #layout-menu.pc-sidebar-resizable {
-    max-width: min(420px, calc(100vw - 1rem));
-  }
-
-  #layout-menu .menu-inner {
-    padding-right: 16px;
-  }
-}
-
-/* === PazarCep Logo Sabitleme (Vertical Menu) === */
-.layout-menu .app-brand .pc-logo {
-  width: 57.844px !important;
-  height: 86.594px !important;
-  flex: 0 0 auto !important;
-  /*align-items: center;*/
-  justify-content: center;
-}
-
-  .layout-menu .app-brand .pc-logo .pc-logo-icon {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* taşmadan sığdırır */
-    display: block;
-  }
-<<<<<<< ours
-=======
-
-/* === Mobil Stabilite: Navbar + Sidebar + İçerik Taşma Koruması === */
-@media (max-width: 1199.98px) {
-  .layout-page {
-    margin-left: 0 !important;
-    min-width: 0;
-  }
-
-  #layout-menu.pc-sidebar-resizable {
-    left: 0;
-    max-width: min(88vw, 320px);
-  }
-
-  .layout-wrapper,
-  .layout-container,
-  .layout-page,
-  .content-wrapper,
-  .container-xxl,
-  .container-fluid {
-    max-width: 100%;
-    overflow-x: clip;
-  }
-
-  .layout-navbar .navbar-nav,
-  .layout-navbar .navbar-nav-right {
-    flex-wrap: wrap;
-    row-gap: 0.4rem;
-  }
-
-  .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .table th,
-  .table td {
-    white-space: nowrap;
-  }
-}
->>>>>>> theirs
