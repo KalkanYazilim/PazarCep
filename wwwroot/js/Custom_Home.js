@@ -22,16 +22,57 @@ document.addEventListener("DOMContentLoaded", function () {
   var mobileNav = document.getElementById("pcMobileNav");
 
   if (mobileToggle && mobileNav) {
+    var closeMobileMenu = function () {
+      mobileToggle.classList.remove("active");
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("open");
+      document.body.classList.remove("pc-mobile-nav-open");
+    };
+
+    var openMobileMenu = function () {
+      mobileToggle.classList.add("active");
+      mobileToggle.setAttribute("aria-expanded", "true");
+      mobileNav.classList.add("open");
+      document.body.classList.add("pc-mobile-nav-open");
+    };
+
+    mobileToggle.setAttribute("aria-expanded", "false");
+
     mobileToggle.addEventListener("click", function () {
-      mobileToggle.classList.toggle("active");
-      mobileNav.classList.toggle("open");
+      var isOpen = mobileNav.classList.contains("open");
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
     });
 
-    mobileNav.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        mobileToggle.classList.remove("active");
-        mobileNav.classList.remove("open");
+    mobileNav.querySelectorAll("a, button").forEach(function (el) {
+      el.addEventListener("click", function () {
+        closeMobileMenu();
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!mobileNav.classList.contains("open")) return;
+
+      var clickedInsideMenu = mobileNav.contains(event.target);
+      var clickedToggle = mobileToggle.contains(event.target);
+      if (!clickedInsideMenu && !clickedToggle) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 768) {
+        closeMobileMenu();
+      }
     });
   }
 

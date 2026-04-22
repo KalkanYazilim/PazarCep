@@ -9,6 +9,9 @@ public class UrunlerController : Controller
 {
   public IActionResult Liste()
   {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Katalog verisi";
+
     var urunler = GetOrnekUrunler();
 
     var model = new UrunListeViewModel
@@ -26,6 +29,8 @@ public class UrunlerController : Controller
   [HttpGet]
   public IActionResult Ekle()
   {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Ürün formu";
     return View(CreateUrunEkleModel());
   }
 
@@ -33,6 +38,9 @@ public class UrunlerController : Controller
   [ValidateAntiForgeryToken]
   public IActionResult Ekle(UrunEkleViewModel model)
   {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Ürün formu";
+
     if (!ModelState.IsValid)
     {
       var invalidModel = CreateUrunEkleModel();
@@ -55,7 +63,12 @@ public class UrunlerController : Controller
     return RedirectToAction(nameof(Liste));
   }
 
-  public IActionResult Kategoriler() => View();
+  public IActionResult Kategoriler()
+  {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Kategori yönetimi";
+    return View(CommerceWorkspaceFactory.CreateCategoryManagement());
+  }
 
   private static UrunEkleViewModel CreateUrunEkleModel() => new()
   {

@@ -1,99 +1,229 @@
-@model PazarCep.Areas.Lojistik.Models.LojistikPanoVM
+@model PazarCep.Areas.Lojistik.Models.LojistikOzetSayfaViewModel
 @{
-    ViewData["Title"] = ViewData["Title"] ?? "Lojistik - Kontrol Paneli";
+    ViewData["Title"] = "Lojistik Operasyon Merkezi";
 }
 
-<div class="row g-4">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body d-flex align-items-center justify-content-between">
-                <div>
-                    <h5 class="mb-1">@ViewData["Title"]</h5>
-                    <small class="text-muted">Araç ve sevkiyat durumlarını buradan takip edebilirsin.</small>
-                </div>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Lojistik / Operasyon Kontrolu</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-map-alt"></i>Rota ve randevu senkronu gorunur</span>
+                <span><i class="bx bx-car"></i>Filo sagligi ayni kabukta izlenir</span>
+                <span><i class="bx bx-mobile-alt"></i>Mobil karar kartlari aktif</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
                 <a asp-area="Lojistik" asp-controller="Filo" asp-action="Index" class="btn btn-primary">
-                    Filoya Git
+                    <i class="bx bx-car me-1"></i>Filo yonetimi
+                </a>
+                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-calendar-event me-1"></i>Randevu planlama
+                </a>
+                <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-outline-secondary">
+                    <i class="bx bx-package me-1"></i>Siparis akisi
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- KPI -->
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Toplam Araç</div>
-                <div class="fs-3">@Model.ToplamArac</div>
-                <small class="text-muted">Müsait: @Model.MusaitArac</small>
-            </div>
-        </div>
-    </div>
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
 
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Sevkiyatta</div>
-                <div class="fs-3">@Model.SevkiyattaArac</div>
-                <small class="text-muted">Yolda olan araçlar</small>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Serviste</div>
-                <div class="fs-3">@Model.ServisteArac</div>
-                <small class="text-muted">Bakım / onarım</small>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold">Bugünkü Sevkiyat</div>
-                <div class="fs-3">@Model.BugunkuSevkiyat</div>
-                <small class="text-muted">Bekleyen: @Model.BekleyenSevkiyat</small>
-            </div>
-        </div>
-    </div>
-
-    <!-- Son sevkiyatlar -->
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                <h6 class="mb-0">Son Sevkiyatlar</h6>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Sevkiyat No</th>
-                                <th>Çıkış</th>
-                                <th>Varış</th>
-                                <th>Araç</th>
-                                <th>Durum</th>
-                                <th>Tarih</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var x in Model.SonSevkiyatlar)
-                            {
-                                <tr>
-                                    <td>@x.SevkiyatNo</td>
-                                    <td>@x.Cikis</td>
-                                    <td>@x.Varis</td>
-                                    <td>@x.AracPlaka</td>
-                                    <td>@x.Durum</td>
-                                    <td>@x.Tarih.ToString("dd.MM.yyyy")</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Operasyon uyarilari</h2>
+                        <p class="pc-panel__subtitle mb-0">Gecikme, servis ve planlama etkisi olusturan alanlar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var uyari in Model.Uyarilar)
+                        {
+                            <article class="pc-alert-strip pc-alert-strip--@uyari.Ton">
+                                <div>
+                                    <div class="fw-semibold mb-1">@uyari.Baslik</div>
+                                    <p class="text-muted mb-0">@uyari.Ozet</p>
+                                </div>
+                                <a href="@uyari.EylemLinki" class="btn btn-outline-secondary btn-sm">@uyari.EylemMetni</a>
+                            </article>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Gunluk operasyon akisi</h2>
+                        <p class="pc-panel__subtitle mb-0">Yigin, sevk ve risk basliklarini ayni anda okuyun.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var asama in Model.OperasyonAsamalari)
+                        {
+                            <article class="pc-health-list__item">
+                                <div>
+                                    <div class="fw-semibold mb-1">@asama.Baslik</div>
+                                    <p class="text-muted mb-0">@asama.Aciklama</p>
+                                </div>
+                                <span class="pc-status-pill pc-status-pill--@asama.Ton">@asama.Deger</span>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel pc-table-card">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Canli sevkiyat gorunumu</h2>
+                <p class="pc-panel__subtitle mb-0">Masaustunde yogun tablo, mobilde net saha kartlari sunulur.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body d-none d-lg-block">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Sevkiyat</th>
+                            <th>Musteri</th>
+                            <th>Guzergah</th>
+                            <th>Pencere</th>
+                            <th>Yuk tipi</th>
+                            <th>Durum</th>
+                            <th class="text-end">Arac</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sevkiyat in Model.Sevkiyatlar)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@sevkiyat.SevkiyatNo</td>
+                                <td>@sevkiyat.Musteri</td>
+                                <td>@sevkiyat.Guzergah</td>
+                                <td>@sevkiyat.Pencere</td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@sevkiyat.YukTipi</span>
+                                        <small class="text-muted">@sevkiyat.OperasyonNotu</small>
+                                    </div>
+                                </td>
+                                <td><span class="pc-status-pill pc-status-pill--@sevkiyat.DurumTonu">@sevkiyat.Durum</span></td>
+                                <td class="text-end">
+                                    <a asp-area="Lojistik" asp-controller="Filo" asp-action="AracDetay" asp-route-id="@sevkiyat.AracId" class="btn btn-sm btn-outline-secondary">@sevkiyat.Arac</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pc-panel__body d-lg-none">
+            <div class="pc-mobile-list">
+                @foreach (var sevkiyat in Model.Sevkiyatlar)
+                {
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@sevkiyat.SevkiyatNo</div>
+                                <div class="text-muted">@sevkiyat.Musteri</div>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@sevkiyat.DurumTonu">@sevkiyat.Durum</span>
+                        </div>
+                        <p class="text-muted mb-3">@sevkiyat.OperasyonNotu</p>
+                        <div class="pc-mobile-card__grid mb-3">
+                            <div>
+                                <span class="pc-mobile-card__label">Guzergah</span>
+                                <strong>@sevkiyat.Guzergah</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Pencere</span>
+                                <strong>@sevkiyat.Pencere</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Yuk tipi</span>
+                                <strong>@sevkiyat.YukTipi</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Arac</span>
+                                <strong>@sevkiyat.Arac</strong>
+                            </div>
+                        </div>
+                        <a asp-area="Lojistik" asp-controller="Filo" asp-action="AracDetay" asp-route-id="@sevkiyat.AracId" class="btn btn-primary w-100">Arac detayini ac</a>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Filo snapshot</h2>
+                <p class="pc-panel__subtitle mb-0">Sahadaki araclarin anlik is yukunu ve teknik baglamini gorun.</p>
+            </div>
+            <a asp-area="Lojistik" asp-controller="Filo" asp-action="Index" class="btn btn-outline-secondary btn-sm">Tum filo</a>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-module-grid">
+                @foreach (var arac in Model.FiloOzeti)
+                {
+                    <article class="pc-module-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <h3 class="h6 mb-1">@arac.Plaka</h3>
+                                <p class="text-muted mb-0">@arac.AracTipi · @arac.Surucu</p>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@arac.DurumTonu">@arac.Durum</span>
+                        </div>
+                        <div class="pc-key-grid mb-3">
+                            <div>
+                                <span class="label">Konum</span>
+                                <strong>@arac.Konum</strong>
+                            </div>
+                            <div>
+                                <span class="label">Doluluk</span>
+                                <strong>@arac.Doluluk</strong>
+                            </div>
+                            <div>
+                                <span class="label">Km</span>
+                                <strong>@arac.BugunkuKm</strong>
+                            </div>
+                            <div>
+                                <span class="label">Bakim</span>
+                                <strong>@arac.SonBakim</strong>
+                            </div>
+                        </div>
+                        <p class="text-muted mb-3">@arac.OperasyonNotu</p>
+                        <a asp-area="Lojistik" asp-controller="Filo" asp-action="AracDetay" asp-route-id="@arac.Id" class="btn btn-outline-secondary btn-sm">Detay</a>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
 </div>

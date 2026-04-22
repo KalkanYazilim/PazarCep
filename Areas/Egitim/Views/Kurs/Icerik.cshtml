@@ -1,71 +1,98 @@
-@model PazarCep.Areas.Egitim.Models.KursIcerikVM
+@model PazarCep.Areas.Egitim.Models.EgitimKursIcerikSayfaViewModel
 @{
     ViewData["Title"] = "Kurs İçeriği";
 }
-<div class="card">
-    <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
-        <div>
-            <h5 class="mb-1">@Model.KursAdi</h5>
-            <div class="text-muted small">Ders Listesi</div>
-        </div>
-        <div class="d-flex gap-2">
-            <a class="btn btn-outline-secondary"
-               asp-area="Egitim" asp-controller="Kurs" asp-action="Detay" asp-route-id="@Model.KursId">
-                <i class="bx bx-left-arrow-alt me-1"></i>Detaya Dön
-            </a>
-            <a class="btn btn-outline-primary"
-               asp-area="Egitim" asp-controller="Kurs" asp-action="Index">
-                Kurslarım
-            </a>
-        </div>
-    </div>
 
-    <div class="card-body">
-        @if (TempData["BasariliMesaj"] != null)
-        {
-            <div class="alert alert-success">@TempData["BasariliMesaj"]</div>
-        }
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Eğitim / Ders Akışı</span>
+            <h1 class="pc-page-title">@Model.KursAdi</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
 
-        @if (Model.Dersler == null || !Model.Dersler.Any())
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-user"></i>@Model.Egitmen</span>
+                <span><i class="bx bx-line-chart"></i>@Model.IlerlemeYuzde% ilerleme</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="Egitim" asp-controller="Kurs" asp-action="Detay" asp-route-id="@Model.KursId" class="btn btn-outline-secondary">
+                    <i class="bx bx-arrow-back me-1"></i>Kurs detayına dön
+                </a>
+                <a asp-area="Egitim" asp-controller="Kurs" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-library me-1"></i>Kurs kataloğu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
         {
-            <div class="alert alert-warning mb-0">Bu kurs için ders bulunamadı.</div>
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
         }
-        else
-        {
+    </section>
+
+    @if (TempData["BasariliMesaj"] is string mesaj)
+    {
+        <section class="pc-panel">
+            <div class="pc-panel__body">
+                <article class="pc-alert-strip pc-alert-strip--success">
+                    <div>
+                        <div class="fw-semibold mb-1">Ders tamamlandı</div>
+                        <p class="text-muted mb-0">@mesaj</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    }
+
+    <section class="pc-panel pc-table-card">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Ders listesi</h2>
+                <p class="pc-panel__subtitle mb-0">Derslerin durumunu görün ve demo tamamlama akışını deneyin.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body d-none d-lg-block">
             <div class="table-responsive">
-                <table class="table align-middle">
+                <table class="table table-hover align-middle">
                     <thead>
                         <tr>
                             <th>Ders</th>
-                            <th class="text-end">Süre</th>
-                            <th class="text-center">Durum</th>
+                            <th>Süre</th>
+                            <th>Durum</th>
                             <th class="text-end">İşlem</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var d in Model.Dersler)
+                        @foreach (var ders in Model.Dersler)
                         {
                             <tr>
-                                <td class="fw-semibold">@d.Baslik</td>
-                                <td class="text-end">@d.SureDakika dk</td>
-                                <td class="text-center">
-                                    @if (d.Tamamlandi)
-                                    {
-                                        <span class="badge bg-label-success">Tamamlandı</span>
-                                    }
-                                    else
-                                    {
-                                        <span class="badge bg-label-warning">Bekliyor</span>
-                                    }
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-semibold">@ders.Baslik</span>
+                                        <small class="text-muted">@ders.Ozet</small>
+                                    </div>
                                 </td>
+                                <td>@ders.Sure</td>
+                                <td><span class="pc-status-pill pc-status-pill--@ders.DurumTonu">@ders.Durum</span></td>
                                 <td class="text-end">
-                                    @if (!d.Tamamlandi)
+                                    @if (!ders.Tamamlandi)
                                     {
-                                        <form asp-area="Egitim" asp-controller="Kurs" asp-action="DersTamamla"
-                                              method="post" class="d-inline">
+                                        <form asp-area="Egitim" asp-controller="Kurs" asp-action="DersTamamla" method="post" class="d-inline">
                                             @Html.AntiForgeryToken()
                                             <input type="hidden" name="kursId" value="@Model.KursId" />
-                                            <input type="hidden" name="dersId" value="@d.Id" />
+                                            <input type="hidden" name="dersId" value="@ders.Id" />
                                             <button type="submit" class="btn btn-sm btn-primary">
                                                 <i class="bx bx-check me-1"></i>Tamamla
                                             </button>
@@ -73,9 +100,7 @@
                                     }
                                     else
                                     {
-                                        <button class="btn btn-sm btn-outline-secondary" disabled>
-                                            Tamam
-                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary" disabled>Tamamlandı</button>
                                     }
                                 </td>
                             </tr>
@@ -83,6 +108,41 @@
                     </tbody>
                 </table>
             </div>
-        }
-    </div>
+        </div>
+        <div class="pc-panel__body d-lg-none">
+            <div class="pc-mobile-list">
+                @foreach (var ders in Model.Dersler)
+                {
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@ders.Baslik</div>
+                                <div class="text-muted">@ders.Ozet</div>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@ders.DurumTonu">@ders.Durum</span>
+                        </div>
+                        <div class="pc-mobile-card__grid mb-3">
+                            <div>
+                                <span class="pc-mobile-card__label">Süre</span>
+                                <strong>@ders.Sure</strong>
+                            </div>
+                        </div>
+                        @if (!ders.Tamamlandi)
+                        {
+                            <form asp-area="Egitim" asp-controller="Kurs" asp-action="DersTamamla" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="kursId" value="@Model.KursId" />
+                                <input type="hidden" name="dersId" value="@ders.Id" />
+                                <button type="submit" class="btn btn-primary w-100">Dersi tamamla</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <button type="button" class="btn btn-outline-secondary w-100" disabled>Tamamlandı</button>
+                        }
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
 </div>

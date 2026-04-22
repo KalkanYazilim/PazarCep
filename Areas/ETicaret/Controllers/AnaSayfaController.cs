@@ -1,10 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
+using PazarCep.Areas.ETicaret.Models;
 
-namespace PazarCep.Areas.ETicaret.Controllers
+namespace PazarCep.Areas.ETicaret.Controllers;
+
+[Area("ETicaret")]
+public class AnaSayfaController : Controller
 {
-  [Area("ETicaret")]
-  public class AnaSayfaController : Controller
+  public IActionResult Index()
   {
-    public IActionResult Index() => View();
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Ticari görünüm";
+    ViewData["MetaDescription"] = "PazarCep e-ticaret operasyon özeti; katalog, sipariş ve randevu akışlarını tek panelde toplar.";
+
+    return View(CommerceWorkspaceFactory.CreateOverview());
   }
 }

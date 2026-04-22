@@ -1,4 +1,171 @@
+@model CommerceOverviewPageViewModel
 @{
-    ViewData["Title"] = "E-Ticaret";
+    ViewData["Title"] = "E-Ticaret Operasyon Özeti";
 }
-<h1>E-Ticaret Area Çalışıyor...!!✅</h1>
+
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">E-Ticaret / Operasyon</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-box"></i>Katalog ve sipariş akışı senkron</span>
+                <span><i class="bx bx-calendar-check"></i>Randevu planlama görünür</span>
+                <span><i class="bx bx-group"></i>Müşteri çalışma alanı ile hizalı</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-primary">
+                    <i class="bx bx-package me-1"></i>Sipariş operasyonu
+                </a>
+                <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary">
+                    <i class="bx bx-box me-1"></i>Katalog görünümü
+                </a>
+                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-calendar-event me-1"></i>Randevu planlama
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Operasyon uyarıları</h2>
+                        <p class="pc-panel__subtitle mb-0">Bugün karar gerektiren ticari ve lojistik sinyaller.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var uyari in Model.Uyarilar)
+                        {
+                            <article class="pc-alert-strip pc-alert-strip--@uyari.Ton">
+                                <div>
+                                    <div class="fw-semibold mb-1">@uyari.Baslik</div>
+                                    <p class="text-muted mb-0">@uyari.Ozet</p>
+                                </div>
+                                <a href="@uyari.EylemLinki" class="btn btn-outline-secondary btn-sm">@uyari.EylemMetni</a>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Sipariş akışı</h2>
+                        <p class="pc-panel__subtitle mb-0">Günün çalışma yükü hangi aşamada birikiyor?</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var asama in Model.SiparisAkisi)
+                        {
+                            <article class="pc-health-list__item">
+                                <div>
+                                    <div class="fw-semibold mb-1">@asama.Baslik</div>
+                                    <p class="text-muted mb-0">@asama.Aciklama</p>
+                                </div>
+                                <span class="pc-status-pill pc-status-pill--@asama.Ton">@asama.Deger</span>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Öne çıkan ürünler</h2>
+                        <p class="pc-panel__subtitle mb-0">Ticari performansı ve stok riskini birlikte görün.</p>
+                    </div>
+                    <a asp-area="ETicaret" asp-controller="Urunler" asp-action="Liste" class="btn btn-outline-secondary btn-sm">Kataloğu aç</a>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-module-grid">
+                        @foreach (var urun in Model.OneCikanUrunler)
+                        {
+                            <article class="pc-module-card">
+                                <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                    <div>
+                                        <div class="fw-semibold">@urun.UrunAdi</div>
+                                        <div class="text-muted small">@urun.Kategori</div>
+                                    </div>
+                                    <span class="pc-chip">@urun.Puan</span>
+                                </div>
+                                <div class="fw-semibold mb-2">@urun.Fiyat</div>
+                                <p class="text-muted mb-2">@urun.StokOzeti</p>
+                                <small class="text-success">@urun.Trend</small>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Bugünkü randevular</h2>
+                        <p class="pc-panel__subtitle mb-0">Sipariş ve yükleme planının saat bazlı özeti.</p>
+                    </div>
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-outline-secondary btn-sm">Slot planlama</a>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-mobile-list">
+                        @foreach (var kayit in Model.BugunkuRandevular)
+                        {
+                            <article class="pc-mobile-card">
+                                <div class="d-flex justify-content-between gap-3 align-items-start mb-3">
+                                    <div>
+                                        <div class="fw-semibold">@kayit.Baslik</div>
+                                        <div class="text-muted">@kayit.Musteri</div>
+                                    </div>
+                                    <span class="pc-status-pill pc-status-pill--@kayit.Ton">@kayit.Durum</span>
+                                </div>
+                                <div class="pc-mobile-card__grid">
+                                    <div>
+                                        <span class="pc-mobile-card__label">Saat</span>
+                                        <strong>@kayit.Zaman</strong>
+                                    </div>
+                                    <div>
+                                        <span class="pc-mobile-card__label">Konum</span>
+                                        <strong>@kayit.Konum</strong>
+                                    </div>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

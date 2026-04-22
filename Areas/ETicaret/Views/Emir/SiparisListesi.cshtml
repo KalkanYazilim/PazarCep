@@ -1,9 +1,160 @@
+@model OrderListPageViewModel
 @{
     ViewData["Title"] = "Sipariş Listesi";
 }
-<h4 class="mb-3">Sipariş Listesi</h4>
-<div class="card">
-    <div class="card-body">
-        Buraya sipariş tablosu gelecek.
-    </div>
+
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">E-Ticaret / Sipariş Yönetimi</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="ETicaret" asp-controller="AnaSayfa" asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="bx bx-arrow-back me-1"></i>Operasyon özetine dön
+                </a>
+                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-calendar-check me-1"></i>Randevu planlama
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Filtre ve görünüm</h2>
+                <p class="pc-panel__subtitle mb-0">Sipariş önceliğini kanal, zaman penceresi ve durum bazında okuyun.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-filter-grid">
+                <div class="pc-col-6">
+                    <label class="form-label">Sipariş ara</label>
+                    <input type="text" class="form-control" placeholder="Sipariş no, müşteri veya temsilci" />
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Durum</label>
+                    <select class="form-select">
+                        <option>Tüm durumlar</option>
+                        <option>Yeni sipariş</option>
+                        <option>Hazırlanıyor</option>
+                        <option>Sevke hazır</option>
+                        <option>Takip gerekli</option>
+                    </select>
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Sevk penceresi</label>
+                    <select class="form-select">
+                        <option>Tüm pencereler</option>
+                        <option>07:00 - 09:00</option>
+                        <option>10:00 - 12:00</option>
+                        <option>13:00 - 15:00</option>
+                        <option>16:00 - 18:00</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel pc-table-card">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Sipariş kuyruğu</h2>
+                <p class="pc-panel__subtitle mb-0">Masaüstünde yoğun tablo, mobilde aksiyon odaklı kart görünümü.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body d-none d-lg-block">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Sipariş</th>
+                            <th>Kanal</th>
+                            <th>Sevk penceresi</th>
+                            <th>Rota</th>
+                            <th>Temsilci</th>
+                            <th>Durum</th>
+                            <th class="text-end">İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var siparis in Model.Siparisler)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-semibold">@siparis.SiparisNo</span>
+                                        <span class="text-muted">@siparis.Musteri</span>
+                                        <small class="text-muted">@siparis.Tutar</small>
+                                    </div>
+                                </td>
+                                <td>@siparis.Kanal</td>
+                                <td>@siparis.SevkPenceresi</td>
+                                <td>@siparis.Rota</td>
+                                <td>@siparis.Temsilci</td>
+                                <td><span class="pc-status-pill pc-status-pill--@siparis.DurumTonu">@siparis.Durum</span></td>
+                                <td class="text-end">
+                                    <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.Id" class="btn btn-sm btn-primary">Detay</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pc-panel__body d-lg-none">
+            <div class="pc-mobile-list">
+                @foreach (var siparis in Model.Siparisler)
+                {
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@siparis.SiparisNo</div>
+                                <div class="text-muted">@siparis.Musteri</div>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@siparis.DurumTonu">@siparis.Durum</span>
+                        </div>
+                        <p class="text-muted mb-3">@siparis.Ozet</p>
+                        <div class="pc-mobile-card__grid mb-3">
+                            <div>
+                                <span class="pc-mobile-card__label">Kanal</span>
+                                <strong>@siparis.Kanal</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Tutar</span>
+                                <strong>@siparis.Tutar</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Sevk</span>
+                                <strong>@siparis.SevkPenceresi</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Temsilci</span>
+                                <strong>@siparis.Temsilci</strong>
+                            </div>
+                        </div>
+                        <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisDetay" asp-route-id="@siparis.Id" class="btn btn-primary w-100">Sipariş detayını aç</a>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
 </div>

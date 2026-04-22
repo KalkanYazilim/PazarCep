@@ -1,75 +1,143 @@
-@model PazarCep.Areas.Egitim.Models.EgitimPanoVM
-
-@if ((TempData["UyariSistemiAktif"] as bool?) == true && TempData["UyariMesaj"] != null)
-{
-    <div class="alert alert-warning">@TempData["UyariMesaj"]</div>
-}
-
+@model PazarCep.Areas.Egitim.Models.EgitimOzetSayfaViewModel
 @{
-    ViewData["Title"] = "Eğitim - Kontrol Paneli";
+    ViewData["Title"] = "Eğitim Merkezi";
 }
 
-<div class="row g-4">
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold text-muted">Toplam Kurs</div>
-                <h3 class="mb-0">@Model.ToplamKurs</h3>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Eğitim / Gelişim Merkezi</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+
+            <div class="pc-page-meta mt-4">
+                <span><i class="bx bx-book-open"></i>Modül bazlı öğrenme akışı</span>
+                <span><i class="bx bx-award"></i>Sertifika görünürlüğü</span>
+                <span><i class="bx bx-mobile-alt"></i>Mobil kart düzeni aktif</span>
+            </div>
+
+            <div class="pc-page-actions mt-4">
+                <a asp-area="Egitim" asp-controller="Kurs" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-library me-1"></i>Kurs kataloğu
+                </a>
+                <a asp-area="Egitim" asp-controller="Kurs" asp-action="Sertifikalar" class="btn btn-outline-secondary">
+                    <i class="bx bx-award me-1"></i>Sertifikalar
+                </a>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold text-muted">Devam Edilen</div>
-                <h3 class="mb-0">@Model.DevamEdilenKurs</h3>
-            </div>
-        </div>
-    </div>
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
 
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold text-muted">Tamamlanan</div>
-                <h3 class="mb-0">@Model.TamamlananKurs</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="fw-semibold text-muted">Sertifika</div>
-                <h3 class="mb-0">@Model.SertifikaSayisi</h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12">
-        <div class="card">
-            <h5 class="card-header">Son Aktiviteler</h5>
-            <div class="card-body">
-                @if (Model.SonAktiviteler == null || !Model.SonAktiviteler.Any())
-                {
-                    <div class="alert alert-warning mb-0">Aktivite bulunamadı.</div>
-                }
-                else
-                {
-                    <ul class="list-group">
-                        @foreach (var a in Model.SonAktiviteler.OrderByDescending(x => x.Tarih))
+    <section class="row g-4">
+        <div class="col-12 col-xl-6">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Öğrenme uyarıları</h2>
+                        <p class="pc-panel__subtitle mb-0">Operasyon etkisi yüksek ama takibi gereken eğitim başlıkları.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var uyari in Model.Uyarilar)
                         {
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <article class="pc-alert-strip pc-alert-strip--@uyari.Ton">
                                 <div>
-                                    <div class="fw-semibold">@a.Baslik</div>
-                                    <div class="text-muted">@a.Aciklama</div>
+                                    <div class="fw-semibold mb-1">@uyari.Baslik</div>
+                                    <p class="text-muted mb-0">@uyari.Ozet</p>
                                 </div>
-                                <small class="text-muted">@a.Tarih.ToString("dd.MM.yyyy")</small>
-                            </li>
+                                <a href="@uyari.EylemLinki" class="btn btn-outline-secondary btn-sm">@uyari.EylemMetni</a>
+                            </article>
                         }
-                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-6">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Son aktiviteler</h2>
+                        <p class="pc-panel__subtitle mb-0">Öğrenme geçmişindeki son hareketler ve tamamlamalar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-timeline">
+                        @foreach (var aktivite in Model.Aktiviteler)
+                        {
+                            <article class="pc-timeline__item">
+                                <div class="pc-timeline__icon"><i class="bx @aktivite.Ikon"></i></div>
+                                <div class="pc-timeline__body">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between gap-2">
+                                        <div>
+                                            <div class="fw-semibold mb-1">@aktivite.Baslik</div>
+                                            <p class="text-muted mb-0">@aktivite.Aciklama</p>
+                                        </div>
+                                        <span class="pc-timeline__time">@aktivite.Zaman</span>
+                                    </div>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Öne çıkan kurslar</h2>
+                <p class="pc-panel__subtitle mb-0">Yüksek etki ve ilerleme seviyesine göre sıralanmış eğitimler.</p>
+            </div>
+            <a asp-area="Egitim" asp-controller="Kurs" asp-action="Index" class="btn btn-outline-secondary btn-sm">Tüm kurslar</a>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-module-grid">
+                @foreach (var kurs in Model.OneCikanKurslar)
+                {
+                    <article class="pc-module-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <h3 class="h6 mb-1">@kurs.KursAdi</h3>
+                                <p class="text-muted mb-0">@kurs.Egitmen · @kurs.Seviye</p>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@kurs.DurumTonu">@kurs.Durum</span>
+                        </div>
+                        <p class="text-muted mb-3">@kurs.Ozet</p>
+                        <div class="pc-key-grid mb-3">
+                            <div>
+                                <span class="label">Süre</span>
+                                <strong>@kurs.Sure</strong>
+                            </div>
+                            <div>
+                                <span class="label">İlerleme</span>
+                                <strong>@kurs.IlerlemeYuzde%</strong>
+                            </div>
+                        </div>
+                        <div class="pc-progress-meter mb-3">
+                            <span style="width:@kurs.IlerlemeYuzde%"></span>
+                        </div>
+                        <a asp-area="Egitim" asp-controller="Kurs" asp-action="Detay" asp-route-id="@kurs.Id" class="btn btn-outline-secondary btn-sm">Detay</a>
+                    </article>
                 }
             </div>
         </div>
-    </div>
+    </section>
 </div>

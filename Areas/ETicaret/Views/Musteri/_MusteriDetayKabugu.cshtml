@@ -1,0 +1,91 @@
+@model MusteriDetaySayfaViewModel
+@{
+    var initials = string.Concat(Model.Kabuk.TamAd.Split(' ', StringSplitOptions.RemoveEmptyEntries).Take(2).Select(parca => char.ToUpperInvariant(parca[0])));
+}
+
+<div class="customer-detail-shell">
+    <div class="card customer-hero border-0">
+        <div class="card-body p-4 p-xl-5">
+            <div class="d-flex flex-column flex-xl-row gap-4 align-items-xl-start justify-content-between">
+                <div class="d-flex flex-column flex-lg-row gap-4 align-items-lg-start">
+                    <div class="customer-avatar">@initials</div>
+                    <div class="customer-hero__content">
+                        <div class="d-flex flex-wrap gap-2 align-items-center mb-3">
+                            <span class="badge bg-label-@Model.Kabuk.DurumSinifi text-uppercase">@Model.Kabuk.Durum</span>
+                            <span class="badge bg-label-secondary">@Model.Kabuk.MusteriKodu</span>
+                            <span class="badge bg-label-info">@Model.Kabuk.Segment</span>
+                        </div>
+                        <h2 class="customer-hero__title">@Model.Kabuk.TamAd</h2>
+                        <p class="customer-hero__subtitle mb-2">@Model.Kabuk.Unvan · @Model.Kabuk.Sirket</p>
+                        <p class="customer-hero__description mb-4">@Model.Kabuk.SayfaAciklamasi</p>
+
+                        <div class="customer-hero__meta">
+                            <span><i class="bx bx-envelope"></i>@Model.Kabuk.Email</span>
+                            <span><i class="bx bx-phone"></i>@Model.Kabuk.Telefon</span>
+                            <span><i class="bx bx-map"></i>@Model.Kabuk.Sehir</span>
+                            <span><i class="bx bx-time-five"></i>Son temas: @Model.Kabuk.SonEtkilesim</span>
+                        </div>
+
+                        <div class="customer-hero__summary mt-4">
+                            <div class="customer-summary-chip">
+                                <span class="label">Temsilci</span>
+                                <strong>@Model.Kabuk.Temsilci</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Abonelik</span>
+                                <strong>@Model.Kabuk.Abonelik</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Bakiye</span>
+                                <strong>@Model.Kabuk.Bakiye</strong>
+                            </div>
+                            <div class="customer-summary-chip">
+                                <span class="label">Kayıt tarihi</span>
+                                <strong>@Model.Kabuk.KayitTarihi</strong>
+                            </div>
+                        </div>
+
+                        <div class="customer-hero__tags mt-4">
+                            @foreach (var etiket in Model.Kabuk.Etiketler)
+                            {
+                                <span class="customer-tag">@etiket</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer-hero__actions">
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="btn btn-outline-secondary">
+                        <i class="bx bx-arrow-back me-1"></i>Müşteri listesine dön
+                    </a>
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@Model.Kabuk.Id" class="btn btn-primary">
+                        <i class="bx bx-id-card me-1"></i>Profil görünümü
+                    </a>
+                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Guvenlik" asp-route-id="@Model.Kabuk.Id" class="btn btn-outline-secondary">
+                        <i class="bx bx-shield-quarter me-1"></i>Güvenlik
+                    </a>
+                </div>
+            </div>
+
+            <div class="customer-hero__metrics mt-4">
+                @await Html.PartialAsync("_MusteriOzetKartlari", Model.Kabuk.HeroKartlari)
+            </div>
+        </div>
+    </div>
+
+    <div class="customer-subnav">
+        @foreach (var sekme in Model.Kabuk.Sekmeler)
+        {
+            var aktifSinif = sekme.Anahtar == Model.Kabuk.AktifSekme ? "is-active" : string.Empty;
+
+            <a asp-area="ETicaret"
+               asp-controller="Musteri"
+               asp-action="@sekme.Action"
+               asp-route-id="@Model.Kabuk.Id"
+               class="customer-subnav__link @aktifSinif">
+                <i class="bx @sekme.Ikon"></i>
+                <span>@sekme.Baslik</span>
+            </a>
+        }
+    </div>
+</div>

@@ -1,46 +1,190 @@
-@model List<PazarCep.Areas.MusteriYonetimi.Models.MusteriListeSatiriVM>
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriListeSayfaViewModel
 @{
-    ViewData["Title"] = ViewData["Title"] ?? "Müşteriler";
+    ViewData["Title"] = "Musteriler";
 }
 
-<div class="card">
-    <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="mb-0">@ViewData["Title"]</h5>
-        <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" class="btn btn-primary">
-            Yeni Müşteri Ekle
-        </a>
-    </div>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">CRM / Portfoy</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
 
-    <div class="card-body">
-        @if (TempData["BasariliMesaj"] != null)
-        {
-            <div class="alert alert-success">@TempData["BasariliMesaj"]</div>
-        }
-
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Ad Soyad / Ünvan</th>
-                        <th>Telefon</th>
-                        <th>E-posta</th>
-                        <th>Durum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var x in Model)
-                    {
-                        <tr>
-                            <td>@x.Id</td>
-                            <td>@x.AdSoyadUnvan</td>
-                            <td>@x.Telefon</td>
-                            <td>@x.Eposta</td>
-                            <td>@x.Durum</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <div class="pc-page-actions mt-4">
+                <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" class="btn btn-primary">
+                    <i class="bx bx-user-plus me-1"></i>Yeni musteri
+                </a>
+                <a asp-area="ETicaret" asp-controller="Musteri" asp-action="TumMusteriler" class="btn btn-outline-secondary">
+                    <i class="bx bx-grid-alt me-1"></i>Detayli musteri alani
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    @if (TempData["BasariliMesaj"] is string mesaj)
+    {
+        <section class="pc-panel">
+            <div class="pc-panel__body">
+                <article class="pc-alert-strip pc-alert-strip--info">
+                    <div>
+                        <div class="fw-semibold mb-1">Kayit taslagi olusturuldu</div>
+                        <p class="text-muted mb-0">@mesaj</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    }
+
+    <section class="pc-panel">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Filtre ve arama</h2>
+                <p class="pc-panel__subtitle mb-0">Segment, temsilci ve musteri durumu bazinda hizli tarama yapin.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body">
+            <div class="pc-filter-grid">
+                <div class="pc-col-6">
+                    <label class="form-label">Musteri ara</label>
+                    <input type="text" class="form-control" placeholder="Kod, isim, sirket veya e-posta" />
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Segment</label>
+                    <select class="form-select">
+                        <option>Tum segmentler</option>
+                        <option>Kurumsal</option>
+                        <option>Sadik Perakende</option>
+                        <option>Yeni Kazanim</option>
+                        <option>Riskte</option>
+                    </select>
+                </div>
+                <div class="pc-col-3">
+                    <label class="form-label">Temsilci</label>
+                    <select class="form-select">
+                        <option>Tum temsilciler</option>
+                        <option>Deniz Sahin</option>
+                        <option>Ece Yildirim</option>
+                        <option>Burcu Tan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-panel pc-table-card">
+        <div class="pc-panel__header">
+            <div>
+                <h2 class="pc-panel__title">Portfoy listesi</h2>
+                <p class="pc-panel__subtitle mb-0">Masaustunde yogun tablo, mobilde aksiyon odakli kartlar.</p>
+            </div>
+        </div>
+        <div class="pc-panel__body d-none d-lg-block">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Musteri</th>
+                            <th>Segment</th>
+                            <th>Temsilci</th>
+                            <th>Acik siparis</th>
+                            <th>Saglik</th>
+                            <th>Yasam boyu deger</th>
+                            <th>Durum</th>
+                            <th class="text-end">Islem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var musteri in Model.Musteriler)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-semibold">@musteri.AdSoyadUnvan</span>
+                                        <span class="text-muted">@musteri.Sirket</span>
+                                        <small class="text-muted">@musteri.MusteriKodu · @musteri.Eposta</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@musteri.Segment</span>
+                                        <small class="text-muted">@musteri.Sehir</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@musteri.Temsilci</span>
+                                        <small class="text-muted">@musteri.Telefon</small>
+                                    </div>
+                                </td>
+                                <td>@musteri.AcikSiparis</td>
+                                <td>@musteri.SaglikSkoru</td>
+                                <td class="fw-semibold">@musteri.YasamBoyuDeger</td>
+                                <td><span class="pc-status-pill pc-status-pill--@musteri.DurumTonu">@musteri.Durum</span></td>
+                                <td class="text-end">
+                                    <div class="d-inline-flex gap-2">
+                                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@musteri.Id" class="btn btn-sm btn-primary">Detay</a>
+                                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@musteri.Id" class="btn btn-sm btn-outline-secondary">Bilgiler</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="pc-panel__body d-lg-none">
+            <div class="pc-mobile-list">
+                @foreach (var musteri in Model.Musteriler)
+                {
+                    <article class="pc-mobile-card">
+                        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                            <div>
+                                <div class="fw-semibold">@musteri.AdSoyadUnvan</div>
+                                <div class="text-muted">@musteri.Sirket</div>
+                            </div>
+                            <span class="pc-status-pill pc-status-pill--@musteri.DurumTonu">@musteri.Durum</span>
+                        </div>
+                        <div class="pc-mobile-card__grid mb-3">
+                            <div>
+                                <span class="pc-mobile-card__label">Segment</span>
+                                <strong>@musteri.Segment</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Temsilci</span>
+                                <strong>@musteri.Temsilci</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Siparis</span>
+                                <strong>@musteri.AcikSiparis</strong>
+                            </div>
+                            <div>
+                                <span class="pc-mobile-card__label">Skor</span>
+                                <strong>@musteri.SaglikSkoru</strong>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@musteri.Id" class="btn btn-primary flex-fill">Detay</a>
+                            <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@musteri.Id" class="btn btn-outline-secondary flex-fill">Bilgiler</a>
+                        </div>
+                    </article>
+                }
+            </div>
+        </div>
+    </section>
 </div>

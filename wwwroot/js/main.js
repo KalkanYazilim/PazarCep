@@ -13,6 +13,88 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 (function () {
+  const layoutRoot = document.documentElement;
+  const desktopMenuStateKey = 'pazarcep_layout_menu_collapsed';
+
+  function isSmallScreen() {
+    return window.Helpers.isSmallScreen();
+  }
+
+  function readDesktopMenuState() {
+    try {
+      return window.localStorage.getItem(desktopMenuStateKey) === 'true';
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function persistDesktopMenuState(collapsed) {
+    try {
+      window.localStorage.setItem(desktopMenuStateKey, collapsed ? 'true' : 'false');
+    } catch (error) {
+      // Ignore storage access issues and keep the toggle working.
+    }
+  }
+
+  function dispatchLayoutResize() {
+    window.dispatchEvent(new Event('resize'));
+  }
+
+  function syncMenuToggleButtons() {
+    const menuOpen = isSmallScreen()
+      ? layoutRoot.classList.contains('layout-menu-expanded')
+      : !layoutRoot.classList.contains('layout-menu-collapsed');
+
+    document.querySelectorAll('[data-pc-menu-toggle="layout"], .layout-menu-toggle').forEach(item => {
+      item.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+      item.classList.toggle('is-active', menuOpen);
+    });
+  }
+
+  function applyDesktopMenuState(collapsed, persist = false, shouldResize = false) {
+    layoutRoot.classList.toggle('layout-menu-collapsed', collapsed);
+    layoutRoot.classList.remove('layout-menu-expanded');
+
+    if (persist) {
+      persistDesktopMenuState(collapsed);
+    }
+
+    syncMenuToggleButtons();
+
+    if (shouldResize) {
+      dispatchLayoutResize();
+    }
+  }
+
+  function applyMobileMenuState(expanded, shouldResize = false) {
+    layoutRoot.classList.toggle('layout-menu-expanded', expanded);
+    layoutRoot.classList.remove('layout-menu-collapsed');
+    syncMenuToggleButtons();
+
+    if (shouldResize) {
+      dispatchLayoutResize();
+    }
+  }
+
+  function syncMenuStateForViewport() {
+    if (isSmallScreen()) {
+      layoutRoot.classList.remove('layout-menu-collapsed');
+      syncMenuToggleButtons();
+      return;
+    }
+
+    applyDesktopMenuState(readDesktopMenuState(), false, false);
+  }
+
+  function toggleLayoutMenu() {
+    if (isSmallScreen()) {
+      applyMobileMenuState(!layoutRoot.classList.contains('layout-menu-expanded'), true);
+      return;
+    }
+
+    applyDesktopMenuState(!layoutRoot.classList.contains('layout-menu-collapsed'), true, true);
+  }
+
   // Initialize menu
   //-----------------
 
@@ -28,11 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Initialize menu togglers and bind click on each
-  let menuToggler = document.querySelectorAll('.layout-menu-toggle');
+  let menuToggler = document.querySelectorAll('.layout-menu-toggle, [data-pc-menu-toggle="layout"]');
   menuToggler.forEach(item => {
     item.addEventListener('click', event => {
       event.preventDefault();
-      window.Helpers.toggleCollapsed();
+      toggleLayoutMenu();
     });
   });
 
@@ -112,15 +194,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Manage menu expanded/collapsed with templateCustomizer & local storage
   //------------------------------------------------------------------
 
-  // If current layout is horizontal OR current window screen is small (overlay menu) than return from here
-  if (window.Helpers.isSmallScreen()) {
-    return;
-  }
-
-  // If current layout is vertical and current window screen is > small
-
-  // Auto update menu collapsed/expanded based on the themeConfig
-  window.Helpers.setCollapsed(true, false);
+  syncMenuStateForViewport();
+  window.addEventListener('resize', syncMenuStateForViewport);
 })();
 // Utils
 function isMacOS() {

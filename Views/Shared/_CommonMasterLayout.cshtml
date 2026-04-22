@@ -1,6 +1,7 @@
 @{
-  @* Compact/Fluid class *@
-  ViewData["contentType"] = ViewData["container"] is string container && container == "container-xxl" ? "layout-compact layout-menu-fixed" : "";
+  ViewData["contentType"] = ViewData["container"] is string container && container == "container-xxl"
+    ? "layout-compact layout-menu-fixed"
+    : "";
 }
 
 @inject IHttpContextAccessor httpContextAccessor
@@ -16,68 +17,38 @@
       data-skin="default"
       data-bs-theme="light"
       data-assets-path='@((httpContextAccessor.HttpContext?.Request.PathBase ?? "") + "/")'
-      data-template='@(("vertical-menu-template-free"))'>
-
+      data-template="vertical-menu-template-free">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-
   @{
-    string title = ViewData["title"] as string ?? "";
-    string appName = TempData.Peek("appName") as string ?? "";
-    string productPage = TempData.Peek("productPage") as string ?? "";
-    }
-  <title>@title | @appName - Asp.Net Core MVC Free Admin Template</title>
-  <meta name="description" content="" />
-
-  <!-- Canonical SEO -->
-  <link rel="canonical" href='@productPage'>
-  <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="~/img/favicon/PazarCep_Logo.ico" /> <!--Logoyu bu satırdan değiştiriyoruz-->
-
-    <!-- Core Styles -->
-    @await Html.PartialAsync("Sections/_Styles")
-
-    <!-- PazarCep özel tema stilleri -->
-    <link rel="stylesheet" href="~/css/Custom_Home.css" asp-append-version="true" />
-
-    <!-- Vendor Styles -->
-    @RenderSection("VendorStyles", required: false)
-
-  <!-- Page Styles -->
+    string title = ViewData["Title"] as string ?? string.Empty;
+    string appName = TempData.Peek("appName") as string ?? "PazarCep";
+    string canonical = TempData.Peek("canonical") as string ?? string.Empty;
+    string description = ViewData["MetaDescription"] as string ?? (TempData.Peek("description") as string ?? string.Empty);
+    string fullTitle = string.IsNullOrWhiteSpace(title) ? appName : $"{title} | {appName}";
+  }
+  <title>@fullTitle</title>
+  <meta name="description" content="@description" />
+  @if (!string.IsNullOrWhiteSpace(canonical))
+  {
+    <link rel="canonical" href="@canonical" />
+  }
+  <link rel="icon" type="image/x-icon" href="~/img/favicon/PazarCep_Logo.ico" />
+  @await Html.PartialAsync("Sections/_Styles")
+  @RenderSection("VendorStyles", required: false)
   @RenderSection("PageStyles", required: false)
-
-  <!-- Include Scripts for customizer, helper, analytics, config -->
   @await Html.PartialAsync("Sections/_ScriptsIncludes")
 </head>
-
-<body>
-  <!-- Layout Content -->
+<body class="@(ViewData["bodyClass"] as string ?? string.Empty)">
   @RenderBody()
-  <!--/ Layout Content -->
 
-    <!-- Core Scripts -->
-    @await Html.PartialAsync("Sections/_Scripts")
-
-    <!-- Vendor Scripts -->
-    @RenderSection("VendorScripts", required: false)
-
-    <!-- PazarCep özel ana sayfa JS -->
-    <script src="~/js/Custom_Home.js" asp-append-version="true"></script>
-
-    <!-- Main JS-->
-    <script src='~/js/main.js'></script>
-
-    <!-- pc-menu-nav toggle behavior -->
-    <script src="~/js/pc-menu-nav-toggle.js" asp-append-version="true"></script>
-
-    <!-- Page Scripts-->
-    @RenderSection("PageScripts", required: false)
-
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-
+  @await Html.PartialAsync("Sections/_Scripts")
+  @RenderSection("VendorScripts", required: false)
+  <script src="~/js/Custom_Home.js" asp-append-version="true"></script>
+  <script src="~/js/main.js"></script>
+  <script src="~/js/pc-menu-nav-toggle.js" asp-append-version="true"></script>
+  @RenderSection("PageScripts", required: false)
 </body>
-
 </html>

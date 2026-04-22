@@ -9,36 +9,37 @@ public class MusterilerController : Controller
 {
   public IActionResult Index()
   {
-    // Demo veri (sonradan DB'den gelecek)
-    var liste = new List<MusteriListeSatiriVM>
-        {
-            new() { Id = 1, AdSoyadUnvan = "Ahmet Yılmaz", Telefon="05xx xxx xx xx", Eposta="ahmet@mail.com", Durum="Aktif" },
-            new() { Id = 2, AdSoyadUnvan = "Kalkan Yazılım Ltd.", Telefon="0(312) xxx xx xx", Eposta="info@kalkan.com", Durum="Aktif" },
-            new() { Id = 3, AdSoyadUnvan = "Mehmet Demir", Telefon="05xx xxx xx xx", Eposta="mehmet@mail.com", Durum="Pasif" },
-        };
+    ViewData["Title"] = "Musteriler";
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "CRM portfoy listesi";
 
-    ViewData["Title"] = "Müşteriler";
-    return View(liste);
+    return View(MusteriYonetimiWorkspaceFactory.CreateCustomerList());
   }
 
   [HttpGet]
   public IActionResult Yeni()
   {
-    ViewData["Title"] = "Yeni Müşteri Ekle";
-    return View(new MusteriYeniVM());
+    ViewData["Title"] = "Yeni Musteri";
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Onboarding formu";
+
+    return View(MusteriYonetimiWorkspaceFactory.CreateCustomerForm());
   }
 
   [HttpPost]
   [ValidateAntiForgeryToken]
-  public IActionResult Yeni(MusteriYeniVM model)
+  public IActionResult Yeni(MusteriKayitFormViewModel model)
   {
-    ViewData["Title"] = "Yeni Müşteri Ekle";
+    ViewData["Title"] = "Yeni Musteri";
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Onboarding formu";
 
     if (!ModelState.IsValid)
+    {
       return View(model);
+    }
 
-    // TODO: DB kaydı
-    TempData["BasariliMesaj"] = $"Müşteri kaydedildi: {model.AdSoyadUnvan}";
+    TempData["BasariliMesaj"] = $"{model.AdSoyadUnvan} icin musteri kaydi taslagi olusturuldu.";
     return RedirectToAction(nameof(Index));
   }
 }

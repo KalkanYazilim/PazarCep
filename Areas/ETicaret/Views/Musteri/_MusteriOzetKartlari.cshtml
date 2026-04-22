@@ -1,0 +1,19 @@
+@model IReadOnlyList<MusteriOzetKartViewModel>
+
+<div class="row g-3">
+    @foreach (var kart in Model)
+    {
+        <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card customer-stat-card customer-tone-@kart.Ton h-100 border-0">
+                <div class="card-body">
+                    <div class="customer-stat-card__icon">
+                        <i class="bx @kart.Ikon"></i>
+                    </div>
+                    <span class="customer-stat-card__label">@kart.Baslik</span>
+                    <h3 class="customer-stat-card__value">@kart.Deger</h3>
+                    <p class="customer-stat-card__meta mb-0">@kart.Aciklama</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

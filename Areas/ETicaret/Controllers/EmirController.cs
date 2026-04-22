@@ -1,17 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
+using PazarCep.Areas.ETicaret.Models;
 
-namespace PazarCep.Areas.ETicaret.Controllers
+namespace PazarCep.Areas.ETicaret.Controllers;
+
+[Area("ETicaret")]
+public class EmirController : Controller
 {
-  [Area("ETicaret")]
-  public class EmirController : Controller
+  public IActionResult SiparisListesi()
   {
-    public IActionResult SiparisListesi() => View();
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Sipariş simülasyonu";
+    return View(CommerceWorkspaceFactory.CreateOrderList());
+  }
 
-    // örnek: /ETicaret/Emir/SiparisDetay/5
-    public IActionResult SiparisDetay(int? id)
-    {
-      ViewBag.SiparisId = id;
-      return View();
-    }
+  public IActionResult SiparisDetay(int? id)
+  {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Sipariş detayı";
+    return View(CommerceWorkspaceFactory.CreateOrderDetail(id));
   }
 }

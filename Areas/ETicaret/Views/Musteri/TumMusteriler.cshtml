@@ -1,9 +1,208 @@
+@model MusteriDizinSayfaViewModel
 @{
     ViewData["Title"] = "Tüm Müşteriler";
 }
-<h4 class="mb-3">Tüm Müşteriler</h4>
-<div class="card">
-    <div class="card-body">
-        Buraya müşteri listesi gelecek.
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/customer-workspace.css" />
+}
+
+<div class="customer-workspace">
+    <div class="card customer-directory-hero border-0">
+        <div class="card-body p-4 p-xl-5">
+            <div class="d-flex flex-column flex-xl-row justify-content-between gap-4 align-items-xl-end">
+                <div>
+                    <span class="customer-eyebrow">CRM / Hesap Yönetimi</span>
+                    <h1 class="customer-page-title mt-2">@Model.SayfaBasligi</h1>
+                    <p class="customer-page-subtitle mb-0">@Model.SayfaAciklamasi</p>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bx bx-filter-alt me-1"></i>Akıllı filtreler
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="bx bx-download me-1"></i>Dışa aktar
+                    </button>
+                    <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Yeni" class="btn btn-primary">
+                        <i class="bx bx-user-plus me-1"></i>Yeni müşteri ata
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                @await Html.PartialAsync("_MusteriOzetKartlari", Model.OzetKartlar)
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <div class="row g-3 align-items-end">
+                <div class="col-12 col-lg-4">
+                    <label class="form-label">Müşteri ara</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bx bx-search"></i></span>
+                        <input type="text" class="form-control" placeholder="İsim, şirket, e-posta veya müşteri kodu" />
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <label class="form-label">Segment</label>
+                    <select class="form-select">
+                        <option>Tüm segmentler</option>
+                        <option>Kurumsal</option>
+                        <option>Sadık perakende</option>
+                        <option>Bölgesel zincir</option>
+                        <option>Riskte</option>
+                    </select>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <label class="form-label">Durum</label>
+                    <select class="form-select">
+                        <option>Tüm durumlar</option>
+                        <option>Aktif</option>
+                        <option>Büyüyor</option>
+                        <option>Takip gerekli</option>
+                        <option>Kritik</option>
+                    </select>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <label class="form-label">Temsilci</label>
+                    <select class="form-select">
+                        <option>Tüm temsilciler</option>
+                        <option>Deniz Şahin</option>
+                        <option>Ece Yıldırım</option>
+                        <option>Burcu Tan</option>
+                    </select>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <button type="button" class="btn btn-primary w-100">Listeyi uygula</button>
+                </div>
+            </div>
+
+            <div class="customer-filter-chips mt-4">
+                @foreach (var filtre in Model.HizliFiltreler)
+                {
+                    <button type="button" class="btn btn-sm btn-outline-secondary">@filtre</button>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-header border-0 pb-0">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                <div>
+                    <h5 class="mb-1">Müşteri portföyü</h5>
+                    <p class="text-muted mb-0">Masaüstünde yüksek yoğunluklu liste, mobilde net aksiyon kartları sunulur.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-label-success">En yüksek değer</span>
+                    <span class="badge bg-label-warning">İzleme listesi</span>
+                    <span class="badge bg-label-info">Mobil uyumlu düzen</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body pt-4">
+            <div class="table-responsive d-none d-lg-block">
+                <table class="table table-hover align-middle customer-directory-table">
+                    <thead>
+                        <tr>
+                            <th>Müşteri</th>
+                            <th>Segment</th>
+                            <th>Durum</th>
+                            <th>Temsilci</th>
+                            <th>Son etkileşim</th>
+                            <th>Açık sipariş</th>
+                            <th>Yaşam boyu değer</th>
+                            <th>Puan</th>
+                            <th class="text-end">İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var musteri in Model.Musteriler)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-semibold">@musteri.TamAd</span>
+                                        <span class="text-muted">@musteri.Sirket</span>
+                                        <small class="text-muted">@musteri.MusteriKodu · @musteri.Email</small>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@musteri.Segment</span>
+                                        <small class="text-muted">@musteri.Sehir</small>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-label-@musteri.DurumSinifi">@musteri.Durum</span></td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@musteri.Temsilci</span>
+                                        <small class="text-muted">@musteri.Telefon</small>
+                                    </div>
+                                </td>
+                                <td>@musteri.SonEtkilesim</td>
+                                <td>@musteri.AcikSiparis</td>
+                                <td class="fw-semibold">@musteri.YasamBoyuDeger</td>
+                                <td>@musteri.MemnuniyetPuani</td>
+                                <td class="text-end">
+                                    <div class="d-inline-flex gap-2">
+                                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@musteri.Id" class="btn btn-sm btn-primary">Detay</a>
+                                        <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@musteri.Id" class="btn btn-sm btn-outline-secondary">Bilgiler</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row g-3 d-lg-none">
+                @foreach (var musteri in Model.Musteriler)
+                {
+                    <div class="col-12">
+                        <div class="customer-mobile-card card border-0">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between gap-3 align-items-start">
+                                    <div>
+                                        <h5 class="mb-1">@musteri.TamAd</h5>
+                                        <p class="text-muted mb-1">@musteri.Sirket</p>
+                                        <small class="text-muted">@musteri.MusteriKodu · @musteri.Sehir</small>
+                                    </div>
+                                    <span class="badge bg-label-@musteri.DurumSinifi">@musteri.Durum</span>
+                                </div>
+
+                                <div class="customer-mobile-card__grid mt-3">
+                                    <div>
+                                        <span class="label">Segment</span>
+                                        <strong>@musteri.Segment</strong>
+                                    </div>
+                                    <div>
+                                        <span class="label">Temsilci</span>
+                                        <strong>@musteri.Temsilci</strong>
+                                    </div>
+                                    <div>
+                                        <span class="label">Açık sipariş</span>
+                                        <strong>@musteri.AcikSiparis</strong>
+                                    </div>
+                                    <div>
+                                        <span class="label">Değer</span>
+                                        <strong>@musteri.YasamBoyuDeger</strong>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-2 mt-3">
+                                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@musteri.Id" class="btn btn-primary flex-fill">Detay</a>
+                                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="Bilgiler" asp-route-id="@musteri.Id" class="btn btn-outline-secondary flex-fill">Bilgiler</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
 </div>

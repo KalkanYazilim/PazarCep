@@ -1,36 +1,98 @@
-@model List<PazarCep.Areas.MusteriYonetimi.Models.NotListeSatiriVM>
+@model PazarCep.Areas.MusteriYonetimi.Models.MusteriYonetimNotSayfaViewModel
 @{
-    ViewData["Title"] = ViewData["Title"] ?? "İletişim & Notlar";
+    ViewData["Title"] = "Iletisim ve Notlar";
 }
 
-<div class="card">
-    <div class="card-header">
-        <h5 class="mb-0">@ViewData["Title"]</h5>
-    </div>
+<div class="pc-page-shell">
+    <section class="pc-page-hero">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">CRM / Temsilci Notlari</span>
+            <h1 class="pc-page-title">@Model.Baslik</h1>
+            <p class="pc-page-description mb-0">@Model.Aciklama</p>
 
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Müşteri</th>
-                        <th>Başlık</th>
-                        <th>Not</th>
-                        <th>Tarih</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var x in Model)
-                    {
-                        <tr>
-                            <td>@x.Musteri</td>
-                            <td>@x.Baslik</td>
-                            <td class="text-truncate" style="max-width: 420px;">@x.Icerik</td>
-                            <td>@x.Tarih.ToString("dd.MM.yyyy")</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <div class="pc-page-actions mt-4">
+                <a asp-area="MusteriYonetimi" asp-controller="Destek" asp-action="Destek" class="btn btn-outline-secondary">
+                    <i class="bx bx-support me-1"></i>Destek kuyrugu
+                </a>
+                <a asp-area="MusteriYonetimi" asp-controller="Musteriler" asp-action="Index" class="btn btn-primary">
+                    <i class="bx bx-id-card me-1"></i>Musteri portfoyu
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section class="pc-kpi-grid">
+        @foreach (var kart in Model.OzetKartlar)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@kart.Baslik</div>
+                        <div class="pc-kpi-card__value">@kart.Deger</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
+            </article>
+        }
+    </section>
+
+    <section class="row g-4">
+        <div class="col-12 col-xl-7">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Son iletisim kayitlari</h2>
+                        <p class="pc-panel__subtitle mb-0">Temsilci baglami ve sonraki aksiyon notlari.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-mobile-list">
+                        @foreach (var notKaydi in Model.Notlar)
+                        {
+                            <article class="pc-mobile-card">
+                                <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                    <div>
+                                        <div class="fw-semibold">@notKaydi.Baslik</div>
+                                        <div class="text-muted">@notKaydi.Musteri · @notKaydi.Kanal</div>
+                                    </div>
+                                    <span class="pc-chip">@notKaydi.Tarih</span>
+                                </div>
+                                <p class="text-muted mb-3">@notKaydi.Icerik</p>
+                                <div class="d-flex justify-content-between align-items-center gap-3">
+                                    <small class="text-muted">Temsilci: @notKaydi.Temsilci</small>
+                                    <a asp-area="ETicaret" asp-controller="Musteri" asp-action="GenelBakis" asp-route-id="@notKaydi.MusteriId" class="btn btn-outline-secondary btn-sm">Musteri karti</a>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-xl-5">
+            <div class="pc-panel h-100">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Temsilci playbook</h2>
+                        <p class="pc-panel__subtitle mb-0">Kayit kalitesini koruyan son kalite adimlari.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-health-list">
+                        @foreach (var adim in Model.Playbook)
+                        {
+                            <article class="pc-health-list__item">
+                                <div>
+                                    <div class="fw-semibold mb-1">@adim.Baslik</div>
+                                    <p class="text-muted mb-0">@adim.Aciklama</p>
+                                </div>
+                                <span class="pc-status-pill pc-status-pill--@adim.DurumTonu">@adim.Durum</span>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
