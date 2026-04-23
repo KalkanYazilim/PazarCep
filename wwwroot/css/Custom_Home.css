@@ -40,6 +40,12 @@ body.pc-homepage.pc-mobile-nav-open {
   overflow: hidden;
 }
 
+body.pc-homepage .pc-homepage-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 body.pc-homepage a {
   color: inherit;
   text-decoration: none;
@@ -58,12 +64,15 @@ body.pc-homepage img {
 
 /* HEADER */
 .pc-header-wrap {
-  position: sticky;
-  top: 0;
+  position: relative;
+  top: auto;
   z-index: 50;
   backdrop-filter: blur(14px);
   background: rgba(248, 250, 252, 0.88);
   border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1.5rem;
+  box-shadow: var(--pc-shadow-card);
+  overflow: hidden;
 }
 
 .pc-header {
@@ -73,13 +82,13 @@ body.pc-homepage img {
   padding: 0.75rem 0;
 }
 
-.pc-logo {
+.pc-home-logo {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.pc-logo-mark {
+.pc-home-logo-mark {
   width: 76px;
   height: 76px;
   border-radius: 16px;
@@ -91,7 +100,7 @@ body.pc-homepage img {
   position: relative;
 }
 
-  .pc-logo-mark::after {
+  .pc-home-logo-mark::after {
     content: "";
     position: absolute;
     width: 70%;
@@ -102,26 +111,32 @@ body.pc-homepage img {
     filter: blur(3px);
   }
 
-  .pc-logo-mark span {
+  .pc-home-logo-mark span {
     color: #ecfdf3;
     font-weight: 800;
     font-size: 1.1rem;
     letter-spacing: -1px;
   }
 
-.pc-logo-text {
+.pc-home-logo-icon {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.pc-home-logo-text {
   display: flex;
   flex-direction: column;
   gap: 0.05rem;
 }
 
-.pc-logo-text-main {
+.pc-home-logo-text-main {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.04em;
 }
 
-.pc-logo-text-sub {
+.pc-home-logo-text-sub {
   font-size: 0.7rem;
   color: var(--pc-muted);
   text-transform: uppercase;
@@ -615,7 +630,7 @@ body.pc-homepage img {
   margin-bottom: 0.6rem;
 }
 
-.pc-chip {
+.pc-home-chip {
   font-size: 0.7rem;
   padding: 0.18rem 0.6rem;
   border-radius: 999px;
@@ -1028,7 +1043,7 @@ body.pc-homepage img {
   font-size: 0.78rem;
 }
 
-.pc-footer-links {
+.pc-home-footer-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -1158,16 +1173,16 @@ body.pc-homepage img {
     display: flex;
   }
 
-  .pc-logo-mark {
+  .pc-home-logo-mark {
     width: 60px;
     height: 60px;
   }
 
-  .pc-logo-text-main {
+  .pc-home-logo-text-main {
     font-size: 1.05rem;
   }
 
-  .pc-logo-text-sub {
+  .pc-home-logo-text-sub {
     letter-spacing: 0.08em;
   }
 
@@ -1181,11 +1196,11 @@ body.pc-homepage img {
 }
 
 @media (max-width: 575.98px) {
-  .pc-logo-text {
+  .pc-home-logo-text {
     min-width: 0;
   }
 
-  .pc-logo-text-sub {
+  .pc-home-logo-text-sub {
     font-size: 0.65rem;
   }
 

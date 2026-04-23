@@ -32,7 +32,6 @@
 
 @section PageScripts{
   <script src="~/js/main.js" asp-append-version="true"></script>
-  <script src="~/js/pc-menu-nav-toggle.js" asp-append-version="true"></script>
   @RenderSection("PageScripts", required: false)
 }
 
@@ -86,6 +85,15 @@
   @if (@ViewData["isMenu"] != null && Convert.ToBoolean(@ViewData["isMenu"]))
   {
     <div class="layout-overlay layout-menu-toggle"></div>
+    <button type="button"
+            class="pc-shell-reopen btn btn-primary"
+            data-pc-menu-toggle="layout"
+            aria-controls="layout-menu"
+            aria-expanded="true"
+            aria-label="Menüyü aç">
+      <i class="icon-base bx bx-menu"></i>
+      <span data-pc-menu-label>Menüyü aç</span>
+    </button>
   }
   <!-- Drag Target Area To SlideIn Menu On Small Screens -->
   <div class="drag-target"></div>

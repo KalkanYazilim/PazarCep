@@ -1,7 +1,8 @@
 @{
-    ViewData["Title"] = "Ana Sayfa";
-    Layout = "_BlankLayout";
+    ViewData["Title"] = "Tanıtım Sayfası";
+    Layout = "_ContentNavbarLayout";
     ViewData["bodyClass"] = "pc-homepage";
+    ViewData["isFooter"] = false;
     ViewData["MetaDescription"] = "PazarCep'in çiftçiden pazara uzanan dijital tedarik zinciri çözümünü tanıtan lansman sayfası.";
 }
 @section PageStyles {
@@ -11,18 +12,17 @@
     <script src="~/js/Custom_Home.js" asp-append-version="true"></script>
 }
 
+<div class="pc-homepage-shell">
 <!-- HEADER -->
 <div class="pc-header-wrap">
     <header class="pc-header pc-container">
-        <a href="#hero" class="pc-logo">
-            <!-- <div class="pc-logo-mark"><span>PC</span></div> -->
-            <div class="pc-logo-mark">
-                <img src="~/img/favicon/PazarCep_Logo.ico" alt="PazarCep Logo" class="pc-logo-icon" />
+        <a href="#hero" class="pc-home-logo">
+            <div class="pc-home-logo-mark">
+                <img src="~/img/favicon/PazarCep_Logo.ico" alt="PazarCep Logo" class="pc-home-logo-icon" />
             </div>
-            <!-- Logoyu bu satırdan değiştiriyoruz -->
-            <div class="pc-logo-text">
-                <div class="pc-logo-text-main">PazarCep</div>
-                <div class="pc-logo-text-sub">Çiftçiden Pazara Dijital Pazar</div>
+            <div class="pc-home-logo-text">
+                <div class="pc-home-logo-text-main">PazarCep</div>
+                <div class="pc-home-logo-text-sub">Çiftçiden Pazara Dijital Pazar</div>
             </div>
         </a>
 
@@ -191,7 +191,7 @@
             <article class="pc-card">
                 <div class="pc-card-header">
                     <h3 class="pc-card-title">Çiftçi Paneli</h3>
-                    <span class="pc-chip">Tarladan sisteme</span>
+                    <span class="pc-home-chip">Tarladan sisteme</span>
                 </div>
                 <p class="pc-card-desc">
                     Akıllı telefon veya web üzerinden ürün girişleri, teklifleri ve ödemeleri takip edin.
@@ -207,7 +207,7 @@
             <article class="pc-card">
                 <div class="pc-card-header">
                     <h3 class="pc-card-title">Alıcı Paneli</h3>
-                    <span class="pc-chip">Market / restoran / toptancı</span>
+                    <span class="pc-home-chip">Market / restoran / toptancı</span>
                 </div>
                 <p class="pc-card-desc">
                     Bölgesel veya ürün bazlı filtreler ile güvenilir üreticilere direkt erişim sağlayın.
@@ -223,7 +223,7 @@
             <article class="pc-card">
                 <div class="pc-card-header">
                     <h3 class="pc-card-title">Lojistik & Depo</h3>
-                    <span class="pc-chip">Ara nokta yönetimi</span>
+                    <span class="pc-home-chip">Ara nokta yönetimi</span>
                 </div>
                 <p class="pc-card-desc">
                     Araç doluluk oranı, rota planlama ve hal/depo stokları anlık yönetilir.
@@ -608,7 +608,7 @@
                 <div class="pc-card">
                     <div class="pc-card-header">
                         <h3 class="pc-card-title">Demo & Erken erişim planı</h3>
-                        <span class="pc-chip">Ön başvuru</span>
+                        <span class="pc-home-chip">Ön başvuru</span>
                     </div>
                     <p class="pc-card-desc">
                         Lansman sürecinde PazarCep'i ilk deneyen üretici ve alıcılar; coğrafi olarak sık kullanılan
@@ -709,7 +709,7 @@
             <div>
                 <strong>PazarCep</strong> &mdash; Çiftçiden Pazara Dijital Pazar
             </div>
-            <div class="pc-footer-links">
+            <div class="pc-home-footer-links">
                 <a href="#roles">Çiftçi / Alıcı akışı</a>
                 <a href="#modules">Modüller</a>
                 <a href="#pricing">Örnek fiyatlar</a>
@@ -723,3 +723,4 @@
         </div>
     </div>
 </footer>
+</div>
