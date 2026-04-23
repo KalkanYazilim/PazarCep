@@ -772,8 +772,12 @@ body.pc-homepage img {
 }
 
   .pc-table-title span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
     font-size: 0.72rem;
     color: var(--pc-muted);
+    white-space: nowrap;
   }
 
 .pc-table {
@@ -789,6 +793,10 @@ body.pc-homepage img {
   .pc-table td {
     padding: 0.4rem 0.35rem;
     text-align: left;
+  }
+
+  .pc-table td[data-demo-live-price] {
+    min-width: 7.5rem;
   }
 
   .pc-table th {

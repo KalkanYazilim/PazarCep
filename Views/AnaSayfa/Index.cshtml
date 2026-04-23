@@ -456,7 +456,7 @@
             <div class="pc-table-wrap pc-table-scroll">
                 <div class="pc-table-title">
                     <strong>Örnek ürün fiyat akışı</strong>
-                    <span>Bugün • Ege Bölgesi</span>
+                    <span><span class="pc-live-dot" aria-hidden="true"></span> Bugün • Ege Bölgesi • <span data-demo-live-clock>--:--:--</span></span>
                 </div>
                 <table class="pc-table">
                     <thead>
@@ -471,30 +471,30 @@
                     <tbody>
                         <tr>
                             <td>Domates (Salkım)</td>
-                            <td>18,50 ₺</td>
-                            <td>23,90 ₺</td>
-                            <td>1,80 ₺</td>
+                            <td data-demo-live-price data-base-price="18.50" data-price-volatility="0.42">18,50 ₺</td>
+                            <td data-demo-live-price data-base-price="23.90" data-price-volatility="0.58">23,90 ₺</td>
+                            <td data-demo-live-price data-base-price="1.80" data-price-volatility="0.08">1,80 ₺</td>
                             <td><span class="pc-chip-inline">PazarPara + TL</span></td>
                         </tr>
                         <tr>
                             <td>Salatalık</td>
-                            <td>12,20 ₺</td>
-                            <td>16,30 ₺</td>
-                            <td>1,10 ₺</td>
+                            <td data-demo-live-price data-base-price="12.20" data-price-volatility="0.34">12,20 ₺</td>
+                            <td data-demo-live-price data-base-price="16.30" data-price-volatility="0.46">16,30 ₺</td>
+                            <td data-demo-live-price data-base-price="1.10" data-price-volatility="0.06">1,10 ₺</td>
                             <td><span class="pc-chip-inline">Komisyonlu satış</span></td>
                         </tr>
                         <tr>
                             <td>Patates (Yemeklik)</td>
-                            <td>9,00 ₺</td>
-                            <td>13,40 ₺</td>
-                            <td>0,95 ₺</td>
+                            <td data-demo-live-price data-base-price="9.00" data-price-volatility="0.25">9,00 ₺</td>
+                            <td data-demo-live-price data-base-price="13.40" data-price-volatility="0.36">13,40 ₺</td>
+                            <td data-demo-live-price data-base-price="0.95" data-price-volatility="0.04">0,95 ₺</td>
                             <td><span class="pc-chip-inline">Uzun vadeli sözleşme</span></td>
                         </tr>
                         <tr>
                             <td>Biber (Çarliston)</td>
-                            <td>15,40 ₺</td>
-                            <td>20,10 ₺</td>
-                            <td>1,35 ₺</td>
+                            <td data-demo-live-price data-base-price="15.40" data-price-volatility="0.38">15,40 ₺</td>
+                            <td data-demo-live-price data-base-price="20.10" data-price-volatility="0.48">20,10 ₺</td>
+                            <td data-demo-live-price data-base-price="1.35" data-price-volatility="0.07">1,35 ₺</td>
                             <td><span class="pc-chip-inline">Gün içi spot</span></td>
                         </tr>
                     </tbody>
@@ -504,7 +504,7 @@
             <div class="pc-metric-cards">
                 <div class="pc-metric-card">
                     <div class="pc-metric-label">Çiftçi Gelir Artışı</div>
-                    <div class="pc-metric-value">+%18</div>
+                    <div class="pc-metric-value" data-demo-live-kpi data-demo-kpi-base="18" data-demo-kpi-prefix="+%" data-demo-kpi-volatility="2" data-demo-kpi-decimals="1">+%18</div>
                     <div class="pc-metric-caption">
                         Toptancıya bağlı çalışan üreticilere göre ortalama ek kazanç.
                     </div>
@@ -513,7 +513,7 @@
 
                 <div class="pc-metric-card">
                     <div class="pc-metric-label">Teslimat Performansı</div>
-                    <div class="pc-metric-value">%94</div>
+                    <div class="pc-metric-value" data-demo-live-kpi data-demo-kpi-base="94" data-demo-kpi-prefix="%" data-demo-kpi-volatility="1.4" data-demo-kpi-decimals="1">%94</div>
                     <div class="pc-metric-caption">
                         Zamanında teslim edilen sevkiyat oranı (örnek pilot bölge verisi).
                     </div>
@@ -651,15 +651,15 @@
                 </div>
             </div>
 
-            <form class="pc-contact-form" id="pcContactForm">
+            <form class="pc-contact-form" id="pcContactForm" name="earlyAccessForm" autocomplete="on">
                 <div class="pc-form-field">
                     <label for="pcName">Ad Soyad</label>
-                    <input type="text" id="pcName" name="name" placeholder="Adınız Soyadınız" required />
+                    <input type="text" id="pcName" name="name" placeholder="Adınız Soyadınız" autocomplete="name" required />
                 </div>
 
                 <div class="pc-form-field">
                     <label for="pcRole">Rolünüz</label>
-                    <select id="pcRole" name="role" required>
+                    <select id="pcRole" name="role" autocomplete="organization-title" required>
                         <option value="">Seçiniz</option>
                         <option value="ciftci">Çiftçi / Üretici</option>
                         <option value="alici">Alıcı (Market, restoran, otel vb.)</option>
@@ -671,17 +671,17 @@
 
                 <div class="pc-form-field">
                     <label for="pcPhone">Telefon</label>
-                    <input type="tel" id="pcPhone" name="phone" placeholder="05xx xxx xx xx" required />
+                    <input type="tel" id="pcPhone" name="phone" placeholder="05xx xxx xx xx" autocomplete="tel" required />
                 </div>
 
                 <div class="pc-form-field">
                     <label for="pcCity">İl</label>
-                    <input type="text" id="pcCity" name="city" placeholder="Örn. Niğde" required />
+                    <input type="text" id="pcCity" name="city" placeholder="Örn. Niğde" autocomplete="address-level1" required />
                 </div>
 
                 <div class="pc-form-field pc-form-field-full">
                     <label for="pcMessage">Kısaca ihtiyacınızı anlatın</label>
-                    <textarea id="pcMessage" name="message" placeholder="Mevcut süreciniz, PazarCep'ten beklentiniz..." required></textarea>
+                    <textarea id="pcMessage" name="message" placeholder="Mevcut süreciniz, PazarCep'ten beklentiniz..." autocomplete="off" required></textarea>
                 </div>
 
                 <div class="pc-form-foot">

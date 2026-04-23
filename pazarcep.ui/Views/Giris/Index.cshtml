@@ -22,7 +22,7 @@
 
                 <form asp-controller="Giris" asp-action="Index" method="post">
                     @Html.AntiForgeryToken()
-                    <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+            <input type="hidden" id="returnUrl" name="returnUrl" value="@ViewBag.ReturnUrl" />
 
                     <div class="mb-3">
                         <label class="form-label" for="eposta">E-posta</label>

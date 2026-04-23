@@ -1,13 +1,16 @@
 @* Demo/Örnek veri kullanan sayfalarda görünür işaret *@
 @if (ViewData["DemoVeri"] is true)
 {
-    <div class="alert alert-warning d-flex align-items-center py-2 px-3 mb-3" role="alert"
-         style="border-left: 6px solid #f0ad4e;">
-        <i class="bx bx-flask me-2"></i>
+    <div class="alert pc-demo-live-alert d-flex align-items-center py-2 px-3 mb-3" role="status" aria-live="polite">
+        <i class="bx bx-test-tube me-2"></i>
         <div class="flex-grow-1">
-            <strong>ÖRNEK VERİ</strong>
-            <span class="ms-2 text-muted">Bu sayfa şu an demo veriyle çalışıyor.</span>
+            <strong>CANLI DEMO</strong>
+            <span class="ms-2 text-muted">Örnek veriler gerçek panel davranışı gibi anlık simüle ediliyor.</span>
         </div>
+        <span class="pc-demo-live-sync ms-2">
+            <span class="pc-live-dot" aria-hidden="true"></span>
+            <span data-demo-live-clock>--:--:--</span>
+        </span>
         @if (!string.IsNullOrWhiteSpace(ViewData["DemoVeriNotu"]?.ToString()))
         {
             <span class="badge bg-label-warning text-dark ms-2">@ViewData["DemoVeriNotu"]</span>

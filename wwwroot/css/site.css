@@ -46,6 +46,134 @@ body {
   color: var(--pc-dark);
 }
 
+/* Iconify/Boxicons runtime styles loaded from vendor/fonts/iconify-icons.css */
+.bx {
+  flex-shrink: 0;
+  vertical-align: -0.125em;
+}
+
+.bx-sm {
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.btn .bx,
+.menu-link .bx,
+.dropdown-item .bx,
+.nav-link .bx,
+.pc-kpi-card__icon .bx,
+.pc-demo-live-alert .bx {
+  display: inline-block;
+}
+
+/* Production-safe demo liveness affordances */
+.pc-demo-live-alert {
+  border: 1px solid rgba(32, 204, 170, 0.28);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.92), rgba(240, 249, 255, 0.92));
+  color: #0f172a;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.pc-demo-live-alert .text-muted {
+  color: #475569 !important;
+}
+
+.pc-demo-live-sync {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(32, 204, 170, 0.28);
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f766e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.35rem 0.55rem;
+  white-space: nowrap;
+}
+
+.pc-live-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: #16a34a;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.42);
+  animation: pc-live-pulse 1.8s ease-out infinite;
+  flex: 0 0 auto;
+}
+
+.pc-live-price,
+.pc-live-kpi,
+[data-demo-live-price],
+[data-demo-live-kpi] {
+  font-variant-numeric: tabular-nums;
+}
+
+.pc-live-price,
+[data-demo-live-price] {
+  white-space: nowrap;
+}
+
+.pc-live-value {
+  font-weight: 700;
+}
+
+.pc-live-trend {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.35rem;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.36rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.pc-live-trend--up {
+  color: #166534;
+  background: rgba(187, 247, 208, 0.7);
+}
+
+.pc-live-trend--down {
+  color: #991b1b;
+  background: rgba(254, 226, 226, 0.78);
+}
+
+.pc-live-updated {
+  animation: pc-live-update 0.72s ease-out;
+}
+
+@keyframes pc-live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.42);
+  }
+
+  75% {
+    box-shadow: 0 0 0 8px rgba(22, 163, 74, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+  }
+}
+
+@keyframes pc-live-update {
+  0% {
+    background-color: rgba(32, 204, 170, 0.18);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
 /* Başlıkları biraz PazarCep havasına çekelim */
 h1, .h1,
 h2, .h2,
@@ -284,6 +412,16 @@ textarea.form-control {
 @media (max-width: 991.98px) {
   .layout-navbar {
     border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .pc-demo-live-alert {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pc-demo-live-alert .pc-demo-live-sync,
+  .pc-demo-live-alert .badge {
+    margin-left: 0 !important;
   }
 
   .layout-menu {

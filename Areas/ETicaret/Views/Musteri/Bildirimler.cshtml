@@ -18,9 +18,11 @@
 
     <div class="row g-4">
         <div class="col-12 col-xl-8">
-            @foreach (var grup in Model.TercihGruplari)
+            @for (var grupIndex = 0; grupIndex < Model.TercihGruplari.Count; grupIndex++)
             {
-                <div class="card customer-section-card border-0 @(grup == Model.TercihGruplari.Last() ? string.Empty : "mb-4")">
+                var grup = Model.TercihGruplari[grupIndex];
+
+                <div class="card customer-section-card border-0 @(grupIndex == Model.TercihGruplari.Count - 1 ? string.Empty : "mb-4")">
                     <div class="card-header border-0 pb-0">
                         <h5 class="mb-1">@grup.Baslik</h5>
                         <p class="text-muted mb-0">@grup.Aciklama</p>
@@ -38,8 +40,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var tercih in grup.Tercihler)
+                                    @for (var tercihIndex = 0; tercihIndex < grup.Tercihler.Count; tercihIndex++)
                                     {
+                                        var tercih = grup.Tercihler[tercihIndex];
+                                        var prefix = $"notification_{grupIndex}_{tercihIndex}";
+
                                         <tr>
                                             <td>
                                                 <div class="d-flex flex-column">
@@ -47,10 +52,10 @@
                                                     <small class="text-muted">@tercih.Aciklama</small>
                                                 </div>
                                             </td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Push" disabled /></td>
-                                            <td class="text-center"><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled /></td>
+                                            <td class="text-center"><input id="@(prefix)_email" name="@(prefix)_email" class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled aria-label="@($"{tercih.Baslik} e-posta bildirimi")" /></td>
+                                            <td class="text-center"><input id="@(prefix)_sms" name="@(prefix)_sms" class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled aria-label="@($"{tercih.Baslik} SMS bildirimi")" /></td>
+                                            <td class="text-center"><input id="@(prefix)_push" name="@(prefix)_push" class="form-check-input" type="checkbox" checked="@tercih.Push" disabled aria-label="@($"{tercih.Baslik} push bildirimi")" /></td>
+                                            <td class="text-center"><input id="@(prefix)_app" name="@(prefix)_app" class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled aria-label="@($"{tercih.Baslik} uygulama bildirimi")" /></td>
                                         </tr>
                                     }
                                 </tbody>
@@ -58,18 +63,21 @@
                         </div>
 
                         <div class="row g-3 d-lg-none">
-                            @foreach (var tercih in grup.Tercihler)
+                            @for (var tercihIndex = 0; tercihIndex < grup.Tercihler.Count; tercihIndex++)
                             {
+                                var tercih = grup.Tercihler[tercihIndex];
+                                var prefix = $"notificationMobile_{grupIndex}_{tercihIndex}";
+
                                 <div class="col-12">
                                     <div class="customer-mobile-card card border-0">
                                         <div class="card-body">
                                             <strong>@tercih.Baslik</strong>
                                             <p class="text-muted mb-3">@tercih.Aciklama</p>
                                             <div class="customer-toggle-grid">
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled /> E-posta</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled /> SMS</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Push" disabled /> Push</label>
-                                                <label><input class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled /> Uygulama</label>
+                                                <label for="@(prefix)_email"><input id="@(prefix)_email" name="@(prefix)_email" class="form-check-input" type="checkbox" checked="@tercih.Eposta" disabled /> E-posta</label>
+                                                <label for="@(prefix)_sms"><input id="@(prefix)_sms" name="@(prefix)_sms" class="form-check-input" type="checkbox" checked="@tercih.Sms" disabled /> SMS</label>
+                                                <label for="@(prefix)_push"><input id="@(prefix)_push" name="@(prefix)_push" class="form-check-input" type="checkbox" checked="@tercih.Push" disabled /> Push</label>
+                                                <label for="@(prefix)_app"><input id="@(prefix)_app" name="@(prefix)_app" class="form-check-input" type="checkbox" checked="@tercih.Uygulama" disabled /> Uygulama</label>
                                             </div>
                                         </div>
                                     </div>

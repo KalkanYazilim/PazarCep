@@ -47,12 +47,12 @@
         <div class="pc-panel__body">
             <div class="pc-filter-grid">
                 <div class="pc-col-6">
-                    <label class="form-label">Sipariş ara</label>
-                    <input type="text" class="form-control" placeholder="Sipariş no, müşteri veya temsilci" />
+                    <label class="form-label" for="eticaretOrderSearch">Sipariş ara</label>
+                    <input type="text" id="eticaretOrderSearch" name="eticaretOrderSearch" class="form-control" placeholder="Sipariş no, müşteri veya temsilci" autocomplete="off" />
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Durum</label>
-                    <select class="form-select">
+                    <label class="form-label" for="eticaretOrderStatus">Durum</label>
+                    <select id="eticaretOrderStatus" name="eticaretOrderStatus" class="form-select">
                         <option>Tüm durumlar</option>
                         <option>Yeni sipariş</option>
                         <option>Hazırlanıyor</option>
@@ -61,8 +61,8 @@
                     </select>
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Sevk penceresi</label>
-                    <select class="form-select">
+                    <label class="form-label" for="eticaretOrderShipmentWindow">Sevk penceresi</label>
+                    <select id="eticaretOrderShipmentWindow" name="eticaretOrderShipmentWindow" class="form-select">
                         <option>Tüm pencereler</option>
                         <option>07:00 - 09:00</option>
                         <option>10:00 - 12:00</option>

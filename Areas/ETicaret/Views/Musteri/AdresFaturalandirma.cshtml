@@ -55,20 +55,25 @@
                 Adres ve faturalandırma alanları operasyon snapshot görünümüdür; düzenleme akışı temsilci onayıyla ilerler.
             </div>
 
-            @foreach (var panel in Model.FaturaPanelleri)
+            @for (var panelIndex = 0; panelIndex < Model.FaturaPanelleri.Count; panelIndex++)
             {
-                <div class="card customer-section-card border-0 @(panel == Model.FaturaPanelleri.Last() ? string.Empty : "mb-4")">
+                var panel = Model.FaturaPanelleri[panelIndex];
+
+                <div class="card customer-section-card border-0 @(panelIndex == Model.FaturaPanelleri.Count - 1 ? string.Empty : "mb-4")">
                     <div class="card-header border-0 pb-0">
                         <h5 class="mb-1">@panel.Baslik</h5>
                         <p class="text-muted mb-0">@panel.Aciklama</p>
                     </div>
                     <div class="card-body">
                         <div class="row g-3">
-                            @foreach (var alan in panel.Alanlar)
+                            @for (var alanIndex = 0; alanIndex < panel.Alanlar.Count; alanIndex++)
                             {
+                                var alan = panel.Alanlar[alanIndex];
+                                var fieldId = $"billingField_{panelIndex}_{alanIndex}";
+
                                 <div class="@alan.GridSinifi">
-                                    <label class="form-label">@alan.Etiket</label>
-                                    <input type="text" class="form-control" value="@alan.Deger" readonly />
+                                    <label class="form-label" for="@fieldId">@alan.Etiket</label>
+                                    <input type="text" id="@fieldId" name="@fieldId" class="form-control" value="@alan.Deger" readonly />
                                     @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))
                                     {
                                         <div class="form-text">@alan.YardimMetni</div>

@@ -47,12 +47,12 @@
         <div class="pc-panel__body">
             <div class="pc-filter-grid">
                 <div class="pc-col-6">
-                    <label class="form-label">Arac veya surucu ara</label>
-                    <input type="text" class="form-control" placeholder="Plaka, surucu, rota veya konum" />
+                    <label class="form-label" for="lojistikFleetSearch">Arac veya surucu ara</label>
+                    <input type="text" id="lojistikFleetSearch" name="lojistikFleetSearch" class="form-control" placeholder="Plaka, surucu, rota veya konum" autocomplete="off" />
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Durum</label>
-                    <select class="form-select">
+                    <label class="form-label" for="lojistikFleetStatus">Durum</label>
+                    <select id="lojistikFleetStatus" name="lojistikFleetStatus" class="form-select">
                         <option>Tum durumlar</option>
                         <option>Musait</option>
                         <option>Sevkiyatta</option>
@@ -61,8 +61,8 @@
                     </select>
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Bakim penceresi</label>
-                    <select class="form-select">
+                    <label class="form-label" for="lojistikMaintenanceWindow">Bakim penceresi</label>
+                    <select id="lojistikMaintenanceWindow" name="lojistikMaintenanceWindow" class="form-select">
                         <option>Tumu</option>
                         <option>Son 7 gun</option>
                         <option>Son 30 gun</option>

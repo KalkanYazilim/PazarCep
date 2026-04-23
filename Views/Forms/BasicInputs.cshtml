@@ -13,7 +13,7 @@
             <div class="card-body">
                 <div>
                     <label for="defaultFormControlInput" class="form-label">Ad Soyad</label>
-                    <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe" aria-describedby="defaultFormControlHelp" />
+                    <input type="text" class="form-control" id="defaultFormControlInput" name="defaultFormControlInput" placeholder="John Doe" aria-describedby="defaultFormControlHelp" />
                     <div id="defaultFormControlHelp" class="form-text">Bilgilerinizi asla başkalarıyla paylaşmayacağız.</div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
             <h5 class="card-header">Yüzen etiket</h5>
             <div class="card-body">
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
+                    <input type="text" class="form-control" id="floatingInput" name="floatingInput" placeholder="John Doe" aria-describedby="floatingInputHelp" />
                     <label for="floatingInput">Ad Soyad</label>
                     <div id="floatingInputHelp" class="form-text">Bilgilerinizi asla başkalarıyla paylaşmayacağız.</div>
                 </div>
@@ -39,19 +39,19 @@
             <div class="card-body">
                 <div class="mb-4">
                     <label for="exampleFormControlInput1" class="form-label">E-posta adresi</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name&#64;example.com" />
+                    <input type="email" class="form-control" id="exampleFormControlInput1" name="exampleFormControlInput1" placeholder="name&#64;example.com" />
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlReadOnlyInput1" class="form-label">Sadece okunur</label>
-                    <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" value="Buraya sadece okunur girdi..." aria-label="readonly input example" readonly />
+                    <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="exampleFormControlReadOnlyInput1" value="Buraya sadece okunur girdi..." aria-label="readonly input example" readonly />
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlReadOnlyInputPlain1" class="form-label">Düz okuma alanı</label>
-                    <input type="text" readonly class="form-control-plaintext" id="exampleFormControlReadOnlyInputPlain1" value="email&#64;example.com" />
+                    <input type="text" readonly class="form-control-plaintext" id="exampleFormControlReadOnlyInputPlain1" name="exampleFormControlReadOnlyInputPlain1" value="email&#64;example.com" />
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlSelect1" class="form-label">Örnek seçim</label>
-                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Varsayılan seçim örneği">
+                    <select class="form-select" id="exampleFormControlSelect1" name="exampleFormControlSelect1" aria-label="Varsayılan seçim örneği">
                         <option selected>Bu menüyü açın</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="exampleDataList" class="form-label">Veri listesi (datalist) örneği</label>
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Yazarak arayın..." />
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" name="exampleDataList" placeholder="Yazarak arayın..." />
                     <datalist id="datalistOptions">
                         <option value="San Francisco"></option>
                         <option value="New York"></option>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlSelect2" class="form-label">Çoklu seçim örneği</label>
-                    <select multiple class="form-select" id="exampleFormControlSelect2" aria-label="Çoklu seçim örneği">
+                    <select multiple class="form-select" id="exampleFormControlSelect2" name="exampleFormControlSelect2" aria-label="Çoklu seçim örneği">
                         <option selected>Bu menüyü açın</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="exampleFormControlSelect3" class="form-label">'size' niteliği ile çoklu seçim örneği</label>
-                    <select class="form-select" id="exampleFormControlSelect3" size="2" aria-label="Boyut 2 seçim örneği">
+                    <select class="form-select" id="exampleFormControlSelect3" name="exampleFormControlSelect3" size="2" aria-label="Boyut 2 seçim örneği">
                         <option selected>Bu menüyü açın</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -89,7 +89,7 @@
                 </div>
                 <div>
                     <label for="exampleFormControlTextarea1" class="form-label">Metin alanı örneği</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -104,15 +104,15 @@
 
                 <div class="mt-2 mb-4">
                     <label for="largeInput" class="form-label">Büyük girdi</label>
-                    <input id="largeInput" class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
+                    <input id="largeInput" name="largeInput" class="form-control form-control-lg" type="text" placeholder=".form-control-lg" />
                 </div>
                 <div class="mb-4">
                     <label for="defaultInput" class="form-label">Varsayılan girdi</label>
-                    <input id="defaultInput" class="form-control" type="text" placeholder="Varsayılan girdi" />
+                    <input id="defaultInput" name="defaultInput" class="form-control" type="text" placeholder="Varsayılan girdi" />
                 </div>
                 <div>
                     <label for="smallInput" class="form-label">Küçük girdi</label>
-                    <input id="smallInput" class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
+                    <input id="smallInput" name="smallInput" class="form-control form-control-sm" type="text" placeholder=".form-control-sm" />
                 </div>
             </div>
             <hr class="m-0" />
@@ -120,7 +120,7 @@
                 <small class="fw-medium">Seçim kutusu</small>
                 <div class="mt-2 mb-4">
                     <label for="largeSelect" class="form-label">Büyük seçim</label>
-                    <select id="largeSelect" class="form-select form-select-lg">
+                    <select id="largeSelect" name="largeSelect" class="form-select form-select-lg">
                         <option>Büyük seçim</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="mb-4">
                     <label for="defaultSelect" class="form-label">Varsayılan seçim</label>
-                    <select id="defaultSelect" class="form-select">
+                    <select id="defaultSelect" name="defaultSelect" class="form-select">
                         <option>Varsayılan seçim</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -138,7 +138,7 @@
                 </div>
                 <div>
                     <label for="smallSelect" class="form-label">Küçük seçim</label>
-                    <select id="smallSelect" class="form-select form-select-sm">
+                    <select id="smallSelect" name="smallSelect" class="form-select form-select-sm">
                         <option>Küçük seçim</option>
                         <option value="1">Bir</option>
                         <option value="2">İki</option>
@@ -151,7 +151,7 @@
                 <small class="fw-medium">Girdi Şekli</small>
                 <div class="mt-2">
                     <label for="roundedInput" class="form-label">Yuvarlatılmış girdi</label>
-                    <input id="roundedInput" class="form-control rounded-pill" type="text" placeholder="Varsayılan girdi" />
+                    <input id="roundedInput" name="roundedInput" class="form-control rounded-pill" type="text" placeholder="Varsayılan girdi" />
                 </div>
             </div>
         </div>
@@ -166,23 +166,23 @@
                 <div class="col-md p-6">
                     <small class="fw-medium">Onay kutuları</small>
                     <div class="form-check mt-4">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="defaultCheck1" />
                         <label class="form-check-label" for="defaultCheck1"> Seçili değil </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked />
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" name="defaultCheck2" checked />
                         <label class="form-check-label" for="defaultCheck2"> Kararsız </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" checked />
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" name="defaultCheck3" checked />
                         <label class="form-check-label" for="defaultCheck3"> Seçili </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="disabledCheck1" disabled />
+                        <input class="form-check-input" type="checkbox" value="" id="disabledCheck1" name="disabledCheck1" disabled />
                         <label class="form-check-label" for="disabledCheck1"> Devre dışı - seçili değil </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="disabledCheck2" disabled checked />
+                        <input class="form-check-input" type="checkbox" value="" id="disabledCheck2" name="disabledCheck2" disabled checked />
                         <label class="form-check-label" for="disabledCheck2"> Devre dışı - seçili </label>
                     </div>
                 </div>
@@ -197,11 +197,11 @@
                         <label class="form-check-label" for="defaultRadio2"> Seçili </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="" id="disabledRadio1" disabled />
+                        <input class="form-check-input" type="radio" value="" id="disabledRadio1" name="disabledRadio1" disabled />
                         <label class="form-check-label" for="disabledRadio1"> Devre dışı - seçili değil </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" value="" id="disabledRadio2" disabled checked />
+                        <input class="form-check-input" type="radio" value="" id="disabledRadio2" name="disabledRadio2" disabled checked />
                         <label class="form-check-label" for="disabledRadio2"> Devre dışı - seçili </label>
                     </div>
                 </div>
@@ -212,15 +212,15 @@
                 <div class="col-md p-6">
                     <small class="fw-medium d-block">Satır içi onay kutuları</small>
                     <div class="form-check form-check-inline mt-4">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="inlineCheckbox1" value="option1" />
                         <label class="form-check-label" for="inlineCheckbox1">1</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="inlineCheckbox2" value="option2" />
                         <label class="form-check-label" for="inlineCheckbox2">2</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled />
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="inlineCheckbox3" value="option3" disabled />
                         <label class="form-check-label" for="inlineCheckbox3">3 (devre dışı)</label>
                     </div>
                 </div>
@@ -249,19 +249,19 @@
                     <h5 class="card-header">Anahtarlar (Switch)</h5>
                     <div class="card-body">
                         <div class="form-check form-switch mb-2">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="flexSwitchCheckDefault" />
                             <label class="form-check-label" for="flexSwitchCheckDefault">Varsayılan switch onay kutusu</label>
                         </div>
                         <div class="form-check form-switch mb-2">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" name="flexSwitchCheckChecked" checked />
                             <label class="form-check-label" for="flexSwitchCheckChecked">Seçili switch onay kutusu</label>
                         </div>
                         <div class="form-check form-switch mb-2">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled />
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" name="flexSwitchCheckDisabled" disabled />
                             <label class="form-check-label" for="flexSwitchCheckDisabled">Devre dışı switch onay kutusu</label>
                         </div>
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled />
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" name="flexSwitchCheckCheckedDisabled" checked disabled />
                             <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Devre dışı seçili switch onay kutusu</label>
                         </div>
                     </div>
@@ -270,11 +270,11 @@
                     <h5 class="card-header text-end">Ters hizalı</h5>
                     <div class="card-body">
                         <div class="form-check form-check-reverse">
-                            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" />
+                            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1" name="reverseCheck1" />
                             <label class="form-check-label" for="reverseCheck1"> Ters onay kutusu </label>
                         </div>
                         <div class="form-check form-check-reverse">
-                            <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled />
+                            <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" name="reverseCheck2" disabled />
                             <label class="form-check-label" for="reverseCheck2"> Devre dışı ters onay kutusu </label>
                         </div>
                         <div class="form-check form-check-reverse">
@@ -286,7 +286,7 @@
                             <label class="form-check-label" for="reverseRadio2"> Seçili </label>
                         </div>
                         <div class="form-check form-switch form-check-reverse mb-0">
-                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse" />
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse" name="flexSwitchCheckReverse" />
                             <label class="form-check-label" for="flexSwitchCheckReverse">Ters switch onay kutusu</label>
                         </div>
                     </div>
@@ -300,19 +300,19 @@
             <div class="card-body">
                 <div class="mb-4">
                     <label for="formRange1" class="form-label">Aralık örneği</label>
-                    <input type="range" class="form-range" id="formRange1" />
+                    <input type="range" class="form-range" id="formRange1" name="formRange1" />
                 </div>
                 <div class="mb-4">
                     <label for="disabledRange" class="form-label">Devre dışı aralık</label>
-                    <input type="range" class="form-range" id="disabledRange" disabled />
+                    <input type="range" class="form-range" id="disabledRange" name="disabledRange" disabled />
                 </div>
                 <div class="mb-4">
                     <label for="formRange2" class="form-label">En düşük ve en yüksek değer</label>
-                    <input type="range" class="form-range" min="0" max="5" id="formRange2" />
+                    <input type="range" class="form-range" min="0" max="5" id="formRange2" name="formRange2" />
                 </div>
                 <div>
                     <label for="formRange3" class="form-label">Adımlar</label>
-                    <input type="range" class="form-range" min="0" max="5" step="0.5" id="formRange3" />
+                    <input type="range" class="form-range" min="0" max="5" step="0.5" id="formRange3" name="formRange3" />
                 </div>
             </div>
         </div>
@@ -326,85 +326,85 @@
                 <div class="mb-4 row">
                     <label for="html5-text-input" class="col-md-2 col-form-label">Metin</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="text" value="@TempData.Peek("appName")" id="html5-text-input" />
+                        <input class="form-control" type="text" value="@TempData.Peek("appName")" id="html5-text-input" name="html5-text-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-search-input" class="col-md-2 col-form-label">Arama</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="search" value="Ara ..." id="html5-search-input" />
+                        <input class="form-control" type="search" value="Ara ..." id="html5-search-input" name="html5-search-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-email-input" class="col-md-2 col-form-label">E-posta</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="email" value="john@example.com" id="html5-email-input" />
+                        <input class="form-control" type="email" value="john@example.com" id="html5-email-input" name="html5-email-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-url-input" class="col-md-2 col-form-label">URL</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="url" value="@TempData.Peek("authorUrl")" id="html5-url-input" />
+                        <input class="form-control" type="url" value="@TempData.Peek("authorUrl")" id="html5-url-input" name="html5-url-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-tel-input" class="col-md-2 col-form-label">Telefon</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="tel" value="90-(164)-188-556" id="html5-tel-input" />
+                        <input class="form-control" type="tel" value="90-(164)-188-556" id="html5-tel-input" name="html5-tel-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-password-input" class="col-md-2 col-form-label">Şifre</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="password" value="password" id="html5-password-input" />
+                        <input class="form-control" type="password" value="password" id="html5-password-input" name="html5-password-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-number-input" class="col-md-2 col-form-label">Sayı</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="number" value="18" id="html5-number-input" />
+                        <input class="form-control" type="number" value="18" id="html5-number-input" name="html5-number-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-datetime-local-input" class="col-md-2 col-form-label">Tarih/Saat</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="datetime-local" value="2021-06-18T12:30:00" id="html5-datetime-local-input" />
+                        <input class="form-control" type="datetime-local" value="2021-06-18T12:30:00" id="html5-datetime-local-input" name="html5-datetime-local-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-date-input" class="col-md-2 col-form-label">Tarih</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
+                        <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" name="html5-date-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-month-input" class="col-md-2 col-form-label">Ay</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="month" value="2021-06" id="html5-month-input" />
+                        <input class="form-control" type="month" value="2021-06" id="html5-month-input" name="html5-month-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-week-input" class="col-md-2 col-form-label">Hafta</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="week" value="2021-W25" id="html5-week-input" />
+                        <input class="form-control" type="week" value="2021-W25" id="html5-week-input" name="html5-week-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-time-input" class="col-md-2 col-form-label">Saat</label>
                     <div class="col-md-10">
-                        <input class="form-control" type="time" value="12:30:00" id="html5-time-input" />
+                        <input class="form-control" type="time" value="12:30:00" id="html5-time-input" name="html5-time-input" />
                     </div>
                 </div>
                 <div class="mb-4 row">
                     <label for="html5-color-input" class="col-md-2 col-form-label">Renk</label>
                     <div class="col-md-10">
-                        <input type="color" class="form-control" id="html5-color-input" value="#666EE8" title="Renk seçin" />
+                        <input type="color" class="form-control" id="html5-color-input" name="html5-color-input" value="#666EE8" title="Renk seçin" />
                     </div>
                 </div>
                 <div class="row">
                     <label for="html5-range" class="col-md-2 col-form-label">Aralık</label>
                     <div class="col-md-10">
-                        <input type="range" class="form-range mt-4" id="html5-range" />
+                        <input type="range" class="form-range mt-4" id="html5-range" name="html5-range" />
                     </div>
                 </div>
             </div>
@@ -416,23 +416,23 @@
             <div class="card-body">
                 <div class="mb-4">
                     <label for="formFile" class="form-label">Varsayılan dosya girişi örneği</label>
-                    <input class="form-control" type="file" id="formFile" />
+                    <input class="form-control" type="file" id="formFile" name="formFile" />
                 </div>
                 <div class="mb-4">
                     <label for="formFileMultiple" class="form-label">Çoklu dosya girişi örneği</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple />
+                    <input class="form-control" type="file" id="formFileMultiple" name="formFileMultiple" multiple />
                 </div>
                 <div class="mb-4">
                     <label for="formFileDisabled" class="form-label">Devre dışı dosya girişi örneği</label>
-                    <input class="form-control" type="file" id="formFileDisabled" disabled />
+                    <input class="form-control" type="file" id="formFileDisabled" name="formFileDisabled" disabled />
                 </div>
                 <div class="mb-4">
                     <label for="formFileSm" class="form-label">Küçük dosya girişi örneği</label>
-                    <input class="form-control form-control-sm" id="formFileSm" type="file" />
+                    <input class="form-control form-control-sm" id="formFileSm" name="formFileSm" type="file" />
                 </div>
                 <div>
                     <label for="formFileLg" class="form-label">Büyük dosya girişi örneği</label>
-                    <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                    <input class="form-control form-control-lg" id="formFileLg" name="formFileLg" type="file" />
                 </div>
             </div>
         </div>

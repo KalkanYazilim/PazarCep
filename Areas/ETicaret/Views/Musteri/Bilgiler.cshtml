@@ -19,8 +19,10 @@
                     Bu ekran hesap bilgisinin güncel görünümünü sunar. Değişiklikler kontrollü operasyon akışı ile taslak olarak ilerletilir.
                 </div>
 
-                @foreach (var grup in Model.BilgiGruplari)
+                @for (var grupIndex = 0; grupIndex < Model.BilgiGruplari.Count; grupIndex++)
                 {
+                    var grup = Model.BilgiGruplari[grupIndex];
+
                     <div class="card customer-section-card border-0">
                         <div class="card-header border-0 pb-0">
                             <h5 class="mb-1">@grup.Baslik</h5>
@@ -28,20 +30,22 @@
                         </div>
                         <div class="card-body">
                             <div class="row g-3">
-                                @foreach (var alan in grup.Alanlar)
+                                @for (var alanIndex = 0; alanIndex < grup.Alanlar.Count; alanIndex++)
                                 {
+                                    var alan = grup.Alanlar[alanIndex];
                                     var uzunAlan = alan.GridSinifi == "col-12";
+                                    var fieldId = $"customerInfo_{grupIndex}_{alanIndex}";
 
                                     <div class="@alan.GridSinifi">
-                                        <label class="form-label">@alan.Etiket</label>
+                                        <label class="form-label" for="@fieldId">@alan.Etiket</label>
 
                                         @if (uzunAlan)
                                         {
-                                            <textarea class="form-control" rows="3" readonly>@alan.Deger</textarea>
+                                            <textarea id="@fieldId" name="@fieldId" class="form-control" rows="3" readonly>@alan.Deger</textarea>
                                         }
                                         else
                                         {
-                                            <input type="text" class="form-control" value="@alan.Deger" readonly />
+                                            <input type="text" id="@fieldId" name="@fieldId" class="form-control" value="@alan.Deger" readonly />
                                         }
 
                                         @if (!string.IsNullOrWhiteSpace(alan.YardimMetni))

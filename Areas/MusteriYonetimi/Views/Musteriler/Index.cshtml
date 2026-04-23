@@ -61,12 +61,12 @@
         <div class="pc-panel__body">
             <div class="pc-filter-grid">
                 <div class="pc-col-6">
-                    <label class="form-label">Musteri ara</label>
-                    <input type="text" class="form-control" placeholder="Kod, isim, sirket veya e-posta" />
+                    <label class="form-label" for="crmCustomerSearch">Musteri ara</label>
+                    <input type="text" id="crmCustomerSearch" name="crmCustomerSearch" class="form-control" placeholder="Kod, isim, sirket veya e-posta" autocomplete="off" />
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Segment</label>
-                    <select class="form-select">
+                    <label class="form-label" for="crmCustomerSegment">Segment</label>
+                    <select id="crmCustomerSegment" name="crmCustomerSegment" class="form-select">
                         <option>Tum segmentler</option>
                         <option>Kurumsal</option>
                         <option>Sadik Perakende</option>
@@ -75,8 +75,8 @@
                     </select>
                 </div>
                 <div class="pc-col-3">
-                    <label class="form-label">Temsilci</label>
-                    <select class="form-select">
+                    <label class="form-label" for="crmCustomerRepresentative">Temsilci</label>
+                    <select id="crmCustomerRepresentative" name="crmCustomerRepresentative" class="form-select">
                         <option>Tum temsilciler</option>
                         <option>Deniz Sahin</option>
                         <option>Ece Yildirim</option>
