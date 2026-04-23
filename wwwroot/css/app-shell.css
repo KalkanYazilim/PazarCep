@@ -205,6 +205,40 @@ body.pc-sidebar-resizing .pc-sidebar-resizer {
   color: #0f5f54;
 }
 
+.pc-shell-reopen {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1400;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.72rem 0.95rem;
+  border-radius: 999px;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-0.5rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: var(--pc-surface-strong);
+  border: 1px solid rgba(15,23,42,0.06);
+}
+
+.pc-shell-reopen:focus {
+  outline: 3px solid rgba(32,204,170,0.18);
+  outline-offset: 3px;
+}
+
+.pc-shell-reopen i {
+  font-size: 1rem;
+}
+
+html.layout-menu-collapsed .pc-shell-reopen {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
 .pc-global-search input {
   width: 100%;
   border: none;
@@ -642,6 +676,10 @@ body.pc-sidebar-resizing .pc-sidebar-resizer {
 
   #layout-menu .menu-inner {
     padding-right: 16px;
+  }
+
+  .pc-shell-reopen {
+    display: none;
   }
 
   .layout-navbar .navbar-nav,

@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 (function () {
   const layoutRoot = document.documentElement;
-  const desktopMenuStateKey = 'pazarcep_layout_menu_collapsed';
+  const desktopMenuStateKey = 'pazarcep_layout_menu_collapsed_v2';
+  const legacyDesktopMenuStateKey = 'pazarcep_layout_menu_collapsed';
 
   function isSmallScreen() {
     return window.Helpers.isSmallScreen();
@@ -40,14 +41,29 @@ document.addEventListener('DOMContentLoaded', function () {
     window.dispatchEvent(new Event('resize'));
   }
 
+  function clearLegacyDesktopMenuState() {
+    try {
+      window.localStorage.removeItem(legacyDesktopMenuStateKey);
+    } catch (error) {
+      // Ignore storage access issues and keep the toggle working.
+    }
+  }
+
   function syncMenuToggleButtons() {
     const menuOpen = isSmallScreen()
       ? layoutRoot.classList.contains('layout-menu-expanded')
       : !layoutRoot.classList.contains('layout-menu-collapsed');
 
     document.querySelectorAll('[data-pc-menu-toggle="layout"], .layout-menu-toggle').forEach(item => {
+      const label = menuOpen ? 'Menüyü kapat' : 'Menüyü aç';
       item.setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+      item.setAttribute('aria-label', label);
       item.classList.toggle('is-active', menuOpen);
+
+      const labelTarget = item.querySelector('[data-pc-menu-label]');
+      if (labelTarget) {
+        labelTarget.textContent = label;
+      }
     });
   }
 
@@ -83,6 +99,22 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
+    // Do not apply persisted collapsed state on the public presentation/home pages.
+    // Always show the menu expanded by default for homepage to ensure discoverability.
+    function isPresentationHome() {
+      try {
+        const p = window.location && window.location.pathname ? window.location.pathname : '/';
+        return p === '/' || p.toLowerCase().startsWith('/anasayfa');
+      } catch (e) {
+        return false;
+      }
+    }
+
+    if (isPresentationHome()) {
+      applyDesktopMenuState(false, false, false);
+      return;
+    }
+
     applyDesktopMenuState(readDesktopMenuState(), false, false);
   }
 
@@ -97,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initialize menu
   //-----------------
+
+  clearLegacyDesktopMenuState();
 
   let layoutMenuEl = document.querySelectorAll('#layout-menu');
   layoutMenuEl.forEach(function (element) {
@@ -121,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Display menu toggle (layout-menu-toggle) on hover with delay
   let delay = function (elem, callback) {
     let timeout = null;
+    const hoverToggle = document.querySelector('.layout-menu-toggle');
     elem.onmouseenter = function () {
       // Set timeout to be a timer which will invoke callback after 300ms (not for small screen)
       if (!Helpers.isSmallScreen()) {
@@ -132,15 +167,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     elem.onmouseleave = function () {
       // Clear any timers set to timeout
-      document.querySelector('.layout-menu-toggle').classList.remove('d-block');
+      if (hoverToggle) {
+        hoverToggle.classList.remove('d-block');
+      }
       clearTimeout(timeout);
     };
   };
   if (document.getElementById('layout-menu')) {
     delay(document.getElementById('layout-menu'), function () {
       // not for small screen
-      if (!Helpers.isSmallScreen()) {
-        document.querySelector('.layout-menu-toggle').classList.add('d-block');
+      const hoverToggle = document.querySelector('.layout-menu-toggle');
+      if (!Helpers.isSmallScreen() && hoverToggle) {
+        hoverToggle.classList.add('d-block');
       }
     });
   }

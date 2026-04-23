@@ -4,6 +4,7 @@
 
     bool StartsWithPath(string prefix) => currentPage.StartsWith(prefix, StringComparison.OrdinalIgnoreCase);
     bool MatchesPath(string path) => string.Equals(currentPage, path, StringComparison.OrdinalIgnoreCase);
+    bool isPresentationHome = MatchesPath("/") || StartsWithPath("/AnaSayfa");
 }
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme pc-sidebar-resizable">
@@ -14,7 +15,7 @@
       </div>
       <span class="app-brand-text demo menu-text fw-bold ms-2">@TempData.Peek("appName")</span>
     </a>
-    <a href="javascript:void(0)" class="layout-menu-toggle menu-link text-large ms-auto">
+    <a href="javascript:void(0)" class="layout-menu-toggle menu-link text-large ms-auto" data-pc-menu-toggle="layout" aria-controls="layout-menu" aria-expanded="false" aria-label="Menüyü aç">
       <i class="icon-base bx bx-chevron-left d-block d-xl-none align-middle"></i>
     </a>
   </div>
@@ -24,13 +25,13 @@
 
   <ul class="menu-inner py-1">
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Genel</span></li>
-    <li class='menu-item@(MatchesPath("/") || StartsWithPath("/Dashboards") ? " active" : "")'>
+    <li class='menu-item@(StartsWithPath("/Dashboards") ? " active" : "")'>
       <a asp-controller="Dashboards" asp-action="Index" class="menu-link">
         <i class="menu-icon icon-base bx bx-grid-alt"></i>
         <div class="text-truncate">Kontrol Merkezi</div>
       </a>
     </li>
-    <li class='menu-item@(StartsWithPath("/AnaSayfa") ? " active" : "")'>
+    <li class='menu-item@(isPresentationHome ? " active" : "")'>
       <a asp-controller="AnaSayfa" asp-action="Index" class="menu-link">
         <i class="menu-icon icon-base bx bx-globe"></i>
         <div class="text-truncate">Tanıtım Sayfası</div>
