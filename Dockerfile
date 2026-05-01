@@ -21,7 +21,8 @@ COPY ["pazarcep.api/pazarcep.api.csproj", "pazarcep.api/"]
 RUN dotnet restore "PazarCep.csproj"
 
 COPY . .
-COPY --from=assets /src/wwwroot ./wwwroot
+COPY --from=assets /src/wwwroot/vendor ./wwwroot/vendor
+COPY --from=assets /src/wwwroot/js ./wwwroot/js
 
 RUN dotnet publish "PazarCep.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
