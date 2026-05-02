@@ -6,12 +6,14 @@ namespace PazarCep.Areas.ETicaret.Controllers;
 [Area("ETicaret")]
 public class RandevuController : Controller
 {
-  public IActionResult Index()
+  public IActionResult Index() => Takvim();
+
+  public IActionResult Takvim(DateTime? ay = null, DateTime? gun = null)
   {
     ViewData["DemoVeri"] = true;
-    ViewData["DemoVeriNotu"] = "Randevu planlama";
-    ViewData["MetaDescription"] = "PazarCep randevu planlama ekranı; yükleme ve teslim alma slotlarını yönetir.";
+    ViewData["DemoVeriNotu"] = "Randevu takvimi";
+    ViewData["MetaDescription"] = "PazarCep randevu takvimi; teslimat, görüşme, nakliye, danışmanlık ve iş planlarını tek takvimde yönetir.";
 
-    return View(CommerceWorkspaceFactory.CreateAppointmentBoard());
+    return View("Index", CommerceWorkspaceFactory.CreateAppointmentCalendar(ay, gun));
   }
 }

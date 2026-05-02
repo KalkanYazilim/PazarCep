@@ -1,0 +1,456 @@
+.pc-appointment-page {
+  --pc-calendar-border: rgba(148, 163, 184, 0.24);
+  --pc-calendar-soft: rgba(32, 204, 170, 0.1);
+  --pc-calendar-text: #0f172a;
+}
+
+.pc-appointment-hero .pc-page-hero__body {
+  max-width: 74rem;
+}
+
+.pc-appointment-kpis {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pc-appointment-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.36fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pc-calendar-panel,
+.pc-selected-day-panel,
+.pc-appointment-side {
+  min-width: 0;
+}
+
+.pc-appointment-side {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.pc-calendar-toolbar,
+.pc-calendar-actions,
+.pc-day-appointment__top,
+.pc-day-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pc-calendar-toolbar {
+  justify-content: space-between;
+}
+
+.pc-calendar-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.pc-calendar-actions .btn {
+  min-width: 2.25rem;
+}
+
+.pc-calendar-weekdays,
+.pc-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.pc-calendar-weekdays {
+  gap: 0.55rem;
+  margin-bottom: 0.55rem;
+  color: #64748b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.pc-calendar-grid {
+  gap: 0.55rem;
+}
+
+.pc-calendar-day {
+  position: relative;
+  min-height: 8.6rem;
+  border: 1px solid var(--pc-calendar-border);
+  border-radius: 1.05rem;
+  padding: 0.72rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  background: #ffffff;
+  color: var(--pc-calendar-text);
+  text-align: left;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, background 0.18s ease;
+}
+
+.pc-calendar-day:hover,
+.pc-calendar-day:focus-visible {
+  border-color: rgba(32, 204, 170, 0.7);
+  box-shadow: 0 0 0 3px rgba(32, 204, 170, 0.15);
+  outline: none;
+}
+
+.pc-calendar-day--selected {
+  border-color: #13b39a;
+  background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%);
+  box-shadow: 0 16px 32px rgba(15, 118, 110, 0.1);
+}
+
+.pc-calendar-day--today .pc-calendar-day__number {
+  color: #ffffff;
+  background: linear-gradient(135deg, #20ccaa, #13b39a);
+}
+
+.pc-calendar-day--muted {
+  background: rgba(248, 250, 252, 0.62);
+  color: #94a3b8;
+}
+
+.pc-calendar-day--empty .pc-calendar-day__items::after {
+  content: "Plan yok";
+  color: #cbd5e1;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.pc-calendar-day__number {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pc-calendar-day__items {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.pc-calendar-badge,
+.pc-calendar-more {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.28rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pc-calendar-more {
+  color: #475569;
+  background: rgba(100, 116, 139, 0.1);
+}
+
+.pc-calendar-badge--pickup {
+  color: #166534;
+  background: rgba(187, 247, 208, 0.78);
+}
+
+.pc-calendar-badge--delivery {
+  color: #075985;
+  background: rgba(186, 230, 253, 0.82);
+}
+
+.pc-calendar-badge--farmer {
+  color: #14532d;
+  background: rgba(220, 252, 231, 0.9);
+}
+
+.pc-calendar-badge--buyer {
+  color: #854d0e;
+  background: rgba(254, 240, 138, 0.68);
+}
+
+.pc-calendar-badge--logistics {
+  color: #1e40af;
+  background: rgba(191, 219, 254, 0.82);
+}
+
+.pc-calendar-badge--consultant {
+  color: #0f766e;
+  background: rgba(153, 246, 228, 0.72);
+}
+
+.pc-calendar-badge--worker {
+  color: #9a3412;
+  background: rgba(254, 215, 170, 0.9);
+}
+
+.pc-day-detail {
+  display: none;
+}
+
+.pc-day-detail.is-active {
+  display: block;
+}
+
+.pc-day-appointment-list,
+.pc-upcoming-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.pc-day-appointment {
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr);
+  gap: 0.9rem;
+  border: 1px solid var(--pc-calendar-border);
+  border-radius: 1.05rem;
+  padding: 0.9rem;
+  background: rgba(248, 250, 252, 0.68);
+}
+
+.pc-day-appointment__time {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  border-radius: 0.9rem;
+  padding: 0.65rem 0.35rem;
+  color: #047857;
+  background: var(--pc-calendar-soft);
+  font-size: 0.82rem;
+}
+
+.pc-day-appointment__time strong {
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.pc-day-appointment__body {
+  min-width: 0;
+}
+
+.pc-day-appointment__top {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.pc-day-appointment h3,
+.pc-upcoming-item h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 0.96rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.pc-day-appointment p,
+.pc-upcoming-item p {
+  margin: 0.22rem 0 0;
+  color: #64748b;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.pc-day-appointment__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.7rem;
+  color: #475569;
+  font-size: 0.82rem;
+}
+
+.pc-day-appointment__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.pc-day-appointment__desc {
+  margin-top: 0.75rem !important;
+}
+
+.pc-day-actions {
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
+}
+
+.pc-empty-state {
+  min-height: 14rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.5rem;
+  border: 1px dashed rgba(148, 163, 184, 0.45);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  color: #64748b;
+  background: rgba(248, 250, 252, 0.72);
+}
+
+.pc-empty-state i {
+  color: #13b39a;
+  font-size: 2rem;
+}
+
+.pc-empty-state strong {
+  color: #0f172a;
+}
+
+.pc-upcoming-item {
+  display: grid;
+  grid-template-columns: 3.45rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.pc-upcoming-item__date {
+  min-height: 3.45rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  color: #047857;
+  background: rgba(32, 204, 170, 0.11);
+  line-height: 1;
+}
+
+.pc-upcoming-item__date strong {
+  color: #0f172a;
+  font-size: 1.15rem;
+}
+
+.pc-upcoming-item__date span {
+  margin-top: 0.18rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pc-upcoming-item__body {
+  min-width: 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+  padding-bottom: 0.85rem;
+}
+
+.pc-upcoming-item:last-child .pc-upcoming-item__body {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pc-upcoming-item small {
+  display: block;
+  margin-top: 0.45rem;
+  color: #475569;
+  font-weight: 700;
+}
+
+.pc-status-pill--neutral {
+  background: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+
+.pc-new-appointment-form textarea.form-control {
+  border-radius: 1rem;
+}
+
+@media (max-width: 1199.98px) {
+  .pc-appointment-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-appointment-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .pc-appointment-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pc-calendar-day {
+    min-height: 7.4rem;
+    padding: 0.55rem;
+  }
+
+  .pc-calendar-badge,
+  .pc-calendar-more {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pc-appointment-kpis,
+  .pc-appointment-side {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-calendar-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .pc-calendar-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .pc-calendar-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .pc-calendar-weekdays {
+    gap: 0.25rem;
+    font-size: 0.68rem;
+  }
+
+  .pc-calendar-grid {
+    gap: 0.28rem;
+  }
+
+  .pc-calendar-day {
+    min-height: 5.7rem;
+    border-radius: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .pc-calendar-day__number {
+    width: 1.65rem;
+    height: 1.65rem;
+    font-size: 0.78rem;
+  }
+
+  .pc-calendar-day__items {
+    gap: 0.22rem;
+  }
+
+  .pc-calendar-badge {
+    padding: 0.22rem 0.34rem;
+    font-size: 0.62rem;
+  }
+
+  .pc-calendar-badge:nth-of-type(n+2),
+  .pc-calendar-more {
+    display: none;
+  }
+
+  .pc-day-appointment {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-day-appointment__time {
+    justify-items: start;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 0.35rem;
+  }
+
+  .pc-day-appointment__top {
+    flex-direction: column;
+  }
+}

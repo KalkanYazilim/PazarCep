@@ -1,89 +1,157 @@
+@model RegisterBasicViewModel
+
 @{
     Layout = "_BlankLayout";
-    ViewData["Title"] = "Kayıt Ol - PazarCep";
+    ViewData["Title"] = "Hesap Oluştur - PazarCep";
+    ViewData["bodyClass"] = "pc-auth-body";
+
+    var publicRoles = new[]
+    {
+        new { Key = PublicUserRoles.Buyer, Title = "Manav / Market / Pazarcı / Alıcı", Badge = "Hızlı başlangıç", Icon = "bx-store", Description = "Ürün satın almak, tedarikçi bulmak ve düzenli alım talepleri oluşturmak istiyorum." },
+        new { Key = PublicUserRoles.Farmer, Title = "Çiftçi / Üreten", Badge = "Üretici profili", Icon = "bx-leaf", Description = "Ürünlerimi tanıtmak, alıcılarla buluşmak, işçi ve nakliye desteği almak istiyorum." },
+        new { Key = PublicUserRoles.Worker, Title = "İşçi / Yevmiyeci", Badge = "İş fırsatları", Icon = "bx-hard-hat", Description = "Tarım işlerinde çalışmak, günlük veya sezonluk iş fırsatlarına başvurmak istiyorum." },
+        new { Key = PublicUserRoles.Logistician, Title = "Lojistikçi / Nakliyeci", Badge = "Araç bilgisi gerekebilir", Icon = "bx-truck", Description = "Ürün taşıma, teslimat ve nakliye hizmeti vermek istiyorum." },
+        new { Key = PublicUserRoles.Consultant, Title = "Danışman / Ziraat Uzmanı", Badge = "Belge onayı gerekebilir", Icon = "bx-support", Description = "Çiftçilere ziraat, üretim, hastalık, gübreleme ve verimlilik konularında destek vermek istiyorum." }
+    };
 }
 
 @section PageStyles {
     <link rel="stylesheet" href="~/vendor/css/pages/page-auth.css" />
+    <link rel="stylesheet" href="~/css/auth-role-selection.css" asp-append-version="true" />
 }
 
-<div class="container-xxl">
-    <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
+@section PageScripts {
+    <script src="~/js/auth-role-selection.js" asp-append-version="true"></script>
+}
 
-            <div class="card px-sm-6 px-0">
-                <div class="card-body">
+<main class="pc-auth-shell pc-auth-shell-register">
+    <section class="pc-auth-hero" aria-labelledby="registerHeroTitle">
+        <a href="/" class="pc-auth-brand">
+            <span class="pc-auth-brand-mark">
+                <img src="~/img/favicon/PazarCep_Logo.ico" alt="PazarCep Logo" />
+            </span>
+            <span>
+                <span class="pc-auth-brand-name">PazarCep</span>
+                <span class="pc-auth-brand-sub">Dijital tarım pazarı</span>
+            </span>
+        </a>
 
-                    <!-- Logo -->
-                    <div class="app-brand justify-content-center mb-6">
-                        <a href="/" class="app-brand-link gap-2">
-                            <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
-                            <span class="app-brand-text demo text-heading fw-bold">@TempData.Peek("appName")</span>
-                        </a>
-                    </div>
+        <div class="pc-auth-hero-content">
+            <span class="pc-auth-kicker">Tek hesapla birden fazla rol yönetimi</span>
+            <h1 id="registerHeroTitle">Çiftçiden alıcıya dijital tarım pazarı</h1>
+            <p>Ürün al, ürününü sat, iş gücü bul, nakliye planla, uzman desteği al.</p>
+        </div>
 
-                    <h4 class="mb-1">Aramıza Katılın 🚀</h4>
-                    <p class="mb-6">
-                        PazarCep hesabınızı oluşturarak işlemlerinizi kolayca yönetmeye başlayabilirsiniz.
-                    </p>
+        <div class="pc-auth-approval-list" aria-label="Rol onay süreçleri">
+            <div><strong>Alıcı</strong><span>Genellikle otomatik aktif edilir.</span></div>
+            <div><strong>Çiftçi</strong><span>Üretim alanı, ürün kategorisi veya kimlik doğrulaması istenebilir.</span></div>
+            <div><strong>İşçi</strong><span>Telefon doğrulaması ve çalışma bölgesi bilgisi istenebilir.</span></div>
+            <div><strong>Lojistikçi</strong><span>Araç, plaka, kapasite ve taşıma bölgesi bilgisi gerekebilir.</span></div>
+            <div><strong>Danışman</strong><span>Diploma, sertifika veya mesleki doğrulama gerekebilir.</span></div>
+        </div>
+    </section>
 
-                    <form id="formAuthentication" class="mb-6" action="/" method="POST">
-
-                        <div class="mb-6">
-                            <label for="username" class="form-label">Kullanıcı Adı</label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="username"
-                                   name="username"
-                                   placeholder="Kullanıcı adınızı girin"
-                                   autofocus />
-                        </div>
-
-                        <div class="mb-6">
-                            <label for="email" class="form-label">E-posta</label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="email"
-                                   name="email"
-                                   placeholder="E-posta adresinizi girin" />
-                        </div>
-
-                        <div class="form-password-toggle">
-                            <label class="form-label" for="password">Parola</label>
-                            <div class="input-group input-group-merge">
-                                <input type="password"
-                                       id="password"
-                                       class="form-control"
-                                       name="password"
-                                       placeholder="••••••••••••" />
-                                <span class="input-group-text cursor-pointer">
-                                    <i class="icon-base bx bx-hide"></i>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="my-7">
-                            <div class="form-check mb-0">
-                                <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
-                                <label class="form-check-label" for="terms-conditions">
-                                    <a href="javascript:void(0);">Gizlilik politikası ve kullanım şartlarını</a> kabul ediyorum.
-                                </label>
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary d-grid w-100">Kayıt Ol</button>
-                    </form>
-
-                    <p class="text-center">
-                        <span>Zaten hesabınız var mı?</span>
-                        <a href="/Auth/LoginBasic">
-                            <span>Giriş yap</span>
-                        </a>
-                    </p>
-
-                </div>
+    <section class="pc-auth-panel" aria-labelledby="registerTitle">
+        <div class="pc-auth-card pc-auth-card-wide">
+            <div class="pc-auth-card-header">
+                <span class="pc-auth-card-eyebrow">Yeni hesap</span>
+                <h2 id="registerTitle">Hesap Oluştur</h2>
+                <p>Bilgilerinizi girin ve PazarCep’i hangi amaçlarla kullanacağınızı seçin.</p>
             </div>
 
+            <form id="formAuthentication" class="pc-auth-form" asp-action="RegisterBasic" asp-controller="Auth" method="POST" data-role-selection-form>
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger small"></div>
+
+                <div class="pc-auth-field-grid">
+                    <div>
+                        <label asp-for="FullName" class="form-label">Ad Soyad</label>
+                        <input asp-for="FullName" class="form-control" placeholder="Adınız ve soyadınız" autocomplete="name" autofocus />
+                    </div>
+                    <div>
+                        <label asp-for="Phone" class="form-label">Telefon</label>
+                        <input asp-for="Phone" class="form-control" placeholder="05xx xxx xx xx" autocomplete="tel" />
+                    </div>
+                    <div>
+                        <label asp-for="Email" class="form-label">E-posta</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="ornek@pazarcep.com" autocomplete="email" />
+                    </div>
+                    <div class="form-password-toggle">
+                        <label asp-for="Password" class="form-label">Şifre</label>
+                        <div class="input-group input-group-merge">
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Şifrenizi belirleyin" autocomplete="new-password" />
+                            <span class="input-group-text cursor-pointer">
+                                <i class="icon-base bx bx-hide"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-password-toggle">
+                        <label asp-for="ConfirmPassword" class="form-label">Şifre Tekrar</label>
+                        <div class="input-group input-group-merge">
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Şifrenizi tekrar girin" autocomplete="new-password" />
+                            <span class="input-group-text cursor-pointer">
+                                <i class="icon-base bx bx-hide"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pc-role-section">
+                    <div class="pc-role-section-header">
+                        <h3>PazarCep’i hangi amaçla kullanacaksınız?</h3>
+                        <p>Birden fazla seçenek seçebilirsiniz. Onaylanan roller hesabınızda aktif hale gelir.</p>
+                    </div>
+
+                    <div class="pc-role-grid" role="group" aria-describedby="roleSelectionHelp roleSelectionError">
+                        @foreach (var role in publicRoles)
+                        {
+                            var inputId = $"role-{role.Key}";
+                            var isChecked = Model.SelectedRoles.Contains(role.Key, StringComparer.OrdinalIgnoreCase);
+                            <label class="pc-role-option" for="@inputId">
+                                <input id="@inputId"
+                                       class="pc-role-input"
+                                       type="checkbox"
+                                       name="SelectedRoles"
+                                       value="@role.Key"
+                                       checked="@isChecked" />
+                                <span class="pc-role-card">
+                                    <span class="pc-role-card-top">
+                                        <span class="pc-role-icon"><i class="icon-base bx @role.Icon"></i></span>
+                                        <span class="pc-role-badge">@role.Badge</span>
+                                    </span>
+                                    <span class="pc-role-title">@role.Title</span>
+                                    <span class="pc-role-desc">@role.Description</span>
+                                </span>
+                            </label>
+                        }
+                    </div>
+
+                    <span asp-validation-for="SelectedRoles" id="roleSelectionError" class="text-danger small" data-role-validation-message></span>
+                    <p id="roleSelectionHelp" class="pc-role-note">
+                        Alıcı rolü otomatik olarak aktif edilir. Çiftçi, İşçi, Lojistikçi ve Danışman rolleri gerekli durumlarda belge veya yönetici onayı gerektirebilir.
+                    </p>
+                    <p class="pc-role-note">
+                        Tek hesapla birden fazla rol seçebilir, onaylanan roller arasında panelinizden geçiş yapabilirsiniz.
+                    </p>
+                    <p class="pc-role-note">
+                        Seçtiğiniz rollere göre bazı bilgiler daha sonra istenebilir. Bu süreç güvenli ve doğru eşleşme sağlamak için kullanılır.
+                    </p>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
+                    <label class="form-check-label" for="terms-conditions">
+                        <a href="javascript:void(0);">Gizlilik politikası ve kullanım şartlarını</a> kabul ediyorum.
+                    </label>
+                </div>
+
+                <button class="btn btn-primary w-100" type="submit">Hesap Oluştur</button>
+            </form>
+
+            <div class="pc-auth-switch">
+                <span>Zaten hesabınız var mı?</span>
+                <a href="/Auth/LoginBasic">Giriş Yap</a>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>

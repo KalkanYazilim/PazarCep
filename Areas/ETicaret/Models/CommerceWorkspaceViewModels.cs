@@ -164,6 +164,52 @@ public sealed class AppointmentBoardPageViewModel
   public required IReadOnlyList<AppointmentRecordViewModel> Kayitlar { get; init; }
 }
 
+public sealed class AppointmentCalendarItemViewModel
+{
+  public required string Id { get; init; }
+  public required string Title { get; init; }
+  public required string TypeKey { get; init; }
+  public required string TypeText { get; init; }
+  public required string StatusKey { get; init; }
+  public required string StatusText { get; init; }
+  public required DateTime StartTime { get; init; }
+  public DateTime? EndTime { get; init; }
+  public required string RelatedParty { get; init; }
+  public required string Location { get; init; }
+  public required string Description { get; init; }
+  public required string BadgeCssClass { get; init; }
+  public required string TypeCssClass { get; init; }
+}
+
+public sealed class AppointmentCalendarDayViewModel
+{
+  public required DateTime Date { get; init; }
+  public required bool IsToday { get; init; }
+  public required bool IsSelected { get; init; }
+  public required bool IsCurrentMonth { get; init; }
+  public required IReadOnlyList<AppointmentCalendarItemViewModel> Appointments { get; init; }
+}
+
+public sealed class AppointmentSummaryViewModel
+{
+  public required int TodayAppointments { get; init; }
+  public required int PendingApprovals { get; init; }
+  public required int ThisWeekPlans { get; init; }
+  public required int CompletedOperations { get; init; }
+}
+
+public sealed class AppointmentCalendarViewModel
+{
+  public required DateTime CurrentMonth { get; init; }
+  public required DateTime PreviousMonth { get; init; }
+  public required DateTime NextMonth { get; init; }
+  public required DateTime SelectedDate { get; init; }
+  public required IReadOnlyList<AppointmentCalendarDayViewModel> Days { get; init; }
+  public required IReadOnlyList<AppointmentCalendarItemViewModel> SelectedDayAppointments { get; init; }
+  public required IReadOnlyList<AppointmentCalendarItemViewModel> UpcomingAppointments { get; init; }
+  public required AppointmentSummaryViewModel Summary { get; init; }
+}
+
 public static class CommerceWorkspaceFactory
 {
   public static CommerceOverviewPageViewModel CreateOverview()
@@ -320,6 +366,134 @@ public static class CommerceWorkspaceFactory
         new() { Kod = "RND-2105", Tip = "Teslim alma", Musteri = "Demir Organik", Zaman = "22 Nisan 2026 · 09:30", Konum = "Ankara transfer merkezi", Durum = "Hazırlanıyor", Ton = "warning", Ozet = "Operasyon ekibi depo giriş saatini doğruluyor." },
         new() { Kod = "RND-2106", Tip = "Depo kabul", Musteri = "Işık Marketler Zinciri", Zaman = "22 Nisan 2026 · 11:15", Konum = "Bursa bölge deposu", Durum = "Teyit bekliyor", Ton = "info", Ozet = "Zincir mağaza teslimatı için kabul ekibi onayı bekleniyor." }
       ]
+    };
+  }
+
+  public static AppointmentCalendarViewModel CreateAppointmentCalendar(DateTime? month = null, DateTime? selectedDate = null)
+  {
+    var today = DateTime.Today;
+    var currentMonth = new DateTime((month ?? selectedDate ?? today).Year, (month ?? selectedDate ?? today).Month, 1);
+    var selected = (selectedDate ?? today).Date;
+    var appointments = CreateAppointmentCalendarItems(today);
+    var firstVisibleDay = currentMonth.AddDays(-GetMondayOffset(currentMonth));
+    var days = Enumerable.Range(0, 42)
+      .Select(offset =>
+      {
+        var date = firstVisibleDay.AddDays(offset);
+        return new AppointmentCalendarDayViewModel
+        {
+          Date = date,
+          IsToday = date == today,
+          IsSelected = date == selected,
+          IsCurrentMonth = date.Month == currentMonth.Month,
+          Appointments = appointments
+            .Where(item => item.StartTime.Date == date)
+            .OrderBy(item => item.StartTime)
+            .ToList()
+        };
+      })
+      .ToList();
+
+    var weekStart = today.AddDays(-GetMondayOffset(today));
+    var weekEnd = weekStart.AddDays(7);
+
+    return new()
+    {
+      CurrentMonth = currentMonth,
+      PreviousMonth = currentMonth.AddMonths(-1),
+      NextMonth = currentMonth.AddMonths(1),
+      SelectedDate = selected,
+      Days = days,
+      SelectedDayAppointments = appointments
+        .Where(item => item.StartTime.Date == selected)
+        .OrderBy(item => item.StartTime)
+        .ToList(),
+      UpcomingAppointments = appointments
+        .Where(item => item.StartTime >= today)
+        .OrderBy(item => item.StartTime)
+        .Take(7)
+        .ToList(),
+      Summary = new()
+      {
+        TodayAppointments = appointments.Count(item => item.StartTime.Date == today),
+        PendingApprovals = appointments.Count(item => item.StatusKey == "PendingApproval"),
+        ThisWeekPlans = appointments.Count(item => item.StartTime >= weekStart && item.StartTime < weekEnd),
+        CompletedOperations = appointments.Count(item => item.StatusKey == "Completed")
+      }
+    };
+  }
+
+  private static int GetMondayOffset(DateTime date)
+  {
+    return ((int)date.DayOfWeek + 6) % 7;
+  }
+
+  private static IReadOnlyList<AppointmentCalendarItemViewModel> CreateAppointmentCalendarItems(DateTime today)
+  {
+    // TODO: Replace demo appointments with database-backed records and role-based filtering.
+    return
+    [
+      CreateAppointment("RND-3001", "Sabah ürün teslim alma", "ProductPickup", "Ürün Teslim Alma", "Approved", "Onaylandı", today.AddHours(8).AddMinutes(30), today.AddHours(9).AddMinutes(15), "Yeşilova Çiftliği", "Ankara transfer noktası", "Domates ve salatalık kabulü için kalite kontrol ekibi hazır olacak."),
+      CreateAppointment("RND-3002", "Market teslimat planı", "ProductDelivery", "Ürün Teslimatı", "InProgress", "Devam Ediyor", today.AddHours(11), today.AddHours(12), "Işık Marketler Zinciri", "Bursa merkez depo", "Soğuk zincir aracı depo kabul kapısına yönlendirildi."),
+      CreateAppointment("RND-3003", "Üretici fiyat görüşmesi", "FarmerMeeting", "Üretici Görüşmesi", "PendingApproval", "Onay Bekliyor", today.AddDays(1).AddHours(10), today.AddDays(1).AddHours(10).AddMinutes(45), "Demir Organik", "Çankaya / Ankara", "Sezonluk kabak ve biber tedarik planı değerlendirilecek."),
+      CreateAppointment("RND-3004", "Alıcı sipariş toplantısı", "BuyerMeeting", "Alıcı Görüşmesi", "Planned", "Planlandı", today.AddDays(2).AddHours(14), today.AddDays(2).AddHours(15), "Kaya Restoran Grubu", "Kadıköy / İstanbul", "Haftalık taze ürün alım takvimi ve teslimat pencereleri netleştirilecek."),
+      CreateAppointment("RND-3005", "Nakliye rota eşleştirme", "LogisticsPlan", "Nakliye Planı", "Approved", "Onaylandı", today.AddDays(3).AddHours(9), today.AddDays(3).AddHours(10), "PazarCep Lojistik", "İzmir - Manisa hattı", "Boş kasa dönüşü ve ikinci teslimat durağı aynı rota üzerinde planlanacak."),
+      CreateAppointment("RND-3006", "Ziraat danışmanlığı", "ConsultantMeeting", "Ziraat Danışmanlığı", "PendingApproval", "Onay Bekliyor", today.AddDays(4).AddHours(16), today.AddDays(4).AddHours(17), "Akdeniz Üretici Birliği", "Antalya / Serik", "Gübreleme programı ve hastalık gözlemi için uzman görüşmesi."),
+      CreateAppointment("RND-3007", "Hasat ekibi planı", "WorkerSchedule", "İşçi / Yevmiye Planı", "Planned", "Planlandı", today.AddDays(5).AddHours(6), today.AddDays(5).AddHours(15), "Bereket Tarım", "Akhisar / Manisa", "Sekiz kişilik hasat ekibi için günlük çalışma programı oluşturuldu."),
+      CreateAppointment("RND-3008", "Tamamlanan teslimat", "ProductDelivery", "Ürün Teslimatı", "Completed", "Tamamlandı", today.AddDays(-1).AddHours(13), today.AddDays(-1).AddHours(14), "Mavi Market", "Nilüfer / Bursa", "Teslimat evrakları ve soğuk zincir kontrolü tamamlandı."),
+      CreateAppointment("RND-3009", "Ertelenen depo kabulü", "ProductPickup", "Ürün Teslim Alma", "Postponed", "Ertelendi", today.AddDays(7).AddHours(12), today.AddDays(7).AddHours(13), "Orta Anadolu Kooperatifi", "Konya bölge deposu", "Depo yoğunluğu nedeniyle kabul penceresi yeniden planlandı."),
+      CreateAppointment("RND-3010", "İptal edilen danışmanlık", "ConsultantMeeting", "Ziraat Danışmanlığı", "Cancelled", "İptal Edildi", today.AddDays(8).AddHours(15), today.AddDays(8).AddHours(16), "Ege Seracılık", "Aydın / Söke", "Üretici talebiyle ileri tarihte yeniden planlanacak."),
+      CreateAppointment("RND-3011", "Öğle teslimat penceresi", "ProductDelivery", "Ürün Teslimatı", "Approved", "Onaylandı", today.AddDays(2).AddHours(12), today.AddDays(2).AddHours(13), "Aksoy Catering", "Bornova / İzmir", "Sebze ve kahvaltılık ürünler aynı teslimat penceresinde taşınacak."),
+      CreateAppointment("RND-3012", "Ek alıcı görüşmesi", "BuyerMeeting", "Alıcı Görüşmesi", "Planned", "Planlandı", today.AddDays(2).AddHours(16), today.AddDays(2).AddHours(16).AddMinutes(30), "Güneş Manav", "Meram / Konya", "Düzenli alım talebi için ürün çeşitleri görüşülecek."),
+      CreateAppointment("RND-3013", "Akşam yükleme kontrolü", "LogisticsPlan", "Nakliye Planı", "Approved", "Onaylandı", today.AddDays(2).AddHours(18), today.AddDays(2).AddHours(19), "PazarCep Filo", "Bursa - İstanbul hattı", "Araç kapasitesi ve teslimat sırası kontrol edilecek.")
+    ];
+  }
+
+  private static AppointmentCalendarItemViewModel CreateAppointment(
+    string id,
+    string title,
+    string typeKey,
+    string typeText,
+    string statusKey,
+    string statusText,
+    DateTime startTime,
+    DateTime? endTime,
+    string relatedParty,
+    string location,
+    string description)
+  {
+    return new()
+    {
+      Id = id,
+      Title = title,
+      TypeKey = typeKey,
+      TypeText = typeText,
+      StatusKey = statusKey,
+      StatusText = statusText,
+      StartTime = startTime,
+      EndTime = endTime,
+      RelatedParty = relatedParty,
+      Location = location,
+      Description = description,
+      BadgeCssClass = statusKey switch
+      {
+        "Approved" or "Completed" => "success",
+        "PendingApproval" or "Postponed" => "warning",
+        "Cancelled" => "danger",
+        "InProgress" => "info",
+        _ => "neutral"
+      },
+      TypeCssClass = typeKey switch
+      {
+        "ProductPickup" => "pickup",
+        "ProductDelivery" => "delivery",
+        "FarmerMeeting" => "farmer",
+        "BuyerMeeting" => "buyer",
+        "LogisticsPlan" => "logistics",
+        "ConsultantMeeting" => "consultant",
+        "WorkerSchedule" => "worker",
+        _ => "default"
+      }
     };
   }
 }

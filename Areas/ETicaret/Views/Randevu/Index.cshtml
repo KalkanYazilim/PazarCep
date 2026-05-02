@@ -1,138 +1,314 @@
-@model AppointmentBoardPageViewModel
+@model AppointmentCalendarViewModel
 @{
-    ViewData["Title"] = "Randevu Planlama";
+    ViewData["Title"] = "Randevu Takvimi";
+
+    var tr = new System.Globalization.CultureInfo("tr-TR");
+    var monthTitle = Model.CurrentMonth.ToString("MMMM yyyy", tr);
+    var selectedDateTitle = Model.SelectedDate.ToString("d MMMM yyyy dddd", tr);
+    var dayNames = new[] { "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz" };
 }
 
-<div class="pc-page-shell">
-    <section class="pc-page-hero">
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/appointment-calendar.css" asp-append-version="true" />
+}
+
+@section PageScripts {
+    <script src="~/js/appointment-calendar.js" asp-append-version="true"></script>
+}
+
+<div class="pc-page-shell pc-appointment-page">
+    <section class="pc-page-hero pc-appointment-hero">
         <div class="pc-page-hero__body">
-            <span class="pc-page-eyebrow">E-Ticaret / Randevu</span>
-            <h1 class="pc-page-title">@Model.Baslik</h1>
-            <p class="pc-page-description mb-0">@Model.Aciklama</p>
+            <span class="pc-page-eyebrow">E-Ticaret / Randevu Takvimi</span>
+            <h1 class="pc-page-title">Randevu Takvimi</h1>
+            <p class="pc-page-description mb-0">Teslimat, görüşme, nakliye ve danışmanlık planlarınızı tek takvim üzerinden yönetin.</p>
             <div class="pc-page-actions mt-4">
-                <a asp-area="ETicaret" asp-controller="Emir" asp-action="SiparisListesi" class="btn btn-outline-secondary">
-                    <i class="bx bx-package me-1"></i>Siparişlere dön
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newAppointmentModal">
+                    <i class="bx bx-calendar-plus me-1"></i>Yeni Randevu Oluştur
+                </button>
+                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy-MM-01")" asp-route-gun="@DateTime.Today.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary">
+                    <i class="bx bx-current-location me-1"></i>Bugüne Git
                 </a>
-                <a asp-area="Lojistik" asp-controller="AnaSayfa" asp-action="Index" class="btn btn-primary">
-                    <i class="bx bx-car me-1"></i>Lojistik paneli
+                <a href="#upcomingAppointments" class="btn btn-outline-secondary">
+                    <i class="bx bx-list-ul me-1"></i>Liste Görünümü
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="pc-kpi-grid">
-        @foreach (var kart in Model.OzetKartlar)
-        {
-            <article class="pc-kpi-card h-100">
-                <div class="pc-kpi-card__top">
-                    <div>
-                        <div class="pc-kpi-card__label">@kart.Baslik</div>
-                        <div class="pc-kpi-card__value">@kart.Deger</div>
-                    </div>
-                    <span class="pc-kpi-card__icon"><i class="bx @kart.Ikon"></i></span>
+    <section class="pc-kpi-grid pc-appointment-kpis" aria-label="Randevu özeti">
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Bugünkü Randevular</div>
+                    <div class="pc-kpi-card__value">@Model.Summary.TodayAppointments</div>
                 </div>
-                <div class="pc-kpi-card__meta">@kart.Aciklama</div>
-            </article>
-        }
+                <span class="pc-kpi-card__icon"><i class="bx bx-calendar-check"></i></span>
+            </div>
+            <div class="pc-kpi-card__meta">Bugün planlanan tüm operasyonlar</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Onay Bekleyenler</div>
+                    <div class="pc-kpi-card__value">@Model.Summary.PendingApprovals</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-time-five"></i></span>
+            </div>
+            <div class="pc-kpi-card__meta">Teyit veya belge kontrolü bekleyen kayıtlar</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Bu Haftaki Planlar</div>
+                    <div class="pc-kpi-card__value">@Model.Summary.ThisWeekPlans</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-calendar-week"></i></span>
+            </div>
+            <div class="pc-kpi-card__meta">Haftalık teslimat, görüşme ve çalışma planı</div>
+        </article>
+        <article class="pc-kpi-card h-100">
+            <div class="pc-kpi-card__top">
+                <div>
+                    <div class="pc-kpi-card__label">Tamamlanan İşlemler</div>
+                    <div class="pc-kpi-card__value">@Model.Summary.CompletedOperations</div>
+                </div>
+                <span class="pc-kpi-card__icon"><i class="bx bx-check-shield"></i></span>
+            </div>
+            <div class="pc-kpi-card__meta">Kapanan randevu ve teslimat adımları</div>
+        </article>
     </section>
 
-    <section class="row g-4">
-        <div class="col-12 col-xl-5">
-            <div class="pc-panel h-100">
+    <section class="pc-appointment-layout">
+        <div class="pc-panel pc-calendar-panel">
+            <div class="pc-panel__header pc-calendar-toolbar">
+                <div>
+                    <h2 class="pc-panel__title text-capitalize">@monthTitle</h2>
+                    <p class="pc-panel__subtitle mb-0">Aylık plan, günlük kapasite ve durum rozetleri.</p>
+                </div>
+                <div class="pc-calendar-actions">
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.PreviousMonth.ToString("yyyy-MM-01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm" aria-label="Önceki ay">
+                        <i class="bx bx-chevron-left"></i>
+                    </a>
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy-MM-01")" asp-route-gun="@DateTime.Today.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm">Bugün</a>
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.NextMonth.ToString("yyyy-MM-01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm" aria-label="Sonraki ay">
+                        <i class="bx bx-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="pc-panel__body">
+                <div class="pc-calendar-weekdays" aria-hidden="true">
+                    @foreach (var dayName in dayNames)
+                    {
+                        <span>@dayName</span>
+                    }
+                </div>
+                <div class="pc-calendar-grid" data-calendar-grid>
+                    @foreach (var day in Model.Days)
+                    {
+                        var dayPanelId = $"day-panel-{day.Date:yyyyMMdd}";
+                        var dayClasses = string.Join(" ", new[]
+                        {
+                            "pc-calendar-day",
+                            day.IsCurrentMonth ? "" : "pc-calendar-day--muted",
+                            day.IsToday ? "pc-calendar-day--today" : "",
+                            day.IsSelected ? "pc-calendar-day--selected" : "",
+                            day.Appointments.Count == 0 ? "pc-calendar-day--empty" : ""
+                        }.Where(value => !string.IsNullOrWhiteSpace(value)));
+
+                        <button type="button"
+                                class="@dayClasses"
+                                data-calendar-day
+                                data-target="@dayPanelId"
+                                aria-pressed="@day.IsSelected.ToString().ToLowerInvariant()">
+                            <span class="pc-calendar-day__number">@day.Date.Day</span>
+                            <span class="pc-calendar-day__items">
+                                @foreach (var appointment in day.Appointments.Take(3))
+                                {
+                                    <span class="pc-calendar-badge pc-calendar-badge--@appointment.TypeCssClass" title="@appointment.Title">
+                                        @appointment.StartTime.ToString("HH:mm") @appointment.TypeText
+                                    </span>
+                                }
+                                @if (day.Appointments.Count > 3)
+                                {
+                                    <span class="pc-calendar-more">+@(day.Appointments.Count - 3) daha</span>
+                                }
+                            </span>
+                        </button>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <aside class="pc-appointment-side">
+            <div class="pc-panel pc-selected-day-panel">
                 <div class="pc-panel__header">
                     <div>
-                        <h2 class="pc-panel__title">Slot kapasitesi</h2>
-                        <p class="pc-panel__subtitle mb-0">Saatlik doluluk ve onay durumu görünümü.</p>
+                        <h2 class="pc-panel__title">Seçili Gün</h2>
+                        <p class="pc-panel__subtitle mb-0" data-selected-date-title>@selectedDateTitle</p>
                     </div>
                 </div>
                 <div class="pc-panel__body">
-                    <div class="pc-health-list">
-                        @foreach (var slot in Model.Slotlar)
-                        {
-                            <article class="pc-health-list__item">
-                                <div>
-                                    <div class="fw-semibold mb-1">@slot.SaatAraligi · @slot.Baslik</div>
-                                    <p class="text-muted mb-1">@slot.Konum</p>
-                                    <small class="text-muted">@slot.Doluluk</small>
+                    @foreach (var day in Model.Days)
+                    {
+                        var dayPanelId = $"day-panel-{day.Date:yyyyMMdd}";
+                        <div id="@dayPanelId"
+                             class="pc-day-detail @(day.IsSelected ? "is-active" : "")"
+                             data-day-detail
+                             data-date-title="@day.Date.ToString("d MMMM yyyy dddd", tr)">
+                            @if (day.Appointments.Count == 0)
+                            {
+                                <div class="pc-empty-state">
+                                    <i class="bx bx-calendar"></i>
+                                    <strong>Bu gün için randevu yok</strong>
+                                    <span>Yeni randevu oluşturarak teslimat, görüşme veya iş planı ekleyebilirsiniz.</span>
                                 </div>
-                                <span class="pc-status-pill pc-status-pill--@slot.Ton">@slot.Durum</span>
-                            </article>
-                        }
-                    </div>
+                            }
+                            else
+                            {
+                                <div class="pc-day-appointment-list">
+                                    @foreach (var appointment in day.Appointments.OrderBy(item => item.StartTime))
+                                    {
+                                        <article class="pc-day-appointment">
+                                            <div class="pc-day-appointment__time">
+                                                <strong>@appointment.StartTime.ToString("HH:mm")</strong>
+                                                @if (appointment.EndTime is not null)
+                                                {
+                                                    <span>@appointment.EndTime.Value.ToString("HH:mm")</span>
+                                                }
+                                            </div>
+                                            <div class="pc-day-appointment__body">
+                                                <div class="pc-day-appointment__top">
+                                                    <div>
+                                                        <h3>@appointment.Title</h3>
+                                                        <p>@appointment.TypeText · @appointment.RelatedParty</p>
+                                                    </div>
+                                                    <span class="pc-status-pill pc-status-pill--@appointment.BadgeCssClass">@appointment.StatusText</span>
+                                                </div>
+                                                <div class="pc-day-appointment__meta">
+                                                    <span><i class="bx bx-map"></i>@appointment.Location</span>
+                                                    <span><i class="bx bx-id-card"></i>@appointment.Id</span>
+                                                </div>
+                                                <p class="pc-day-appointment__desc">@appointment.Description</p>
+                                                <div class="pc-day-actions">
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm">Detay</button>
+                                                    <button type="button" class="btn btn-outline-secondary btn-sm">Düzenle</button>
+                                                    <button type="button" class="btn btn-outline-danger btn-sm">İptal Et</button>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-xl-7">
-            <div class="pc-panel pc-table-card h-100">
+            <div class="pc-panel" id="upcomingAppointments">
                 <div class="pc-panel__header">
                     <div>
-                        <h2 class="pc-panel__title">Randevu kayıtları</h2>
-                        <p class="pc-panel__subtitle mb-0">Sipariş, müşteri ve konum bağlamıyla okunabilir plan tablosu.</p>
+                        <h2 class="pc-panel__title">Yaklaşan Randevular</h2>
+                        <p class="pc-panel__subtitle mb-0">Tarihe göre en yakın planlar.</p>
                     </div>
                 </div>
-                <div class="pc-panel__body d-none d-lg-block">
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Kod</th>
-                                    <th>Tip</th>
-                                    <th>Müşteri</th>
-                                    <th>Zaman</th>
-                                    <th>Konum</th>
-                                    <th>Durum</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var kayit in Model.Kayitlar)
-                                {
-                                    <tr>
-                                        <td class="fw-semibold">@kayit.Kod</td>
-                                        <td>@kayit.Tip</td>
-                                        <td>
-                                            <div class="d-flex flex-column">
-                                                <span>@kayit.Musteri</span>
-                                                <small class="text-muted">@kayit.Ozet</small>
-                                            </div>
-                                        </td>
-                                        <td>@kayit.Zaman</td>
-                                        <td>@kayit.Konum</td>
-                                        <td><span class="pc-status-pill pc-status-pill--@kayit.Ton">@kayit.Durum</span></td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="pc-panel__body d-lg-none">
-                    <div class="pc-mobile-list">
-                        @foreach (var kayit in Model.Kayitlar)
+                <div class="pc-panel__body">
+                    <div class="pc-upcoming-list">
+                        @foreach (var appointment in Model.UpcomingAppointments)
                         {
-                            <article class="pc-mobile-card">
-                                <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
-                                    <div>
-                                        <div class="fw-semibold">@kayit.Kod · @kayit.Tip</div>
-                                        <div class="text-muted">@kayit.Musteri</div>
-                                    </div>
-                                    <span class="pc-status-pill pc-status-pill--@kayit.Ton">@kayit.Durum</span>
+                            <article class="pc-upcoming-item">
+                                <div class="pc-upcoming-item__date">
+                                    <strong>@appointment.StartTime.ToString("dd", tr)</strong>
+                                    <span>@appointment.StartTime.ToString("MMM", tr)</span>
                                 </div>
-                                <p class="text-muted mb-3">@kayit.Ozet</p>
-                                <div class="pc-mobile-card__grid">
-                                    <div>
-                                        <span class="pc-mobile-card__label">Zaman</span>
-                                        <strong>@kayit.Zaman</strong>
+                                <div class="pc-upcoming-item__body">
+                                    <div class="d-flex justify-content-between align-items-start gap-2">
+                                        <div>
+                                            <h3>@appointment.Title</h3>
+                                            <p>@appointment.TypeText · @appointment.Location</p>
+                                        </div>
+                                        <span class="pc-status-pill pc-status-pill--@appointment.BadgeCssClass">@appointment.StatusText</span>
                                     </div>
-                                    <div>
-                                        <span class="pc-mobile-card__label">Konum</span>
-                                        <strong>@kayit.Konum</strong>
-                                    </div>
+                                    <small>@appointment.StartTime.ToString("HH:mm") · @appointment.RelatedParty</small>
                                 </div>
                             </article>
                         }
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
     </section>
+</div>
+
+<div class="modal fade" id="newAppointmentModal" tabindex="-1" aria-labelledby="newAppointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title fs-5" id="newAppointmentModalLabel">Yeni Randevu Oluştur</h2>
+                    <p class="text-muted mb-0 small">Bu form demo amaçlıdır; kayıt işlemi daha sonra veritabanına bağlanacaktır.</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                @* TODO: Persist new appointment form values when appointment storage is implemented. *@
+                <form class="pc-new-appointment-form">
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="appointmentTitle" class="form-label">Randevu Başlığı</label>
+                            <input id="appointmentTitle" class="form-control" type="text" placeholder="Örn. Sabah ürün teslim alma" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="appointmentType" class="form-label">Randevu Türü</label>
+                            <select id="appointmentType" class="form-select">
+                                <option>Ürün Teslim Alma</option>
+                                <option>Ürün Teslimatı</option>
+                                <option>Üretici Görüşmesi</option>
+                                <option>Alıcı Görüşmesi</option>
+                                <option>Nakliye Planı</option>
+                                <option>Ziraat Danışmanlığı</option>
+                                <option>İşçi / Yevmiye Planı</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="appointmentDate" class="form-label">Tarih</label>
+                            <input id="appointmentDate" class="form-control" type="date" />
+                        </div>
+                        <div class="col-md-3">
+                            <label for="appointmentTime" class="form-label">Saat</label>
+                            <input id="appointmentTime" class="form-control" type="time" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="appointmentParty" class="form-label">İlgili Kişi / Firma</label>
+                            <input id="appointmentParty" class="form-control" type="text" placeholder="Firma veya kişi adı" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="appointmentLocation" class="form-label">Konum / Bölge</label>
+                            <input id="appointmentLocation" class="form-control" type="text" placeholder="İlçe, depo veya rota" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="appointmentStatus" class="form-label">Durum</label>
+                            <select id="appointmentStatus" class="form-select">
+                                <option>Planlandı</option>
+                                <option>Onay Bekliyor</option>
+                                <option>Onaylandı</option>
+                                <option>Devam Ediyor</option>
+                                <option>Tamamlandı</option>
+                                <option>İptal Edildi</option>
+                                <option>Ertelendi</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="appointmentDescription" class="form-label">Açıklama</label>
+                            <textarea id="appointmentDescription" class="form-control" rows="4" placeholder="Randevu notları, ürün, araç veya görüşme detayları"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Taslak Olarak Kaydet</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,85 +1,117 @@
 @{
     Layout = "_BlankLayout";
     ViewData["Title"] = "Giriş Yap - PazarCep";
+    ViewData["bodyClass"] = "pc-auth-body";
 }
 
 @section PageStyles {
     <link rel="stylesheet" href="~/vendor/css/pages/page-auth.css" />
+    <link rel="stylesheet" href="~/css/auth-role-selection.css" asp-append-version="true" />
 }
 
-<div class="container-xxl">
-    <div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
+<main class="pc-auth-shell">
+    <section class="pc-auth-hero" aria-labelledby="authHeroTitle">
+        <a href="/" class="pc-auth-brand">
+            <span class="pc-auth-brand-mark">
+                <img src="~/img/favicon/PazarCep_Logo.ico" alt="PazarCep Logo" />
+            </span>
+            <span>
+                <span class="pc-auth-brand-name">PazarCep</span>
+                <span class="pc-auth-brand-sub">Dijital tarım pazarı</span>
+            </span>
+        </a>
 
-            <div class="card px-sm-6 px-0">
-                <div class="card-body">
+        <div class="pc-auth-hero-content">
+            <span class="pc-auth-kicker">Çiftçiden alıcıya dijital tarım pazarı</span>
+            <h1 id="authHeroTitle">PazarCep’e Hoş Geldiniz</h1>
+            <p>Tarımın üretim, alım, iş gücü, lojistik ve uzman desteği ihtiyaçlarını tek hesapta yönetin.</p>
+        </div>
 
-                    <!-- Logo -->
-                    <div class="app-brand justify-content-center">
-                        <a href="/" class="app-brand-link gap-2">
-                            <span class="app-brand-logo demo">@await Html.PartialAsync("../_Partials/_Macros")</span>
-                            <span class="app-brand-text demo text-heading fw-bold">@TempData.Peek("appName")</span>
-                        </a>
-                    </div>
+        <div class="pc-auth-role-summary" aria-label="PazarCep rolleri">
+            <article>
+                <i class="icon-base bx bx-store"></i>
+                <span>Alıcı</span>
+            </article>
+            <article>
+                <i class="icon-base bx bx-leaf"></i>
+                <span>Çiftçi / Üreten</span>
+            </article>
+            <article>
+                <i class="icon-base bx bx-hard-hat"></i>
+                <span>İşçi / Yevmiyeci</span>
+            </article>
+            <article>
+                <i class="icon-base bx bx-truck"></i>
+                <span>Lojistikçi</span>
+            </article>
+            <article>
+                <i class="icon-base bx bx-support"></i>
+                <span>Ziraat Uzmanı</span>
+            </article>
+        </div>
 
-                    <h4 class="mb-1">PazarCep’e Hoş Geldiniz 👋</h4>
-                    <p class="mb-6">Hesabınıza giriş yaparak işlemlerinize devam edebilirsiniz.</p>
+        <div class="pc-auth-trust">
+            <span><i class="icon-base bx bx-check-shield"></i> Güvenli hesap girişi</span>
+            <span><i class="icon-base bx bx-user-check"></i> Tek hesapla birden fazla rol yönetimi</span>
+        </div>
+    </section>
 
-                    <form id="formAuthentication" class="mb-6" action="/" method="POST">
-
-                        <div class="mb-6">
-                            <label for="email" class="form-label">E-posta veya Kullanıcı Adı</label>
-                            <input type="text"
-                                   class="form-control"
-                                   id="email"
-                                   name="email-username"
-                                   placeholder="E-posta veya kullanıcı adınızı girin"
-                                   autofocus />
-                        </div>
-
-                        <div class="mb-6 form-password-toggle">
-                            <label class="form-label" for="password">Parola</label>
-                            <div class="input-group input-group-merge">
-                                <input type="password"
-                                       id="password"
-                                       class="form-control"
-                                       name="password"
-                                       placeholder="••••••••••••"
-                                       aria-describedby="password" />
-                                <span class="input-group-text cursor-pointer">
-                                    <i class="icon-base bx bx-hide"></i>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="mb-8">
-                            <div class="d-flex justify-content-between">
-                                <div class="form-check mb-0">
-                                    <input class="form-check-input" type="checkbox" id="remember-me" name="remember-me" />
-                                    <label class="form-check-label" for="remember-me">Beni Hatırla</label>
-                                </div>
-                                <a href="/Auth/ForgotPasswordBasic">
-                                    <span>Parolanızı mı unuttunuz?</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="mb-6">
-                            <button class="btn btn-primary d-grid w-100" type="submit">Giriş Yap</button>
-                        </div>
-
-                    </form>
-
-                    <p class="text-center">
-                        <span>Hesabınız yok mu?</span>
-                        <a href="/Auth/RegisterBasic">
-                            <span>Yeni hesap oluştur</span>
-                        </a>
-                    </p>
-
-                </div>
+    <section class="pc-auth-panel" aria-labelledby="loginTitle">
+        <div class="pc-auth-card">
+            <div class="pc-auth-card-header">
+                <span class="pc-auth-card-eyebrow">Hesabınıza erişin</span>
+                <h2 id="loginTitle">Giriş Yap</h2>
+                <p>Mevcut hesabınızla giriş yapın. Aktif rol seçimi panel içinde yapılır.</p>
             </div>
 
+            @if (TempData["RegisterSuccessMessage"] is string successMessage)
+            {
+                <div class="alert alert-success" role="status">@successMessage</div>
+            }
+
+            <form id="formAuthentication" class="pc-auth-form" action="/" method="POST">
+                <div>
+                    <label for="email" class="form-label">E-posta veya telefon</label>
+                    <input type="text"
+                           class="form-control"
+                           id="email"
+                           name="email-username"
+                           placeholder="E-posta adresi veya telefon"
+                           autocomplete="username"
+                           autofocus />
+                </div>
+
+                <div class="form-password-toggle">
+                    <label class="form-label" for="password">Şifre</label>
+                    <div class="input-group input-group-merge">
+                        <input type="password"
+                               id="password"
+                               class="form-control"
+                               name="password"
+                               placeholder="Şifrenizi girin"
+                               autocomplete="current-password"
+                               aria-describedby="password" />
+                        <span class="input-group-text cursor-pointer">
+                            <i class="icon-base bx bx-hide"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="pc-auth-form-row">
+                    <div class="form-check mb-0">
+                        <input class="form-check-input" type="checkbox" id="remember-me" name="remember-me" />
+                        <label class="form-check-label" for="remember-me">Beni hatırla</label>
+                    </div>
+                    <a href="/Auth/ForgotPasswordBasic">Şifremi unuttum</a>
+                </div>
+
+                <button class="btn btn-primary w-100" type="submit">Giriş Yap</button>
+            </form>
+
+            <div class="pc-auth-switch">
+                <span>Yeni hesap mı oluşturacaksınız?</span>
+                <a href="/Auth/RegisterBasic">Hesap Oluştur</a>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>
