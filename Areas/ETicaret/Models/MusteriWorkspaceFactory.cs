@@ -15,8 +15,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Aktif",
       DurumSinifi = "success",
       Sehir = "İstanbul / Kadıköy",
-      KayitTarihi = "14 Ocak 2024",
-      SonEtkilesim = "Bugün 10:45",
+      KayitTarihi = "2024.01.14",
+      SonEtkilesim = "2026.05.02 10:45",
       Email = "ayse.kaya@kayarestoran.com",
       Telefon = "+90 532 441 18 27",
       Temsilci = "Deniz Şahin",
@@ -42,8 +42,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Büyüyor",
       DurumSinifi = "primary",
       Sehir = "Ankara / Çankaya",
-      KayitTarihi = "3 Mart 2024",
-      SonEtkilesim = "Dün 16:20",
+      KayitTarihi = "2024.03.03",
+      SonEtkilesim = "2026.05.01 16:20",
       Email = "murat@demirorganik.com",
       Telefon = "+90 541 772 66 19",
       Temsilci = "Ece Yıldırım",
@@ -69,8 +69,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Takip Gerekli",
       DurumSinifi = "warning",
       Sehir = "İzmir / Bornova",
-      KayitTarihi = "18 Mayıs 2024",
-      SonEtkilesim = "2 gün önce",
+      KayitTarihi = "2024.05.18",
+      SonEtkilesim = "2026.04.30",
       Email = "selin.aksoy@aksoycatering.com",
       Telefon = "+90 533 915 42 80",
       Temsilci = "Deniz Şahin",
@@ -96,8 +96,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Aktif",
       DurumSinifi = "success",
       Sehir = "Bursa / Nilüfer",
-      KayitTarihi = "29 Haziran 2024",
-      SonEtkilesim = "Bugün 08:12",
+      KayitTarihi = "2024.06.29",
+      SonEtkilesim = "2026.05.02 08:12",
       Email = "emre.isik@isikmarket.com",
       Telefon = "+90 545 612 92 73",
       Temsilci = "Burcu Tan",
@@ -123,8 +123,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Onboarding",
       DurumSinifi = "info",
       Sehir = "Antalya / Muratpaşa",
-      KayitTarihi = "7 Şubat 2025",
-      SonEtkilesim = "3 saat önce",
+      KayitTarihi = "2025.02.07",
+      SonEtkilesim = "2026.05.02 09:00",
       Email = "zeynep@ozturkgurme.com",
       Telefon = "+90 537 220 18 44",
       Temsilci = "Ece Yıldırım",
@@ -150,8 +150,8 @@ public static class MusteriWorkspaceFactory
       Durum = "Kritik",
       DurumSinifi = "danger",
       Sehir = "Adana / Seyhan",
-      KayitTarihi = "22 Nisan 2024",
-      SonEtkilesim = "5 gün önce",
+      KayitTarihi = "2024.04.22",
+      SonEtkilesim = "2026.04.27",
       Email = "kerem.arslan@arslantaze.com",
       Telefon = "+90 535 811 09 90",
       Temsilci = "Burcu Tan",
@@ -234,10 +234,10 @@ public static class MusteriWorkspaceFactory
       ],
       SonAktiviteler =
       [
-        new() { Baslik = "Teklif güncellendi", Aciklama = $"{musteri.Sirket} için haftalık meyve-sebze kotasyonu revize edildi.", Zaman = "Bugün · 10:20", Ikon = "bx-receipt", Ton = "primary" },
-        new() { Baslik = "Sipariş onaylandı", Aciklama = "Teslimat penceresi 07:00 - 09:00 olarak sabitlendi.", Zaman = "Bugün · 08:45", Ikon = "bx-check-circle", Ton = "success" },
-        new() { Baslik = "Temsilci notu", Aciklama = $"{musteri.Temsilci} ödeme vadesi revizyonu için geri dönüş bekliyor.", Zaman = "Dün · 17:30", Ikon = "bx-note", Ton = "warning" },
-        new() { Baslik = "Sadakat avantajı atandı", Aciklama = "Platin segmentte ek indirim eşiği aktive edildi.", Zaman = "2 gün önce", Ikon = "bx-gift", Ton = "info" }
+        new() { Baslik = "Teklif güncellendi", Aciklama = $"{musteri.Sirket} için haftalık meyve-sebze kotasyonu revize edildi.", Zaman = "2026.05.02 10:20", Ikon = "bx-receipt", Ton = "primary" },
+        new() { Baslik = "Sipariş onaylandı", Aciklama = "Teslimat penceresi 07:00 - 09:00 olarak sabitlendi.", Zaman = "2026.05.02 08:45", Ikon = "bx-check-circle", Ton = "success" },
+        new() { Baslik = "Temsilci notu", Aciklama = $"{musteri.Temsilci} ödeme vadesi revizyonu için geri dönüş bekliyor.", Zaman = "2026.05.01 17:30", Ikon = "bx-note", Ton = "warning" },
+        new() { Baslik = "Sadakat avantajı atandı", Aciklama = "Platin segmentte ek indirim eşiği aktive edildi.", Zaman = "2026.04.30", Ikon = "bx-gift", Ton = "info" }
       ],
       HesapSagligi =
       [
@@ -248,9 +248,9 @@ public static class MusteriWorkspaceFactory
       ],
       SonSiparisler =
       [
-        new() { SiparisNo = "SC-58421", Tarih = "21 Nisan 2026", Kanal = "Mobil", Tutar = "₺12.450", Durum = "Teslimat hazırlanıyor", DurumSinifi = "info" },
-        new() { SiparisNo = "SC-58390", Tarih = "18 Nisan 2026", Kanal = "Müşteri temsilcisi", Tutar = "₺9.180", Durum = "Tamamlandı", DurumSinifi = "success" },
-        new() { SiparisNo = "SC-58277", Tarih = "15 Nisan 2026", Kanal = "Web", Tutar = "₺6.940", Durum = "Tamamlandı", DurumSinifi = "success" }
+        new() { SiparisNo = "SC-58421", Tarih = "2026.04.21", Kanal = "Mobil", Tutar = "₺12.450", Durum = "Teslimat hazırlanıyor", DurumSinifi = "info" },
+        new() { SiparisNo = "SC-58390", Tarih = "2026.04.18", Kanal = "Müşteri temsilcisi", Tutar = "₺9.180", Durum = "Tamamlandı", DurumSinifi = "success" },
+        new() { SiparisNo = "SC-58277", Tarih = "2026.04.15", Kanal = "Web", Tutar = "₺6.940", Durum = "Tamamlandı", DurumSinifi = "success" }
       ]
     };
   }
@@ -365,9 +365,9 @@ public static class MusteriWorkspaceFactory
       ],
       SonFaturalar =
       [
-        new() { FaturaNo = "EF-2026-0421", Tutar = "₺12.450", Vade = "05.05.2026", Yontem = "Havale", Durum = "Planlandı", DurumSinifi = "info" },
-        new() { FaturaNo = "EF-2026-0405", Tutar = "₺9.180", Vade = "19.04.2026", Yontem = "Havale", Durum = "Ödendi", DurumSinifi = "success" },
-        new() { FaturaNo = "EF-2026-0328", Tutar = "₺6.940", Vade = "11.04.2026", Yontem = "Havale", Durum = "Ödendi", DurumSinifi = "success" }
+        new() { FaturaNo = "EF-2026-0421", Tutar = "₺12.450", Vade = "2026.05.05", Yontem = "Havale", Durum = "Planlandı", DurumSinifi = "info" },
+        new() { FaturaNo = "EF-2026-0405", Tutar = "₺9.180", Vade = "2026.04.19", Yontem = "Havale", Durum = "Ödendi", DurumSinifi = "success" },
+        new() { FaturaNo = "EF-2026-0328", Tutar = "₺6.940", Vade = "2026.04.11", Yontem = "Havale", Durum = "Ödendi", DurumSinifi = "success" }
       ]
     };
   }
@@ -412,9 +412,9 @@ public static class MusteriWorkspaceFactory
       ],
       SonBildirimler =
       [
-        new() { Baslik = "Teslimat slotu onaylandı", Kanal = "Uygulama", Durum = "İletildi", DurumSinifi = "success", Tarih = "Bugün 09:12", Ozet = "Sabah sevkiyat planı müşteri tarafından onaylandı." },
-        new() { Baslik = "Yeni fatura yayınlandı", Kanal = "E-posta", Durum = "Okundu", DurumSinifi = "info", Tarih = "Dün 16:48", Ozet = "Nisan ikinci yarı siparişleri için e-fatura teslim edildi." },
-        new() { Baslik = "Vade hatırlatması", Kanal = "SMS", Durum = "Beklemede", DurumSinifi = "warning", Tarih = "20 Nisan 2026", Ozet = "Vadesi yaklaşan ödeme için zamanlanmış hatırlatma." }
+        new() { Baslik = "Teslimat slotu onaylandı", Kanal = "Uygulama", Durum = "İletildi", DurumSinifi = "success", Tarih = "2026.05.02 09:12", Ozet = "Sabah sevkiyat planı müşteri tarafından onaylandı." },
+        new() { Baslik = "Yeni fatura yayınlandı", Kanal = "E-posta", Durum = "Okundu", DurumSinifi = "info", Tarih = "2026.05.01 16:48", Ozet = "Nisan ikinci yarı siparişleri için e-fatura teslim edildi." },
+        new() { Baslik = "Vade hatırlatması", Kanal = "SMS", Durum = "Beklemede", DurumSinifi = "warning", Tarih = "2026.04.20", Ozet = "Vadesi yaklaşan ödeme için zamanlanmış hatırlatma." }
       ]
     };
   }
@@ -434,9 +434,9 @@ public static class MusteriWorkspaceFactory
       ],
       Yorumlar =
       [
-        new() { Urun = "Organik Domates", Kanal = "Mobil uygulama", Tarih = "20 Nisan 2026", Puan = 5, Baslik = "Kalite çok tutarlı", Icerik = "Teslimat erken geldi, ürün kalitesi beklediğimiz standardı korudu.", Durum = "Yayında", DurumSinifi = "success", ModerasyonNotu = "Öne çıkarılabilir yorum." },
-        new() { Urun = "Köy Yumurtası", Kanal = "Web", Tarih = "17 Nisan 2026", Puan = 3, Baslik = "Paketleme geliştirilmeli", Icerik = "İçerik iyi ancak koli içinde daha sabitlenmiş olmasını beklerdik.", Durum = "İncelemede", DurumSinifi = "warning", ModerasyonNotu = "Operasyon ekibi yanıt hazırlıyor." },
-        new() { Urun = "Çiğ Badem", Kanal = "Müşteri temsilcisi", Tarih = "12 Nisan 2026", Puan = 4, Baslik = "Fiyat / kalite dengesi iyi", Icerik = "Kurumsal siparişlerde tekrar değerlendireceğiz, genel deneyim olumlu.", Durum = "Yanıtlandı", DurumSinifi = "info", ModerasyonNotu = "Satış ekibi çapraz satış önerisi ile dönüş yaptı." }
+        new() { Urun = "Organik Domates", Kanal = "Mobil uygulama", Tarih = "2026.04.20", Puan = 5, Baslik = "Kalite çok tutarlı", Icerik = "Teslimat erken geldi, ürün kalitesi beklediğimiz standardı korudu.", Durum = "Yayında", DurumSinifi = "success", ModerasyonNotu = "Öne çıkarılabilir yorum." },
+        new() { Urun = "Köy Yumurtası", Kanal = "Web", Tarih = "2026.04.17", Puan = 3, Baslik = "Paketleme geliştirilmeli", Icerik = "İçerik iyi ancak koli içinde daha sabitlenmiş olmasını beklerdik.", Durum = "İncelemede", DurumSinifi = "warning", ModerasyonNotu = "Operasyon ekibi yanıt hazırlıyor." },
+        new() { Urun = "Çiğ Badem", Kanal = "Müşteri temsilcisi", Tarih = "2026.04.12", Puan = 4, Baslik = "Fiyat / kalite dengesi iyi", Icerik = "Kurumsal siparişlerde tekrar değerlendireceğiz, genel deneyim olumlu.", Durum = "Yanıtlandı", DurumSinifi = "info", ModerasyonNotu = "Satış ekibi çapraz satış önerisi ile dönüş yaptı." }
       ]
     };
   }
@@ -456,9 +456,9 @@ public static class MusteriWorkspaceFactory
       ],
       Yonlendirmeler =
       [
-        new() { AdSoyad = "Nil Yılmaz", Kanal = "Referans kodu", KayitDurumu = "İlk sipariş tamamlandı", DurumSinifi = "success", Tarih = "19 Nisan 2026", DonusumDegeri = "₺1.850", Not = "Meyve kategorisinde yüksek hacim potansiyeli var." },
-        new() { AdSoyad = "Mavera Şarküteri", Kanal = "Temsilci yönlendirmesi", KayitDurumu = "Teklif sürecinde", DurumSinifi = "info", Tarih = "15 Nisan 2026", DonusumDegeri = "Bekleniyor", Not = "Muhasebe evrak onayı bekleniyor." },
-        new() { AdSoyad = "Rota Cafe", Kanal = "QR kampanyası", KayitDurumu = "İletişim kuruldu", DurumSinifi = "warning", Tarih = "11 Nisan 2026", DonusumDegeri = "Ön potansiyel", Not = "İlk deneme siparişi için kampanya talebi var." }
+        new() { AdSoyad = "Nil Yılmaz", Kanal = "Referans kodu", KayitDurumu = "İlk sipariş tamamlandı", DurumSinifi = "success", Tarih = "2026.04.19", DonusumDegeri = "₺1.850", Not = "Meyve kategorisinde yüksek hacim potansiyeli var." },
+        new() { AdSoyad = "Mavera Şarküteri", Kanal = "Temsilci yönlendirmesi", KayitDurumu = "Teklif sürecinde", DurumSinifi = "info", Tarih = "2026.04.15", DonusumDegeri = "Bekleniyor", Not = "Muhasebe evrak onayı bekleniyor." },
+        new() { AdSoyad = "Rota Cafe", Kanal = "QR kampanyası", KayitDurumu = "İletişim kuruldu", DurumSinifi = "warning", Tarih = "2026.04.11", DonusumDegeri = "Ön potansiyel", Not = "İlk deneme siparişi için kampanya talebi var." }
       ],
       ProgramAdimlari =
       [
@@ -490,15 +490,15 @@ public static class MusteriWorkspaceFactory
       ],
       Oturumlar =
       [
-        new() { Cihaz = "MacBook Pro · Chrome", Konum = "İstanbul", IpAdresi = "78.189.24.18", SonAktivite = "Şu an aktif", MevcutOturum = true },
-        new() { Cihaz = "iPhone 15 · iOS App", Konum = "İstanbul", IpAdresi = "176.42.10.77", SonAktivite = "Bugün 07:34", MevcutOturum = false },
-        new() { Cihaz = "Windows 11 · Edge", Konum = "Ankara", IpAdresi = "95.70.121.33", SonAktivite = "18 Nisan 2026", MevcutOturum = false }
+        new() { Cihaz = "MacBook Pro · Chrome", Konum = "İstanbul", IpAdresi = "78.189.24.18", SonAktivite = "2026.05.02 10:10", MevcutOturum = true },
+        new() { Cihaz = "iPhone 15 · iOS App", Konum = "İstanbul", IpAdresi = "176.42.10.77", SonAktivite = "2026.05.02 07:34", MevcutOturum = false },
+        new() { Cihaz = "Windows 11 · Edge", Konum = "Ankara", IpAdresi = "95.70.121.33", SonAktivite = "2026.04.18", MevcutOturum = false }
       ],
       DenetimKayitlari =
       [
-        new() { Baslik = "MFA doğrulandı", Aciklama = "Yönetici oturumu başarılı ikinci faktör doğrulamasıyla açıldı.", Zaman = "Bugün · 09:58", Ton = "success" },
-        new() { Baslik = "Yeni cihaz girişi", Aciklama = "Ankara konumundan Edge tarayıcısı ile giriş yapıldı.", Zaman = "18 Nisan 2026", Ton = "warning" },
-        new() { Baslik = "Fatura adresi değişikliği", Aciklama = "İkinci onay akışı ile tamamlandı, log kaydı oluşturuldu.", Zaman = "11 Nisan 2026", Ton = "info" }
+        new() { Baslik = "MFA doğrulandı", Aciklama = "Yönetici oturumu başarılı ikinci faktör doğrulamasıyla açıldı.", Zaman = "2026.05.02 09:58", Ton = "success" },
+        new() { Baslik = "Yeni cihaz girişi", Aciklama = "Ankara konumundan Edge tarayıcısı ile giriş yapıldı.", Zaman = "2026.04.18", Ton = "warning" },
+        new() { Baslik = "Fatura adresi değişikliği", Aciklama = "İkinci onay akışı ile tamamlandı, log kaydı oluşturuldu.", Zaman = "2026.04.11", Ton = "info" }
       ]
     };
   }

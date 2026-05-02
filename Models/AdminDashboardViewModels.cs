@@ -90,10 +90,10 @@ public static class AdminDashboardFactory
       ],
       IsListesi =
       [
-        new() { Baslik = "Kritik stok alarmı olan ürünleri gözden geçir", Takim = "E-Ticaret", Durum = "Bugün", DurumTonu = "warning", SonTarih = "10:30", Aciklama = "Katalogta kritik seviye altına düşen 5 ürün için tedarik aksiyonu planlanmalı." },
-        new() { Baslik = "Sabah sevkiyat slotlarını doğrula", Takim = "Lojistik", Durum = "Öncelikli", DurumTonu = "danger", SonTarih = "11:00", Aciklama = "Soğuk zincir ürünler için kapı ve araç atamaları kapatılmadan rota kilitlenmemeli." },
-        new() { Baslik = "CRM takip listesini temsilcilere dağıt", Takim = "Müşteri Yönetimi", Durum = "Planlandı", DurumTonu = "info", SonTarih = "13:00", Aciklama = "Takip gereken müşteriler için bugün aksiyon sahibi netleştirilmeli." },
-        new() { Baslik = "Haftalık yönetim özeti hazırlanıyor", Takim = "Panel", Durum = "Yolda", DurumTonu = "success", SonTarih = "16:00", Aciklama = "Canlı ön izleme için modül bazlı görsel kalite ve operatif durum notları toparlanıyor." }
+        new() { Baslik = "Kritik stok alarmı olan ürünleri gözden geçir", Takim = "E-Ticaret", Durum = "2026.05.02", DurumTonu = "warning", SonTarih = "2026.05.02 10:30", Aciklama = "Katalogta kritik seviye altına düşen 5 ürün için tedarik aksiyonu planlanmalı." },
+        new() { Baslik = "Sabah sevkiyat slotlarını doğrula", Takim = "Lojistik", Durum = "Öncelikli", DurumTonu = "danger", SonTarih = "2026.05.02 11:00", Aciklama = "Soğuk zincir ürünler için kapı ve araç atamaları kapatılmadan rota kilitlenmemeli." },
+        new() { Baslik = "CRM takip listesini temsilcilere dağıt", Takim = "Müşteri Yönetimi", Durum = "Planlandı", DurumTonu = "info", SonTarih = "2026.05.02 13:00", Aciklama = "Takip gereken müşteriler için bugün aksiyon sahibi netleştirilmeli." },
+        new() { Baslik = "Haftalık yönetim özeti hazırlanıyor", Takim = "Panel", Durum = "Yolda", DurumTonu = "success", SonTarih = "2026.05.02 16:00", Aciklama = "Canlı ön izleme için modül bazlı görsel kalite ve operatif durum notları toparlanıyor." }
       ],
       Moduller =
       [
@@ -104,10 +104,10 @@ public static class AdminDashboardFactory
       ],
       ZamanAkisi =
       [
-        new() { Baslik = "Sabah dağıtımı kilitlendi", Aciklama = "07:00 - 09:00 arası teslimat slotları operasyon ekibi tarafından teyit edildi.", Zaman = "Bugün · 08:40", Ikon = "bx-check-circle" },
-        new() { Baslik = "Katalog uyarısı oluştu", Aciklama = "İki ürün kritik stok seviyesine düştü ve liste ekranına işaret bırakıldı.", Zaman = "Bugün · 09:15", Ikon = "bx-error-circle" },
-        new() { Baslik = "Müşteri temsilcisi notu eklendi", Aciklama = "Kurumsal segmentteki bir hesap için vade revizyonu talebi işlendi.", Zaman = "Bugün · 10:05", Ikon = "bx-note" },
-        new() { Baslik = "Ön izleme kalite geçişi güncellendi", Aciklama = "Paylaşılan layout, mobil davranış ve iş modülü tutarlılığı tek standarda çekildi.", Zaman = "Bugün · 11:10", Ikon = "bx-rocket" }
+        new() { Baslik = "Sabah dağıtımı kilitlendi", Aciklama = "07:00 - 09:00 arası teslimat slotları operasyon ekibi tarafından teyit edildi.", Zaman = "2026.05.02 08:40", Ikon = "bx-check-circle" },
+        new() { Baslik = "Katalog uyarısı oluştu", Aciklama = "İki ürün kritik stok seviyesine düştü ve liste ekranına işaret bırakıldı.", Zaman = "2026.05.02 09:15", Ikon = "bx-error-circle" },
+        new() { Baslik = "Müşteri temsilcisi notu eklendi", Aciklama = "Kurumsal segmentteki bir hesap için vade revizyonu talebi işlendi.", Zaman = "2026.05.02 10:05", Ikon = "bx-note" },
+        new() { Baslik = "Ön izleme kalite geçişi güncellendi", Aciklama = "Paylaşılan layout, mobil davranış ve iş modülü tutarlılığı tek standarda çekildi.", Zaman = "2026.05.02 11:10", Ikon = "bx-rocket" }
       ],
       HizliBaglantilar =
       [

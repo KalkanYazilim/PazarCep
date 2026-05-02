@@ -1,0 +1,150 @@
+@model FinancePageViewModel
+@{
+    ViewData["Title"] = Model.Title;
+    var culture = new System.Globalization.CultureInfo("tr-TR");
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/business-panels.css" asp-append-version="true" />
+}
+
+<div class="pc-page-shell pc-business-panel">
+    <section class="pc-page-hero pc-business-hero pc-business-hero--@Model.RoleKey.ToLowerInvariant()">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Ortak Finans Modülü</span>
+            <h1 class="pc-page-title">@Model.Title</h1>
+            <p class="pc-page-description mb-0">@Model.Subtitle</p>
+            @await Html.PartialAsync("_RoleSwitcher", Model.RoleSwitcher)
+            <div class="pc-page-actions mt-4">
+                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#financeModal">
+                    <i class="bx bx-plus me-1"></i>Gelir / Gider Ekle
+                </button>
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="bx bx-filter-alt me-1"></i>Tarih Filtresi
+                </button>
+                <button class="btn btn-outline-secondary" type="button">
+                    <i class="bx bx-export me-1"></i>Dışa Aktar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid pc-business-kpi-grid">
+        @foreach (var metric in Model.Metrics)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@metric.Title</div>
+                        <div class="pc-kpi-card__value">@metric.Value</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @metric.Icon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@metric.Description</div>
+            </article>
+        }
+    </section>
+
+    <section class="pc-business-finance-grid">
+        <div class="pc-panel pc-table-card">
+            <div class="pc-panel__header">
+                <div>
+                    <h2 class="pc-panel__title">Gelir / Gider Tablosu</h2>
+                    <p class="pc-panel__subtitle mb-0">Kategori, ödeme durumu ve ilgili operasyon bağlantısıyla takip.</p>
+                </div>
+            </div>
+            <div class="pc-panel__body">
+                <div class="pc-business-filter-row">
+                    <input class="form-control" type="date" aria-label="Başlangıç tarihi" />
+                    <input class="form-control" type="date" aria-label="Bitiş tarihi" />
+                    <select class="form-select" aria-label="Kategori">
+                        <option>Kategori</option>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option>@category</option>
+                        }
+                    </select>
+                    <select class="form-select" aria-label="Ödeme durumu">
+                        <option>Ödeme Durumu</option>
+                        <option>Ödendi</option>
+                        <option>Kısmi Ödendi</option>
+                        <option>Ödenmedi</option>
+                    </select>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Tip</th>
+                                <th>Kategori</th>
+                                <th>Tutar</th>
+                                <th>Ödeme</th>
+                                <th>Bağlantı</th>
+                                <th>Açıklama</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Transactions)
+                            {
+                                var tone = item.TransactionType == "Income" ? "success" : "warning";
+                                <tr>
+                                    <td>@item.TransactionDate.ToString("yyyy.MM.dd")</td>
+                                    <td><span class="pc-status-pill pc-status-pill--@tone">@(item.TransactionType == "Income" ? "Gelir" : "Gider")</span></td>
+                                    <td>@item.Category</td>
+                                    <td class="fw-semibold">₺@item.Amount.ToString("N0", culture)</td>
+                                    <td>@item.PaymentStatus</td>
+                                    <td>@item.RelatedEntityType / @item.RelatedEntityId</td>
+                                    <td>@item.Description</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <aside class="pc-panel">
+            <div class="pc-panel__header">
+                <div>
+                    <h2 class="pc-panel__title">Kategori Yönetimi</h2>
+                    <p class="pc-panel__subtitle mb-0">Rol bazlı gelir ve gider kategorileri.</p>
+                </div>
+            </div>
+            <div class="pc-panel__body">
+                <div class="pc-category-stack">
+                    @foreach (var category in Model.Categories)
+                    {
+                        <span class="pc-category-chip">@category</span>
+                    }
+                </div>
+            </div>
+        </aside>
+    </section>
+</div>
+
+<div class="modal fade" id="financeModal" tabindex="-1" aria-labelledby="financeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="financeModalLabel">Gelir / Gider Kaydı</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                @* TODO: Persist FinanceTransaction records with user, role and related entity IDs. *@
+                <form class="row g-3">
+                    <div class="col-md-6"><label class="form-label">Tip</label><select class="form-select"><option>Gelir</option><option>Gider</option></select></div>
+                    <div class="col-md-6"><label class="form-label">Kategori</label><input class="form-control" type="text" placeholder="Kategori" /></div>
+                    <div class="col-md-6"><label class="form-label">Tutar</label><input class="form-control" type="number" placeholder="0" /></div>
+                    <div class="col-md-6"><label class="form-label">Tarih</label><input class="form-control" type="date" /></div>
+                    <div class="col-md-6"><label class="form-label">Ödeme Durumu</label><select class="form-select"><option>Ödendi</option><option>Kısmi Ödendi</option><option>Ödenmedi</option></select></div>
+                    <div class="col-md-6"><label class="form-label">İlgili Kayıt</label><input class="form-control" type="text" placeholder="Tarla, iş, sipariş, araç veya randevu" /></div>
+                    <div class="col-12"><label class="form-label">Açıklama</label><textarea class="form-control" rows="3"></textarea></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-secondary" type="button" data-bs-dismiss="modal">Vazgeç</button>
+                <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>

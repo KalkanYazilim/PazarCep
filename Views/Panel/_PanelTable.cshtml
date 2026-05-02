@@ -1,0 +1,48 @@
+@model PanelTableViewModel
+
+<div class="pc-panel pc-table-card">
+    <div class="pc-panel__header">
+        <div>
+            <h2 class="pc-panel__title">@Model.Title</h2>
+            <p class="pc-panel__subtitle mb-0">@Model.Description</p>
+        </div>
+    </div>
+    <div class="pc-panel__body">
+        @if (Model.Rows.Count == 0)
+        {
+            <div class="pc-business-empty">
+                <i class="bx bx-inbox"></i>
+                <strong>Kayıt bulunamadı</strong>
+                <span>Filtreleri değiştirin veya yeni kayıt oluşturun.</span>
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-hover align-middle pc-business-table">
+                    <thead>
+                        <tr>
+                            @foreach (var column in Model.Columns)
+                            {
+                                <th>@column.Header</th>
+                            }
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var row in Model.Rows)
+                        {
+                            <tr>
+                                @foreach (var column in Model.Columns)
+                                {
+                                    <td>@row.Values.GetValueOrDefault(column.Key)</td>
+                                }
+                                <td><span class="pc-status-pill pc-status-pill--@row.StatusTone">@row.StatusText</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+</div>

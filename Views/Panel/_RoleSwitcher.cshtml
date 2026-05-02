@@ -1,0 +1,10 @@
+@model IReadOnlyList<RoleSwitcherItemViewModel>
+
+<div class="pc-role-switcher" aria-label="Aktif rol seçimi">
+    @foreach (var role in Model)
+    {
+        <a asp-controller="Panel" asp-action="@role.Action" class="pc-role-switcher__item @(role.IsActive ? "is-active" : "")">
+            @role.Text
+        </a>
+    }
+</div>

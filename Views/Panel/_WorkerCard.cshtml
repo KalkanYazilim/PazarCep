@@ -1,0 +1,9 @@
+@model WorkerCardViewModel
+
+<article class="pc-worker-card" draggable="true" data-worker-card data-worker-id="@Model.Id">
+    <div>
+        <strong>@Model.Name</strong>
+        <span>@Model.Region · @Model.Skill</span>
+    </div>
+    <span class="pc-status-pill pc-status-pill--info">@Model.Status</span>
+</article>

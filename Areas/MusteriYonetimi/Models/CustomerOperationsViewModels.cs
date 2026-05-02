@@ -301,26 +301,26 @@ public static class MusteriYonetimiWorkspaceFactory
 
   private static readonly IReadOnlyList<MusteriYonetimSiparisSatiriViewModel> Siparisler =
   [
-    new() { SiparisId = 50124, MusteriId = 1024, SiparisNo = "SC-50124", Musteri = "Ayse Kaya", Kanal = "Mobil", Tarih = "22 Nisan 2026", Tutar = "₺12.450", Durum = "Hazirlaniyor", DurumTonu = "warning", SevkPenceresi = "07:00 - 09:00", OperasyonNotu = "Sabah slotu icin depo cikisi onaylandi." },
-    new() { SiparisId = 50111, MusteriId = 1078, SiparisNo = "SC-50111", Musteri = "Murat Demir", Kanal = "Web", Tarih = "22 Nisan 2026", Tutar = "₺8.940", Durum = "Sevke Hazir", DurumTonu = "success", SevkPenceresi = "10:00 - 12:00", OperasyonNotu = "Rota ve arac atamasi tamamlandi." },
-    new() { SiparisId = 50098, MusteriId = 1117, SiparisNo = "SC-50098", Musteri = "Emre Isik", Kanal = "Temsilci", Tarih = "22 Nisan 2026", Tutar = "₺19.260", Durum = "Yeni Siparis", DurumTonu = "info", SevkPenceresi = "13:00 - 15:00", OperasyonNotu = "Kurumsal depo kabul listesi bekleniyor." },
-    new() { SiparisId = 50087, MusteriId = 1091, SiparisNo = "SC-50087", Musteri = "Selin Aksoy", Kanal = "Mobil", Tarih = "21 Nisan 2026", Tutar = "₺6.380", Durum = "Beklemede", DurumTonu = "danger", SevkPenceresi = "16:00 - 18:00", OperasyonNotu = "Alternatif urun onayi bekleniyor." },
-    new() { SiparisId = 50076, MusteriId = 1150, SiparisNo = "SC-50076", Musteri = "Zeynep Ozturk", Kanal = "Temsilci", Tarih = "21 Nisan 2026", Tutar = "₺4.210", Durum = "Onboarding Kontrolu", DurumTonu = "warning", SevkPenceresi = "11:00 - 13:00", OperasyonNotu = "Ilk sevkiyat icin fatura profili teyidi istendi." }
+    new() { SiparisId = 50124, MusteriId = 1024, SiparisNo = "SC-50124", Musteri = "Ayse Kaya", Kanal = "Mobil", Tarih = "2026.04.22", Tutar = "₺12.450", Durum = "Hazirlaniyor", DurumTonu = "warning", SevkPenceresi = "07:00 - 09:00", OperasyonNotu = "Sabah slotu icin depo cikisi onaylandi." },
+    new() { SiparisId = 50111, MusteriId = 1078, SiparisNo = "SC-50111", Musteri = "Murat Demir", Kanal = "Web", Tarih = "2026.04.22", Tutar = "₺8.940", Durum = "Sevke Hazir", DurumTonu = "success", SevkPenceresi = "10:00 - 12:00", OperasyonNotu = "Rota ve arac atamasi tamamlandi." },
+    new() { SiparisId = 50098, MusteriId = 1117, SiparisNo = "SC-50098", Musteri = "Emre Isik", Kanal = "Temsilci", Tarih = "2026.04.22", Tutar = "₺19.260", Durum = "Yeni Siparis", DurumTonu = "info", SevkPenceresi = "13:00 - 15:00", OperasyonNotu = "Kurumsal depo kabul listesi bekleniyor." },
+    new() { SiparisId = 50087, MusteriId = 1091, SiparisNo = "SC-50087", Musteri = "Selin Aksoy", Kanal = "Mobil", Tarih = "2026.04.21", Tutar = "₺6.380", Durum = "Beklemede", DurumTonu = "danger", SevkPenceresi = "16:00 - 18:00", OperasyonNotu = "Alternatif urun onayi bekleniyor." },
+    new() { SiparisId = 50076, MusteriId = 1150, SiparisNo = "SC-50076", Musteri = "Zeynep Ozturk", Kanal = "Temsilci", Tarih = "2026.04.21", Tutar = "₺4.210", Durum = "Onboarding Kontrolu", DurumTonu = "warning", SevkPenceresi = "11:00 - 13:00", OperasyonNotu = "Ilk sevkiyat icin fatura profili teyidi istendi." }
   ];
 
   private static readonly IReadOnlyList<MusteriYonetimDestekSatiriViewModel> Talepler =
   [
-    new() { MusteriId = 1189, TalepNo = "SKY-0001", Konu = "Geciken teslimat", Musteri = "Kerem Arslan", Kanal = "Telefon", Oncelik = "Yuksek", OncelikTonu = "danger", Durum = "Acik", DurumTonu = "danger", Tarih = "20 Nisan 2026", Ozet = "Ucuncu teslimat penceresinde gecikme yasandi, telafi beklentisi var." },
-    new() { MusteriId = 1091, TalepNo = "SKY-0002", Konu = "Eksik urun", Musteri = "Selin Aksoy", Kanal = "Web formu", Oncelik = "Normal", OncelikTonu = "warning", Durum = "Inceleniyor", DurumTonu = "warning", Tarih = "21 Nisan 2026", Ozet = "Iki kalemde adet farki bildirildi, depo ve siparis kaydi eslestiriliyor." },
-    new() { MusteriId = 1024, TalepNo = "DST-0010", Konu = "Bildirim tercihleri", Musteri = "Ayse Kaya", Kanal = "Temsilci", Oncelik = "Normal", OncelikTonu = "info", Durum = "Cozuldu", DurumTonu = "success", Tarih = "18 Nisan 2026", Ozet = "Fatura ve operasyon bildirimleri ayri adreslere yonlendirildi." },
-    new() { MusteriId = 1117, TalepNo = "DST-0011", Konu = "Panelde hata", Musteri = "Emre Isik", Kanal = "Uygulama", Oncelik = "Yuksek", OncelikTonu = "danger", Durum = "Acik", DurumTonu = "danger", Tarih = "21 Nisan 2026", Ozet = "Toplu siparis ekraninda filtreleme geri bildirimi alindi." }
+    new() { MusteriId = 1189, TalepNo = "SKY-0001", Konu = "Geciken teslimat", Musteri = "Kerem Arslan", Kanal = "Telefon", Oncelik = "Yuksek", OncelikTonu = "danger", Durum = "Acik", DurumTonu = "danger", Tarih = "2026.04.20", Ozet = "Ucuncu teslimat penceresinde gecikme yasandi, telafi beklentisi var." },
+    new() { MusteriId = 1091, TalepNo = "SKY-0002", Konu = "Eksik urun", Musteri = "Selin Aksoy", Kanal = "Web formu", Oncelik = "Normal", OncelikTonu = "warning", Durum = "Inceleniyor", DurumTonu = "warning", Tarih = "2026.04.21", Ozet = "Iki kalemde adet farki bildirildi, depo ve siparis kaydi eslestiriliyor." },
+    new() { MusteriId = 1024, TalepNo = "DST-0010", Konu = "Bildirim tercihleri", Musteri = "Ayse Kaya", Kanal = "Temsilci", Oncelik = "Normal", OncelikTonu = "info", Durum = "Cozuldu", DurumTonu = "success", Tarih = "2026.04.18", Ozet = "Fatura ve operasyon bildirimleri ayri adreslere yonlendirildi." },
+    new() { MusteriId = 1117, TalepNo = "DST-0011", Konu = "Panelde hata", Musteri = "Emre Isik", Kanal = "Uygulama", Oncelik = "Yuksek", OncelikTonu = "danger", Durum = "Acik", DurumTonu = "danger", Tarih = "2026.04.21", Ozet = "Toplu siparis ekraninda filtreleme geri bildirimi alindi." }
   ];
 
   private static readonly IReadOnlyList<MusteriYonetimNotSatiriViewModel> Notlar =
   [
     new() { MusteriId = 1024, Musteri = "Ayse Kaya", Baslik = "SLA teyidi", Icerik = "Sabah ilk teslimat kuralinin devam etmesi istendi. Kritik siparislerde temsilci dogrudan aranacak.", Kanal = "Telefon gorusmesi", Tarih = "Bugun 09:40", Temsilci = "Deniz Sahin" },
     new() { MusteriId = 1117, Musteri = "Emre Isik", Baslik = "Yeni kategori talebi", Icerik = "Atistirmalik ve kuru meyve grubunda yeni kampanya acilisi icin teklif bekliyor.", Kanal = "Saha ziyareti", Tarih = "Dun 15:10", Temsilci = "Burcu Tan" },
-    new() { MusteriId = 1150, Musteri = "Zeynep Ozturk", Baslik = "Ilk fatura profili", Icerik = "E-fatura kaydi tamamlandi, muhasebe yetkilisi yarin sisteme eklenecek.", Kanal = "E-posta", Tarih = "21 Nisan 2026", Temsilci = "Ece Yildirim" }
+    new() { MusteriId = 1150, Musteri = "Zeynep Ozturk", Baslik = "Ilk fatura profili", Icerik = "E-fatura kaydi tamamlandi, muhasebe yetkilisi yarin sisteme eklenecek.", Kanal = "E-posta", Tarih = "2026.04.21", Temsilci = "Ece Yildirim" }
   ];
 
   public static MusteriYonetimOzetSayfaViewModel CreateOverview()
@@ -426,7 +426,7 @@ public static class MusteriYonetimiWorkspaceFactory
       OzetKartlar =
       [
         new() { Baslik = "Kuyruktaki siparis", Deger = liste.Count.ToString(), Aciklama = "Bu gorunumde listelenen kayit", Ikon = "bx-package" },
-        new() { Baslik = "Bugun kapanacak", Deger = liste.Count(x => x.Tarih == "22 Nisan 2026").ToString(), Aciklama = "Gun icinde kapanis hedefi olan siparis", Ikon = "bx-calendar-check" },
+        new() { Baslik = "Bugun kapanacak", Deger = liste.Count(x => x.Tarih == "2026.04.22").ToString(), Aciklama = "Gun icinde kapanis hedefi olan siparis", Ikon = "bx-calendar-check" },
         new() { Baslik = "Kritik kayit", Deger = liste.Count(x => x.DurumTonu == "danger").ToString(), Aciklama = "Mudahale gerektiren siparis", Ikon = "bx-error" },
         new() { Baslik = "Toplam tutar", Deger = $"₺{liste.Sum(x => decimal.Parse(x.Tutar.Replace("₺", "").Replace(".", string.Empty))):N0}", Aciklama = "Kuyruktaki toplam is hacmi", Ikon = "bx-wallet" }
       ],
@@ -451,7 +451,7 @@ public static class MusteriYonetimiWorkspaceFactory
       [
         new() { Baslik = "Acik talep", Deger = liste.Count(x => x.DurumTonu != "success").ToString(), Aciklama = "Cevap veya kapanis bekleyen kayit", Ikon = "bx-message-error" },
         new() { Baslik = "Yuksek oncelik", Deger = liste.Count(x => x.OncelikTonu == "danger").ToString(), Aciklama = "Birincil mudahale gerektiren talep", Ikon = "bx-alarm-exclamation" },
-        new() { Baslik = "Bugun gelen", Deger = liste.Count(x => x.Tarih.Contains("22 Nisan", StringComparison.OrdinalIgnoreCase)).ToString(), Aciklama = "Ayni gun acilan kayit", Ikon = "bx-time-five" },
+        new() { Baslik = "Bugun gelen", Deger = liste.Count(x => x.Tarih.Contains("2026.04.22", StringComparison.OrdinalIgnoreCase)).ToString(), Aciklama = "Ayni gun acilan kayit", Ikon = "bx-time-five" },
         new() { Baslik = "Bagli hesap", Deger = liste.Select(x => x.MusteriId).Distinct().Count().ToString(), Aciklama = "Talep ureten farkli musteri", Ikon = "bx-group" }
       ],
       Talepler = liste

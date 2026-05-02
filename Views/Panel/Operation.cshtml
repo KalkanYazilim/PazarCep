@@ -1,0 +1,117 @@
+@model OperationPageViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/business-panels.css" asp-append-version="true" />
+}
+
+<div class="pc-page-shell pc-business-panel">
+    <section class="pc-page-hero pc-business-hero pc-business-hero--@Model.RoleKey.ToLowerInvariant()">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Operasyon Yönetimi</span>
+            <h1 class="pc-page-title">@Model.Title</h1>
+            <p class="pc-page-description mb-0">@Model.Subtitle</p>
+            @await Html.PartialAsync("_RoleSwitcher", Model.RoleSwitcher)
+            <div class="pc-page-actions mt-4">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#businessFormModal">
+                    <i class="bx bx-plus me-1"></i>Yeni Kayıt
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                    <i class="bx bx-filter-alt me-1"></i>Filtrele
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                    <i class="bx bx-export me-1"></i>Dışa Aktar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid pc-business-kpi-grid pc-business-kpi-grid--compact">
+        @foreach (var metric in Model.Metrics)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@metric.Title</div>
+                        <div class="pc-kpi-card__value">@metric.Value</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @metric.Icon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@metric.Description</div>
+            </article>
+        }
+    </section>
+
+    <section class="pc-business-operation-grid">
+        @await Html.PartialAsync("_PanelTable", Model.MainTable)
+        <aside class="pc-panel">
+            <div class="pc-panel__header">
+                <div>
+                    <h2 class="pc-panel__title">Yan Panel</h2>
+                    <p class="pc-panel__subtitle mb-0">Uyarılar, takip notları ve son durum.</p>
+                </div>
+            </div>
+            <div class="pc-panel__body">
+                <div class="pc-business-timeline">
+                    @foreach (var item in Model.SideItems)
+                    {
+                        <article class="pc-business-timeline__item pc-business-timeline__item--@item.Tone">
+                            <span>@item.Time</span>
+                            <strong>@item.Title</strong>
+                            <p>@item.Description</p>
+                        </article>
+                    }
+                </div>
+            </div>
+        </aside>
+    </section>
+</div>
+
+<div class="modal fade" id="businessFormModal" tabindex="-1" aria-labelledby="businessFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title fs-5" id="businessFormModalLabel">Yeni Kayıt</h2>
+                    <p class="text-muted mb-0 small">Bu form demo veri yapısına bağlıdır; kalıcı kayıt altyapısı eklendiğinde veritabanına yazılacaktır.</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Başlık</label>
+                        <input class="form-control" type="text" placeholder="Kayıt başlığı" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tarih</label>
+                        <input class="form-control" type="date" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">İlgili Kişi / Firma</label>
+                        <input class="form-control" type="text" placeholder="Kişi veya firma" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Durum</label>
+                        <select class="form-select">
+                            <option>Planlandı</option>
+                            <option>Onay Bekliyor</option>
+                            <option>Devam Ediyor</option>
+                            <option>Tamamlandı</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Notlar</label>
+                        <textarea class="form-control" rows="4" placeholder="Operasyon notları"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Taslak Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>

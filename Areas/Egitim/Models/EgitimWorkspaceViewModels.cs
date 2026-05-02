@@ -138,7 +138,7 @@ public static class EgitimWorkspaceFactory
       Ozet = "Üretici, kategori yönetimi ve dijital satış ritmini aynı akışta ele alır.",
       SureDakika = 320,
       IlerlemeYuzde = 45,
-      SonGuncelleme = "Bugün",
+      SonGuncelleme = "2026.05.02",
       ModulSayisi = 3,
       Kazanimlar =
       [
@@ -158,7 +158,7 @@ public static class EgitimWorkspaceFactory
       Ozet = "Teslimat penceresi, araç kapasitesi ve soğuk zincir operasyonu üzerine yoğunlaşır.",
       SureDakika = 210,
       IlerlemeYuzde = 0,
-      SonGuncelleme = "3 gün önce",
+      SonGuncelleme = "2026.04.29",
       ModulSayisi = 4,
       Kazanimlar =
       [
@@ -178,7 +178,7 @@ public static class EgitimWorkspaceFactory
       Ozet = "Sipariş, katalog ve müşteri deneyimini PazarCep iş akışları üzerinden anlatır.",
       SureDakika = 180,
       IlerlemeYuzde = 100,
-      SonGuncelleme = "10 gün önce",
+      SonGuncelleme = "2026.04.22",
       ModulSayisi = 3,
       Kazanimlar =
       [
@@ -198,7 +198,7 @@ public static class EgitimWorkspaceFactory
       Ozet = "Destek kuyruğu, temsilci notları ve hesap sağlığı sinyallerini ürünleştirir.",
       SureDakika = 260,
       IlerlemeYuzde = 72,
-      SonGuncelleme = "Dün",
+      SonGuncelleme = "2026.05.01",
       ModulSayisi = 5,
       Kazanimlar =
       [
@@ -229,9 +229,9 @@ public static class EgitimWorkspaceFactory
       ],
       Aktiviteler =
       [
-        new() { Baslik = "Bölüm tamamlandı", Aciklama = "CRM ile Hizmet Kalitesi Yönetimi kursunda destek kuyruğu modülü bitirildi.", Zaman = "Bugün 10:05", Ikon = "bx-check-double" },
-        new() { Baslik = "Yeni ders atandı", Aciklama = "Soğuk zincir kursu lojistik ekibi için önerilen öğrenme listesine eklendi.", Zaman = "Dün 16:20", Ikon = "bx-list-plus" },
-        new() { Baslik = "Sertifika doğrulandı", Aciklama = "Temel E-Ticaret Eğitimi sertifikası operasyon özgeçmişine işlendi.", Zaman = "18 Nisan 2026", Ikon = "bx-award" }
+        new() { Baslik = "Bölüm tamamlandı", Aciklama = "CRM ile Hizmet Kalitesi Yönetimi kursunda destek kuyruğu modülü bitirildi.", Zaman = "2026.05.02 10:05", Ikon = "bx-check-double" },
+        new() { Baslik = "Yeni ders atandı", Aciklama = "Soğuk zincir kursu lojistik ekibi için önerilen öğrenme listesine eklendi.", Zaman = "2026.05.01 16:20", Ikon = "bx-list-plus" },
+        new() { Baslik = "Sertifika doğrulandı", Aciklama = "Temel E-Ticaret Eğitimi sertifikası operasyon özgeçmişine işlendi.", Zaman = "2026.04.18", Ikon = "bx-award" }
       ],
       OneCikanKurslar = Kurslar
         .OrderByDescending(x => x.IlerlemeYuzde)
@@ -320,8 +320,8 @@ public static class EgitimWorkspaceFactory
   {
     var sertifikalar = new List<EgitimSertifikaViewModel>
     {
-      new() { Baslik = "Temel E-Ticaret Sertifikası", Kurum = "Kalkan Akademi", Tarih = "12 Nisan 2026", Kod = "PZC-EDU-1043", Kapsam = "Sipariş, katalog ve müşteri temel akışları" },
-      new() { Baslik = "CRM Hizmet Kalitesi Sertifikası", Kurum = "PazarCep Eğitim", Tarih = "03 Nisan 2026", Kod = "PZC-CRM-2071", Kapsam = "Müşteri sağlığı, destek ve temsilci notları" }
+      new() { Baslik = "Temel E-Ticaret Sertifikası", Kurum = "Kalkan Akademi", Tarih = "2026.04.12", Kod = "PZC-EDU-1043", Kapsam = "Sipariş, katalog ve müşteri temel akışları" },
+      new() { Baslik = "CRM Hizmet Kalitesi Sertifikası", Kurum = "PazarCep Eğitim", Tarih = "2026.04.03", Kod = "PZC-CRM-2071", Kapsam = "Müşteri sağlığı, destek ve temsilci notları" }
     };
 
     return new()
@@ -331,7 +331,7 @@ public static class EgitimWorkspaceFactory
       OzetKartlar =
       [
         new() { Baslik = "Toplam sertifika", Deger = sertifikalar.Count.ToString(), Aciklama = "Doğrulanmış belge sayısı", Ikon = "bx-award" },
-        new() { Baslik = "Son kazanım", Deger = "12 Nisan", Aciklama = "En son belge üretim tarihi", Ikon = "bx-calendar-star" },
+        new() { Baslik = "Son kazanım", Deger = "2026.04.12", Aciklama = "En son belge üretim tarihi", Ikon = "bx-calendar-star" },
         new() { Baslik = "Aktif iz", Deger = "2 profil", Aciklama = "Operasyon özgeçmişine işlenen eğitim", Ikon = "bx-briefcase-alt-2" },
         new() { Baslik = "PDF hazır", Deger = "Talep üzerine", Aciklama = "Belge akışı kontrollü üretilir", Ikon = "bx-file" }
       ],

@@ -38,6 +38,120 @@
       </a>
     </li>
 
+    @* TODO: Filter role groups by the authenticated user's approved roles when authorization infrastructure is connected. *@
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Rol Panelleri</span></li>
+
+    <li class='menu-item@(StartsWithPath("/Panel/Ciftci") ? " active open" : "")'>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon icon-base bx bx-leaf"></i>
+        <div class="text-truncate">Çiftçi Yönetimi</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(MatchesPath("/Panel/Ciftci") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="Ciftci" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/CiftciTarlalar") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="CiftciTarlalar" class="menu-link"><div class="text-truncate">Tarlalarım</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/CiftciTarlaIsleri") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="CiftciTarlaIsleri" class="menu-link"><div class="text-truncate">Tarla İşleri</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/CiftciYevmiye") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="CiftciYevmiye" class="menu-link"><div class="text-truncate">İşçi / Yevmiye Takibi</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/CiftciFinans") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="CiftciFinans" class="menu-link"><div class="text-truncate">Gelir / Gider</div></a>
+        </li>
+      </ul>
+    </li>
+
+    <li class='menu-item@(StartsWithPath("/Panel/Alici") ? " active open" : "")'>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon icon-base bx bx-store"></i>
+        <div class="text-truncate">Alıcı Yönetimi</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(MatchesPath("/Panel/Alici") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="Alici" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/AliciAlimlar") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="AliciAlimlar" class="menu-link"><div class="text-truncate">Alımlar</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/AliciStok") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="AliciStok" class="menu-link"><div class="text-truncate">Stok</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/AliciIndirme") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="AliciIndirme" class="menu-link"><div class="text-truncate">Ürün İndirme İşleri</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/AliciFinans") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="AliciFinans" class="menu-link"><div class="text-truncate">Gelir / Gider</div></a>
+        </li>
+      </ul>
+    </li>
+
+    <li class='menu-item@(StartsWithPath("/Panel/Yevmiyeci") ? " active open" : "")'>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon icon-base bx bx-hard-hat"></i>
+        <div class="text-truncate">Yevmiyeci Paneli</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(MatchesPath("/Panel/Yevmiyeci") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="Yevmiyeci" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/YevmiyeciDavetler") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="YevmiyeciDavetler" class="menu-link"><div class="text-truncate">İş Davetleri</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/YevmiyeciTakvim") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="YevmiyeciTakvim" class="menu-link"><div class="text-truncate">Takvimim</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/YevmiyeciKazanc") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="YevmiyeciKazanc" class="menu-link"><div class="text-truncate">Kazançlarım</div></a>
+        </li>
+      </ul>
+    </li>
+
+    <li class='menu-item@(StartsWithPath("/Panel/Lojistik") ? " active open" : "")'>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon icon-base bx bx-car"></i>
+        <div class="text-truncate">Lojistik Yönetimi</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(MatchesPath("/Panel/Lojistik") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="Lojistik" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/LojistikAraclar") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="LojistikAraclar" class="menu-link"><div class="text-truncate">Araçlarım</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/LojistikNakliye") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="LojistikNakliye" class="menu-link"><div class="text-truncate">Nakliye İşleri</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/LojistikFinans") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="LojistikFinans" class="menu-link"><div class="text-truncate">Gelir / Gider</div></a>
+        </li>
+      </ul>
+    </li>
+
+    <li class='menu-item@(StartsWithPath("/Panel/Danisman") ? " active open" : "")'>
+      <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <i class="menu-icon icon-base bx bx-support"></i>
+        <div class="text-truncate">Danışman Paneli</div>
+      </a>
+      <ul class="menu-sub">
+        <li class='menu-item@(MatchesPath("/Panel/Danisman") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="Danisman" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/DanismanRandevular") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="DanismanRandevular" class="menu-link"><div class="text-truncate">Randevular</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/DanismanSaha") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="DanismanSaha" class="menu-link"><div class="text-truncate">Saha Ziyaretleri</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/DanismanFinans") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="DanismanFinans" class="menu-link"><div class="text-truncate">Gelir / Gider</div></a>
+        </li>
+      </ul>
+    </li>
+
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Operasyon Modülleri</span></li>
 
     <li class='menu-item@(StartsWithPath("/ETicaret") ? " active open" : "")'>

@@ -3,8 +3,8 @@
     ViewData["Title"] = "Randevu Takvimi";
 
     var tr = new System.Globalization.CultureInfo("tr-TR");
-    var monthTitle = Model.CurrentMonth.ToString("MMMM yyyy", tr);
-    var selectedDateTitle = Model.SelectedDate.ToString("d MMMM yyyy dddd", tr);
+    var monthTitle = Model.CurrentMonth.ToString("yyyy.MM.dd");
+    var selectedDateTitle = Model.SelectedDate.ToString("yyyy.MM.dd");
     var dayNames = new[] { "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz" };
 }
 
@@ -26,7 +26,7 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newAppointmentModal">
                     <i class="bx bx-calendar-plus me-1"></i>Yeni Randevu Oluştur
                 </button>
-                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy-MM-01")" asp-route-gun="@DateTime.Today.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary">
+                <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy.MM.01")" asp-route-gun="@DateTime.Today.ToString("yyyy.MM.dd")" class="btn btn-outline-secondary">
                     <i class="bx bx-current-location me-1"></i>Bugüne Git
                 </a>
                 <a href="#upcomingAppointments" class="btn btn-outline-secondary">
@@ -87,11 +87,11 @@
                     <p class="pc-panel__subtitle mb-0">Aylık plan, günlük kapasite ve durum rozetleri.</p>
                 </div>
                 <div class="pc-calendar-actions">
-                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.PreviousMonth.ToString("yyyy-MM-01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm" aria-label="Önceki ay">
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.PreviousMonth.ToString("yyyy.MM.01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy.MM.dd")" class="btn btn-outline-secondary btn-sm" aria-label="Önceki ay">
                         <i class="bx bx-chevron-left"></i>
                     </a>
-                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy-MM-01")" asp-route-gun="@DateTime.Today.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm">Bugün</a>
-                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.NextMonth.ToString("yyyy-MM-01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy-MM-dd")" class="btn btn-outline-secondary btn-sm" aria-label="Sonraki ay">
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@DateTime.Today.ToString("yyyy.MM.01")" asp-route-gun="@DateTime.Today.ToString("yyyy.MM.dd")" class="btn btn-outline-secondary btn-sm">Bugün</a>
+                    <a asp-area="ETicaret" asp-controller="Randevu" asp-action="Takvim" asp-route-ay="@Model.NextMonth.ToString("yyyy.MM.01")" asp-route-gun="@Model.SelectedDate.ToString("yyyy.MM.dd")" class="btn btn-outline-secondary btn-sm" aria-label="Sonraki ay">
                         <i class="bx bx-chevron-right"></i>
                     </a>
                 </div>
@@ -103,7 +103,7 @@
                         <span>@dayName</span>
                     }
                 </div>
-                <div class="pc-calendar-grid" data-calendar-grid>
+                <div class="pc-calendar-grid" data-calendar-grid>9
                     @foreach (var day in Model.Days)
                     {
                         var dayPanelId = $"day-panel-{day.Date:yyyyMMdd}";
@@ -126,7 +126,7 @@
                                 @foreach (var appointment in day.Appointments.Take(3))
                                 {
                                     <span class="pc-calendar-badge pc-calendar-badge--@appointment.TypeCssClass" title="@appointment.Title">
-                                        @appointment.StartTime.ToString("HH:mm") @appointment.TypeText
+                                        @appointment.StartTime.ToString("yyyy.MM.dd HH:mm") @appointment.TypeText
                                     </span>
                                 }
                                 @if (day.Appointments.Count > 3)
@@ -155,7 +155,7 @@
                         <div id="@dayPanelId"
                              class="pc-day-detail @(day.IsSelected ? "is-active" : "")"
                              data-day-detail
-                             data-date-title="@day.Date.ToString("d MMMM yyyy dddd", tr)">
+                             data-date-title="@day.Date.ToString("yyyy.MM.dd")">
                             @if (day.Appointments.Count == 0)
                             {
                                 <div class="pc-empty-state">
@@ -171,10 +171,10 @@
                                     {
                                         <article class="pc-day-appointment">
                                             <div class="pc-day-appointment__time">
-                                                <strong>@appointment.StartTime.ToString("HH:mm")</strong>
+                                                <strong>@appointment.StartTime.ToString("yyyy.MM.dd HH:mm")</strong>
                                                 @if (appointment.EndTime is not null)
                                                 {
-                                                    <span>@appointment.EndTime.Value.ToString("HH:mm")</span>
+                                                    <span>@appointment.EndTime.Value.ToString("yyyy.MM.dd HH:mm")</span>
                                                 }
                                             </div>
                                             <div class="pc-day-appointment__body">
@@ -218,8 +218,7 @@
                         {
                             <article class="pc-upcoming-item">
                                 <div class="pc-upcoming-item__date">
-                                    <strong>@appointment.StartTime.ToString("dd", tr)</strong>
-                                    <span>@appointment.StartTime.ToString("MMM", tr)</span>
+                                    <strong>@appointment.StartTime.ToString("yyyy.MM.dd HH:mm")</strong>
                                 </div>
                                 <div class="pc-upcoming-item__body">
                                     <div class="d-flex justify-content-between align-items-start gap-2">
@@ -229,7 +228,7 @@
                                         </div>
                                         <span class="pc-status-pill pc-status-pill--@appointment.BadgeCssClass">@appointment.StatusText</span>
                                     </div>
-                                    <small>@appointment.StartTime.ToString("HH:mm") · @appointment.RelatedParty</small>
+                                    <small>@appointment.StartTime.ToString("yyyy.MM.dd HH:mm") · @appointment.RelatedParty</small>
                                 </div>
                             </article>
                         }

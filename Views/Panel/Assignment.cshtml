@@ -1,0 +1,93 @@
+@model WorkerAssignmentViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/business-panels.css" asp-append-version="true" />
+}
+
+@section PageScripts {
+    <script src="~/js/worker-assignment.js" asp-append-version="true"></script>
+}
+
+<div class="pc-page-shell pc-business-panel">
+    <section class="pc-page-hero pc-business-hero pc-business-hero--@Model.RoleKey.ToLowerInvariant()">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">İşçi Atama</span>
+            <h1 class="pc-page-title">@Model.Title</h1>
+            <p class="pc-page-description mb-0">@Model.Subtitle</p>
+            @await Html.PartialAsync("_RoleSwitcher", Model.RoleSwitcher)
+        </div>
+    </section>
+
+    <section class="pc-business-assignment-grid" data-worker-assignment>
+        <div class="pc-panel">
+            <div class="pc-panel__header">
+                <div>
+                    <h2 class="pc-panel__title">İş Detayı</h2>
+                    <p class="pc-panel__subtitle mb-0">@Model.WorkType · @Model.JobLocation</p>
+                </div>
+            </div>
+            <div class="pc-panel__body">
+                @await Html.PartialAsync("_PanelTable", Model.Jobs)
+                <div class="pc-assignment-cost">
+                    <label class="form-label" for="offeredWage">Teklif Edilen Ücret</label>
+                    <input id="offeredWage" class="form-control" type="number" value="@Model.OfferedWage" data-wage-input />
+                    <div class="pc-cost-preview">
+                        <span>Atanan işçi</span>
+                        <strong><span data-assigned-count>@Model.AssignedWorkers.Count</span> kişi</strong>
+                        <span>Toplam maliyet</span>
+                        <strong data-total-cost>₺@((Model.AssignedWorkers.Count * Model.OfferedWage).ToString("N0"))</strong>
+                    </div>
+                    <button class="btn btn-primary w-100 mt-3" type="button">Atamayı Kaydet</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pc-assignment-board">
+            <section class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Uygun İşçiler</h2>
+                        <p class="pc-panel__subtitle mb-0">Kartları atananlar alanına sürükleyebilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-worker-dropzone" data-worker-zone="available">
+                        @foreach (var worker in Model.AvailableWorkers)
+                        {
+                            @await Html.PartialAsync("_WorkerCard", worker)
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <section class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Atanan İşçiler</h2>
+                        <p class="pc-panel__subtitle mb-0">JavaScript kapalıysa aşağıdaki seçim alanı kullanılabilir.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-worker-dropzone pc-worker-dropzone--assigned" data-worker-zone="assigned">
+                        @foreach (var worker in Model.AssignedWorkers)
+                        {
+                            @await Html.PartialAsync("_WorkerCard", worker)
+                        }
+                    </div>
+                    <div class="mt-3">
+                        <label class="form-label" for="fallbackWorkers">İşçi Seçimi</label>
+                        <select id="fallbackWorkers" class="form-select" multiple>
+                            @foreach (var worker in Model.AvailableWorkers.Concat(Model.AssignedWorkers))
+                            {
+                                <option selected="@Model.AssignedWorkers.Any(item => item.Id == worker.Id)">@worker.Name - @worker.Skill</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>

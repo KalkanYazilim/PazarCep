@@ -289,7 +289,7 @@ public static class CommerceWorkspaceFactory
       DurumTonu = "warning",
       ToplamTutar = "₺12.450",
       Kanal = "Mobil sipariş",
-      TeslimatPenceresi = "22 Nisan 2026 · 07:00 - 09:00",
+      TeslimatPenceresi = "2026.04.22 07:00 - 09:00",
       OdemeYontemi = "Kurumsal havale",
       Temsilci = "Deniz Şahin",
       SevkiyatRota = "Kadıköy merkez · soğuk zincir",
@@ -310,10 +310,10 @@ public static class CommerceWorkspaceFactory
       ],
       Akis =
       [
-        new() { Baslik = "Sipariş alındı", Aciklama = "Mobil uygulama üzerinden kurumsal sipariş oluşturuldu.", Zaman = "Bugün · 06:52", Ikon = "bx-receipt" },
-        new() { Baslik = "Operasyon sahibine atandı", Aciklama = "Deniz Şahin siparişi kalite ve tedarik kontrolüne aldı.", Zaman = "Bugün · 07:05", Ikon = "bx-user-check" },
-        new() { Baslik = "Randevu senkronlandı", Aciklama = "Yükleme slotu ve araç kapasitesi teyit edildi.", Zaman = "Bugün · 07:18", Ikon = "bx-calendar-check" },
-        new() { Baslik = "Paketleme başladı", Aciklama = "Soğuk zincir kalemleri ayrılmış toplama listesine geçti.", Zaman = "Bugün · 07:34", Ikon = "bx-box" }
+        new() { Baslik = "Sipariş alındı", Aciklama = "Mobil uygulama üzerinden kurumsal sipariş oluşturuldu.", Zaman = "2026.05.02 06:52", Ikon = "bx-receipt" },
+        new() { Baslik = "Operasyon sahibine atandı", Aciklama = "Deniz Şahin siparişi kalite ve tedarik kontrolüne aldı.", Zaman = "2026.05.02 07:05", Ikon = "bx-user-check" },
+        new() { Baslik = "Randevu senkronlandı", Aciklama = "Yükleme slotu ve araç kapasitesi teyit edildi.", Zaman = "2026.05.02 07:18", Ikon = "bx-calendar-check" },
+        new() { Baslik = "Paketleme başladı", Aciklama = "Soğuk zincir kalemleri ayrılmış toplama listesine geçti.", Zaman = "2026.05.02 07:34", Ikon = "bx-box" }
       ]
     };
   }
@@ -362,9 +362,9 @@ public static class CommerceWorkspaceFactory
       ],
       Kayitlar =
       [
-        new() { Kod = "RND-2104", Tip = "Yükleme", Musteri = "Kaya Restoran Grubu", Zaman = "22 Nisan 2026 · 07:30", Konum = "Kadıköy merkez depo", Durum = "Onaylandı", Ton = "success", Ozet = "Sipariş SC-50124 ile bağlantılı, araç ataması tamamlandı." },
-        new() { Kod = "RND-2105", Tip = "Teslim alma", Musteri = "Demir Organik", Zaman = "22 Nisan 2026 · 09:30", Konum = "Ankara transfer merkezi", Durum = "Hazırlanıyor", Ton = "warning", Ozet = "Operasyon ekibi depo giriş saatini doğruluyor." },
-        new() { Kod = "RND-2106", Tip = "Depo kabul", Musteri = "Işık Marketler Zinciri", Zaman = "22 Nisan 2026 · 11:15", Konum = "Bursa bölge deposu", Durum = "Teyit bekliyor", Ton = "info", Ozet = "Zincir mağaza teslimatı için kabul ekibi onayı bekleniyor." }
+        new() { Kod = "RND-2104", Tip = "Yükleme", Musteri = "Kaya Restoran Grubu", Zaman = "2026.04.22 07:30", Konum = "Kadıköy merkez depo", Durum = "Onaylandı", Ton = "success", Ozet = "Sipariş SC-50124 ile bağlantılı, araç ataması tamamlandı." },
+        new() { Kod = "RND-2105", Tip = "Teslim alma", Musteri = "Demir Organik", Zaman = "2026.04.22 09:30", Konum = "Ankara transfer merkezi", Durum = "Hazırlanıyor", Ton = "warning", Ozet = "Operasyon ekibi depo giriş saatini doğruluyor." },
+        new() { Kod = "RND-2106", Tip = "Depo kabul", Musteri = "Işık Marketler Zinciri", Zaman = "2026.04.22 11:15", Konum = "Bursa bölge deposu", Durum = "Teyit bekliyor", Ton = "info", Ozet = "Zincir mağaza teslimatı için kabul ekibi onayı bekleniyor." }
       ]
     };
   }
