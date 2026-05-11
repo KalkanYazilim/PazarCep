@@ -60,6 +60,9 @@ body.pc-homepage img {
   max-width: var(--pc-max-width);
   margin: 0 auto;
   padding: 0 1.25rem;
+
+
+  background-color: #6f42c1 !important; /*Silinmesi Gerekiyor!!*/
 }
 
 /* HEADER */
