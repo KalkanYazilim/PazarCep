@@ -1,0 +1,11 @@
+flowchart TD
+    A[Rol Aksiyonu] --> B[Gelir / Gider Kaydı]
+    B --> C[FinanceTransaction]
+    C --> D[Kategori]
+    C --> E[Ödeme Durumu]
+    C --> F[İlgili Kayıt Bağlantısı]
+    D --> G[Özet Kartları]
+    E --> G
+    F --> G
+    G --> H[Aylık / yıllık rapor]
+    H --> I[Net bakiye]

@@ -1,0 +1,11 @@
+flowchart TD
+    A[Yevmiyeci Dashboard] --> B[İş Davetleri]
+    B --> C[Onay süresini gör]
+    C --> D{Kabul / Red}
+    D -- Kabul --> E[İş takvime eklenir]
+    D -- Red --> F[Davet reddedilir]
+    C --> G{30 dakika doldu mu?}
+    G -- Evet --> H[Davet süresi doldu]
+    E --> I[İş tamamlandı]
+    I --> J[Kazanç kaydı oluşur]
+    J --> K[Ödeme durumu takip edilir]

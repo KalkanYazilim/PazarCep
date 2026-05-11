@@ -129,6 +129,98 @@ public sealed class WorkerCardViewModel
   public required string Status { get; init; }
 }
 
+public sealed class OperationsCalendarViewModel
+{
+  public required string RoleKey { get; init; }
+  public required string ThemeClass { get; init; }
+  public required string Title { get; init; }
+  public required string Subtitle { get; init; }
+  public required string ActiveAction { get; init; }
+  public required IReadOnlyList<RoleSwitcherItemViewModel> RoleSwitcher { get; init; }
+  public required IReadOnlyList<PanelActionViewModel> QuickActions { get; init; }
+  public required IReadOnlyList<PanelMetricViewModel> FinanceMetrics { get; init; }
+  public required IReadOnlyList<OperationsCalendarDayViewModel> Days { get; init; }
+  public required IReadOnlyList<WorkerAvailabilityViewModel> AvailableWorkers { get; init; }
+  public required IReadOnlyList<WorkerInvitationViewModel> Invitations { get; init; }
+  public required IReadOnlyList<PanelTimelineItemViewModel> Timeline { get; init; }
+  public required IReadOnlyList<NotificationItemViewModel> Notifications { get; init; }
+  public required IReadOnlyList<string> FinanceCategories { get; init; }
+  public required string PrimaryJobType { get; init; }
+  public required string PrimaryLocation { get; init; }
+  public required decimal DefaultOfferedWage { get; init; }
+  public required string WorkModel { get; init; }
+}
+
+public sealed class OperationsCalendarDayViewModel
+{
+  public required DateTime Date { get; init; }
+  public required bool IsToday { get; init; }
+  public required bool IsSelected { get; init; }
+  public required string DayTitle { get; init; }
+  public required IReadOnlyList<OperationsCalendarEventViewModel> Events { get; init; }
+}
+
+public sealed class OperationsCalendarEventViewModel
+{
+  public required string Title { get; init; }
+  public required string TypeText { get; init; }
+  public required string StatusText { get; init; }
+  public required string Tone { get; init; }
+  public required DateTime StartTime { get; init; }
+  public required string Location { get; init; }
+  public required IReadOnlyList<WorkerAvatarViewModel> ConfirmedWorkers { get; init; }
+}
+
+public sealed class WorkerAvatarViewModel
+{
+  public required string Name { get; init; }
+  public required string Initials { get; init; }
+}
+
+public sealed class WorkerAvailabilityViewModel
+{
+  public required string Id { get; init; }
+  public required string Name { get; init; }
+  public required string Initials { get; init; }
+  public required string Location { get; init; }
+  public required IReadOnlyList<string> SkillTags { get; init; }
+  public required decimal DailyWageExpectation { get; init; }
+  public required string AvailabilityStatus { get; init; }
+  public required string RatingText { get; init; }
+  public required string LastWorkInfo { get; init; }
+}
+
+public sealed class WorkerInvitationViewModel
+{
+  public required string Id { get; init; }
+  public required string WorkerName { get; init; }
+  public required string JobOwner { get; init; }
+  public required string JobType { get; init; }
+  public required string Location { get; init; }
+  public required DateTime WorkDate { get; init; }
+  public required DateTime StartTime { get; init; }
+  public required DateTime EndTime { get; init; }
+  public required decimal OfferedWage { get; init; }
+  public required string WorkModel { get; init; }
+  public required bool FoodIncluded { get; init; }
+  public required bool TransportIncluded { get; init; }
+  public required string InvitationStatus { get; init; }
+  public required string StatusTone { get; init; }
+  public required DateTime InvitationSentAt { get; init; }
+  public required DateTime ApprovalDeadlineAt { get; init; }
+  public DateTime? RespondedAt { get; init; }
+  public required string RemainingApprovalText { get; init; }
+  public required string Notes { get; init; }
+}
+
+public sealed class NotificationItemViewModel
+{
+  public required string Title { get; init; }
+  public required string Description { get; init; }
+  public required string Tone { get; init; }
+  public required string Icon { get; init; }
+}
+
 public static class BusinessPanelFactory
 {
   private static readonly IReadOnlyList<RoleSwitcherItemViewModel> Roles =
@@ -148,6 +240,20 @@ public static class BusinessPanelFactory
       Action = role.Action,
       IsActive = role.Action == activeAction
     }).ToList();
+  }
+
+  public static IReadOnlyList<RoleSwitcherItemViewModel> OperationsRoleSwitcher(string activeAction)
+  {
+    var roles = new[]
+    {
+      new RoleSwitcherItemViewModel { Text = "Çiftçi", Action = "CiftciOperasyon", IsActive = activeAction == "CiftciOperasyon" },
+      new RoleSwitcherItemViewModel { Text = "Alıcı", Action = "AliciOperasyon", IsActive = activeAction == "AliciOperasyon" },
+      new RoleSwitcherItemViewModel { Text = "Yevmiyeci", Action = "YevmiyeciOperasyon", IsActive = activeAction == "YevmiyeciOperasyon" },
+      new RoleSwitcherItemViewModel { Text = "Lojistik", Action = "LojistikOperasyon", IsActive = activeAction == "LojistikOperasyon" },
+      new RoleSwitcherItemViewModel { Text = "Danışman", Action = "DanismanOperasyon", IsActive = activeAction == "DanismanOperasyon" }
+    };
+
+    return roles;
   }
 
   public static RoleDashboardViewModel CreateDashboard(string roleKey)
@@ -235,6 +341,329 @@ public static class BusinessPanelFactory
     };
   }
 
+  public static OperationsCalendarViewModel CreateOperations(string roleKey)
+  {
+    var context = GetOperationsContext(roleKey);
+    var invitations = CreateWorkerInvitations(roleKey);
+    var availableWorkers = CreateAvailableWorkers(roleKey);
+    var financeTransactions = CreateFinanceTransactions(roleKey);
+    var income = financeTransactions.Where(item => item.TransactionType == "Income").Sum(item => item.Amount);
+    var expense = financeTransactions.Where(item => item.TransactionType == "Expense").Sum(item => item.Amount);
+    var pendingPayments = financeTransactions.Where(item => item.PaymentStatus != "Ödendi").Sum(item => item.Amount);
+    var workerWageTotal = invitations.Where(item => item.InvitationStatus is "Accepted" or "Pending").Sum(item => item.OfferedWage);
+
+    return new()
+    {
+      RoleKey = roleKey,
+      ThemeClass = $"role-theme-{GetThemeKey(roleKey)}",
+      Title = context.Title,
+      Subtitle = context.Subtitle,
+      ActiveAction = context.ActiveAction,
+      RoleSwitcher = OperationsRoleSwitcher(context.ActiveAction),
+      QuickActions = context.Actions,
+      FinanceMetrics =
+      [
+        Metric("Bugünkü Gelir", FormatMoney(income / 4), "Gün içi tahsilat ve hizmet geliri", "bx-trending-up"),
+        Metric("Bugünkü Gider", FormatMoney(expense / 4), "Gün içi operasyon maliyeti", "bx-trending-down"),
+        Metric("Aylık Gelir", FormatMoney(income), "Bu ay kayıtlı gelir", "bx-wallet"),
+        Metric("Aylık Gider", FormatMoney(expense), "Bu ay kayıtlı gider", "bx-receipt"),
+        Metric("Net Bakiye", FormatMoney(income - expense), "Gelir eksi gider", "bx-line-chart"),
+        Metric("Bekleyen Ödeme", FormatMoney(pendingPayments), "Ödeme takibi gereken kayıtlar", "bx-time-five"),
+        Metric("İşçilik Toplamı", FormatMoney(workerWageTotal), "Davet edilen ve kabul eden işçiler", "bx-group"),
+        Metric(context.CostMetricTitle, context.CostMetricValue, context.CostMetricDescription, context.CostMetricIcon)
+      ],
+      Days = CreateOperationsDays(roleKey, invitations),
+      AvailableWorkers = availableWorkers,
+      Invitations = invitations,
+      Timeline = CreateOperationsTimeline(roleKey),
+      Notifications = CreateNotifications(roleKey, invitations),
+      FinanceCategories = CreateFinanceCategories(roleKey),
+      PrimaryJobType = context.PrimaryJobType,
+      PrimaryLocation = context.PrimaryLocation,
+      DefaultOfferedWage = context.DefaultOfferedWage,
+      WorkModel = context.WorkModel
+    };
+  }
+
+  private sealed record OperationsContext(
+    string Title,
+    string Subtitle,
+    string ActiveAction,
+    IReadOnlyList<PanelActionViewModel> Actions,
+    string PrimaryJobType,
+    string PrimaryLocation,
+    decimal DefaultOfferedWage,
+    string WorkModel,
+    string CostMetricTitle,
+    string CostMetricValue,
+    string CostMetricDescription,
+    string CostMetricIcon);
+
+  private static OperationsContext GetOperationsContext(string roleKey)
+  {
+    return roleKey switch
+    {
+      "Buyer" => new(
+        "Alıcı Operasyon Paneli",
+        "Ürün indirme, yevmiyeci çağırma, stok hareketi ve ödeme takibini aynı takvimde yönetin.",
+        "AliciOperasyon",
+        QuickActions(("İndirme İşi Aç", "bx-user-plus", "AliciIndirme"), ("Alım Kaydı", "bx-cart", "AliciAlimlar"), ("Gelir / Gider", "bx-wallet", "AliciFinans")),
+        "Ürün indirme ve kasa düzenleme",
+        "Kadıköy hal kabul alanı",
+        950,
+        "Saatlik",
+        "Fire / Paketleme",
+        "₺8.900",
+        "Bugün planlanan paketleme ve fire maliyeti",
+        "bx-package"),
+      "Worker" => new(
+        "Yevmiyeci Operasyon Paneli",
+        "İş davetleri, onay süresi, uygunluk takvimi, kazanç ve ödeme durumunu tek yerden takip edin.",
+        "YevmiyeciOperasyon",
+        QuickActions(("İş Davetleri", "bx-envelope", "YevmiyeciDavetler"), ("Takvimim", "bx-calendar", "YevmiyeciTakvim"), ("Kazançlarım", "bx-wallet", "YevmiyeciKazanc")),
+        "Hasat ve ürün indirme",
+        "Akhisar / Kadıköy hattı",
+        1100,
+        "Yevmiye",
+        "Ulaşım Gideri",
+        "₺620",
+        "Kabul edilen işler için tahmini yol maliyeti",
+        "bx-bus"),
+      "Logistics" => new(
+        "Lojistik Operasyon Paneli",
+        "Nakliye işleri, araç planlaması, rota takvimi ve gelir/gider yönetimini rolünüze göre izleyin.",
+        "LojistikOperasyon",
+        QuickActions(("Nakliye İşi", "bx-trip", "LojistikNakliye"), ("Araçlarım", "bx-car", "LojistikAraclar"), ("Gelir / Gider", "bx-wallet", "LojistikFinans")),
+        "Yükleme ve teslimat desteği",
+        "Akhisar yükleme noktası",
+        1200,
+        "Yevmiye",
+        "Yakıt / Rota",
+        "₺14.200",
+        "Bugünkü rota yakıt ve yol maliyeti",
+        "bx-gas-pump"),
+      "Consultant" => new(
+        "Danışman Operasyon Paneli",
+        "Randevular, saha ziyaretleri, üretici notları ve danışmanlık gelirlerini birlikte yönetin.",
+        "DanismanOperasyon",
+        QuickActions(("Randevu Planla", "bx-calendar-plus", "DanismanRandevular"), ("Saha Raporu", "bx-clipboard", "DanismanSaha"), ("Gelir / Gider", "bx-wallet", "DanismanFinans")),
+        "Saha ziyareti ve numune hazırlığı",
+        "Serik üretici sahası",
+        1000,
+        "Yevmiye",
+        "Saha Ziyareti",
+        "₺3.400",
+        "Bugünkü ulaşım ve numune maliyeti",
+        "bx-briefcase"),
+      _ => new(
+        "Çiftçi Operasyon Paneli",
+        "Tarlalar, işçiler, saha işleri, ödeme hatırlatmaları ve gelir/gider takibini aynı ekranda yönetin.",
+        "CiftciOperasyon",
+        QuickActions(("İşçi Çağır", "bx-user-plus", "CiftciYevmiye"), ("Tarla İşleri", "bx-task", "CiftciTarlaIsleri"), ("Gelir / Gider", "bx-wallet", "CiftciFinans")),
+        "Hasat ve yükleme",
+        "Akhisar / Dere Tarla",
+        1100,
+        "Yevmiye",
+        "Tarla Maliyeti",
+        "₺11.700",
+        "Bugünkü sulama, yakıt ve işçilik maliyeti",
+        "bx-leaf")
+    };
+  }
+
+  private static IReadOnlyList<OperationsCalendarDayViewModel> CreateOperationsDays(string roleKey, IReadOnlyList<WorkerInvitationViewModel> invitations)
+  {
+    var today = DateTime.Today;
+    return Enumerable.Range(0, 7).Select(offset =>
+    {
+      var date = today.AddDays(offset);
+      var eventsForDay = CreateOperationsEvents(roleKey, date, invitations);
+      return new OperationsCalendarDayViewModel
+      {
+        Date = date,
+        IsToday = offset == 0,
+        IsSelected = offset == 0,
+        DayTitle = date.ToString("yyyy.MM.dd"),
+        Events = eventsForDay
+      };
+    }).ToList();
+  }
+
+  private static IReadOnlyList<OperationsCalendarEventViewModel> CreateOperationsEvents(string roleKey, DateTime date, IReadOnlyList<WorkerInvitationViewModel> invitations)
+  {
+    var acceptedWorkers = invitations
+      .Where(item => item.InvitationStatus == "Accepted" && item.WorkDate.Date == date.Date)
+      .Select(item => CreateAvatar(item.WorkerName))
+      .ToList();
+
+    var baseEvent = roleKey switch
+    {
+      "Buyer" => ("Sabah ürün kabulü", "Ürün indirme", "Onay Bekliyor", "warning", "Kadıköy hal"),
+      "Worker" => ("Kabul edilen iş", "Yevmiye işi", "Onaylandı", "success", "Akhisar"),
+      "Logistics" => ("Soğuk zincir taşıma", "Nakliye işi", "Devam Ediyor", "info", "Akhisar - Kadıköy"),
+      "Consultant" => ("Saha ziyareti", "Ziraat danışmanlığı", "Planlandı", "success", "Serik"),
+      _ => ("Dere Tarla hasat işi", "Tarla işi", "Planlandı", "success", "Akhisar")
+    };
+
+    var events = new List<OperationsCalendarEventViewModel>
+    {
+      new()
+      {
+        Title = baseEvent.Item1,
+        TypeText = baseEvent.Item2,
+        StatusText = baseEvent.Item3,
+        Tone = baseEvent.Item4,
+        StartTime = date.AddHours(7),
+        Location = baseEvent.Item5,
+        ConfirmedWorkers = acceptedWorkers
+      }
+    };
+
+    if (date.DayOfWeek is DayOfWeek.Wednesday or DayOfWeek.Friday)
+    {
+      events.Add(new()
+      {
+        Title = roleKey == "Logistics" ? "Yakıt ödeme hatırlatması" : "Ödeme kontrolü",
+        TypeText = "Finans",
+        StatusText = "Bekliyor",
+        Tone = "warning",
+        StartTime = date.AddHours(15),
+        Location = "Finans paneli",
+        ConfirmedWorkers = []
+      });
+    }
+
+    return events;
+  }
+
+  private static IReadOnlyList<WorkerAvailabilityViewModel> CreateAvailableWorkers(string roleKey)
+  {
+    var skillPrefix = roleKey switch
+    {
+      "Buyer" => "İndirme",
+      "Logistics" => "Yükleme",
+      "Consultant" => "Numune",
+      _ => "Hasat"
+    };
+
+    return
+    [
+      Worker("WRK-101", "Mehmet Kaya", "Akhisar", [skillPrefix, "Yükleme"], 1100, "Uygun", "4,8", "Son iş: 2026.05.08"),
+      Worker("WRK-102", "Ayşe Demir", "Salihli", ["Ayıklama", "Paketleme"], 1050, "Uygun", "4,7", "Son iş: 2026.05.07"),
+      Worker("WRK-103", "Hasan Çelik", "Turgutlu", ["Sulama", "Budama"], 980, "Davet bekliyor", "4,5", "Son iş: 2026.05.06"),
+      Worker("WRK-104", "Fatma Aydın", "Merkez", ["Kasa dizimi", "Temizlik"], 950, "Uygun", "4,9", "Son iş: 2026.05.09")
+    ];
+  }
+
+  private static IReadOnlyList<WorkerInvitationViewModel> CreateWorkerInvitations(string roleKey)
+  {
+    var now = DateTime.Today.AddHours(10);
+    var owner = GetRoleText(roleKey);
+    return
+    [
+      Invitation("INV-2401", "Zeynep Arslan", owner, roleKey == "Buyer" ? "Ürün indirme" : "Hasat", "Akhisar", 0, 7, 12, 1100, "Yevmiye", true, false, "Accepted", "success", now.AddMinutes(-18), now.AddMinutes(-4), "Kabul edildi ve takvimde işçi rozeti gösteriliyor."),
+      Invitation("INV-2402", "Ali Şahin", owner, roleKey == "Logistics" ? "Yükleme desteği" : "Yükleme", "Kadıköy", 0, 8, 13, 1000, "Saatlik", false, true, "Pending", "warning", now.AddMinutes(-12), null, "İşçi 30 dakika içinde yanıt vermeli."),
+      Invitation("INV-2403", "Elif Koç", owner, "Paketleme", "Bursa", 1, 9, 15, 950, "Kabala", true, true, "Expired", "danger", now.AddMinutes(-55), null, "İşçi 30 dakika içinde onay vermedi. Lütfen başka bir işçi çağırın."),
+      Invitation("INV-2404", "Hasan Çelik", owner, "Temizlik", "Salihli", 2, 6, 11, 980, "Yevmiye", false, false, "Rejected", "neutral", now.AddMinutes(-25), now.AddMinutes(-10), "İşçi teklifi reddetti; alternatif işçi çağırılabilir.")
+    ];
+  }
+
+  private static IReadOnlyList<PanelTimelineItemViewModel> CreateOperationsTimeline(string roleKey)
+  {
+    return
+    [
+      new() { Title = "Sabah planı açıldı", Description = $"{GetRoleText(roleKey)} için takvim, işçi daveti ve ödeme kontrolü birlikte listelendi.", Time = "2026.05.11 08:30", Tone = "info" },
+      new() { Title = "İşçi onayı alındı", Description = "Kabul eden işçiler takvim hücresinde mini rozet olarak gösteriliyor.", Time = "2026.05.11 09:42", Tone = "success" },
+      new() { Title = "Davet süresi doldu", Description = "İşçi 30 dakika içinde onay vermedi. Lütfen başka bir işçi çağırın.", Time = "2026.05.11 10:05", Tone = "warning" }
+    ];
+  }
+
+  private static IReadOnlyList<NotificationItemViewModel> CreateNotifications(string roleKey, IReadOnlyList<WorkerInvitationViewModel> invitations)
+  {
+    var expired = invitations.First(item => item.InvitationStatus == "Expired");
+    return
+    [
+      new() { Title = "Bekleyen işçi onayı", Description = "Bir davet 30 dakikalık onay süresi içinde yanıt bekliyor.", Tone = "warning", Icon = "bx-time-five" },
+      new() { Title = "Süresi dolan davet", Description = expired.Notes, Tone = "danger", Icon = "bx-error-circle" },
+      new() { Title = "Ödeme hatırlatması", Description = $"{GetRoleText(roleKey)} finans kayıtlarında açık ödeme bulunuyor.", Tone = "info", Icon = "bx-wallet" },
+      new() { Title = "Yaklaşan plan", Description = "Bugünkü takvimde randevu, iş veya teslimat kaydı var.", Tone = "success", Icon = "bx-calendar-check" }
+    ];
+  }
+
+  private static IReadOnlyList<string> CreateFinanceCategories(string roleKey)
+  {
+    return roleKey switch
+    {
+      "Buyer" => ["Ürün alımı", "Ürün satışı", "İşçi ücreti", "Nakliye", "Paketleme", "Pazar yeri ücreti", "Fire / zayiat", "Diğer"],
+      "Worker" => ["İş kazancı", "Avans ödeme", "Yol gideri", "Yemek gideri", "Diğer"],
+      "Logistics" => ["Nakliye geliri", "Yakıt", "Bakım", "Sürücü ödemesi", "Yol / geçiş ücreti", "Diğer"],
+      "Consultant" => ["Danışmanlık ücreti", "Saha ziyareti ücreti", "Eğitim ücreti", "Ulaşım", "Malzeme", "Ofis gideri", "Diğer"],
+      _ => ["Ürün satışı", "İşçi ücreti", "Tohum", "Gübre", "Yakıt", "Sulama", "İlaç", "Ekipman", "Diğer"]
+    };
+  }
+
+  private static WorkerAvailabilityViewModel Worker(string id, string name, string location, IReadOnlyList<string> skills, decimal wage, string status, string rating, string lastWork) => new()
+  {
+    Id = id,
+    Name = name,
+    Initials = GetInitials(name),
+    Location = location,
+    SkillTags = skills,
+    DailyWageExpectation = wage,
+    AvailabilityStatus = status,
+    RatingText = rating,
+    LastWorkInfo = lastWork
+  };
+
+  private static WorkerInvitationViewModel Invitation(string id, string workerName, string owner, string jobType, string location, int dayOffset, int startHour, int endHour, decimal wage, string workModel, bool food, bool transport, string status, string tone, DateTime sentAt, DateTime? respondedAt, string notes)
+  {
+    var workDate = DateTime.Today.AddDays(dayOffset);
+    var deadline = sentAt.AddMinutes(30);
+    var remaining = status switch
+    {
+      "Pending" => $"{Math.Max(0, (int)(deadline - DateTime.Today.AddHours(10)).TotalMinutes)} dk kaldı",
+      "Accepted" => "Kabul edildi",
+      "Expired" => "Süre doldu",
+      "Rejected" => "Reddedildi",
+      _ => "Takipte"
+    };
+
+    return new()
+    {
+      Id = id,
+      WorkerName = workerName,
+      JobOwner = owner,
+      JobType = jobType,
+      Location = location,
+      WorkDate = workDate,
+      StartTime = workDate.AddHours(startHour),
+      EndTime = workDate.AddHours(endHour),
+      OfferedWage = wage,
+      WorkModel = workModel,
+      FoodIncluded = food,
+      TransportIncluded = transport,
+      InvitationStatus = status,
+      StatusTone = tone,
+      InvitationSentAt = sentAt,
+      ApprovalDeadlineAt = deadline,
+      RespondedAt = respondedAt,
+      RemainingApprovalText = remaining,
+      Notes = notes
+    };
+  }
+
+  private static WorkerAvatarViewModel CreateAvatar(string name) => new()
+  {
+    Name = name,
+    Initials = GetInitials(name)
+  };
+
+  private static string GetInitials(string name)
+  {
+    var parts = name.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    return string.Concat(parts.Take(2).Select(part => part[0])).ToUpperInvariant();
+  }
+
   private static RoleDashboardViewModel CreateFarmerDashboard()
   {
     return new()
@@ -258,7 +687,7 @@ public static class BusinessPanelFactory
         Metric("Yaklaşan Hasat", "3", "Bu hafta başlayacak ürünler", "bx-calendar-star")
       ],
       Tables = [GetOperationTable("Farmer", "Fields"), GetOperationTable("Farmer", "FieldWork")],
-      QuickActions = QuickActions(("Tarla Ekle", "bx-plus", "CiftciTarlalar"), ("İşçi Çağır", "bx-user-plus", "CiftciYevmiye"), ("Gelir / Gider", "bx-wallet", "CiftciFinans")),
+      QuickActions = QuickActions(("Operasyon Takvimi", "bx-calendar-week", "CiftciOperasyon"), ("Tarla Ekle", "bx-plus", "CiftciTarlalar"), ("İşçi Çağır", "bx-user-plus", "CiftciYevmiye"), ("Gelir / Gider", "bx-wallet", "CiftciFinans")),
       Timeline = GetOperationSideItems("Farmer", "Fields")
     };
   }
@@ -284,7 +713,7 @@ public static class BusinessPanelFactory
         Metric("Stok Değeri", "₺226.000", "Satış fiyatı ile tahmini değer", "bx-store")
       ],
       Tables = [GetOperationTable("Buyer", "Purchases"), GetOperationTable("Buyer", "Stock")],
-      QuickActions = QuickActions(("Alım Kaydı", "bx-plus", "AliciAlimlar"), ("İndirme Ekibi", "bx-user-plus", "AliciIndirme"), ("Stok", "bx-box", "AliciStok")),
+      QuickActions = QuickActions(("Operasyon Takvimi", "bx-calendar-week", "AliciOperasyon"), ("Alım Kaydı", "bx-plus", "AliciAlimlar"), ("İndirme Ekibi", "bx-user-plus", "AliciIndirme"), ("Stok", "bx-box", "AliciStok")),
       Timeline = GetOperationSideItems("Buyer", "Purchases")
     };
   }
@@ -308,7 +737,7 @@ public static class BusinessPanelFactory
         Metric("Ödenen Kazanç", "₺16.800", "Bu ay ödenen tutar", "bx-credit-card")
       ],
       Tables = [GetOperationTable("Worker", "Invitations"), GetOperationTable("Worker", "Availability")],
-      QuickActions = QuickActions(("İş Davetleri", "bx-envelope", "YevmiyeciDavetler"), ("Takvimim", "bx-calendar", "YevmiyeciTakvim"), ("Kazançlarım", "bx-wallet", "YevmiyeciKazanc")),
+      QuickActions = QuickActions(("Operasyon Takvimi", "bx-calendar-week", "YevmiyeciOperasyon"), ("İş Davetleri", "bx-envelope", "YevmiyeciDavetler"), ("Takvimim", "bx-calendar", "YevmiyeciTakvim"), ("Kazançlarım", "bx-wallet", "YevmiyeciKazanc")),
       Timeline = GetOperationSideItems("Worker", "Invitations")
     };
   }
@@ -332,7 +761,7 @@ public static class BusinessPanelFactory
         Metric("Net Bakiye", "₺54.600", "Gelir eksi lojistik gider", "bx-wallet")
       ],
       Tables = [GetOperationTable("Logistics", "Vehicles"), GetOperationTable("Logistics", "TransportJobs")],
-      QuickActions = QuickActions(("Araçlarım", "bx-car", "LojistikAraclar"), ("Nakliye İşleri", "bx-trip", "LojistikNakliye"), ("Gelir / Gider", "bx-wallet", "LojistikFinans")),
+      QuickActions = QuickActions(("Operasyon Takvimi", "bx-calendar-week", "LojistikOperasyon"), ("Araçlarım", "bx-car", "LojistikAraclar"), ("Nakliye İşleri", "bx-trip", "LojistikNakliye"), ("Gelir / Gider", "bx-wallet", "LojistikFinans")),
       Timeline = GetOperationSideItems("Logistics", "TransportJobs")
     };
   }
@@ -356,7 +785,7 @@ public static class BusinessPanelFactory
         Metric("Net Bakiye", "₺55.500", "Aylık danışmanlık dengesi", "bx-wallet")
       ],
       Tables = [GetOperationTable("Consultant", "Appointments"), GetOperationTable("Consultant", "Reports")],
-      QuickActions = QuickActions(("Randevular", "bx-calendar", "DanismanRandevular"), ("Saha Ziyaretleri", "bx-clipboard", "DanismanSaha"), ("Gelir / Gider", "bx-wallet", "DanismanFinans")),
+      QuickActions = QuickActions(("Operasyon Takvimi", "bx-calendar-week", "DanismanOperasyon"), ("Randevular", "bx-calendar", "DanismanRandevular"), ("Saha Ziyaretleri", "bx-clipboard", "DanismanSaha"), ("Gelir / Gider", "bx-wallet", "DanismanFinans")),
       Timeline = GetOperationSideItems("Consultant", "Appointments")
     };
   }
@@ -487,8 +916,8 @@ public static class BusinessPanelFactory
     return
     [
       new() { Title = "Bugünkü öncelik", Description = $"{GetRoleText(roleKey)} operasyonlarında ilk kontrol edilmesi gereken kayıtlar listelendi.", Time = "2026.05.02 09:00", Tone = "info" },
-      new() { Title = "Ödeme kontrolü", Description = "Açık ödeme ve bekleyen tahsilat kayıtları finans paneline bağlandı.", Time = "11:30", Tone = "warning" },
-      new() { Title = "Plan güncellendi", Description = "Takvim, iş ataması ve operasyon listesi aynı demo veri setiyle gösteriliyor.", Time = "14:15", Tone = "success" }
+      new() { Title = "Ödeme kontrolü", Description = "Açık ödeme ve bekleyen tahsilat kayıtları finans paneline bağlandı.", Time = "2026.05.02 11:30", Tone = "warning" },
+      new() { Title = "Plan güncellendi", Description = "Takvim, iş ataması ve operasyon listesi aynı demo veri setiyle gösteriliyor.", Time = "2026.05.02 14:15", Tone = "success" }
     ];
   }
 
@@ -552,20 +981,25 @@ public static class BusinessPanelFactory
 
   private static string GetAction(string roleKey, string pageKey) => (roleKey, pageKey) switch
   {
+    ("Farmer", "Operations") => "CiftciOperasyon",
     ("Farmer", "Fields") => "CiftciTarlalar",
     ("Farmer", "FieldWork") => "CiftciTarlaIsleri",
     ("Farmer", "WorkerAssignment") => "CiftciYevmiye",
     ("Farmer", "Finance") => "CiftciFinans",
+    ("Buyer", "Operations") => "AliciOperasyon",
     ("Buyer", "Purchases") => "AliciAlimlar",
     ("Buyer", "Stock") => "AliciStok",
     ("Buyer", "Unloading") => "AliciIndirme",
     ("Buyer", "Finance") => "AliciFinans",
+    ("Worker", "Operations") => "YevmiyeciOperasyon",
     ("Worker", "Invitations") => "YevmiyeciDavetler",
     ("Worker", "Availability") => "YevmiyeciTakvim",
     ("Worker", "Earnings") => "YevmiyeciKazanc",
+    ("Logistics", "Operations") => "LojistikOperasyon",
     ("Logistics", "Vehicles") => "LojistikAraclar",
     ("Logistics", "TransportJobs") => "LojistikNakliye",
     ("Logistics", "Finance") => "LojistikFinans",
+    ("Consultant", "Operations") => "DanismanOperasyon",
     ("Consultant", "Appointments") => "DanismanRandevular",
     ("Consultant", "Reports") => "DanismanSaha",
     ("Consultant", "Finance") => "DanismanFinans",
@@ -588,6 +1022,15 @@ public static class BusinessPanelFactory
     "Logistics" => "Lojistik",
     "Consultant" => "Danışman",
     _ => "Çiftçi"
+  };
+
+  private static string GetThemeKey(string roleKey) => roleKey switch
+  {
+    "Buyer" => "buyer",
+    "Worker" => "worker",
+    "Logistics" => "logistics",
+    "Consultant" => "consultant",
+    _ => "farmer"
   };
 
   private static string FormatMoney(decimal amount) => $"₺{amount:N0}";

@@ -50,6 +50,9 @@
         <li class='menu-item@(MatchesPath("/Panel/Ciftci") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="Ciftci" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
         </li>
+        <li class='menu-item@(StartsWithPath("/Panel/CiftciOperasyon") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="CiftciOperasyon" class="menu-link"><div class="text-truncate">Operasyon Takvimi</div></a>
+        </li>
         <li class='menu-item@(StartsWithPath("/Panel/CiftciTarlalar") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="CiftciTarlalar" class="menu-link"><div class="text-truncate">Tarlalarım</div></a>
         </li>
@@ -73,6 +76,9 @@
       <ul class="menu-sub">
         <li class='menu-item@(MatchesPath("/Panel/Alici") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="Alici" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/AliciOperasyon") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="AliciOperasyon" class="menu-link"><div class="text-truncate">Operasyon Takvimi</div></a>
         </li>
         <li class='menu-item@(StartsWithPath("/Panel/AliciAlimlar") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="AliciAlimlar" class="menu-link"><div class="text-truncate">Alımlar</div></a>
@@ -98,6 +104,9 @@
         <li class='menu-item@(MatchesPath("/Panel/Yevmiyeci") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="Yevmiyeci" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
         </li>
+        <li class='menu-item@(StartsWithPath("/Panel/YevmiyeciOperasyon") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="YevmiyeciOperasyon" class="menu-link"><div class="text-truncate">Operasyon Takvimi</div></a>
+        </li>
         <li class='menu-item@(StartsWithPath("/Panel/YevmiyeciDavetler") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="YevmiyeciDavetler" class="menu-link"><div class="text-truncate">İş Davetleri</div></a>
         </li>
@@ -119,6 +128,9 @@
         <li class='menu-item@(MatchesPath("/Panel/Lojistik") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="Lojistik" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
         </li>
+        <li class='menu-item@(StartsWithPath("/Panel/LojistikOperasyon") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="LojistikOperasyon" class="menu-link"><div class="text-truncate">Operasyon Takvimi</div></a>
+        </li>
         <li class='menu-item@(StartsWithPath("/Panel/LojistikAraclar") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="LojistikAraclar" class="menu-link"><div class="text-truncate">Araçlarım</div></a>
         </li>
@@ -139,6 +151,9 @@
       <ul class="menu-sub">
         <li class='menu-item@(MatchesPath("/Panel/Danisman") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="Danisman" class="menu-link"><div class="text-truncate">Genel Bakış</div></a>
+        </li>
+        <li class='menu-item@(StartsWithPath("/Panel/DanismanOperasyon") ? " active" : "")'>
+          <a asp-controller="Panel" asp-action="DanismanOperasyon" class="menu-link"><div class="text-truncate">Operasyon Takvimi</div></a>
         </li>
         <li class='menu-item@(StartsWithPath("/Panel/DanismanRandevular") ? " active" : "")'>
           <a asp-controller="Panel" asp-action="DanismanRandevular" class="menu-link"><div class="text-truncate">Randevular</div></a>

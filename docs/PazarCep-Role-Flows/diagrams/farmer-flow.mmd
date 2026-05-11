@@ -1,0 +1,13 @@
+flowchart TD
+    A[Çiftçi Dashboard] --> B[Tarlalarım]
+    B --> C[Tarla Detayı]
+    C --> D[Tarla İşi Oluştur]
+    D --> E[İşçi Daveti]
+    E --> F{İşçi onayladı mı?}
+    F -- Kabul --> G[Takvimde işçi rozeti göster]
+    F -- Red --> H[Başka işçi çağır]
+    F -- Süre doldu --> H
+    G --> I[Tarla maliyeti güncellenir]
+    I --> J[Hasat / ürün satışı kaydı]
+    J --> K[Finans güncellenir]
+    K --> L[Net bakiye görüntülenir]

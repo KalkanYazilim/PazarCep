@@ -1,0 +1,18 @@
+flowchart TD
+    A[Lojistik Paneli] --> B[Araçlarım]
+    B --> C[Araç ekle / düzenle]
+    C --> D[Nakliye işi oluştur]
+    D --> E[Alış noktası]
+    D --> F[Teslim noktası]
+    E --> G[Araç / sürücü ata]
+    F --> G
+    G --> H[Yükleme takvimi]
+    H --> I[Teslimat takibi]
+    I --> J[Nakliye geliri]
+    I --> K[Yakıt gideri]
+    I --> L[Bakım gideri]
+    J --> M[Gelir / gider]
+    K --> M
+    L --> M
+    M --> N[Net bakiye]
+    N --> O[Bildirimler]

@@ -11,6 +11,13 @@ public class PanelController : Controller
   public IActionResult Lojistik() => Dashboard("Logistics");
   public IActionResult Danisman() => Dashboard("Consultant");
 
+  public IActionResult Operasyon(string role = "Ciftci") => SharedOperations(MapRoleSlug(role));
+  public IActionResult CiftciOperasyon() => SharedOperations("Farmer");
+  public IActionResult AliciOperasyon() => SharedOperations("Buyer");
+  public IActionResult YevmiyeciOperasyon() => SharedOperations("Worker");
+  public IActionResult LojistikOperasyon() => SharedOperations("Logistics");
+  public IActionResult DanismanOperasyon() => SharedOperations("Consultant");
+
   public IActionResult CiftciTarlalar() => Operation("Farmer", "Fields");
   public IActionResult CiftciTarlaIsleri() => Operation("Farmer", "FieldWork");
   public IActionResult CiftciYevmiye() => View("Assignment", BusinessPanelFactory.CreateAssignment("Farmer"));
@@ -55,5 +62,25 @@ public class PanelController : Controller
     ViewData["DemoVeriNotu"] = "Gelir / gider yönetimi";
     ViewData["MetaDescription"] = "PazarCep ortak gelir gider yönetimi ekranı.";
     return View("Finance", BusinessPanelFactory.CreateFinance(roleKey));
+  }
+
+  private IActionResult SharedOperations(string roleKey)
+  {
+    ViewData["DemoVeri"] = true;
+    ViewData["DemoVeriNotu"] = "Rol bazlı ortak operasyon takvimi";
+    ViewData["MetaDescription"] = "PazarCep rol bazlı ortak operasyon, takvim, işçi daveti ve finans özeti ekranı.";
+    return View("Operations", BusinessPanelFactory.CreateOperations(roleKey));
+  }
+
+  private static string MapRoleSlug(string role)
+  {
+    return role.Trim().ToLowerInvariant() switch
+    {
+      "alici" or "buyer" => "Buyer",
+      "yevmiyeci" or "worker" => "Worker",
+      "lojistik" or "logistics" => "Logistics",
+      "danisman" or "consultant" => "Consultant",
+      _ => "Farmer"
+    };
   }
 }

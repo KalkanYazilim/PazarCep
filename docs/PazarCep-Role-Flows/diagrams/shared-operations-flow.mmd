@@ -1,0 +1,15 @@
+flowchart TD
+    A[Ortak Sayfa Açılır] --> B[Aktif rol algılanır]
+    B --> C[Rol config yüklenir]
+    C --> D[Rol verisi yüklenir]
+    D --> E[Rol teması uygulanır]
+    E --> F[Rol aksiyonları render edilir]
+    F --> G{Sayfa tipi}
+    G --> H[Operasyon Takvimi]
+    G --> I[Gelir / Gider]
+    G --> J[İşçi Daveti]
+    G --> K[Bildirimler]
+    H --> L[Bitiş]
+    I --> L
+    J --> L
+    K --> L

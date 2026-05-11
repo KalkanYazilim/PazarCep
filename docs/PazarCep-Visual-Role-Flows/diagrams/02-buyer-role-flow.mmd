@@ -1,0 +1,15 @@
+flowchart TD
+    A[Alıcı Paneli] --> B[Ürün alımı]
+    B --> C[Satıcı / çiftçi seçimi]
+    C --> D[Miktar / fiyat / ödeme durumu]
+    D --> E[Teslimat takibi]
+    E --> F[Ürün indirme işi oluştur]
+    F --> G[Yevmiyeci çağır]
+    G --> H[30 dakika onay süreci]
+    H --> I{İşçi onayladı mı?}
+    I -- Evet --> J[Takvimde mini avatar / badge görünür]
+    I -- Hayır --> K[Bildirim ve alternatif işçi]
+    J --> L[Stok güncelleme]
+    L --> M[Satış kaydı]
+    M --> N[Gelir / gider]
+    N --> O[Net kâr / zarar]

@@ -1,0 +1,20 @@
+flowchart TD
+    A[Yevmiyeci Paneli] --> B[İş davetleri]
+    B --> C[Davet detayı]
+    C --> D[İş türü]
+    C --> E[Lokasyon]
+    C --> F[Ücret]
+    C --> G[Yemek / ulaşım bilgisi]
+    D --> H[30 dakika onay süresi]
+    E --> H
+    F --> H
+    G --> H
+    H --> I{Kabul / red / süre doldu}
+    I -- Kabul --> J[Takvime işlenir]
+    I -- Red --> K[Çağırana bildirim gider]
+    I -- Süre doldu --> L[Davet expired olur]
+    J --> M[Çalışma günü]
+    M --> N[İş tamamlandı]
+    N --> O[Ödeme durumu]
+    O --> P[Kazançlarım]
+    P --> Q[Haftalık / aylık kazanç özeti]

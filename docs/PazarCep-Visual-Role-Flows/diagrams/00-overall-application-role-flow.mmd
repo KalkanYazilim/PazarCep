@@ -1,0 +1,32 @@
+flowchart TD
+    A[Kullanıcı PazarCep'e girer] --> B[Login / Register]
+    B --> C[Authentication]
+    C --> D[Rol algılama]
+    D --> E{Tek rol mü?}
+    E -- Evet --> F[Aktif rol otomatik seçilir]
+    E -- Hayır --> G[Role switcher]
+    G --> H[Aktif rol seçimi]
+    F --> I[Rol bazlı menü]
+    H --> I
+    I --> J[Rol bazlı tema]
+    J --> K[Rol bazlı izinler]
+    K --> L[Rol bazlı aksiyonlar]
+    L --> M{Rol Dashboard}
+    M --> N[Çiftçi Dashboard]
+    M --> O[Alıcı Dashboard]
+    M --> P[Yevmiyeci Dashboard]
+    M --> Q[Lojistik Dashboard]
+    M --> R[Danışman Dashboard]
+    N --> S[Shared Operations Page]
+    O --> S
+    P --> S
+    Q --> S
+    R --> S
+    S --> T[Shared Finance Module]
+    S --> U[Worker Invitation System]
+    S --> V[Calendar System]
+    S --> W[Notification System]
+    T --> X[Özet kartları ve net bakiye]
+    U --> Y[30 dakika onay süreci]
+    V --> Z[Rol bazlı takvim olayları]
+    W --> AA[Rol bazlı bildirimler]

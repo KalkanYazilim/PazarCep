@@ -1,0 +1,16 @@
+flowchart TD
+    A[Başlangıç] --> B[Giriş Sayfası]
+    B --> C{Kimlik doğrulandı mı?}
+    C -- Hayır --> B
+    C -- Evet --> D{Onaylı rol var mı?}
+    D -- Hayır --> E[Rol başvurusu / onay bekleme]
+    D -- Evet --> F{Tek rol mü?}
+    F -- Evet --> G[Rol dashboarduna yönlendir]
+    F -- Hayır --> H[Aktif rol seçimi göster]
+    H --> I[Aktif rolü kaydet]
+    I --> G
+    G --> J[Rol bazlı menü render edilir]
+    J --> K[Ortak sayfa açılır]
+    K --> L[Aktif rol algılanır]
+    L --> M[Rol teması ve izinleri uygulanır]
+    M --> N[Bitiş]

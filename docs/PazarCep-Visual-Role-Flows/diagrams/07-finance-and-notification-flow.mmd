@@ -1,0 +1,34 @@
+flowchart TD
+    A[Role action] --> B{Finans etkisi}
+    B -- Gelir --> C[Income record]
+    B -- Gider --> D[Expense record]
+    C --> E[FinanceTransaction]
+    D --> E
+    E --> F[Payment status]
+    E --> G[Related entity]
+    F --> H[Daily summary]
+    G --> H
+    H --> I[Monthly summary]
+    I --> J[Yearly summary]
+    J --> K[Net balance]
+    L[Notification event] --> M{Event type}
+    M --> N[Worker invitation sent]
+    M --> O[Worker accepted]
+    M --> P[Worker rejected]
+    M --> Q[30 minutes expired]
+    M --> R[Appointment upcoming]
+    M --> S[Payment pending]
+    M --> T[Transport approaching]
+    M --> U[Field work scheduled]
+    M --> V[Delivery approaching]
+    M --> W[Harvest approaching]
+    N --> X[Shared notification module]
+    O --> X
+    P --> X
+    Q --> X
+    R --> X
+    S --> X
+    T --> X
+    U --> X
+    V --> X
+    W --> X

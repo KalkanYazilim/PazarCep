@@ -1,0 +1,352 @@
+@model OperationsCalendarViewModel
+@{
+    ViewData["Title"] = Model.Title;
+    var culture = new System.Globalization.CultureInfo("tr-TR");
+    var acceptedInvitations = Model.Invitations.Where(item => item.InvitationStatus == "Accepted").ToList();
+}
+
+@section PageStyles {
+    <link rel="stylesheet" href="~/css/business-panels.css" asp-append-version="true" />
+}
+
+@section PageScripts {
+    <script src="~/js/worker-assignment.js" asp-append-version="true"></script>
+}
+
+<div class="pc-page-shell pc-business-panel pc-operations-page @Model.ThemeClass" data-worker-assignment>
+    <section class="pc-page-hero pc-business-hero pc-business-hero--@Model.RoleKey.ToLowerInvariant()">
+        <div class="pc-page-hero__body">
+            <span class="pc-page-eyebrow">Rol Bazlı Ortak Operasyon</span>
+            <h1 class="pc-page-title">@Model.Title</h1>
+            <p class="pc-page-description mb-0">@Model.Subtitle</p>
+            @await Html.PartialAsync("_RoleSwitcher", Model.RoleSwitcher)
+            <div class="pc-page-actions mt-4">
+                @foreach (var action in Model.QuickActions)
+                {
+                    <a asp-controller="Panel" asp-action="@action.TargetAction" class="btn btn-outline-secondary">
+                        <i class="bx @action.Icon me-1"></i>@action.Text
+                    </a>
+                }
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quickFinanceModal">
+                    <i class="bx bx-plus me-1"></i>Gelir / Gider Ekle
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="pc-kpi-grid pc-business-kpi-grid">
+        @foreach (var metric in Model.FinanceMetrics)
+        {
+            <article class="pc-kpi-card h-100">
+                <div class="pc-kpi-card__top">
+                    <div>
+                        <div class="pc-kpi-card__label">@metric.Title</div>
+                        <div class="pc-kpi-card__value">@metric.Value</div>
+                    </div>
+                    <span class="pc-kpi-card__icon"><i class="bx @metric.Icon"></i></span>
+                </div>
+                <div class="pc-kpi-card__meta">@metric.Description</div>
+            </article>
+        }
+    </section>
+
+    <section class="pc-operations-layout">
+        <div class="pc-operations-main">
+            <section class="pc-panel">
+                <div class="pc-panel__header pc-operations-header">
+                    <div>
+                        <h2 class="pc-panel__title">Operasyon Takvimi</h2>
+                        <p class="pc-panel__subtitle mb-0">İş, randevu, ödeme ve kabul eden işçiler haftalık planda görünür.</p>
+                    </div>
+                    <div class="pc-operations-toolbar">
+                        <button type="button" class="btn btn-outline-secondary btn-sm">2026.05.11</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">Haftalık</button>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-operations-calendar">
+                        @foreach (var day in Model.Days)
+                        {
+                            <article class="pc-operations-day @(day.IsToday ? "is-today" : "") @(day.IsSelected ? "is-selected" : "")">
+                                <div class="pc-operations-day__top">
+                                    <span>@day.Date.ToString("ddd", culture)</span>
+                                    <strong>@day.DayTitle</strong>
+                                </div>
+                                <div class="pc-operations-day__events">
+                                    @foreach (var item in day.Events)
+                                    {
+                                        <div class="pc-operations-event pc-operations-event--@item.Tone">
+                                            <span>@item.StartTime.ToString("yyyy.MM.dd HH:mm")</span>
+                                            <strong>@item.Title</strong>
+                                            <small>@item.TypeText · @item.Location</small>
+                                            @if (item.ConfirmedWorkers.Count > 0)
+                                            {
+                                                <div class="pc-worker-avatar-stack" aria-label="Kabul eden işçiler">
+                                                    @foreach (var worker in item.ConfirmedWorkers)
+                                                    {
+                                                        <span class="pc-worker-avatar" title="@worker.Name">@worker.Initials</span>
+                                                    }
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <section class="pc-operations-worker-grid">
+                <div class="pc-panel">
+                    <div class="pc-panel__header">
+                        <div>
+                            <h2 class="pc-panel__title">Uygun İşçiler</h2>
+                            <p class="pc-panel__subtitle mb-0">Seçili gün için davet gönderilebilecek kişiler.</p>
+                        </div>
+                    </div>
+                    <div class="pc-panel__body">
+                        <div class="pc-worker-dropzone" data-worker-zone="available">
+                            @foreach (var worker in Model.AvailableWorkers)
+                            {
+                                <article class="pc-worker-card pc-worker-card--detailed" data-worker-card data-worker-id="@worker.Id" draggable="true">
+                                    <div class="pc-worker-card__avatar">@worker.Initials</div>
+                                    <div class="pc-worker-card__body">
+                                        <strong>@worker.Name</strong>
+                                        <span>@worker.Location · @worker.RatingText puan</span>
+                                        <div class="pc-worker-tags">
+                                            @foreach (var tag in worker.SkillTags)
+                                            {
+                                                <span>@tag</span>
+                                            }
+                                        </div>
+                                        <small>@worker.LastWorkInfo</small>
+                                    </div>
+                                    <div class="pc-worker-card__meta">
+                                        <span class="pc-status-pill pc-status-pill--success">@worker.AvailabilityStatus</span>
+                                        <strong>₺@worker.DailyWageExpectation.ToString("N0", culture)</strong>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Davet Et</button>
+                                    </div>
+                                </article>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pc-panel">
+                    <div class="pc-panel__header">
+                        <div>
+                            <h2 class="pc-panel__title">Davet Taslağı</h2>
+                            <p class="pc-panel__subtitle mb-0">Sürükle-bırak çalışmazsa seçim alanı kullanılabilir.</p>
+                        </div>
+                    </div>
+                    <div class="pc-panel__body">
+                        <div class="pc-invitation-form">
+                            <div class="pc-worker-dropzone pc-worker-dropzone--assigned" data-worker-zone="assigned">
+                                @foreach (var invitation in acceptedInvitations)
+                                {
+                                    <article class="pc-worker-card" data-worker-card data-worker-id="@invitation.Id" draggable="true">
+                                        <div>
+                                            <strong>@invitation.WorkerName</strong>
+                                            <span>@invitation.JobType · @invitation.Location</span>
+                                        </div>
+                                        <span class="pc-status-pill pc-status-pill--success">Kabul etti</span>
+                                    </article>
+                                }
+                            </div>
+                            <div class="pc-invitation-fields">
+                                <label class="form-label" for="operationJobType">İş Türü</label>
+                                <input id="operationJobType" class="form-control" type="text" value="@Model.PrimaryJobType" />
+
+                                <label class="form-label" for="operationLocation">Konum</label>
+                                <input id="operationLocation" class="form-control" type="text" value="@Model.PrimaryLocation" />
+
+                                <label class="form-label" for="operationWage">Teklif Edilen Ücret</label>
+                                <input id="operationWage" class="form-control" type="number" value="@Model.DefaultOfferedWage" data-wage-input />
+
+                                <label class="form-label" for="operationWorkModel">Çalışma Modeli</label>
+                                <select id="operationWorkModel" class="form-select">
+                                    <option selected="@(Model.WorkModel == "Yevmiye")">Yevmiye</option>
+                                    <option selected="@(Model.WorkModel == "Saatlik")">Saatlik</option>
+                                    <option selected="@(Model.WorkModel == "Kabala")">Kabala</option>
+                                </select>
+
+                                <div class="pc-inline-options">
+                                    <label class="form-check"><input class="form-check-input" type="checkbox" checked /> <span class="form-check-label">Yemek dahil</span></label>
+                                    <label class="form-check"><input class="form-check-input" type="checkbox" /> <span class="form-check-label">Yol dahil</span></label>
+                                </div>
+
+                                <div class="pc-cost-preview">
+                                    <span>Seçilen işçi</span>
+                                    <strong><span data-assigned-count>@acceptedInvitations.Count</span> kişi</strong>
+                                    <span>Onay süresi</span>
+                                    <strong>30 dk</strong>
+                                    <span>Beklenen maliyet</span>
+                                    <strong data-total-cost>₺@((acceptedInvitations.Count * Model.DefaultOfferedWage).ToString("N0", culture))</strong>
+                                </div>
+
+                                <select class="form-select mt-3" multiple aria-label="İşçi seçimi">
+                                    @foreach (var worker in Model.AvailableWorkers)
+                                    {
+                                        <option>@worker.Name - @worker.Location</option>
+                                    }
+                                </select>
+
+                                <button type="button" class="btn btn-primary w-100 mt-3">Daveti Gönder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">İşçi Davetleri</h2>
+                        <p class="pc-panel__subtitle mb-0">30 dakikalık onay süresi, yanıt durumu ve ödeme koşulları.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle pc-business-table">
+                            <thead>
+                                <tr>
+                                    <th>İşçi</th>
+                                    <th>İş</th>
+                                    <th>Tarih / Saat</th>
+                                    <th>Ücret</th>
+                                    <th>Koşul</th>
+                                    <th>Son Onay</th>
+                                    <th>Durum</th>
+                                    <th>Aksiyon</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var invitation in Model.Invitations)
+                                {
+                                    <tr>
+                                        <td>@invitation.WorkerName</td>
+                                        <td>@invitation.JobType<br /><small class="text-muted">@invitation.Location</small></td>
+                                        <td>@invitation.StartTime.ToString("yyyy.MM.dd HH:mm") - @invitation.EndTime.ToString("yyyy.MM.dd HH:mm")</td>
+                                        <td>₺@invitation.OfferedWage.ToString("N0", culture)<br /><small class="text-muted">@invitation.WorkModel</small></td>
+                                        <td>@(invitation.FoodIncluded ? "Yemek var" : "Yemek yok") / @(invitation.TransportIncluded ? "Yol var" : "Yol yok")</td>
+                                        <td>@invitation.ApprovalDeadlineAt.ToString("yyyy.MM.dd HH:mm")<br /><small>@invitation.RemainingApprovalText</small></td>
+                                        <td><span class="pc-status-pill pc-status-pill--@invitation.StatusTone">@invitation.InvitationStatus</span></td>
+                                        <td>
+                                            <div class="d-inline-flex gap-2">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
+                                                <button type="button" class="btn btn-sm btn-outline-primary">Tekrar Davet</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="pc-operations-side">
+            <section class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Bildirimler</h2>
+                        <p class="pc-panel__subtitle mb-0">Onay, ödeme ve yaklaşan plan uyarıları.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-notification-stack">
+                        @foreach (var notification in Model.Notifications)
+                        {
+                            <article class="pc-notification pc-notification--@notification.Tone">
+                                <i class="bx @notification.Icon"></i>
+                                <div>
+                                    <strong>@notification.Title</strong>
+                                    <p>@notification.Description</p>
+                                </div>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <section class="pc-panel">
+                <div class="pc-panel__header">
+                    <div>
+                        <h2 class="pc-panel__title">Günlük Akış</h2>
+                        <p class="pc-panel__subtitle mb-0">Takvim ve finans bağlantılı kayıtlar.</p>
+                    </div>
+                </div>
+                <div class="pc-panel__body">
+                    <div class="pc-business-timeline">
+                        @foreach (var item in Model.Timeline)
+                        {
+                            <article class="pc-business-timeline__item pc-business-timeline__item--@item.Tone">
+                                <span>@item.Time</span>
+                                <strong>@item.Title</strong>
+                                <p>@item.Description</p>
+                            </article>
+                        }
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </section>
+</div>
+
+<div class="modal fade" id="quickFinanceModal" tabindex="-1" aria-labelledby="quickFinanceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title fs-5" id="quickFinanceModalLabel">Hızlı Gelir / Gider Kaydı</h2>
+                    <p class="text-muted mb-0 small">Kategori listesi aktif role göre değişir. Kalıcı kayıt için finans altyapısına bağlanacaktır.</p>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                @* TODO: Persist FinanceTransaction with active role, user and related operation IDs. *@
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">İşlem Tipi</label>
+                        <select class="form-select"><option>Gelir</option><option>Gider</option></select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Kategori</label>
+                        <select class="form-select">
+                            @foreach (var category in Model.FinanceCategories)
+                            {
+                                <option>@category</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tutar</label>
+                        <input class="form-control" type="number" placeholder="0" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Tarih</label>
+                        <input class="form-control" type="date" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">İlgili Kayıt</label>
+                        <input class="form-control" type="text" placeholder="Tarla, iş, randevu, sipariş veya nakliye" />
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Ödeme Durumu</label>
+                        <select class="form-select"><option>Ödendi</option><option>Kısmi Ödendi</option><option>Ödenmedi</option></select>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Açıklama</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>

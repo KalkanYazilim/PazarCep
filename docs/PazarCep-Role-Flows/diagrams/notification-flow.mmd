@@ -1,0 +1,14 @@
+flowchart TD
+    A[Olay oluşur] --> B{Olay tipi}
+    B --> C[İşçi kabul etti]
+    B --> D[İşçi reddetti]
+    B --> E[Davet süresi doldu]
+    B --> F[Ödeme bekliyor]
+    B --> G[Randevu / teslimat yaklaşıyor]
+    C --> H[Notification oluştur]
+    D --> H
+    E --> H
+    F --> H
+    G --> H
+    H --> I[UI bildirim paneli]
+    H --> J[Gelecek: SignalR / SMS / E-posta]

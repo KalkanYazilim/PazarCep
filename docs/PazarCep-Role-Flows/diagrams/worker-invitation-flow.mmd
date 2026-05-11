@@ -1,0 +1,15 @@
+flowchart TD
+    A[İş / tarih seçilir] --> B[Uygun işçiler listelenir]
+    B --> C[İşçi seçilir]
+    C --> D[Ücret ve çalışma modeli girilir]
+    D --> E[Davet gönderilir]
+    E --> F[ApprovalDeadlineAt = SentAt + 30 dk]
+    F --> G{İşçi yanıtı}
+    G -- Kabul --> H[Accepted]
+    G -- Red --> I[Rejected]
+    G -- Yanıt yok --> J[Expired]
+    H --> K[Takvimde avatar / rozet]
+    H --> L[Maliyet özeti güncellenir]
+    I --> M[Başka işçi çağır]
+    J --> N[İşçi 30 dakika içinde onay vermedi]
+    N --> M

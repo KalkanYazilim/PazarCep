@@ -1,0 +1,11 @@
+flowchart TD
+    A[Alıcı Dashboard] --> B[Ürün Alımı]
+    B --> C[Teslimat Takibi]
+    C --> D[Ürün İndirme İşi]
+    D --> E[İşçi Daveti]
+    E --> F{Onay durumu}
+    F -- Kabul --> G[İndirme takvimine ekle]
+    F -- Red/Süre doldu --> H[Başka işçi çağır]
+    G --> I[Stok güncelle]
+    I --> J[Ürün satışı]
+    J --> K[Finans güncelle]
